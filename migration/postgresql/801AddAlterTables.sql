@@ -63,3 +63,8 @@ UPDATE AD_PrintFormat SET IsDefinedForMobile = 'N' WHERE IsDefinedForMobile IS N
 -- Print Format
 UPDATE AD_Form SET IsDefinedForMobile = 'N' WHERE IsDefinedForMobile IS NULL
 ;
+
+-- Apr 7, 2014 9:59:35 PM CEST
+-- SFAndroid Server
+ALTER TABLE SFA_Column ADD COLUMN AD_Process_ID NUMERIC(10) DEFAULT NULL 
+;
