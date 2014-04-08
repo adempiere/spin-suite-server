@@ -28,7 +28,7 @@ import org.compiere.model.MTable;
  * @author Dixon Martinez
  *
  */
-public class CalloutSyncTable extends CalloutEngine {
+public class CalloutSFATable extends CalloutEngine {
 
 	/**
 	 * 
