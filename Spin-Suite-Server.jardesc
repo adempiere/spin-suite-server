@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<jardesc>
+    <jar path="Spin-Suite-Server/packages/Spin-Suite-Server/lib/Spin-Suite-Server.jar"/>
+    <options buildIfNeeded="true" compress="true" descriptionLocation="/Spin-Suite-Server/Spin-Suite-Server.jardesc" exportErrors="true" exportWarnings="true" includeDirectoryEntries="false" overwrite="false" saveDescription="true" storeRefactorings="false" useSourceFolders="false"/>
+    <storedRefactorings deprecationInfo="true" structuralOnly="false"/>
+    <selectedProjects/>
+    <manifest generateManifest="true" manifestLocation="" manifestVersion="1.0" reuseManifest="false" saveManifest="false" usesManifest="true">
+        <sealing sealJar="false">
+            <packagesToSeal/>
+            <packagesToUnSeal/>
+        </sealing>
+    </manifest>
+    <selectedElements exportClassFiles="true" exportJavaFiles="false" exportOutputFolder="false">
+        <javaElement handleIdentifier="=Spin-Suite-Server/test"/>
+        <javaElement handleIdentifier="=Spin-Suite-Server/base"/>
+        <javaElement handleIdentifier="=Spin-Suite-Server/patches"/>
+    </selectedElements>
+</jardesc>
