@@ -1,6 +1,6 @@
 -- Feb 12, 2014 10:13:27 PM VET
 -- SFAndroid Server
-INSERT INTO AD_Table (AccessLevel,AD_Client_ID,AD_Org_ID,AD_Table_ID,CopyColumnsFromTable,Created,CreatedBy,EntityType,ImportTable,IsActive,IsCentrallyMaintained,IsChangeLog,IsDeleteable,IsHighVolume,IsSecurityEnabled,IsView,LoadSeq,Name,ReplicationType,TableName,Updated,UpdatedBy) VALUES ('3',0,0,53752,'N',TO_TIMESTAMP('2014-02-12 22:13:24','YYYY-MM-DD HH24:MI:SS'),100,'ECA01','N','Y','Y','N','Y','N','N','N',0,'Window Mobile','L','SFA_Window',TO_TIMESTAMP('2014-02-12 22:13:24','YYYY-MM-DD HH24:MI:SS'),100)
+INSERT INTO AD_Table (AccessLevel,AD_Client_ID,AD_Org_ID,AD_Table_ID,CopyColumnsFromTable,Created,CreatedBy,EntityType,ImportTable,IsActive,IsCentrallyMaintained,IsChangeLog,IsDeleteable,IsHighVolume,IsSecurityEnabled,IsView,LoadSeq,Name,ReplicationType,TableName,Updated,UpdatedBy) VALUES ('3',0,0,53752,'N',TO_TIMESTAMP('2014-02-12 22:13:24','YYYY-MM-DD HH24:MI:SS'),100,'ECA01','N','Y','Y','N','Y','N','N','N',0,'Window Mobile','L','SPS_Window',TO_TIMESTAMP('2014-02-12 22:13:24','YYYY-MM-DD HH24:MI:SS'),100)
 ;
 
 -- Feb 12, 2014 10:13:27 PM VET
@@ -83,7 +83,7 @@ INSERT INTO AD_Column_Trl (AD_Language,AD_Column_ID, Name, IsTranslated,AD_Clien
 
 -- Feb 12, 2014 10:13:42 PM VET
 -- SFAndroid Server
-INSERT INTO AD_Element (AD_Client_ID,AD_Element_ID,AD_Org_ID,ColumnName,Created,CreatedBy,EntityType,IsActive,Name,PrintName,Updated,UpdatedBy) VALUES (0,57036,0,'SFA_Window_ID',TO_TIMESTAMP('2014-02-12 22:13:41','YYYY-MM-DD HH24:MI:SS'),100,'ECA01','Y','Window Mobile ID','Window Mobile ID',TO_TIMESTAMP('2014-02-12 22:13:41','YYYY-MM-DD HH24:MI:SS'),100)
+INSERT INTO AD_Element (AD_Client_ID,AD_Element_ID,AD_Org_ID,ColumnName,Created,CreatedBy,EntityType,IsActive,Name,PrintName,Updated,UpdatedBy) VALUES (0,57036,0,'SPS_Window_ID',TO_TIMESTAMP('2014-02-12 22:13:41','YYYY-MM-DD HH24:MI:SS'),100,'ECA01','Y','Window Mobile ID','Window Mobile ID',TO_TIMESTAMP('2014-02-12 22:13:41','YYYY-MM-DD HH24:MI:SS'),100)
 ;
 
 -- Feb 12, 2014 10:13:42 PM VET
@@ -93,7 +93,7 @@ INSERT INTO AD_Element_Trl (AD_Language,AD_Element_ID, Description,Help,Name,PO_
 
 -- Feb 12, 2014 10:13:44 PM VET
 -- SFAndroid Server
-INSERT INTO AD_Column (AD_Client_ID,AD_Column_ID,AD_Element_ID,AD_Org_ID,AD_Reference_ID,AD_Table_ID,ColumnName,Created,CreatedBy,DefaultValue,EntityType,FieldLength,IsActive,IsAllowLogging,IsAlwaysUpdateable,IsEncrypted,IsIdentifier,IsKey,IsMandatory,IsParent,IsSelectionColumn,IsTranslated,IsUpdateable,Name,Updated,UpdatedBy,Version) VALUES (0,71610,57036,0,13,53752,'SFA_Window_ID',TO_TIMESTAMP('2014-02-12 22:13:42','YYYY-MM-DD HH24:MI:SS'),100,NULL,'ECA01',22,'Y','Y','N','N','N','Y','Y','N','N','N','N','Window Mobile ID',TO_TIMESTAMP('2014-02-12 22:13:42','YYYY-MM-DD HH24:MI:SS'),100,1)
+INSERT INTO AD_Column (AD_Client_ID,AD_Column_ID,AD_Element_ID,AD_Org_ID,AD_Reference_ID,AD_Table_ID,ColumnName,Created,CreatedBy,DefaultValue,EntityType,FieldLength,IsActive,IsAllowLogging,IsAlwaysUpdateable,IsEncrypted,IsIdentifier,IsKey,IsMandatory,IsParent,IsSelectionColumn,IsTranslated,IsUpdateable,Name,Updated,UpdatedBy,Version) VALUES (0,71610,57036,0,13,53752,'SPS_Window_ID',TO_TIMESTAMP('2014-02-12 22:13:42','YYYY-MM-DD HH24:MI:SS'),100,NULL,'ECA01',22,'Y','Y','N','N','N','Y','Y','N','N','N','N','Window Mobile ID',TO_TIMESTAMP('2014-02-12 22:13:42','YYYY-MM-DD HH24:MI:SS'),100,1)
 ;
 
 -- Feb 12, 2014 10:13:44 PM VET
@@ -103,7 +103,7 @@ INSERT INTO AD_Column_Trl (AD_Language,AD_Column_ID, Name, IsTranslated,AD_Clien
 
 -- Feb 12, 2014 10:13:46 PM VET
 -- SFAndroid Server
-INSERT INTO AD_Sequence (AD_Client_ID,AD_Org_ID,AD_Sequence_ID,Created,CreatedBy,CurrentNext,CurrentNextSys,Description,IncrementNo,IsActive,IsAudited,IsAutoSequence,IsTableID,Name,StartNewYear,StartNo,Updated,UpdatedBy) VALUES (0,0,53894,TO_TIMESTAMP('2014-02-12 22:13:44','YYYY-MM-DD HH24:MI:SS'),100,1000000,50000,'Table SFA_Window',1,'Y','N','Y','Y','SFA_Window','N',1000000,TO_TIMESTAMP('2014-02-12 22:13:44','YYYY-MM-DD HH24:MI:SS'),100)
+INSERT INTO AD_Sequence (AD_Client_ID,AD_Org_ID,AD_Sequence_ID,Created,CreatedBy,CurrentNext,CurrentNextSys,Description,IncrementNo,IsActive,IsAudited,IsAutoSequence,IsTableID,Name,StartNewYear,StartNo,Updated,UpdatedBy) VALUES (0,0,53894,TO_TIMESTAMP('2014-02-12 22:13:44','YYYY-MM-DD HH24:MI:SS'),100,1000000,50000,'Table SPS_Window',1,'Y','N','Y','Y','SPS_Window','N',1000000,TO_TIMESTAMP('2014-02-12 22:13:44','YYYY-MM-DD HH24:MI:SS'),100)
 ;
 
 -- Feb 12, 2014 10:14:07 PM VET
@@ -118,17 +118,17 @@ UPDATE AD_Element_Trl SET IsTranslated='N' WHERE AD_Element_ID=57036
 
 -- Feb 12, 2014 10:14:07 PM VET
 -- SFAndroid Server
-UPDATE AD_Column SET ColumnName='SFA_Window_ID', Name='Window Mobile', Description=NULL, Help=NULL WHERE AD_Element_ID=57036
+UPDATE AD_Column SET ColumnName='SPS_Window_ID', Name='Window Mobile', Description=NULL, Help=NULL WHERE AD_Element_ID=57036
 ;
 
 -- Feb 12, 2014 10:14:07 PM VET
 -- SFAndroid Server
-UPDATE AD_Process_Para SET ColumnName='SFA_Window_ID', Name='Window Mobile', Description=NULL, Help=NULL, AD_Element_ID=57036 WHERE UPPER(ColumnName)='SFA_WINDOW_ID' AND IsCentrallyMaintained='Y' AND AD_Element_ID IS NULL
+UPDATE AD_Process_Para SET ColumnName='SPS_Window_ID', Name='Window Mobile', Description=NULL, Help=NULL, AD_Element_ID=57036 WHERE UPPER(ColumnName)='SPS_WINDOW_ID' AND IsCentrallyMaintained='Y' AND AD_Element_ID IS NULL
 ;
 
 -- Feb 12, 2014 10:14:07 PM VET
 -- SFAndroid Server
-UPDATE AD_Process_Para SET ColumnName='SFA_Window_ID', Name='Window Mobile', Description=NULL, Help=NULL WHERE AD_Element_ID=57036 AND IsCentrallyMaintained='Y'
+UPDATE AD_Process_Para SET ColumnName='SPS_Window_ID', Name='Window Mobile', Description=NULL, Help=NULL WHERE AD_Element_ID=57036 AND IsCentrallyMaintained='Y'
 ;
 
 -- Feb 12, 2014 10:14:07 PM VET
@@ -370,7 +370,7 @@ UPDATE AD_Field SET IsSameLine='Y',Updated=TO_TIMESTAMP('2014-02-12 22:19:50','Y
 
 -- Feb 12, 2014 10:20:26 PM VET
 -- SFAndroid Server
-INSERT INTO AD_Table (AccessLevel,AD_Client_ID,AD_Org_ID,AD_Table_ID,CopyColumnsFromTable,Created,CreatedBy,EntityType,ImportTable,IsActive,IsCentrallyMaintained,IsChangeLog,IsDeleteable,IsHighVolume,IsSecurityEnabled,IsView,LoadSeq,Name,ReplicationType,TableName,Updated,UpdatedBy) VALUES ('3',0,0,53753,'N',TO_TIMESTAMP('2014-02-12 22:20:24','YYYY-MM-DD HH24:MI:SS'),100,'ECA02','N','Y','Y','N','Y','N','N','N',0,'Window Mobile Translation','L','SFA_Window_Trl',TO_TIMESTAMP('2014-02-12 22:20:24','YYYY-MM-DD HH24:MI:SS'),100)
+INSERT INTO AD_Table (AccessLevel,AD_Client_ID,AD_Org_ID,AD_Table_ID,CopyColumnsFromTable,Created,CreatedBy,EntityType,ImportTable,IsActive,IsCentrallyMaintained,IsChangeLog,IsDeleteable,IsHighVolume,IsSecurityEnabled,IsView,LoadSeq,Name,ReplicationType,TableName,Updated,UpdatedBy) VALUES ('3',0,0,53753,'N',TO_TIMESTAMP('2014-02-12 22:20:24','YYYY-MM-DD HH24:MI:SS'),100,'ECA02','N','Y','Y','N','Y','N','N','N',0,'Window Mobile Translation','L','SPS_Window_Trl',TO_TIMESTAMP('2014-02-12 22:20:24','YYYY-MM-DD HH24:MI:SS'),100)
 ;
 
 -- Feb 12, 2014 10:20:26 PM VET
@@ -453,7 +453,7 @@ INSERT INTO AD_Column_Trl (AD_Language,AD_Column_ID, Name, IsTranslated,AD_Clien
 
 -- Feb 12, 2014 10:20:41 PM VET
 -- SFAndroid Server
-INSERT INTO AD_Sequence (AD_Client_ID,AD_Org_ID,AD_Sequence_ID,Created,CreatedBy,CurrentNext,CurrentNextSys,Description,IncrementNo,IsActive,IsAudited,IsAutoSequence,IsTableID,Name,StartNewYear,StartNo,Updated,UpdatedBy) VALUES (0,0,53895,TO_TIMESTAMP('2014-02-12 22:20:39','YYYY-MM-DD HH24:MI:SS'),100,1000000,50000,'Table SFA_Window_Trl',1,'Y','N','Y','Y','SFA_Window_Trl','N',1000000,TO_TIMESTAMP('2014-02-12 22:20:39','YYYY-MM-DD HH24:MI:SS'),100)
+INSERT INTO AD_Sequence (AD_Client_ID,AD_Org_ID,AD_Sequence_ID,Created,CreatedBy,CurrentNext,CurrentNextSys,Description,IncrementNo,IsActive,IsAudited,IsAutoSequence,IsTableID,Name,StartNewYear,StartNo,Updated,UpdatedBy) VALUES (0,0,53895,TO_TIMESTAMP('2014-02-12 22:20:39','YYYY-MM-DD HH24:MI:SS'),100,1000000,50000,'Table SPS_Window_Trl',1,'Y','N','Y','Y','SPS_Window_Trl','N',1000000,TO_TIMESTAMP('2014-02-12 22:20:39','YYYY-MM-DD HH24:MI:SS'),100)
 ;
 
 -- Feb 12, 2014 10:20:50 PM VET
@@ -508,7 +508,7 @@ INSERT INTO AD_Column_Trl (AD_Language,AD_Column_ID, Name, IsTranslated,AD_Clien
 
 -- Feb 12, 2014 10:22:39 PM VET
 -- SFAndroid Server
-INSERT INTO AD_Column (AD_Client_ID,AD_Column_ID,AD_Element_ID,AD_Org_ID,AD_Reference_ID,AD_Table_ID,ColumnName,Created,CreatedBy,EntityType,FieldLength,IsActive,IsAllowLogging,IsAlwaysUpdateable,IsAutocomplete,IsEncrypted,IsIdentifier,IsKey,IsMandatory,IsParent,IsSelectionColumn,IsSyncDatabase,IsTranslated,IsUpdateable,Name,SeqNo,Updated,UpdatedBy,Version) VALUES (0,71625,57036,0,19,53753,'SFA_Window_ID',TO_TIMESTAMP('2014-02-12 22:22:37','YYYY-MM-DD HH24:MI:SS'),100,'ECA02',10,'Y','Y','N','N','N','N','N','N','Y','N','N','N','N','Window Mobile',0,TO_TIMESTAMP('2014-02-12 22:22:37','YYYY-MM-DD HH24:MI:SS'),100,0)
+INSERT INTO AD_Column (AD_Client_ID,AD_Column_ID,AD_Element_ID,AD_Org_ID,AD_Reference_ID,AD_Table_ID,ColumnName,Created,CreatedBy,EntityType,FieldLength,IsActive,IsAllowLogging,IsAlwaysUpdateable,IsAutocomplete,IsEncrypted,IsIdentifier,IsKey,IsMandatory,IsParent,IsSelectionColumn,IsSyncDatabase,IsTranslated,IsUpdateable,Name,SeqNo,Updated,UpdatedBy,Version) VALUES (0,71625,57036,0,19,53753,'SPS_Window_ID',TO_TIMESTAMP('2014-02-12 22:22:37','YYYY-MM-DD HH24:MI:SS'),100,'ECA02',10,'Y','Y','N','N','N','N','N','N','Y','N','N','N','N','Window Mobile',0,TO_TIMESTAMP('2014-02-12 22:22:37','YYYY-MM-DD HH24:MI:SS'),100,0)
 ;
 
 -- Feb 12, 2014 10:22:39 PM VET
@@ -681,7 +681,7 @@ UPDATE AD_Field SET IsSameLine='Y',Updated=TO_TIMESTAMP('2014-02-12 22:25:20','Y
 
 -- Feb 12, 2014 10:26:04 PM VET
 -- SFAndroid Server
-INSERT INTO AD_Table (AccessLevel,AD_Client_ID,AD_Org_ID,AD_Table_ID,CopyColumnsFromTable,Created,CreatedBy,EntityType,ImportTable,IsActive,IsCentrallyMaintained,IsChangeLog,IsDeleteable,IsHighVolume,IsSecurityEnabled,IsView,LoadSeq,Name,ReplicationType,TableName,Updated,UpdatedBy) VALUES ('3',0,0,53754,'N',TO_TIMESTAMP('2014-02-12 22:26:02','YYYY-MM-DD HH24:MI:SS'),100,'ECA02','N','Y','Y','N','Y','N','N','N',0,'Tab','L','SFA_Tab',TO_TIMESTAMP('2014-02-12 22:26:02','YYYY-MM-DD HH24:MI:SS'),100)
+INSERT INTO AD_Table (AccessLevel,AD_Client_ID,AD_Org_ID,AD_Table_ID,CopyColumnsFromTable,Created,CreatedBy,EntityType,ImportTable,IsActive,IsCentrallyMaintained,IsChangeLog,IsDeleteable,IsHighVolume,IsSecurityEnabled,IsView,LoadSeq,Name,ReplicationType,TableName,Updated,UpdatedBy) VALUES ('3',0,0,53754,'N',TO_TIMESTAMP('2014-02-12 22:26:02','YYYY-MM-DD HH24:MI:SS'),100,'ECA02','N','Y','Y','N','Y','N','N','N',0,'Tab','L','SPS_Tab',TO_TIMESTAMP('2014-02-12 22:26:02','YYYY-MM-DD HH24:MI:SS'),100)
 ;
 
 -- Feb 12, 2014 10:26:04 PM VET
@@ -764,7 +764,7 @@ INSERT INTO AD_Column_Trl (AD_Language,AD_Column_ID, Name, IsTranslated,AD_Clien
 
 -- Feb 12, 2014 10:26:19 PM VET
 -- SFAndroid Server
-INSERT INTO AD_Element (AD_Client_ID,AD_Element_ID,AD_Org_ID,ColumnName,Created,CreatedBy,EntityType,IsActive,Name,PrintName,Updated,UpdatedBy) VALUES (0,57037,0,'SFA_Tab_ID',TO_TIMESTAMP('2014-02-12 22:26:18','YYYY-MM-DD HH24:MI:SS'),100,'ECA02','Y','Tab ID','Tab ID',TO_TIMESTAMP('2014-02-12 22:26:18','YYYY-MM-DD HH24:MI:SS'),100)
+INSERT INTO AD_Element (AD_Client_ID,AD_Element_ID,AD_Org_ID,ColumnName,Created,CreatedBy,EntityType,IsActive,Name,PrintName,Updated,UpdatedBy) VALUES (0,57037,0,'SPS_Tab_ID',TO_TIMESTAMP('2014-02-12 22:26:18','YYYY-MM-DD HH24:MI:SS'),100,'ECA02','Y','Tab ID','Tab ID',TO_TIMESTAMP('2014-02-12 22:26:18','YYYY-MM-DD HH24:MI:SS'),100)
 ;
 
 -- Feb 12, 2014 10:26:19 PM VET
@@ -774,7 +774,7 @@ INSERT INTO AD_Element_Trl (AD_Language,AD_Element_ID, Description,Help,Name,PO_
 
 -- Feb 12, 2014 10:26:21 PM VET
 -- SFAndroid Server
-INSERT INTO AD_Column (AD_Client_ID,AD_Column_ID,AD_Element_ID,AD_Org_ID,AD_Reference_ID,AD_Table_ID,ColumnName,Created,CreatedBy,DefaultValue,EntityType,FieldLength,IsActive,IsAllowLogging,IsAlwaysUpdateable,IsEncrypted,IsIdentifier,IsKey,IsMandatory,IsParent,IsSelectionColumn,IsTranslated,IsUpdateable,Name,Updated,UpdatedBy,Version) VALUES (0,71633,57037,0,13,53754,'SFA_Tab_ID',TO_TIMESTAMP('2014-02-12 22:26:19','YYYY-MM-DD HH24:MI:SS'),100,NULL,'ECA02',22,'Y','Y','N','N','N','Y','Y','N','N','N','N','Tab ID',TO_TIMESTAMP('2014-02-12 22:26:19','YYYY-MM-DD HH24:MI:SS'),100,1)
+INSERT INTO AD_Column (AD_Client_ID,AD_Column_ID,AD_Element_ID,AD_Org_ID,AD_Reference_ID,AD_Table_ID,ColumnName,Created,CreatedBy,DefaultValue,EntityType,FieldLength,IsActive,IsAllowLogging,IsAlwaysUpdateable,IsEncrypted,IsIdentifier,IsKey,IsMandatory,IsParent,IsSelectionColumn,IsTranslated,IsUpdateable,Name,Updated,UpdatedBy,Version) VALUES (0,71633,57037,0,13,53754,'SPS_Tab_ID',TO_TIMESTAMP('2014-02-12 22:26:19','YYYY-MM-DD HH24:MI:SS'),100,NULL,'ECA02',22,'Y','Y','N','N','N','Y','Y','N','N','N','N','Tab ID',TO_TIMESTAMP('2014-02-12 22:26:19','YYYY-MM-DD HH24:MI:SS'),100,1)
 ;
 
 -- Feb 12, 2014 10:26:21 PM VET
@@ -784,7 +784,7 @@ INSERT INTO AD_Column_Trl (AD_Language,AD_Column_ID, Name, IsTranslated,AD_Clien
 
 -- Feb 12, 2014 10:26:22 PM VET
 -- SFAndroid Server
-INSERT INTO AD_Sequence (AD_Client_ID,AD_Org_ID,AD_Sequence_ID,Created,CreatedBy,CurrentNext,CurrentNextSys,Description,IncrementNo,IsActive,IsAudited,IsAutoSequence,IsTableID,Name,StartNewYear,StartNo,Updated,UpdatedBy) VALUES (0,0,53896,TO_TIMESTAMP('2014-02-12 22:26:21','YYYY-MM-DD HH24:MI:SS'),100,1000000,50000,'Table SFA_Tab',1,'Y','N','Y','Y','SFA_Tab','N',1000000,TO_TIMESTAMP('2014-02-12 22:26:21','YYYY-MM-DD HH24:MI:SS'),100)
+INSERT INTO AD_Sequence (AD_Client_ID,AD_Org_ID,AD_Sequence_ID,Created,CreatedBy,CurrentNext,CurrentNextSys,Description,IncrementNo,IsActive,IsAudited,IsAutoSequence,IsTableID,Name,StartNewYear,StartNo,Updated,UpdatedBy) VALUES (0,0,53896,TO_TIMESTAMP('2014-02-12 22:26:21','YYYY-MM-DD HH24:MI:SS'),100,1000000,50000,'Table SPS_Tab',1,'Y','N','Y','Y','SPS_Tab','N',1000000,TO_TIMESTAMP('2014-02-12 22:26:21','YYYY-MM-DD HH24:MI:SS'),100)
 ;
 
 -- Feb 12, 2014 10:26:48 PM VET
@@ -809,17 +809,17 @@ UPDATE AD_Element_Trl SET IsTranslated='N' WHERE AD_Element_ID=57037
 
 -- Feb 12, 2014 10:27:04 PM VET
 -- SFAndroid Server
-UPDATE AD_Column SET ColumnName='SFA_Tab_ID', Name='Tab', Description=NULL, Help=NULL WHERE AD_Element_ID=57037
+UPDATE AD_Column SET ColumnName='SPS_Tab_ID', Name='Tab', Description=NULL, Help=NULL WHERE AD_Element_ID=57037
 ;
 
 -- Feb 12, 2014 10:27:04 PM VET
 -- SFAndroid Server
-UPDATE AD_Process_Para SET ColumnName='SFA_Tab_ID', Name='Tab', Description=NULL, Help=NULL, AD_Element_ID=57037 WHERE UPPER(ColumnName)='SFA_TAB_ID' AND IsCentrallyMaintained='Y' AND AD_Element_ID IS NULL
+UPDATE AD_Process_Para SET ColumnName='SPS_Tab_ID', Name='Tab', Description=NULL, Help=NULL, AD_Element_ID=57037 WHERE UPPER(ColumnName)='SPS_TAB_ID' AND IsCentrallyMaintained='Y' AND AD_Element_ID IS NULL
 ;
 
 -- Feb 12, 2014 10:27:04 PM VET
 -- SFAndroid Server
-UPDATE AD_Process_Para SET ColumnName='SFA_Tab_ID', Name='Tab', Description=NULL, Help=NULL WHERE AD_Element_ID=57037 AND IsCentrallyMaintained='Y'
+UPDATE AD_Process_Para SET ColumnName='SPS_Tab_ID', Name='Tab', Description=NULL, Help=NULL WHERE AD_Element_ID=57037 AND IsCentrallyMaintained='Y'
 ;
 
 -- Feb 12, 2014 10:27:04 PM VET
@@ -889,7 +889,7 @@ UPDATE AD_Table SET EntityType='ECA01',Updated=TO_TIMESTAMP('2014-02-12 22:28:39
 
 -- Feb 12, 2014 10:29:17 PM VET
 -- SFAndroid Server
-INSERT INTO AD_Column (AD_Client_ID,AD_Column_ID,AD_Element_ID,AD_Org_ID,AD_Reference_ID,AD_Table_ID,ColumnName,Created,CreatedBy,EntityType,FieldLength,IsActive,IsAllowLogging,IsAlwaysUpdateable,IsAutocomplete,IsEncrypted,IsIdentifier,IsKey,IsMandatory,IsParent,IsSelectionColumn,IsSyncDatabase,IsTranslated,IsUpdateable,Name,SeqNo,Updated,UpdatedBy,Version) VALUES (0,71634,57036,0,19,53754,'SFA_Window_ID',TO_TIMESTAMP('2014-02-12 22:29:15','YYYY-MM-DD HH24:MI:SS'),100,'ECA01',10,'Y','Y','N','N','N','N','N','N','N','N','N','N','Y','Window Mobile',0,TO_TIMESTAMP('2014-02-12 22:29:15','YYYY-MM-DD HH24:MI:SS'),100,0)
+INSERT INTO AD_Column (AD_Client_ID,AD_Column_ID,AD_Element_ID,AD_Org_ID,AD_Reference_ID,AD_Table_ID,ColumnName,Created,CreatedBy,EntityType,FieldLength,IsActive,IsAllowLogging,IsAlwaysUpdateable,IsAutocomplete,IsEncrypted,IsIdentifier,IsKey,IsMandatory,IsParent,IsSelectionColumn,IsSyncDatabase,IsTranslated,IsUpdateable,Name,SeqNo,Updated,UpdatedBy,Version) VALUES (0,71634,57036,0,19,53754,'SPS_Window_ID',TO_TIMESTAMP('2014-02-12 22:29:15','YYYY-MM-DD HH24:MI:SS'),100,'ECA01',10,'Y','Y','N','N','N','N','N','N','N','N','N','N','Y','Window Mobile',0,TO_TIMESTAMP('2014-02-12 22:29:15','YYYY-MM-DD HH24:MI:SS'),100,0)
 ;
 
 -- Feb 12, 2014 10:29:17 PM VET
@@ -904,7 +904,7 @@ UPDATE AD_Column SET IsMandatory='Y',Updated=TO_TIMESTAMP('2014-02-12 22:29:34',
 
 -- Feb 12, 2014 10:29:55 PM VET
 -- SFAndroid Server
-INSERT INTO AD_Column (AD_Client_ID,AD_Column_ID,AD_Element_ID,AD_Org_ID,AD_Reference_ID,AD_Table_ID,ColumnName,Created,CreatedBy,EntityType,FieldLength,IsActive,IsAllowLogging,IsAlwaysUpdateable,IsAutocomplete,IsEncrypted,IsIdentifier,IsKey,IsMandatory,IsParent,IsSelectionColumn,IsSyncDatabase,IsTranslated,IsUpdateable,Name,SeqNo,Updated,UpdatedBy,Version) VALUES (0,71635,55949,0,19,53754,'SFA_SyncTable_ID',TO_TIMESTAMP('2014-02-12 22:29:53','YYYY-MM-DD HH24:MI:SS'),100,'ECA01',10,'Y','Y','N','N','N','N','N','Y','N','N','N','N','Y','Synchronizing Table',0,TO_TIMESTAMP('2014-02-12 22:29:53','YYYY-MM-DD HH24:MI:SS'),100,0)
+INSERT INTO AD_Column (AD_Client_ID,AD_Column_ID,AD_Element_ID,AD_Org_ID,AD_Reference_ID,AD_Table_ID,ColumnName,Created,CreatedBy,EntityType,FieldLength,IsActive,IsAllowLogging,IsAlwaysUpdateable,IsAutocomplete,IsEncrypted,IsIdentifier,IsKey,IsMandatory,IsParent,IsSelectionColumn,IsSyncDatabase,IsTranslated,IsUpdateable,Name,SeqNo,Updated,UpdatedBy,Version) VALUES (0,71635,55949,0,19,53754,'SPS_SyncTable_ID',TO_TIMESTAMP('2014-02-12 22:29:53','YYYY-MM-DD HH24:MI:SS'),100,'ECA01',10,'Y','Y','N','N','N','N','N','Y','N','N','N','N','Y','Synchronizing Table',0,TO_TIMESTAMP('2014-02-12 22:29:53','YYYY-MM-DD HH24:MI:SS'),100,0)
 ;
 
 -- Feb 12, 2014 10:29:55 PM VET
@@ -1014,7 +1014,7 @@ INSERT INTO AD_Column_Trl (AD_Language,AD_Column_ID, Name, IsTranslated,AD_Clien
 
 -- Feb 12, 2014 10:32:44 PM VET
 -- SFAndroid Server
-INSERT INTO AD_Process (AccessLevel,AD_Client_ID,AD_Org_ID,AD_Process_ID,Classname,CopyFromProcess,Created,CreatedBy,EntityType,IsActive,IsBetaFunctionality,IsDirectPrint,IsReport,IsServerProcess,Name,ShowHelp,Statistic_Count,Statistic_Seconds,Updated,UpdatedBy,Value) VALUES ('3',0,0,53575,'org.sfandroid.process','N',TO_TIMESTAMP('2014-02-12 22:32:43','YYYY-MM-DD HH24:MI:SS'),100,'ECA02','Y','N','N','N','N','Copy From','Y',0,0,TO_TIMESTAMP('2014-02-12 22:32:43','YYYY-MM-DD HH24:MI:SS'),100,'SFA_Tab CopyFrom')
+INSERT INTO AD_Process (AccessLevel,AD_Client_ID,AD_Org_ID,AD_Process_ID,Classname,CopyFromProcess,Created,CreatedBy,EntityType,IsActive,IsBetaFunctionality,IsDirectPrint,IsReport,IsServerProcess,Name,ShowHelp,Statistic_Count,Statistic_Seconds,Updated,UpdatedBy,Value) VALUES ('3',0,0,53575,'org.sfandroid.process','N',TO_TIMESTAMP('2014-02-12 22:32:43','YYYY-MM-DD HH24:MI:SS'),100,'ECA02','Y','N','N','N','N','Copy From','Y',0,0,TO_TIMESTAMP('2014-02-12 22:32:43','YYYY-MM-DD HH24:MI:SS'),100,'SPS_Tab CopyFrom')
 ;
 
 -- Feb 12, 2014 10:32:44 PM VET
@@ -1034,7 +1034,7 @@ UPDATE AD_Process_Trl SET Name='Copiar Desde',Updated=TO_TIMESTAMP('2014-02-12 2
 
 -- Feb 12, 2014 10:34:41 PM VET
 -- SFAndroid Server
-INSERT INTO AD_Process_Para (AD_Client_ID,AD_Element_ID,AD_Org_ID,AD_Process_ID,AD_Process_Para_ID,AD_Reference_ID,ColumnName,Created,CreatedBy,EntityType,FieldLength,IsActive,IsCentrallyMaintained,IsMandatory,IsRange,Name,SeqNo,Updated,UpdatedBy) VALUES (0,57037,0,53575,54477,19,'SFA_Tab_ID',TO_TIMESTAMP('2014-02-12 22:34:39','YYYY-MM-DD HH24:MI:SS'),100,'ECA02',0,'Y','Y','Y','N','Tab',10,TO_TIMESTAMP('2014-02-12 22:34:39','YYYY-MM-DD HH24:MI:SS'),100)
+INSERT INTO AD_Process_Para (AD_Client_ID,AD_Element_ID,AD_Org_ID,AD_Process_ID,AD_Process_Para_ID,AD_Reference_ID,ColumnName,Created,CreatedBy,EntityType,FieldLength,IsActive,IsCentrallyMaintained,IsMandatory,IsRange,Name,SeqNo,Updated,UpdatedBy) VALUES (0,57037,0,53575,54477,19,'SPS_Tab_ID',TO_TIMESTAMP('2014-02-12 22:34:39','YYYY-MM-DD HH24:MI:SS'),100,'ECA02',0,'Y','Y','Y','N','Tab',10,TO_TIMESTAMP('2014-02-12 22:34:39','YYYY-MM-DD HH24:MI:SS'),100)
 ;
 
 -- Feb 12, 2014 10:34:41 PM VET
@@ -1426,7 +1426,7 @@ UPDATE AD_Field SET IsDisplayed='Y', SeqNo=150,Updated=TO_TIMESTAMP('2014-02-12 
 
 -- Feb 12, 2014 10:42:38 PM VET
 -- SFAndroid Server
-INSERT INTO AD_Process (AccessLevel,AD_Client_ID,AD_Org_ID,AD_Process_ID,Classname,CopyFromProcess,Created,CreatedBy,EntityType,IsActive,IsBetaFunctionality,IsDirectPrint,IsReport,IsServerProcess,Name,ShowHelp,Statistic_Count,Statistic_Seconds,Updated,UpdatedBy,Value) VALUES ('3',0,0,53576,'org.sfandroid.process.ImportFields','N',TO_TIMESTAMP('2014-02-12 22:42:37','YYYY-MM-DD HH24:MI:SS'),100,'ECA02','Y','N','N','N','N','Import Fields','Y',0,0,TO_TIMESTAMP('2014-02-12 22:42:37','YYYY-MM-DD HH24:MI:SS'),100,'SFA_Tab ImportFields')
+INSERT INTO AD_Process (AccessLevel,AD_Client_ID,AD_Org_ID,AD_Process_ID,Classname,CopyFromProcess,Created,CreatedBy,EntityType,IsActive,IsBetaFunctionality,IsDirectPrint,IsReport,IsServerProcess,Name,ShowHelp,Statistic_Count,Statistic_Seconds,Updated,UpdatedBy,Value) VALUES ('3',0,0,53576,'org.sfandroid.process.ImportFields','N',TO_TIMESTAMP('2014-02-12 22:42:37','YYYY-MM-DD HH24:MI:SS'),100,'ECA02','Y','N','N','N','N','Import Fields','Y',0,0,TO_TIMESTAMP('2014-02-12 22:42:37','YYYY-MM-DD HH24:MI:SS'),100,'SPS_Tab ImportFields')
 ;
 
 -- Feb 12, 2014 10:42:38 PM VET
@@ -1521,7 +1521,7 @@ UPDATE AD_Field SET IsSameLine='Y',Updated=TO_TIMESTAMP('2014-02-12 22:44:20','Y
 
 -- Feb 12, 2014 10:44:55 PM VET
 -- SFAndroid Server
-INSERT INTO AD_Table (AccessLevel,AD_Client_ID,AD_Org_ID,AD_Table_ID,AD_Window_ID,CopyColumnsFromTable,Created,CreatedBy,EntityType,ImportTable,IsActive,IsCentrallyMaintained,IsChangeLog,IsDeleteable,IsHighVolume,IsSecurityEnabled,IsView,LoadSeq,Name,ReplicationType,TableName,Updated,UpdatedBy) VALUES ('3',0,0,53755,53342,'N',TO_TIMESTAMP('2014-02-12 22:44:54','YYYY-MM-DD HH24:MI:SS'),100,'ECA02','N','Y','Y','N','Y','N','N','N',0,'Tab','L','SFA_Tab_Trl',TO_TIMESTAMP('2014-02-12 22:44:54','YYYY-MM-DD HH24:MI:SS'),100)
+INSERT INTO AD_Table (AccessLevel,AD_Client_ID,AD_Org_ID,AD_Table_ID,AD_Window_ID,CopyColumnsFromTable,Created,CreatedBy,EntityType,ImportTable,IsActive,IsCentrallyMaintained,IsChangeLog,IsDeleteable,IsHighVolume,IsSecurityEnabled,IsView,LoadSeq,Name,ReplicationType,TableName,Updated,UpdatedBy) VALUES ('3',0,0,53755,53342,'N',TO_TIMESTAMP('2014-02-12 22:44:54','YYYY-MM-DD HH24:MI:SS'),100,'ECA02','N','Y','Y','N','Y','N','N','N',0,'Tab','L','SPS_Tab_Trl',TO_TIMESTAMP('2014-02-12 22:44:54','YYYY-MM-DD HH24:MI:SS'),100)
 ;
 
 -- Feb 12, 2014 10:44:55 PM VET
@@ -1604,7 +1604,7 @@ INSERT INTO AD_Column_Trl (AD_Language,AD_Column_ID, Name, IsTranslated,AD_Clien
 
 -- Feb 12, 2014 10:45:10 PM VET
 -- SFAndroid Server
-INSERT INTO AD_Sequence (AD_Client_ID,AD_Org_ID,AD_Sequence_ID,Created,CreatedBy,CurrentNext,CurrentNextSys,Description,IncrementNo,IsActive,IsAudited,IsAutoSequence,IsTableID,Name,StartNewYear,StartNo,Updated,UpdatedBy) VALUES (0,0,53897,TO_TIMESTAMP('2014-02-12 22:45:09','YYYY-MM-DD HH24:MI:SS'),100,1000000,50000,'Table SFA_Tab_Trl',1,'Y','N','Y','Y','SFA_Tab_Trl','N',1000000,TO_TIMESTAMP('2014-02-12 22:45:09','YYYY-MM-DD HH24:MI:SS'),100)
+INSERT INTO AD_Sequence (AD_Client_ID,AD_Org_ID,AD_Sequence_ID,Created,CreatedBy,CurrentNext,CurrentNextSys,Description,IncrementNo,IsActive,IsAudited,IsAutoSequence,IsTableID,Name,StartNewYear,StartNo,Updated,UpdatedBy) VALUES (0,0,53897,TO_TIMESTAMP('2014-02-12 22:45:09','YYYY-MM-DD HH24:MI:SS'),100,1000000,50000,'Table SPS_Tab_Trl',1,'Y','N','Y','Y','SPS_Tab_Trl','N',1000000,TO_TIMESTAMP('2014-02-12 22:45:09','YYYY-MM-DD HH24:MI:SS'),100)
 ;
 
 -- Feb 12, 2014 10:45:42 PM VET
@@ -1724,7 +1724,7 @@ UPDATE AD_Column SET EntityType='ECA01',Updated=TO_TIMESTAMP('2014-02-12 22:48:1
 
 -- Feb 12, 2014 10:48:40 PM VET
 -- SFAndroid Server
-INSERT INTO AD_Column (AD_Client_ID,AD_Column_ID,AD_Element_ID,AD_Org_ID,AD_Reference_ID,AD_Table_ID,ColumnName,Created,CreatedBy,EntityType,FieldLength,IsActive,IsAllowLogging,IsAlwaysUpdateable,IsAutocomplete,IsEncrypted,IsIdentifier,IsKey,IsMandatory,IsParent,IsSelectionColumn,IsSyncDatabase,IsTranslated,IsUpdateable,Name,SeqNo,Updated,UpdatedBy,Version) VALUES (0,71655,57037,0,19,53755,'SFA_Tab_ID',TO_TIMESTAMP('2014-02-12 22:48:38','YYYY-MM-DD HH24:MI:SS'),100,'ECA01',10,'Y','Y','N','N','N','N','N','Y','Y','N','N','N','N','Tab',0,TO_TIMESTAMP('2014-02-12 22:48:38','YYYY-MM-DD HH24:MI:SS'),100,0)
+INSERT INTO AD_Column (AD_Client_ID,AD_Column_ID,AD_Element_ID,AD_Org_ID,AD_Reference_ID,AD_Table_ID,ColumnName,Created,CreatedBy,EntityType,FieldLength,IsActive,IsAllowLogging,IsAlwaysUpdateable,IsAutocomplete,IsEncrypted,IsIdentifier,IsKey,IsMandatory,IsParent,IsSelectionColumn,IsSyncDatabase,IsTranslated,IsUpdateable,Name,SeqNo,Updated,UpdatedBy,Version) VALUES (0,71655,57037,0,19,53755,'SPS_Tab_ID',TO_TIMESTAMP('2014-02-12 22:48:38','YYYY-MM-DD HH24:MI:SS'),100,'ECA01',10,'Y','Y','N','N','N','N','N','Y','Y','N','N','N','N','Tab',0,TO_TIMESTAMP('2014-02-12 22:48:38','YYYY-MM-DD HH24:MI:SS'),100,0)
 ;
 
 -- Feb 12, 2014 10:48:40 PM VET
@@ -1907,7 +1907,7 @@ UPDATE AD_Field SET IsSameLine='Y',Updated=TO_TIMESTAMP('2014-02-12 22:51:48','Y
 
 -- Feb 12, 2014 10:52:21 PM VET
 -- SFAndroid Server
-INSERT INTO AD_Table (AccessLevel,AD_Client_ID,AD_Org_ID,AD_Table_ID,AD_Window_ID,CopyColumnsFromTable,Created,CreatedBy,EntityType,ImportTable,IsActive,IsCentrallyMaintained,IsChangeLog,IsDeleteable,IsHighVolume,IsSecurityEnabled,IsView,LoadSeq,Name,ReplicationType,TableName,Updated,UpdatedBy) VALUES ('3',0,0,53756,53342,'N',TO_TIMESTAMP('2014-02-12 22:52:20','YYYY-MM-DD HH24:MI:SS'),100,'ECA01','N','Y','Y','N','Y','N','N','N',0,'Field','L','SFA_Field',TO_TIMESTAMP('2014-02-12 22:52:20','YYYY-MM-DD HH24:MI:SS'),100)
+INSERT INTO AD_Table (AccessLevel,AD_Client_ID,AD_Org_ID,AD_Table_ID,AD_Window_ID,CopyColumnsFromTable,Created,CreatedBy,EntityType,ImportTable,IsActive,IsCentrallyMaintained,IsChangeLog,IsDeleteable,IsHighVolume,IsSecurityEnabled,IsView,LoadSeq,Name,ReplicationType,TableName,Updated,UpdatedBy) VALUES ('3',0,0,53756,53342,'N',TO_TIMESTAMP('2014-02-12 22:52:20','YYYY-MM-DD HH24:MI:SS'),100,'ECA01','N','Y','Y','N','Y','N','N','N',0,'Field','L','SPS_Field',TO_TIMESTAMP('2014-02-12 22:52:20','YYYY-MM-DD HH24:MI:SS'),100)
 ;
 
 -- Feb 12, 2014 10:52:21 PM VET
@@ -1990,7 +1990,7 @@ INSERT INTO AD_Column_Trl (AD_Language,AD_Column_ID, Name, IsTranslated,AD_Clien
 
 -- Feb 12, 2014 10:52:37 PM VET
 -- SFAndroid Server
-INSERT INTO AD_Element (AD_Client_ID,AD_Element_ID,AD_Org_ID,ColumnName,Created,CreatedBy,EntityType,IsActive,Name,PrintName,Updated,UpdatedBy) VALUES (0,57038,0,'SFA_Field_ID',TO_TIMESTAMP('2014-02-12 22:52:35','YYYY-MM-DD HH24:MI:SS'),100,'ECA01','Y','Field ID','Field ID',TO_TIMESTAMP('2014-02-12 22:52:35','YYYY-MM-DD HH24:MI:SS'),100)
+INSERT INTO AD_Element (AD_Client_ID,AD_Element_ID,AD_Org_ID,ColumnName,Created,CreatedBy,EntityType,IsActive,Name,PrintName,Updated,UpdatedBy) VALUES (0,57038,0,'SPS_Field_ID',TO_TIMESTAMP('2014-02-12 22:52:35','YYYY-MM-DD HH24:MI:SS'),100,'ECA01','Y','Field ID','Field ID',TO_TIMESTAMP('2014-02-12 22:52:35','YYYY-MM-DD HH24:MI:SS'),100)
 ;
 
 -- Feb 12, 2014 10:52:37 PM VET
@@ -2000,7 +2000,7 @@ INSERT INTO AD_Element_Trl (AD_Language,AD_Element_ID, Description,Help,Name,PO_
 
 -- Feb 12, 2014 10:52:39 PM VET
 -- SFAndroid Server
-INSERT INTO AD_Column (AD_Client_ID,AD_Column_ID,AD_Element_ID,AD_Org_ID,AD_Reference_ID,AD_Table_ID,ColumnName,Created,CreatedBy,DefaultValue,EntityType,FieldLength,IsActive,IsAllowLogging,IsAlwaysUpdateable,IsEncrypted,IsIdentifier,IsKey,IsMandatory,IsParent,IsSelectionColumn,IsTranslated,IsUpdateable,Name,Updated,UpdatedBy,Version) VALUES (0,71665,57038,0,13,53756,'SFA_Field_ID',TO_TIMESTAMP('2014-02-12 22:52:37','YYYY-MM-DD HH24:MI:SS'),100,NULL,'ECA01',22,'Y','Y','N','N','N','Y','Y','N','N','N','N','Field ID',TO_TIMESTAMP('2014-02-12 22:52:37','YYYY-MM-DD HH24:MI:SS'),100,1)
+INSERT INTO AD_Column (AD_Client_ID,AD_Column_ID,AD_Element_ID,AD_Org_ID,AD_Reference_ID,AD_Table_ID,ColumnName,Created,CreatedBy,DefaultValue,EntityType,FieldLength,IsActive,IsAllowLogging,IsAlwaysUpdateable,IsEncrypted,IsIdentifier,IsKey,IsMandatory,IsParent,IsSelectionColumn,IsTranslated,IsUpdateable,Name,Updated,UpdatedBy,Version) VALUES (0,71665,57038,0,13,53756,'SPS_Field_ID',TO_TIMESTAMP('2014-02-12 22:52:37','YYYY-MM-DD HH24:MI:SS'),100,NULL,'ECA01',22,'Y','Y','N','N','N','Y','Y','N','N','N','N','Field ID',TO_TIMESTAMP('2014-02-12 22:52:37','YYYY-MM-DD HH24:MI:SS'),100,1)
 ;
 
 -- Feb 12, 2014 10:52:39 PM VET
@@ -2010,7 +2010,7 @@ INSERT INTO AD_Column_Trl (AD_Language,AD_Column_ID, Name, IsTranslated,AD_Clien
 
 -- Feb 12, 2014 10:52:40 PM VET
 -- SFAndroid Server
-INSERT INTO AD_Sequence (AD_Client_ID,AD_Org_ID,AD_Sequence_ID,Created,CreatedBy,CurrentNext,CurrentNextSys,Description,IncrementNo,IsActive,IsAudited,IsAutoSequence,IsTableID,Name,StartNewYear,StartNo,Updated,UpdatedBy) VALUES (0,0,53898,TO_TIMESTAMP('2014-02-12 22:52:39','YYYY-MM-DD HH24:MI:SS'),100,1000000,50000,'Table SFA_Field',1,'Y','N','Y','Y','SFA_Field','N',1000000,TO_TIMESTAMP('2014-02-12 22:52:39','YYYY-MM-DD HH24:MI:SS'),100)
+INSERT INTO AD_Sequence (AD_Client_ID,AD_Org_ID,AD_Sequence_ID,Created,CreatedBy,CurrentNext,CurrentNextSys,Description,IncrementNo,IsActive,IsAudited,IsAutoSequence,IsTableID,Name,StartNewYear,StartNo,Updated,UpdatedBy) VALUES (0,0,53898,TO_TIMESTAMP('2014-02-12 22:52:39','YYYY-MM-DD HH24:MI:SS'),100,1000000,50000,'Table SPS_Field',1,'Y','N','Y','Y','SPS_Field','N',1000000,TO_TIMESTAMP('2014-02-12 22:52:39','YYYY-MM-DD HH24:MI:SS'),100)
 ;
 
 -- Feb 12, 2014 10:54:11 PM VET
@@ -2025,17 +2025,17 @@ UPDATE AD_Element_Trl SET IsTranslated='N' WHERE AD_Element_ID=57038
 
 -- Feb 12, 2014 10:54:11 PM VET
 -- SFAndroid Server
-UPDATE AD_Column SET ColumnName='SFA_Field_ID', Name='Field', Description=NULL, Help=NULL WHERE AD_Element_ID=57038
+UPDATE AD_Column SET ColumnName='SPS_Field_ID', Name='Field', Description=NULL, Help=NULL WHERE AD_Element_ID=57038
 ;
 
 -- Feb 12, 2014 10:54:11 PM VET
 -- SFAndroid Server
-UPDATE AD_Process_Para SET ColumnName='SFA_Field_ID', Name='Field', Description=NULL, Help=NULL, AD_Element_ID=57038 WHERE UPPER(ColumnName)='SFA_FIELD_ID' AND IsCentrallyMaintained='Y' AND AD_Element_ID IS NULL
+UPDATE AD_Process_Para SET ColumnName='SPS_Field_ID', Name='Field', Description=NULL, Help=NULL, AD_Element_ID=57038 WHERE UPPER(ColumnName)='SPS_FIELD_ID' AND IsCentrallyMaintained='Y' AND AD_Element_ID IS NULL
 ;
 
 -- Feb 12, 2014 10:54:11 PM VET
 -- SFAndroid Server
-UPDATE AD_Process_Para SET ColumnName='SFA_Field_ID', Name='Field', Description=NULL, Help=NULL WHERE AD_Element_ID=57038 AND IsCentrallyMaintained='Y'
+UPDATE AD_Process_Para SET ColumnName='SPS_Field_ID', Name='Field', Description=NULL, Help=NULL WHERE AD_Element_ID=57038 AND IsCentrallyMaintained='Y'
 ;
 
 -- Feb 12, 2014 10:54:11 PM VET
@@ -2060,7 +2060,7 @@ UPDATE AD_Element_Trl SET Name='Campos',PrintName='Campos',Updated=TO_TIMESTAMP(
 
 -- Feb 12, 2014 10:55:10 PM VET
 -- SFAndroid Server
-INSERT INTO AD_Column (AD_Client_ID,AD_Column_ID,AD_Element_ID,AD_Org_ID,AD_Reference_ID,AD_Table_ID,ColumnName,Created,CreatedBy,EntityType,FieldLength,IsActive,IsAllowLogging,IsAlwaysUpdateable,IsAutocomplete,IsEncrypted,IsIdentifier,IsKey,IsMandatory,IsParent,IsSelectionColumn,IsSyncDatabase,IsTranslated,IsUpdateable,Name,SeqNo,Updated,UpdatedBy,Version) VALUES (0,71666,57037,0,19,53756,'SFA_Tab_ID',TO_TIMESTAMP('2014-02-12 22:55:08','YYYY-MM-DD HH24:MI:SS'),100,'ECA01',10,'Y','Y','N','N','N','N','N','Y','N','N','N','N','N','Tab',0,TO_TIMESTAMP('2014-02-12 22:55:08','YYYY-MM-DD HH24:MI:SS'),100,0)
+INSERT INTO AD_Column (AD_Client_ID,AD_Column_ID,AD_Element_ID,AD_Org_ID,AD_Reference_ID,AD_Table_ID,ColumnName,Created,CreatedBy,EntityType,FieldLength,IsActive,IsAllowLogging,IsAlwaysUpdateable,IsAutocomplete,IsEncrypted,IsIdentifier,IsKey,IsMandatory,IsParent,IsSelectionColumn,IsSyncDatabase,IsTranslated,IsUpdateable,Name,SeqNo,Updated,UpdatedBy,Version) VALUES (0,71666,57037,0,19,53756,'SPS_Tab_ID',TO_TIMESTAMP('2014-02-12 22:55:08','YYYY-MM-DD HH24:MI:SS'),100,'ECA01',10,'Y','Y','N','N','N','N','N','Y','N','N','N','N','N','Tab',0,TO_TIMESTAMP('2014-02-12 22:55:08','YYYY-MM-DD HH24:MI:SS'),100,0)
 ;
 
 -- Feb 12, 2014 10:55:10 PM VET
@@ -2070,7 +2070,7 @@ INSERT INTO AD_Column_Trl (AD_Language,AD_Column_ID, Name, IsTranslated,AD_Clien
 
 -- Feb 12, 2014 10:55:36 PM VET
 -- SFAndroid Server
-INSERT INTO AD_Column (AD_Client_ID,AD_Column_ID,AD_Element_ID,AD_Org_ID,AD_Reference_ID,AD_Table_ID,ColumnName,Created,CreatedBy,EntityType,FieldLength,IsActive,IsAllowLogging,IsAlwaysUpdateable,IsAutocomplete,IsEncrypted,IsIdentifier,IsKey,IsMandatory,IsParent,IsSelectionColumn,IsSyncDatabase,IsTranslated,IsUpdateable,Name,SeqNo,Updated,UpdatedBy,Version) VALUES (0,71667,55947,0,19,53756,'SFA_SyncColumn_ID',TO_TIMESTAMP('2014-02-12 22:55:34','YYYY-MM-DD HH24:MI:SS'),100,'ECA01',10,'Y','Y','N','N','N','N','N','Y','N','N','N','N','Y','Synchronizing Column',0,TO_TIMESTAMP('2014-02-12 22:55:34','YYYY-MM-DD HH24:MI:SS'),100,0)
+INSERT INTO AD_Column (AD_Client_ID,AD_Column_ID,AD_Element_ID,AD_Org_ID,AD_Reference_ID,AD_Table_ID,ColumnName,Created,CreatedBy,EntityType,FieldLength,IsActive,IsAllowLogging,IsAlwaysUpdateable,IsAutocomplete,IsEncrypted,IsIdentifier,IsKey,IsMandatory,IsParent,IsSelectionColumn,IsSyncDatabase,IsTranslated,IsUpdateable,Name,SeqNo,Updated,UpdatedBy,Version) VALUES (0,71667,55947,0,19,53756,'SPS_SyncColumn_ID',TO_TIMESTAMP('2014-02-12 22:55:34','YYYY-MM-DD HH24:MI:SS'),100,'ECA01',10,'Y','Y','N','N','N','N','N','Y','N','N','N','N','Y','Synchronizing Column',0,TO_TIMESTAMP('2014-02-12 22:55:34','YYYY-MM-DD HH24:MI:SS'),100,0)
 ;
 
 -- Feb 12, 2014 10:55:36 PM VET
@@ -2487,7 +2487,7 @@ UPDATE AD_Field SET IsSameLine='Y',Updated=TO_TIMESTAMP('2014-02-12 23:00:20','Y
 
 -- Feb 12, 2014 11:00:46 PM VET
 -- SFAndroid Server
-INSERT INTO AD_Table (AccessLevel,AD_Client_ID,AD_Org_ID,AD_Table_ID,AD_Window_ID,CopyColumnsFromTable,Created,CreatedBy,EntityType,ImportTable,IsActive,IsCentrallyMaintained,IsChangeLog,IsDeleteable,IsHighVolume,IsSecurityEnabled,IsView,LoadSeq,Name,ReplicationType,TableName,Updated,UpdatedBy) VALUES ('3',0,0,53757,53342,'N',TO_TIMESTAMP('2014-02-12 23:00:45','YYYY-MM-DD HH24:MI:SS'),100,'ECA01','N','Y','Y','N','Y','N','N','N',0,'Field Translation','L','SFA_Field_Trl',TO_TIMESTAMP('2014-02-12 23:00:45','YYYY-MM-DD HH24:MI:SS'),100)
+INSERT INTO AD_Table (AccessLevel,AD_Client_ID,AD_Org_ID,AD_Table_ID,AD_Window_ID,CopyColumnsFromTable,Created,CreatedBy,EntityType,ImportTable,IsActive,IsCentrallyMaintained,IsChangeLog,IsDeleteable,IsHighVolume,IsSecurityEnabled,IsView,LoadSeq,Name,ReplicationType,TableName,Updated,UpdatedBy) VALUES ('3',0,0,53757,53342,'N',TO_TIMESTAMP('2014-02-12 23:00:45','YYYY-MM-DD HH24:MI:SS'),100,'ECA01','N','Y','Y','N','Y','N','N','N',0,'Field Translation','L','SPS_Field_Trl',TO_TIMESTAMP('2014-02-12 23:00:45','YYYY-MM-DD HH24:MI:SS'),100)
 ;
 
 -- Feb 12, 2014 11:00:46 PM VET
@@ -2570,12 +2570,12 @@ INSERT INTO AD_Column_Trl (AD_Language,AD_Column_ID, Name, IsTranslated,AD_Clien
 
 -- Feb 12, 2014 11:01:00 PM VET
 -- SFAndroid Server
-INSERT INTO AD_Sequence (AD_Client_ID,AD_Org_ID,AD_Sequence_ID,Created,CreatedBy,CurrentNext,CurrentNextSys,Description,IncrementNo,IsActive,IsAudited,IsAutoSequence,IsTableID,Name,StartNewYear,StartNo,Updated,UpdatedBy) VALUES (0,0,53899,TO_TIMESTAMP('2014-02-12 23:00:59','YYYY-MM-DD HH24:MI:SS'),100,1000000,50000,'Table SFA_Field_Trl',1,'Y','N','Y','Y','SFA_Field_Trl','N',1000000,TO_TIMESTAMP('2014-02-12 23:00:59','YYYY-MM-DD HH24:MI:SS'),100)
+INSERT INTO AD_Sequence (AD_Client_ID,AD_Org_ID,AD_Sequence_ID,Created,CreatedBy,CurrentNext,CurrentNextSys,Description,IncrementNo,IsActive,IsAudited,IsAutoSequence,IsTableID,Name,StartNewYear,StartNo,Updated,UpdatedBy) VALUES (0,0,53899,TO_TIMESTAMP('2014-02-12 23:00:59','YYYY-MM-DD HH24:MI:SS'),100,1000000,50000,'Table SPS_Field_Trl',1,'Y','N','Y','Y','SPS_Field_Trl','N',1000000,TO_TIMESTAMP('2014-02-12 23:00:59','YYYY-MM-DD HH24:MI:SS'),100)
 ;
 
 -- Feb 12, 2014 11:01:20 PM VET
 -- SFAndroid Server
-INSERT INTO AD_Column (AD_Client_ID,AD_Column_ID,AD_Element_ID,AD_Org_ID,AD_Reference_ID,AD_Table_ID,ColumnName,Created,CreatedBy,EntityType,FieldLength,IsActive,IsAllowLogging,IsAlwaysUpdateable,IsAutocomplete,IsEncrypted,IsIdentifier,IsKey,IsMandatory,IsParent,IsSelectionColumn,IsSyncDatabase,IsTranslated,IsUpdateable,Name,SeqNo,Updated,UpdatedBy,Version) VALUES (0,71683,57038,0,19,53757,'SFA_Field_ID',TO_TIMESTAMP('2014-02-12 23:01:18','YYYY-MM-DD HH24:MI:SS'),100,'ECA01',10,'Y','Y','N','N','N','N','N','Y','Y','N','N','N','N','Field',0,TO_TIMESTAMP('2014-02-12 23:01:18','YYYY-MM-DD HH24:MI:SS'),100,0)
+INSERT INTO AD_Column (AD_Client_ID,AD_Column_ID,AD_Element_ID,AD_Org_ID,AD_Reference_ID,AD_Table_ID,ColumnName,Created,CreatedBy,EntityType,FieldLength,IsActive,IsAllowLogging,IsAlwaysUpdateable,IsAutocomplete,IsEncrypted,IsIdentifier,IsKey,IsMandatory,IsParent,IsSelectionColumn,IsSyncDatabase,IsTranslated,IsUpdateable,Name,SeqNo,Updated,UpdatedBy,Version) VALUES (0,71683,57038,0,19,53757,'SPS_Field_ID',TO_TIMESTAMP('2014-02-12 23:01:18','YYYY-MM-DD HH24:MI:SS'),100,'ECA01',10,'Y','Y','N','N','N','N','N','Y','Y','N','N','N','N','Field',0,TO_TIMESTAMP('2014-02-12 23:01:18','YYYY-MM-DD HH24:MI:SS'),100,0)
 ;
 
 -- Feb 12, 2014 11:01:20 PM VET
@@ -3093,7 +3093,7 @@ UPDATE AD_Element SET EntityType='ECA01',Updated=TO_TIMESTAMP('2014-02-12 23:16:
 
 -- Feb 12, 2014 11:17:05 PM VET
 -- SFAndroid Server
-INSERT INTO AD_Column (AD_Client_ID,AD_Column_ID,AD_Element_ID,AD_Org_ID,AD_Reference_ID,AD_Table_ID,ColumnName,Created,CreatedBy,EntityType,FieldLength,IsActive,IsAllowLogging,IsAlwaysUpdateable,IsAutocomplete,IsEncrypted,IsIdentifier,IsKey,IsMandatory,IsParent,IsSelectionColumn,IsSyncDatabase,IsTranslated,IsUpdateable,Name,SeqNo,Updated,UpdatedBy,Version) VALUES (0,71687,57036,0,19,53518,'SFA_Window_ID',TO_TIMESTAMP('2014-02-12 23:17:03','YYYY-MM-DD HH24:MI:SS'),100,'ECA01',10,'Y','Y','N','N','N','N','N','N','N','N','N','N','Y','Window Mobile',0,TO_TIMESTAMP('2014-02-12 23:17:03','YYYY-MM-DD HH24:MI:SS'),100,0)
+INSERT INTO AD_Column (AD_Client_ID,AD_Column_ID,AD_Element_ID,AD_Org_ID,AD_Reference_ID,AD_Table_ID,ColumnName,Created,CreatedBy,EntityType,FieldLength,IsActive,IsAllowLogging,IsAlwaysUpdateable,IsAutocomplete,IsEncrypted,IsIdentifier,IsKey,IsMandatory,IsParent,IsSelectionColumn,IsSyncDatabase,IsTranslated,IsUpdateable,Name,SeqNo,Updated,UpdatedBy,Version) VALUES (0,71687,57036,0,19,53518,'SPS_Window_ID',TO_TIMESTAMP('2014-02-12 23:17:03','YYYY-MM-DD HH24:MI:SS'),100,'ECA01',10,'Y','Y','N','N','N','N','N','N','N','N','N','N','Y','Window Mobile',0,TO_TIMESTAMP('2014-02-12 23:17:03','YYYY-MM-DD HH24:MI:SS'),100,0)
 ;
 
 -- Feb 12, 2014 11:17:05 PM VET

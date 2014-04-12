@@ -1,6 +1,6 @@
 -- Jun 26, 2013 10:45:18 AM VET
 -- SFAndroid Contribution
-INSERT INTO AD_Table (AccessLevel,AD_Client_ID,AD_Org_ID,AD_Table_ID,CopyColumnsFromTable,Created,CreatedBy,EntityType,ImportTable,IsActive,IsCentrallyMaintained,IsChangeLog,IsDeleteable,IsHighVolume,IsSecurityEnabled,IsView,LoadSeq,Name,ReplicationType,TableName,Updated,UpdatedBy) VALUES ('4',0,0,53501,'N',TO_TIMESTAMP('2013-06-26 10:45:05','YYYY-MM-DD HH24:MI:SS'),100,'ECA01','N','Y','Y','N','Y','N','N','N',0,'Sync/Option Menu','L','SFA_SyncMenu',TO_TIMESTAMP('2013-06-26 10:45:05','YYYY-MM-DD HH24:MI:SS'),100)
+INSERT INTO AD_Table (AccessLevel,AD_Client_ID,AD_Org_ID,AD_Table_ID,CopyColumnsFromTable,Created,CreatedBy,EntityType,ImportTable,IsActive,IsCentrallyMaintained,IsChangeLog,IsDeleteable,IsHighVolume,IsSecurityEnabled,IsView,LoadSeq,Name,ReplicationType,TableName,Updated,UpdatedBy) VALUES ('4',0,0,53501,'N',TO_TIMESTAMP('2013-06-26 10:45:05','YYYY-MM-DD HH24:MI:SS'),100,'ECA01','N','Y','Y','N','Y','N','N','N',0,'Sync/Option Menu','L','SPS_SyncMenu',TO_TIMESTAMP('2013-06-26 10:45:05','YYYY-MM-DD HH24:MI:SS'),100)
 ;
 
 -- Jun 26, 2013 10:45:18 AM VET
@@ -63,7 +63,7 @@ INSERT INTO AD_Column_Trl (AD_Language,AD_Column_ID, Name, IsTranslated,AD_Clien
 
 -- Jun 26, 2013 10:45:39 AM VET
 -- SFAndroid Contribution
-INSERT INTO AD_Column (AD_Client_ID,AD_Column_ID,AD_Element_ID,AD_Org_ID,AD_Reference_ID,AD_Table_ID,ColumnName,Created,CreatedBy,EntityType,FieldLength,IsActive,IsAlwaysUpdateable,IsEncrypted,IsIdentifier,IsKey,IsMandatory,IsParent,IsSelectionColumn,IsSyncDatabase,IsTranslated,IsUpdateable,Name,SeqNo,Updated,UpdatedBy,Version) VALUES (0,65736,55948,0,13,53501,'SFA_SyncMenu_ID',TO_TIMESTAMP('2013-06-26 10:45:38','YYYY-MM-DD HH24:MI:SS'),100,'ECA01',22,'Y','N','N','N','Y','Y','N','N','N','N','N','Sync/Option Menu',0,TO_TIMESTAMP('2013-06-26 10:45:38','YYYY-MM-DD HH24:MI:SS'),100,1)
+INSERT INTO AD_Column (AD_Client_ID,AD_Column_ID,AD_Element_ID,AD_Org_ID,AD_Reference_ID,AD_Table_ID,ColumnName,Created,CreatedBy,EntityType,FieldLength,IsActive,IsAlwaysUpdateable,IsEncrypted,IsIdentifier,IsKey,IsMandatory,IsParent,IsSelectionColumn,IsSyncDatabase,IsTranslated,IsUpdateable,Name,SeqNo,Updated,UpdatedBy,Version) VALUES (0,65736,55948,0,13,53501,'SPS_SyncMenu_ID',TO_TIMESTAMP('2013-06-26 10:45:38','YYYY-MM-DD HH24:MI:SS'),100,'ECA01',22,'Y','N','N','N','Y','Y','N','N','N','N','N','Sync/Option Menu',0,TO_TIMESTAMP('2013-06-26 10:45:38','YYYY-MM-DD HH24:MI:SS'),100,1)
 ;
 
 -- Jun 26, 2013 10:45:39 AM VET
@@ -248,7 +248,7 @@ INSERT INTO AD_Column_Trl (AD_Language,AD_Column_ID, Name, IsTranslated,AD_Clien
 
 -- Jun 26, 2013 10:57:04 AM VET
 -- SFAndroid Contribution
-INSERT INTO AD_Column (AD_Client_ID,AD_Column_ID,AD_Element_ID,AD_Org_ID,AD_Reference_ID,AD_Table_ID,ColumnName,Created,CreatedBy,EntityType,FieldLength,IsActive,IsAllowLogging,IsAlwaysUpdateable,IsAutocomplete,IsEncrypted,IsIdentifier,IsKey,IsMandatory,IsParent,IsSelectionColumn,IsSyncDatabase,IsTranslated,IsUpdateable,MandatoryLogic,Name,SeqNo,Updated,UpdatedBy,Version) VALUES (0,65754,55949,0,19,53501,'SFA_SyncTable_ID',TO_TIMESTAMP('2013-06-26 10:57:00','YYYY-MM-DD HH24:MI:SS'),100,'ECA01',10,'Y','Y','N','N','N','N','N','N','N','N','N','N','Y','@DeploymentType@ = ''L'' | @DeploymentType@ = ''W'' | @DeploymentType@ = ''M''''','Synchronizing Table',0,TO_TIMESTAMP('2013-06-26 10:57:00','YYYY-MM-DD HH24:MI:SS'),100,0)
+INSERT INTO AD_Column (AD_Client_ID,AD_Column_ID,AD_Element_ID,AD_Org_ID,AD_Reference_ID,AD_Table_ID,ColumnName,Created,CreatedBy,EntityType,FieldLength,IsActive,IsAllowLogging,IsAlwaysUpdateable,IsAutocomplete,IsEncrypted,IsIdentifier,IsKey,IsMandatory,IsParent,IsSelectionColumn,IsSyncDatabase,IsTranslated,IsUpdateable,MandatoryLogic,Name,SeqNo,Updated,UpdatedBy,Version) VALUES (0,65754,55949,0,19,53501,'SPS_SyncTable_ID',TO_TIMESTAMP('2013-06-26 10:57:00','YYYY-MM-DD HH24:MI:SS'),100,'ECA01',10,'Y','Y','N','N','N','N','N','N','N','N','N','N','Y','@DeploymentType@ = ''L'' | @DeploymentType@ = ''W'' | @DeploymentType@ = ''M''''','Synchronizing Table',0,TO_TIMESTAMP('2013-06-26 10:57:00','YYYY-MM-DD HH24:MI:SS'),100,0)
 ;
 
 -- Jun 26, 2013 10:57:04 AM VET

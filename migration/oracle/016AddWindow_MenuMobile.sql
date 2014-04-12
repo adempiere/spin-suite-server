@@ -15,7 +15,7 @@ UPDATE AD_Window_Trl SET Name='Menú del Móvil',Description='Menú del Móvil',
 
 -- Jun 26, 2013 11:57:29 AM VET
 -- SFAndroid Contribution
-INSERT INTO AD_Tab (AD_Client_ID,AD_Org_ID,AD_Tab_ID,AD_Table_ID,AD_Window_ID,Created,CreatedBy,Description,EntityType,HasTree,ImportFields,IsActive,IsAdvancedTab,IsInfoTab,IsInsertRecord,IsReadOnly,IsSingleRow,IsSortTab,IsTranslationTab,Name,Processing,SeqNo,TabLevel,Updated,UpdatedBy,WhereClause) VALUES (0,0,53656,53501,53234,TO_DATE('2013-06-26 11:57:25','YYYY-MM-DD HH24:MI:SS'),100,'Mobile Menu','ECA01','Y','N','Y','N','N','Y','N','Y','N','N','Mobile Menu','N',10,0,TO_DATE('2013-06-26 11:57:25','YYYY-MM-DD HH24:MI:SS'),100,'SFA_SyncMenu.Action <> ''W'' OR (SFA_SyncMenu.IsSummary = ''Y'' AND SFA_SyncMenu.Action <> ''W'')')
+INSERT INTO AD_Tab (AD_Client_ID,AD_Org_ID,AD_Tab_ID,AD_Table_ID,AD_Window_ID,Created,CreatedBy,Description,EntityType,HasTree,ImportFields,IsActive,IsAdvancedTab,IsInfoTab,IsInsertRecord,IsReadOnly,IsSingleRow,IsSortTab,IsTranslationTab,Name,Processing,SeqNo,TabLevel,Updated,UpdatedBy,WhereClause) VALUES (0,0,53656,53501,53234,TO_DATE('2013-06-26 11:57:25','YYYY-MM-DD HH24:MI:SS'),100,'Mobile Menu','ECA01','Y','N','Y','N','N','Y','N','Y','N','N','Mobile Menu','N',10,0,TO_DATE('2013-06-26 11:57:25','YYYY-MM-DD HH24:MI:SS'),100,'SPS_SyncMenu.Action <> ''W'' OR (SPS_SyncMenu.IsSummary = ''Y'' AND SPS_SyncMenu.Action <> ''W'')')
 ;
 
 -- Jun 26, 2013 11:57:29 AM VET

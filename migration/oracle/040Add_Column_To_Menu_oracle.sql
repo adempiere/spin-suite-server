@@ -95,7 +95,7 @@ UPDATE AD_Element_Trl SET Name='Menú de Acción Rápida',PrintName='Menú de Ac
 
 -- Aug 15, 2013 12:27:09 AM VET
 -- SFAndroid Contribution
-INSERT INTO AD_Reference (AD_Client_ID,AD_Org_ID,AD_Reference_ID,Created,CreatedBy,EntityType,IsActive,IsOrderByValue,Name,Updated,UpdatedBy,ValidationType) VALUES (0,0,53524,TO_DATE('2013-08-15 00:27:08','YYYY-MM-DD HH24:MI:SS'),100,'ECA01','Y','N','SFA_Menu',TO_DATE('2013-08-15 00:27:08','YYYY-MM-DD HH24:MI:SS'),100,'T')
+INSERT INTO AD_Reference (AD_Client_ID,AD_Org_ID,AD_Reference_ID,Created,CreatedBy,EntityType,IsActive,IsOrderByValue,Name,Updated,UpdatedBy,ValidationType) VALUES (0,0,53524,TO_DATE('2013-08-15 00:27:08','YYYY-MM-DD HH24:MI:SS'),100,'ECA01','Y','N','SPS_Menu',TO_DATE('2013-08-15 00:27:08','YYYY-MM-DD HH24:MI:SS'),100,'T')
 ;
 
 -- Aug 15, 2013 12:27:09 AM VET
@@ -110,7 +110,7 @@ INSERT INTO AD_Ref_Table (AD_Client_ID,AD_Display,AD_Key,AD_Org_ID,AD_Reference_
 
 -- Aug 15, 2013 12:28:38 AM VET
 -- SFAndroid Contribution
-INSERT INTO AD_Val_Rule (AD_Client_ID,AD_Org_ID,AD_Val_Rule_ID,Code,Created,CreatedBy,EntityType,IsActive,Name,Type,Updated,UpdatedBy) VALUES (0,0,52179,'SFA_Menu.Action = ''Q''',TO_DATE('2013-08-15 00:28:37','YYYY-MM-DD HH24:MI:SS'),100,'ECA01','Y','SFA_Menu Quick Action','S',TO_DATE('2013-08-15 00:28:37','YYYY-MM-DD HH24:MI:SS'),100)
+INSERT INTO AD_Val_Rule (AD_Client_ID,AD_Org_ID,AD_Val_Rule_ID,Code,Created,CreatedBy,EntityType,IsActive,Name,Type,Updated,UpdatedBy) VALUES (0,0,52179,'SPS_Menu.Action = ''Q''',TO_DATE('2013-08-15 00:28:37','YYYY-MM-DD HH24:MI:SS'),100,'ECA01','Y','SPS_Menu Quick Action','S',TO_DATE('2013-08-15 00:28:37','YYYY-MM-DD HH24:MI:SS'),100)
 ;
 
 -- Aug 15, 2013 12:28:51 AM VET
@@ -130,12 +130,12 @@ INSERT INTO AD_Field_Trl (AD_Language,AD_Field_ID, Description,Help,Name, IsTran
 
 -- Aug 15, 2013 12:35:08 AM VET
 -- SFAndroid Contribution
-UPDATE AD_Val_Rule SET Code='SFA_Menu.IsSummary = ''Y''', Name='SFA_Menu Quick Is Summary',Updated=TO_DATE('2013-08-15 00:35:08','YYYY-MM-DD HH24:MI:SS'),UpdatedBy=100 WHERE AD_Val_Rule_ID=52179
+UPDATE AD_Val_Rule SET Code='SPS_Menu.IsSummary = ''Y''', Name='SPS_Menu Quick Is Summary',Updated=TO_DATE('2013-08-15 00:35:08','YYYY-MM-DD HH24:MI:SS'),UpdatedBy=100 WHERE AD_Val_Rule_ID=52179
 ;
 
 -- Aug 15, 2013 12:37:15 AM VET
 -- SFAndroid Contribution
-INSERT INTO AD_Column (AD_Client_ID,AD_Column_ID,AD_Element_ID,AD_Org_ID,AD_Reference_ID,AD_Table_ID,ColumnName,Created,CreatedBy,EntityType,FieldLength,IsActive,IsAllowLogging,IsAlwaysUpdateable,IsAutocomplete,IsEncrypted,IsIdentifier,IsKey,IsMandatory,IsParent,IsSelectionColumn,IsSyncDatabase,IsTranslated,IsUpdateable,Name,SeqNo,Updated,UpdatedBy,Version) VALUES (0,66703,55948,0,19,53518,'SFA_SyncMenu_ID',TO_DATE('2013-08-15 00:37:15','YYYY-MM-DD HH24:MI:SS'),100,'ECA01',10,'Y','Y','N','N','N','N','N','N','N','N','N','N','Y','Sync/Option Menu',0,TO_DATE('2013-08-15 00:37:15','YYYY-MM-DD HH24:MI:SS'),100,0)
+INSERT INTO AD_Column (AD_Client_ID,AD_Column_ID,AD_Element_ID,AD_Org_ID,AD_Reference_ID,AD_Table_ID,ColumnName,Created,CreatedBy,EntityType,FieldLength,IsActive,IsAllowLogging,IsAlwaysUpdateable,IsAutocomplete,IsEncrypted,IsIdentifier,IsKey,IsMandatory,IsParent,IsSelectionColumn,IsSyncDatabase,IsTranslated,IsUpdateable,Name,SeqNo,Updated,UpdatedBy,Version) VALUES (0,66703,55948,0,19,53518,'SPS_SyncMenu_ID',TO_DATE('2013-08-15 00:37:15','YYYY-MM-DD HH24:MI:SS'),100,'ECA01',10,'Y','Y','N','N','N','N','N','N','N','N','N','N','Y','Sync/Option Menu',0,TO_DATE('2013-08-15 00:37:15','YYYY-MM-DD HH24:MI:SS'),100,0)
 ;
 
 -- Aug 15, 2013 12:37:15 AM VET

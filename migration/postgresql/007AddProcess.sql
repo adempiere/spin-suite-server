@@ -1,6 +1,6 @@
 -- Jun 26, 2013 9:46:23 AM VET
 -- SFAndroid Contribution
-INSERT INTO AD_Process (AccessLevel,AD_Client_ID,AD_Org_ID,AD_Process_ID,Classname,CopyFromProcess,Created,CreatedBy,Description,EntityType,IsActive,IsBetaFunctionality,IsDirectPrint,IsReport,IsServerProcess,Name,ShowHelp,Statistic_Count,Statistic_Seconds,Updated,UpdatedBy,Value) VALUES ('4',0,0,53391,'org.erpca.process.CopyColumnsFromTable','N',TO_TIMESTAMP('2013-06-26 09:46:19','YYYY-MM-DD HH24:MI:SS'),100,'Copy Columns from Table','ECA01','Y','N','N','N','N','Copy Columns from Table','Y',0,0,TO_TIMESTAMP('2013-06-26 09:46:19','YYYY-MM-DD HH24:MI:SS'),100,'SFA_SyncTable_CopyColumnsFromTable')
+INSERT INTO AD_Process (AccessLevel,AD_Client_ID,AD_Org_ID,AD_Process_ID,Classname,CopyFromProcess,Created,CreatedBy,Description,EntityType,IsActive,IsBetaFunctionality,IsDirectPrint,IsReport,IsServerProcess,Name,ShowHelp,Statistic_Count,Statistic_Seconds,Updated,UpdatedBy,Value) VALUES ('4',0,0,53391,'org.erpca.process.CopyColumnsFromTable','N',TO_TIMESTAMP('2013-06-26 09:46:19','YYYY-MM-DD HH24:MI:SS'),100,'Copy Columns from Table','ECA01','Y','N','N','N','N','Copy Columns from Table','Y',0,0,TO_TIMESTAMP('2013-06-26 09:46:19','YYYY-MM-DD HH24:MI:SS'),100,'SPS_SyncTable_CopyColumnsFromTable')
 ;
 
 -- Jun 26, 2013 9:46:23 AM VET
@@ -35,7 +35,7 @@ UPDATE AD_Process_Para_Trl SET IsTranslated='N' WHERE AD_Process_Para_ID=53914
 
 -- Jun 26, 2013 9:49:30 AM VET
 -- SFAndroid Contribution
-INSERT INTO AD_Process (AccessLevel,AD_Client_ID,AD_Org_ID,AD_Process_ID,Classname,CopyFromProcess,Created,CreatedBy,Description,EntityType,IsActive,IsBetaFunctionality,IsDirectPrint,IsReport,IsServerProcess,Name,ShowHelp,Statistic_Count,Statistic_Seconds,Updated,UpdatedBy,Value) VALUES ('4',0,0,53392,'org.erpca.process.GenerateScriptFromTable','N',TO_TIMESTAMP('2013-06-26 09:49:26','YYYY-MM-DD HH24:MI:SS'),100,'Generate Script From Table','ECA01','Y','N','N','N','N','Generate Script From Table','Y',0,0,TO_TIMESTAMP('2013-06-26 09:49:26','YYYY-MM-DD HH24:MI:SS'),100,'SFA_SyncTable_GenerateScriptFromTable')
+INSERT INTO AD_Process (AccessLevel,AD_Client_ID,AD_Org_ID,AD_Process_ID,Classname,CopyFromProcess,Created,CreatedBy,Description,EntityType,IsActive,IsBetaFunctionality,IsDirectPrint,IsReport,IsServerProcess,Name,ShowHelp,Statistic_Count,Statistic_Seconds,Updated,UpdatedBy,Value) VALUES ('4',0,0,53392,'org.erpca.process.GenerateScriptFromTable','N',TO_TIMESTAMP('2013-06-26 09:49:26','YYYY-MM-DD HH24:MI:SS'),100,'Generate Script From Table','ECA01','Y','N','N','N','N','Generate Script From Table','Y',0,0,TO_TIMESTAMP('2013-06-26 09:49:26','YYYY-MM-DD HH24:MI:SS'),100,'SPS_SyncTable_GenerateScriptFromTable')
 ;
 
 -- Jun 26, 2013 9:49:30 AM VET

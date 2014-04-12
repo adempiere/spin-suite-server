@@ -164,7 +164,7 @@ INSERT INTO AD_Field_Trl (AD_Language,AD_Field_ID, Description,Help,Name, IsTran
 
 -- Feb 19, 2014 10:59:30 AM VET
 -- SFAndroid Server
-UPDATE AD_Tab SET OrderByClause='SFA_Field.SeqNo',Updated=TO_TIMESTAMP('2014-02-19 10:59:30','YYYY-MM-DD HH24:MI:SS'),UpdatedBy=100 WHERE AD_Tab_ID=53899
+UPDATE AD_Tab SET OrderByClause='SPS_Field.SeqNo',Updated=TO_TIMESTAMP('2014-02-19 10:59:30','YYYY-MM-DD HH24:MI:SS'),UpdatedBy=100 WHERE AD_Tab_ID=53899
 ;
 
 -- Feb 19, 2014 11:01:34 AM VET

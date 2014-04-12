@@ -143,37 +143,37 @@ INSERT INTO AD_Column_Trl (AD_Language,AD_Column_ID, Name, IsTranslated,AD_Clien
 
 -- Jun 26, 2013 10:39:52 AM VET
 -- SFAndroid Contribution
-UPDATE AD_Table SET TableName='SFA_SyncColumn_Trl',Updated=TO_TIMESTAMP('2013-06-26 10:39:52','YYYY-MM-DD HH24:MI:SS'),UpdatedBy=100 WHERE AD_Table_ID=53500
+UPDATE AD_Table SET TableName='SPS_SyncColumn_Trl',Updated=TO_TIMESTAMP('2013-06-26 10:39:52','YYYY-MM-DD HH24:MI:SS'),UpdatedBy=100 WHERE AD_Table_ID=53500
 ;
 
 -- Jun 26, 2013 10:39:56 AM VET
 -- SFAndroid Contribution
-INSERT INTO AD_Sequence (AD_Client_ID,AD_Org_ID,AD_Sequence_ID,Created,CreatedBy,CurrentNext,CurrentNextSys,Description,IncrementNo,IsActive,IsAudited,IsAutoSequence,IsTableID,Name,StartNewYear,StartNo,Updated,UpdatedBy) VALUES (0,0,53627,TO_TIMESTAMP('2013-06-26 10:39:52','YYYY-MM-DD HH24:MI:SS'),100,1000000,50000,'Table SFA_SyncColumn_Trl',1,'Y','N','Y','Y','SFA_SyncColumn_Trl','N',1000000,TO_TIMESTAMP('2013-06-26 10:39:52','YYYY-MM-DD HH24:MI:SS'),100)
+INSERT INTO AD_Sequence (AD_Client_ID,AD_Org_ID,AD_Sequence_ID,Created,CreatedBy,CurrentNext,CurrentNextSys,Description,IncrementNo,IsActive,IsAudited,IsAutoSequence,IsTableID,Name,StartNewYear,StartNo,Updated,UpdatedBy) VALUES (0,0,53627,TO_TIMESTAMP('2013-06-26 10:39:52','YYYY-MM-DD HH24:MI:SS'),100,1000000,50000,'Table SPS_SyncColumn_Trl',1,'Y','N','Y','Y','SPS_SyncColumn_Trl','N',1000000,TO_TIMESTAMP('2013-06-26 10:39:52','YYYY-MM-DD HH24:MI:SS'),100)
 ;
 
 -- Jun 26, 2013 10:40:08 AM VET
 -- SFAndroid Contribution
-UPDATE AD_Element SET ColumnName='SFA_SyncColumn_Trl_ID',Updated=TO_TIMESTAMP('2013-06-26 10:40:08','YYYY-MM-DD HH24:MI:SS'),UpdatedBy=100 WHERE AD_Element_ID=55961
+UPDATE AD_Element SET ColumnName='SPS_SyncColumn_Trl_ID',Updated=TO_TIMESTAMP('2013-06-26 10:40:08','YYYY-MM-DD HH24:MI:SS'),UpdatedBy=100 WHERE AD_Element_ID=55961
 ;
 
 -- Jun 26, 2013 10:40:08 AM VET
 -- SFAndroid Contribution
-UPDATE AD_Column SET ColumnName='SFA_SyncColumn_Trl_ID', Name='Synchronizing Column Translation', Description=NULL, Help=NULL WHERE AD_Element_ID=55961
+UPDATE AD_Column SET ColumnName='SPS_SyncColumn_Trl_ID', Name='Synchronizing Column Translation', Description=NULL, Help=NULL WHERE AD_Element_ID=55961
 ;
 
 -- Jun 26, 2013 10:40:08 AM VET
 -- SFAndroid Contribution
-UPDATE AD_Process_Para SET ColumnName='SFA_SyncColumn_Trl_ID', Name='Synchronizing Column Translation', Description=NULL, Help=NULL, AD_Element_ID=55961 WHERE UPPER(ColumnName)='SFA_SYNCCOLUMN_TRL_ID' AND IsCentrallyMaintained='Y' AND AD_Element_ID IS NULL
+UPDATE AD_Process_Para SET ColumnName='SPS_SyncColumn_Trl_ID', Name='Synchronizing Column Translation', Description=NULL, Help=NULL, AD_Element_ID=55961 WHERE UPPER(ColumnName)='SPS_SYNCCOLUMN_TRL_ID' AND IsCentrallyMaintained='Y' AND AD_Element_ID IS NULL
 ;
 
 -- Jun 26, 2013 10:40:08 AM VET
 -- SFAndroid Contribution
-UPDATE AD_Process_Para SET ColumnName='SFA_SyncColumn_Trl_ID', Name='Synchronizing Column Translation', Description=NULL, Help=NULL WHERE AD_Element_ID=55961 AND IsCentrallyMaintained='Y'
+UPDATE AD_Process_Para SET ColumnName='SPS_SyncColumn_Trl_ID', Name='Synchronizing Column Translation', Description=NULL, Help=NULL WHERE AD_Element_ID=55961 AND IsCentrallyMaintained='Y'
 ;
 
 -- Jun 26, 2013 10:41:02 AM VET
 -- SFAndroid Contribution
-UPDATE AD_Column SET AD_Element_ID=55947, AD_Reference_ID=19, ColumnName='SFA_SyncColumn_ID', Description=NULL, FieldLength=10, Help=NULL, IsKey='N', IsMandatory='N', IsParent='Y', IsUpdateable='N', Name='Synchronizing Column', Version=1.000000000000,Updated=TO_TIMESTAMP('2013-06-26 10:41:02','YYYY-MM-DD HH24:MI:SS'),UpdatedBy=100 WHERE AD_Column_ID=65725
+UPDATE AD_Column SET AD_Element_ID=55947, AD_Reference_ID=19, ColumnName='SPS_SyncColumn_ID', Description=NULL, FieldLength=10, Help=NULL, IsKey='N', IsMandatory='N', IsParent='Y', IsUpdateable='N', Name='Synchronizing Column', Version=1.000000000000,Updated=TO_TIMESTAMP('2013-06-26 10:41:02','YYYY-MM-DD HH24:MI:SS'),UpdatedBy=100 WHERE AD_Column_ID=65725
 ;
 
 -- Jun 26, 2013 10:41:02 AM VET

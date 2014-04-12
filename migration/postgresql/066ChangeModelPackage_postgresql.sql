@@ -20,12 +20,12 @@ INSERT INTO AD_UserQuery (AD_Client_ID,AD_Org_ID,AD_Tab_ID,AD_Table_ID,AD_User_I
 
 -- Apr 8, 2014 11:11:14 PM CEST
 -- SFAndroid Server
-UPDATE AD_Process SET Classname='org.spinsuite.process.CopyColumnsFromTable', Value='SFA_Table_CopyColumnsFromTable',Updated=TO_TIMESTAMP('2014-04-08 23:11:14','YYYY-MM-DD HH24:MI:SS'),UpdatedBy=100 WHERE AD_Process_ID=53391
+UPDATE AD_Process SET Classname='org.spinsuite.process.CopyColumnsFromTable', Value='SPS_Table_CopyColumnsFromTable',Updated=TO_TIMESTAMP('2014-04-08 23:11:14','YYYY-MM-DD HH24:MI:SS'),UpdatedBy=100 WHERE AD_Process_ID=53391
 ;
 
 -- Apr 8, 2014 11:11:31 PM CEST
 -- SFAndroid Server
-UPDATE AD_Process SET Classname='org.spinsuite.process.GenerateScriptFromTable', Value='SFA_Table_GenerateScriptFromTable',Updated=TO_TIMESTAMP('2014-04-08 23:11:31','YYYY-MM-DD HH24:MI:SS'),UpdatedBy=100 WHERE AD_Process_ID=53392
+UPDATE AD_Process SET Classname='org.spinsuite.process.GenerateScriptFromTable', Value='SPS_Table_GenerateScriptFromTable',Updated=TO_TIMESTAMP('2014-04-08 23:11:31','YYYY-MM-DD HH24:MI:SS'),UpdatedBy=100 WHERE AD_Process_ID=53392
 ;
 
 -- Apr 8, 2014 11:11:39 PM CEST

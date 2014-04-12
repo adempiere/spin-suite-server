@@ -1,6 +1,6 @@
 -- Feb 14, 2014 10:13:45 AM CET
 -- SFAndroid Server
-UPDATE AD_Table SET Name='Mobile Table', TableName='SFA_Table',Updated=TO_TIMESTAMP('2014-02-14 10:13:45','YYYY-MM-DD HH24:MI:SS'),UpdatedBy=100 WHERE AD_Table_ID=53503
+UPDATE AD_Table SET Name='Mobile Table', TableName='SPS_Table',Updated=TO_TIMESTAMP('2014-02-14 10:13:45','YYYY-MM-DD HH24:MI:SS'),UpdatedBy=100 WHERE AD_Table_ID=53503
 ;
 
 -- Feb 14, 2014 10:13:45 AM CET
@@ -10,7 +10,7 @@ UPDATE AD_Table_Trl SET IsTranslated='N' WHERE AD_Table_ID=53503
 
 -- Feb 14, 2014 10:13:47 AM CET
 -- SFAndroid Server
-INSERT INTO AD_Sequence (AD_Client_ID,AD_Org_ID,AD_Sequence_ID,Created,CreatedBy,CurrentNext,CurrentNextSys,Description,IncrementNo,IsActive,IsAudited,IsAutoSequence,IsTableID,Name,StartNewYear,StartNo,Updated,UpdatedBy) VALUES (0,0,53903,TO_TIMESTAMP('2014-02-14 10:13:45','YYYY-MM-DD HH24:MI:SS'),100,1000000,50000,'Table SFA_Table',1,'Y','N','Y','Y','SFA_Table','N',1000000,TO_TIMESTAMP('2014-02-14 10:13:45','YYYY-MM-DD HH24:MI:SS'),100)
+INSERT INTO AD_Sequence (AD_Client_ID,AD_Org_ID,AD_Sequence_ID,Created,CreatedBy,CurrentNext,CurrentNextSys,Description,IncrementNo,IsActive,IsAudited,IsAutoSequence,IsTableID,Name,StartNewYear,StartNo,Updated,UpdatedBy) VALUES (0,0,53903,TO_TIMESTAMP('2014-02-14 10:13:45','YYYY-MM-DD HH24:MI:SS'),100,1000000,50000,'Table SPS_Table',1,'Y','N','Y','Y','SPS_Table','N',1000000,TO_TIMESTAMP('2014-02-14 10:13:45','YYYY-MM-DD HH24:MI:SS'),100)
 ;
 
 -- Feb 14, 2014 10:14:12 AM CET
@@ -20,7 +20,7 @@ UPDATE AD_Table_Trl SET Name='Tabla Móvil',Updated=TO_TIMESTAMP('2014-02-14 10:
 
 -- Feb 14, 2014 10:14:48 AM CET
 -- SFAndroid Server
-UPDATE AD_Element SET ColumnName='SFA_Table_ID', Name='Mobile Table', PrintName='Mobile Table',Updated=TO_TIMESTAMP('2014-02-14 10:14:48','YYYY-MM-DD HH24:MI:SS'),UpdatedBy=100 WHERE AD_Element_ID=55949
+UPDATE AD_Element SET ColumnName='SPS_Table_ID', Name='Mobile Table', PrintName='Mobile Table',Updated=TO_TIMESTAMP('2014-02-14 10:14:48','YYYY-MM-DD HH24:MI:SS'),UpdatedBy=100 WHERE AD_Element_ID=55949
 ;
 
 -- Feb 14, 2014 10:14:48 AM CET
@@ -30,17 +30,17 @@ UPDATE AD_Element_Trl SET IsTranslated='N' WHERE AD_Element_ID=55949
 
 -- Feb 14, 2014 10:14:48 AM CET
 -- SFAndroid Server
-UPDATE AD_Column SET ColumnName='SFA_Table_ID', Name='Mobile Table', Description=NULL, Help=NULL WHERE AD_Element_ID=55949
+UPDATE AD_Column SET ColumnName='SPS_Table_ID', Name='Mobile Table', Description=NULL, Help=NULL WHERE AD_Element_ID=55949
 ;
 
 -- Feb 14, 2014 10:14:48 AM CET
 -- SFAndroid Server
-UPDATE AD_Process_Para SET ColumnName='SFA_Table_ID', Name='Mobile Table', Description=NULL, Help=NULL, AD_Element_ID=55949 WHERE UPPER(ColumnName)='SFA_TABLE_ID' AND IsCentrallyMaintained='Y' AND AD_Element_ID IS NULL
+UPDATE AD_Process_Para SET ColumnName='SPS_Table_ID', Name='Mobile Table', Description=NULL, Help=NULL, AD_Element_ID=55949 WHERE UPPER(ColumnName)='SPS_TABLE_ID' AND IsCentrallyMaintained='Y' AND AD_Element_ID IS NULL
 ;
 
 -- Feb 14, 2014 10:14:48 AM CET
 -- SFAndroid Server
-UPDATE AD_Process_Para SET ColumnName='SFA_Table_ID', Name='Mobile Table', Description=NULL, Help=NULL WHERE AD_Element_ID=55949 AND IsCentrallyMaintained='Y'
+UPDATE AD_Process_Para SET ColumnName='SPS_Table_ID', Name='Mobile Table', Description=NULL, Help=NULL WHERE AD_Element_ID=55949 AND IsCentrallyMaintained='Y'
 ;
 
 -- Feb 14, 2014 10:14:48 AM CET
@@ -60,7 +60,7 @@ UPDATE AD_Element_Trl SET Name='Tabla Móvil',PrintName='Tabla Móvil',Updated=T
 
 -- Feb 14, 2014 10:16:04 AM CET
 -- SFAndroid Server
-UPDATE AD_Table SET Name='Mobile Table Translation', TableName='SFA_Table_Trl',Updated=TO_TIMESTAMP('2014-02-14 10:16:04','YYYY-MM-DD HH24:MI:SS'),UpdatedBy=100 WHERE AD_Table_ID=53504
+UPDATE AD_Table SET Name='Mobile Table Translation', TableName='SPS_Table_Trl',Updated=TO_TIMESTAMP('2014-02-14 10:16:04','YYYY-MM-DD HH24:MI:SS'),UpdatedBy=100 WHERE AD_Table_ID=53504
 ;
 
 -- Feb 14, 2014 10:16:04 AM CET
@@ -70,12 +70,12 @@ UPDATE AD_Table_Trl SET IsTranslated='N' WHERE AD_Table_ID=53504
 
 -- Feb 14, 2014 10:16:05 AM CET
 -- SFAndroid Server
-INSERT INTO AD_Sequence (AD_Client_ID,AD_Org_ID,AD_Sequence_ID,Created,CreatedBy,CurrentNext,CurrentNextSys,Description,IncrementNo,IsActive,IsAudited,IsAutoSequence,IsTableID,Name,StartNewYear,StartNo,Updated,UpdatedBy) VALUES (0,0,53904,TO_TIMESTAMP('2014-02-14 10:16:04','YYYY-MM-DD HH24:MI:SS'),100,1000000,50000,'Table SFA_Table_Trl',1,'Y','N','Y','Y','SFA_Table_Trl','N',1000000,TO_TIMESTAMP('2014-02-14 10:16:04','YYYY-MM-DD HH24:MI:SS'),100)
+INSERT INTO AD_Sequence (AD_Client_ID,AD_Org_ID,AD_Sequence_ID,Created,CreatedBy,CurrentNext,CurrentNextSys,Description,IncrementNo,IsActive,IsAudited,IsAutoSequence,IsTableID,Name,StartNewYear,StartNo,Updated,UpdatedBy) VALUES (0,0,53904,TO_TIMESTAMP('2014-02-14 10:16:04','YYYY-MM-DD HH24:MI:SS'),100,1000000,50000,'Table SPS_Table_Trl',1,'Y','N','Y','Y','SPS_Table_Trl','N',1000000,TO_TIMESTAMP('2014-02-14 10:16:04','YYYY-MM-DD HH24:MI:SS'),100)
 ;
 
 -- Feb 14, 2014 10:16:39 AM CET
 -- SFAndroid Server
-UPDATE AD_Table SET Name='Mobile Column', TableName='SFA_Column',Updated=TO_TIMESTAMP('2014-02-14 10:16:39','YYYY-MM-DD HH24:MI:SS'),UpdatedBy=100 WHERE AD_Table_ID=53499
+UPDATE AD_Table SET Name='Mobile Column', TableName='SPS_Column',Updated=TO_TIMESTAMP('2014-02-14 10:16:39','YYYY-MM-DD HH24:MI:SS'),UpdatedBy=100 WHERE AD_Table_ID=53499
 ;
 
 -- Feb 14, 2014 10:16:39 AM CET
@@ -85,7 +85,7 @@ UPDATE AD_Table_Trl SET IsTranslated='N' WHERE AD_Table_ID=53499
 
 -- Feb 14, 2014 10:16:40 AM CET
 -- SFAndroid Server
-INSERT INTO AD_Sequence (AD_Client_ID,AD_Org_ID,AD_Sequence_ID,Created,CreatedBy,CurrentNext,CurrentNextSys,Description,IncrementNo,IsActive,IsAudited,IsAutoSequence,IsTableID,Name,StartNewYear,StartNo,Updated,UpdatedBy) VALUES (0,0,53905,TO_TIMESTAMP('2014-02-14 10:16:39','YYYY-MM-DD HH24:MI:SS'),100,1000000,50000,'Table SFA_Column',1,'Y','N','Y','Y','SFA_Column','N',1000000,TO_TIMESTAMP('2014-02-14 10:16:39','YYYY-MM-DD HH24:MI:SS'),100)
+INSERT INTO AD_Sequence (AD_Client_ID,AD_Org_ID,AD_Sequence_ID,Created,CreatedBy,CurrentNext,CurrentNextSys,Description,IncrementNo,IsActive,IsAudited,IsAutoSequence,IsTableID,Name,StartNewYear,StartNo,Updated,UpdatedBy) VALUES (0,0,53905,TO_TIMESTAMP('2014-02-14 10:16:39','YYYY-MM-DD HH24:MI:SS'),100,1000000,50000,'Table SPS_Column',1,'Y','N','Y','Y','SPS_Column','N',1000000,TO_TIMESTAMP('2014-02-14 10:16:39','YYYY-MM-DD HH24:MI:SS'),100)
 ;
 
 -- Feb 14, 2014 10:16:58 AM CET
@@ -95,7 +95,7 @@ UPDATE AD_Table_Trl SET Name='Columna de Móvil',Updated=TO_TIMESTAMP('2014-02-1
 
 -- Feb 14, 2014 10:18:04 AM CET
 -- SFAndroid Server
-UPDATE AD_Element SET ColumnName='SFA_Column_ID', Name='Mobile Column', PrintName='Mobile Column',Updated=TO_TIMESTAMP('2014-02-14 10:18:04','YYYY-MM-DD HH24:MI:SS'),UpdatedBy=100 WHERE AD_Element_ID=55947
+UPDATE AD_Element SET ColumnName='SPS_Column_ID', Name='Mobile Column', PrintName='Mobile Column',Updated=TO_TIMESTAMP('2014-02-14 10:18:04','YYYY-MM-DD HH24:MI:SS'),UpdatedBy=100 WHERE AD_Element_ID=55947
 ;
 
 -- Feb 14, 2014 10:18:04 AM CET
@@ -105,17 +105,17 @@ UPDATE AD_Element_Trl SET IsTranslated='N' WHERE AD_Element_ID=55947
 
 -- Feb 14, 2014 10:18:04 AM CET
 -- SFAndroid Server
-UPDATE AD_Column SET ColumnName='SFA_Column_ID', Name='Mobile Column', Description=NULL, Help=NULL WHERE AD_Element_ID=55947
+UPDATE AD_Column SET ColumnName='SPS_Column_ID', Name='Mobile Column', Description=NULL, Help=NULL WHERE AD_Element_ID=55947
 ;
 
 -- Feb 14, 2014 10:18:04 AM CET
 -- SFAndroid Server
-UPDATE AD_Process_Para SET ColumnName='SFA_Column_ID', Name='Mobile Column', Description=NULL, Help=NULL, AD_Element_ID=55947 WHERE UPPER(ColumnName)='SFA_COLUMN_ID' AND IsCentrallyMaintained='Y' AND AD_Element_ID IS NULL
+UPDATE AD_Process_Para SET ColumnName='SPS_Column_ID', Name='Mobile Column', Description=NULL, Help=NULL, AD_Element_ID=55947 WHERE UPPER(ColumnName)='SPS_COLUMN_ID' AND IsCentrallyMaintained='Y' AND AD_Element_ID IS NULL
 ;
 
 -- Feb 14, 2014 10:18:04 AM CET
 -- SFAndroid Server
-UPDATE AD_Process_Para SET ColumnName='SFA_Column_ID', Name='Mobile Column', Description=NULL, Help=NULL WHERE AD_Element_ID=55947 AND IsCentrallyMaintained='Y'
+UPDATE AD_Process_Para SET ColumnName='SPS_Column_ID', Name='Mobile Column', Description=NULL, Help=NULL WHERE AD_Element_ID=55947 AND IsCentrallyMaintained='Y'
 ;
 
 -- Feb 14, 2014 10:18:04 AM CET
@@ -135,7 +135,7 @@ UPDATE AD_Element_Trl SET Name='Columna del Móvil',PrintName='Columna del Móvi
 
 -- Feb 14, 2014 10:25:30 AM CET
 -- SFAndroid Server
-UPDATE AD_Table SET Name='Translation', TableName='SFA_Column_Trl',Updated=TO_TIMESTAMP('2014-02-14 10:25:30','YYYY-MM-DD HH24:MI:SS'),UpdatedBy=100 WHERE AD_Table_ID=53500
+UPDATE AD_Table SET Name='Translation', TableName='SPS_Column_Trl',Updated=TO_TIMESTAMP('2014-02-14 10:25:30','YYYY-MM-DD HH24:MI:SS'),UpdatedBy=100 WHERE AD_Table_ID=53500
 ;
 
 -- Feb 14, 2014 10:25:30 AM CET
@@ -145,7 +145,7 @@ UPDATE AD_Table_Trl SET IsTranslated='N' WHERE AD_Table_ID=53500
 
 -- Feb 14, 2014 10:25:31 AM CET
 -- SFAndroid Server
-INSERT INTO AD_Sequence (AD_Client_ID,AD_Org_ID,AD_Sequence_ID,Created,CreatedBy,CurrentNext,CurrentNextSys,Description,IncrementNo,IsActive,IsAudited,IsAutoSequence,IsTableID,Name,StartNewYear,StartNo,Updated,UpdatedBy) VALUES (0,0,53906,TO_TIMESTAMP('2014-02-14 10:25:30','YYYY-MM-DD HH24:MI:SS'),100,1000000,50000,'Table SFA_Column_Trl',1,'Y','N','Y','Y','SFA_Column_Trl','N',1000000,TO_TIMESTAMP('2014-02-14 10:25:30','YYYY-MM-DD HH24:MI:SS'),100)
+INSERT INTO AD_Sequence (AD_Client_ID,AD_Org_ID,AD_Sequence_ID,Created,CreatedBy,CurrentNext,CurrentNextSys,Description,IncrementNo,IsActive,IsAudited,IsAutoSequence,IsTableID,Name,StartNewYear,StartNo,Updated,UpdatedBy) VALUES (0,0,53906,TO_TIMESTAMP('2014-02-14 10:25:30','YYYY-MM-DD HH24:MI:SS'),100,1000000,50000,'Table SPS_Column_Trl',1,'Y','N','Y','Y','SPS_Column_Trl','N',1000000,TO_TIMESTAMP('2014-02-14 10:25:30','YYYY-MM-DD HH24:MI:SS'),100)
 ;
 
 -- Feb 14, 2014 10:26:24 AM CET
@@ -285,11 +285,11 @@ INSERT INTO AD_UserQuery (AD_Client_ID,AD_Org_ID,AD_Tab_ID,AD_Table_ID,AD_User_I
 
 -- Feb 14, 2014 10:40:46 AM CET
 -- SFAndroid Server
-UPDATE AD_Val_Rule SET Code='EXISTS(SELECT 1 FROM SFA_Table st WHERE st.SFA_Table_ID = @SFA_Table_ID@ AND st.AD_Table_ID = AD_Column.AD_Table_ID)', Name='AD_Column_ID EXISTS in SFA_Table',Updated=TO_TIMESTAMP('2014-02-14 10:40:46','YYYY-MM-DD HH24:MI:SS'),UpdatedBy=100 WHERE AD_Val_Rule_ID=52166
+UPDATE AD_Val_Rule SET Code='EXISTS(SELECT 1 FROM SPS_Table st WHERE st.SPS_Table_ID = @SPS_Table_ID@ AND st.AD_Table_ID = AD_Column.AD_Table_ID)', Name='AD_Column_ID EXISTS in SPS_Table',Updated=TO_TIMESTAMP('2014-02-14 10:40:46','YYYY-MM-DD HH24:MI:SS'),UpdatedBy=100 WHERE AD_Val_Rule_ID=52166
 ;
 
 -- Feb 14, 2014 10:41:18 AM CET
 -- SFAndroid Server
-UPDATE AD_Val_Rule SET Code='SFA_Tab.SFA_Table_ID=@SFA_Table_ID@', Name='SFA_Tab equal SFA_Table of Context',Updated=TO_TIMESTAMP('2014-02-14 10:41:18','YYYY-MM-DD HH24:MI:SS'),UpdatedBy=100 WHERE AD_Val_Rule_ID=52312
+UPDATE AD_Val_Rule SET Code='SPS_Tab.SPS_Table_ID=@SPS_Table_ID@', Name='SPS_Tab equal SPS_Table of Context',Updated=TO_TIMESTAMP('2014-02-14 10:41:18','YYYY-MM-DD HH24:MI:SS'),UpdatedBy=100 WHERE AD_Val_Rule_ID=52312
 ;
 

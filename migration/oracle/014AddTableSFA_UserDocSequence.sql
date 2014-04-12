@@ -1,6 +1,6 @@
 -- Jun 26, 2013 11:26:37 AM VET
 -- SFAndroid Contribution
-INSERT INTO AD_Table (AccessLevel,AD_Client_ID,AD_Org_ID,AD_Table_ID,CopyColumnsFromTable,Created,CreatedBy,Description,EntityType,ImportTable,IsActive,IsCentrallyMaintained,IsChangeLog,IsDeleteable,IsHighVolume,IsSecurityEnabled,IsView,LoadSeq,Name,ReplicationType,TableName,Updated,UpdatedBy) VALUES ('3',0,0,53505,'N',TO_DATE('2013-06-26 11:26:33','YYYY-MM-DD HH24:MI:SS'),100,'Document Sequence by Sales Representative','ECA01','N','Y','Y','N','Y','N','N','N',0,'Doc Sequence by User','L','SFA_UserDocSequence',TO_DATE('2013-06-26 11:26:33','YYYY-MM-DD HH24:MI:SS'),100)
+INSERT INTO AD_Table (AccessLevel,AD_Client_ID,AD_Org_ID,AD_Table_ID,CopyColumnsFromTable,Created,CreatedBy,Description,EntityType,ImportTable,IsActive,IsCentrallyMaintained,IsChangeLog,IsDeleteable,IsHighVolume,IsSecurityEnabled,IsView,LoadSeq,Name,ReplicationType,TableName,Updated,UpdatedBy) VALUES ('3',0,0,53505,'N',TO_DATE('2013-06-26 11:26:33','YYYY-MM-DD HH24:MI:SS'),100,'Document Sequence by Sales Representative','ECA01','N','Y','Y','N','Y','N','N','N',0,'Doc Sequence by User','L','SPS_UserDocSequence',TO_DATE('2013-06-26 11:26:33','YYYY-MM-DD HH24:MI:SS'),100)
 ;
 
 -- Jun 26, 2013 11:26:37 AM VET
@@ -10,7 +10,7 @@ INSERT INTO AD_Table_Trl (AD_Language,AD_Table_ID, Name, IsTranslated,AD_Client_
 
 -- Jun 26, 2013 11:26:37 AM VET
 -- SFAndroid Contribution
-INSERT INTO AD_Sequence (AD_Client_ID,AD_Org_ID,AD_Sequence_ID,Created,CreatedBy,CurrentNext,CurrentNextSys,Description,IncrementNo,IsActive,IsAudited,IsAutoSequence,IsTableID,Name,StartNewYear,StartNo,Updated,UpdatedBy) VALUES (0,0,53631,TO_DATE('2013-06-26 11:26:37','YYYY-MM-DD HH24:MI:SS'),100,1000000,50000,'Table SFA_UserDocSequence',1,'Y','N','Y','Y','SFA_UserDocSequence','N',1000000,TO_DATE('2013-06-26 11:26:37','YYYY-MM-DD HH24:MI:SS'),100)
+INSERT INTO AD_Sequence (AD_Client_ID,AD_Org_ID,AD_Sequence_ID,Created,CreatedBy,CurrentNext,CurrentNextSys,Description,IncrementNo,IsActive,IsAudited,IsAutoSequence,IsTableID,Name,StartNewYear,StartNo,Updated,UpdatedBy) VALUES (0,0,53631,TO_DATE('2013-06-26 11:26:37','YYYY-MM-DD HH24:MI:SS'),100,1000000,50000,'Table SPS_UserDocSequence',1,'Y','N','Y','Y','SPS_UserDocSequence','N',1000000,TO_DATE('2013-06-26 11:26:37','YYYY-MM-DD HH24:MI:SS'),100)
 ;
 
 -- Jun 26, 2013 11:26:57 AM VET
@@ -73,7 +73,7 @@ INSERT INTO AD_Column_Trl (AD_Language,AD_Column_ID, Name, IsTranslated,AD_Clien
 
 -- Jun 26, 2013 11:27:29 AM VET
 -- SFAndroid Contribution
-INSERT INTO AD_Element (AD_Client_ID,AD_Element_ID,AD_Org_ID,ColumnName,Created,CreatedBy,EntityType,IsActive,Name,PrintName,Updated,UpdatedBy) VALUES (0,55965,0,'SFA_UserDocSequence_ID',TO_DATE('2013-06-26 11:27:29','YYYY-MM-DD HH24:MI:SS'),100,'ECA01','Y','Doc Sequence by User','Doc Sequence by User',TO_DATE('2013-06-26 11:27:29','YYYY-MM-DD HH24:MI:SS'),100)
+INSERT INTO AD_Element (AD_Client_ID,AD_Element_ID,AD_Org_ID,ColumnName,Created,CreatedBy,EntityType,IsActive,Name,PrintName,Updated,UpdatedBy) VALUES (0,55965,0,'SPS_UserDocSequence_ID',TO_DATE('2013-06-26 11:27:29','YYYY-MM-DD HH24:MI:SS'),100,'ECA01','Y','Doc Sequence by User','Doc Sequence by User',TO_DATE('2013-06-26 11:27:29','YYYY-MM-DD HH24:MI:SS'),100)
 ;
 
 -- Jun 26, 2013 11:27:29 AM VET
@@ -83,7 +83,7 @@ INSERT INTO AD_Element_Trl (AD_Language,AD_Element_ID, Description,Help,Name,PO_
 
 -- Jun 26, 2013 11:27:30 AM VET
 -- SFAndroid Contribution
-INSERT INTO AD_Column (AD_Client_ID,AD_Column_ID,AD_Element_ID,AD_Org_ID,AD_Reference_ID,AD_Table_ID,ColumnName,Created,CreatedBy,EntityType,FieldLength,IsActive,IsAlwaysUpdateable,IsEncrypted,IsIdentifier,IsKey,IsMandatory,IsParent,IsSelectionColumn,IsSyncDatabase,IsTranslated,IsUpdateable,Name,SeqNo,Updated,UpdatedBy,Version) VALUES (0,65802,55965,0,13,53505,'SFA_UserDocSequence_ID',TO_DATE('2013-06-26 11:27:29','YYYY-MM-DD HH24:MI:SS'),100,'ECA01',22,'Y','N','N','N','Y','Y','N','N','N','N','N','Doc Sequence by User',0,TO_DATE('2013-06-26 11:27:29','YYYY-MM-DD HH24:MI:SS'),100,1)
+INSERT INTO AD_Column (AD_Client_ID,AD_Column_ID,AD_Element_ID,AD_Org_ID,AD_Reference_ID,AD_Table_ID,ColumnName,Created,CreatedBy,EntityType,FieldLength,IsActive,IsAlwaysUpdateable,IsEncrypted,IsIdentifier,IsKey,IsMandatory,IsParent,IsSelectionColumn,IsSyncDatabase,IsTranslated,IsUpdateable,Name,SeqNo,Updated,UpdatedBy,Version) VALUES (0,65802,55965,0,13,53505,'SPS_UserDocSequence_ID',TO_DATE('2013-06-26 11:27:29','YYYY-MM-DD HH24:MI:SS'),100,'ECA01',22,'Y','N','N','N','Y','Y','N','N','N','N','N','Doc Sequence by User',0,TO_DATE('2013-06-26 11:27:29','YYYY-MM-DD HH24:MI:SS'),100,1)
 ;
 
 -- Jun 26, 2013 11:27:30 AM VET

@@ -1,6 +1,6 @@
 -- Jul 3, 2013 11:42:04 AM VET
 -- SFAndroid Contribution
-INSERT INTO AD_Table (AccessLevel,AD_Client_ID,AD_Org_ID,AD_Table_ID,CopyColumnsFromTable,Created,CreatedBy,EntityType,ImportTable,IsActive,IsCentrallyMaintained,IsChangeLog,IsDeleteable,IsHighVolume,IsSecurityEnabled,IsView,LoadSeq,Name,ReplicationType,TableName,Updated,UpdatedBy) VALUES ('4',0,0,53518,'N',TO_TIMESTAMP('2013-07-03 11:42:00','YYYY-MM-DD HH24:MI:SS'),100,'ECA01','N','Y','Y','N','Y','N','N','N',0,'Menu Option','L','SFA_Menu',TO_TIMESTAMP('2013-07-03 11:42:00','YYYY-MM-DD HH24:MI:SS'),100)
+INSERT INTO AD_Table (AccessLevel,AD_Client_ID,AD_Org_ID,AD_Table_ID,CopyColumnsFromTable,Created,CreatedBy,EntityType,ImportTable,IsActive,IsCentrallyMaintained,IsChangeLog,IsDeleteable,IsHighVolume,IsSecurityEnabled,IsView,LoadSeq,Name,ReplicationType,TableName,Updated,UpdatedBy) VALUES ('4',0,0,53518,'N',TO_TIMESTAMP('2013-07-03 11:42:00','YYYY-MM-DD HH24:MI:SS'),100,'ECA01','N','Y','Y','N','Y','N','N','N',0,'Menu Option','L','SPS_Menu',TO_TIMESTAMP('2013-07-03 11:42:00','YYYY-MM-DD HH24:MI:SS'),100)
 ;
 
 -- Jul 3, 2013 11:42:04 AM VET
@@ -10,7 +10,7 @@ INSERT INTO AD_Table_Trl (AD_Language,AD_Table_ID, Name, IsTranslated,AD_Client_
 
 -- Jul 3, 2013 11:42:05 AM VET
 -- SFAndroid Contribution
-INSERT INTO AD_Sequence (AD_Client_ID,AD_Org_ID,AD_Sequence_ID,Created,CreatedBy,CurrentNext,CurrentNextSys,Description,IncrementNo,IsActive,IsAudited,IsAutoSequence,IsTableID,Name,StartNewYear,StartNo,Updated,UpdatedBy) VALUES (0,0,53646,TO_TIMESTAMP('2013-07-03 11:42:05','YYYY-MM-DD HH24:MI:SS'),100,1000000,50000,'Table SFA_Menu',1,'Y','N','Y','Y','SFA_Menu','N',1000000,TO_TIMESTAMP('2013-07-03 11:42:05','YYYY-MM-DD HH24:MI:SS'),100)
+INSERT INTO AD_Sequence (AD_Client_ID,AD_Org_ID,AD_Sequence_ID,Created,CreatedBy,CurrentNext,CurrentNextSys,Description,IncrementNo,IsActive,IsAudited,IsAutoSequence,IsTableID,Name,StartNewYear,StartNo,Updated,UpdatedBy) VALUES (0,0,53646,TO_TIMESTAMP('2013-07-03 11:42:05','YYYY-MM-DD HH24:MI:SS'),100,1000000,50000,'Table SPS_Menu',1,'Y','N','Y','Y','SPS_Menu','N',1000000,TO_TIMESTAMP('2013-07-03 11:42:05','YYYY-MM-DD HH24:MI:SS'),100)
 ;
 
 -- Jul 3, 2013 11:42:29 AM VET
@@ -93,7 +93,7 @@ INSERT INTO AD_Column_Trl (AD_Language,AD_Column_ID, Name, IsTranslated,AD_Clien
 
 -- Jul 3, 2013 11:45:07 AM VET
 -- SFAndroid Contribution
-INSERT INTO AD_Element (AD_Client_ID,AD_Element_ID,AD_Org_ID,ColumnName,Created,CreatedBy,EntityType,IsActive,Name,PrintName,Updated,UpdatedBy) VALUES (0,55995,0,'SFA_Menu_ID',TO_TIMESTAMP('2013-07-03 11:45:07','YYYY-MM-DD HH24:MI:SS'),100,'ECA01','Y','Menu Option','Menu Option',TO_TIMESTAMP('2013-07-03 11:45:07','YYYY-MM-DD HH24:MI:SS'),100)
+INSERT INTO AD_Element (AD_Client_ID,AD_Element_ID,AD_Org_ID,ColumnName,Created,CreatedBy,EntityType,IsActive,Name,PrintName,Updated,UpdatedBy) VALUES (0,55995,0,'SPS_Menu_ID',TO_TIMESTAMP('2013-07-03 11:45:07','YYYY-MM-DD HH24:MI:SS'),100,'ECA01','Y','Menu Option','Menu Option',TO_TIMESTAMP('2013-07-03 11:45:07','YYYY-MM-DD HH24:MI:SS'),100)
 ;
 
 -- Jul 3, 2013 11:45:07 AM VET
@@ -103,7 +103,7 @@ INSERT INTO AD_Element_Trl (AD_Language,AD_Element_ID, Description,Help,Name,PO_
 
 -- Jul 3, 2013 11:45:08 AM VET
 -- SFAndroid Contribution
-INSERT INTO AD_Column (AD_Client_ID,AD_Column_ID,AD_Element_ID,AD_Org_ID,AD_Reference_ID,AD_Table_ID,ColumnName,Created,CreatedBy,EntityType,FieldLength,IsActive,IsAlwaysUpdateable,IsEncrypted,IsIdentifier,IsKey,IsMandatory,IsParent,IsSelectionColumn,IsSyncDatabase,IsTranslated,IsUpdateable,Name,SeqNo,Updated,UpdatedBy,Version) VALUES (0,66036,55995,0,13,53518,'SFA_Menu_ID',TO_TIMESTAMP('2013-07-03 11:45:07','YYYY-MM-DD HH24:MI:SS'),100,'ECA01',22,'Y','N','N','N','Y','Y','N','N','N','N','N','Menu Option',0,TO_TIMESTAMP('2013-07-03 11:45:07','YYYY-MM-DD HH24:MI:SS'),100,1)
+INSERT INTO AD_Column (AD_Client_ID,AD_Column_ID,AD_Element_ID,AD_Org_ID,AD_Reference_ID,AD_Table_ID,ColumnName,Created,CreatedBy,EntityType,FieldLength,IsActive,IsAlwaysUpdateable,IsEncrypted,IsIdentifier,IsKey,IsMandatory,IsParent,IsSelectionColumn,IsSyncDatabase,IsTranslated,IsUpdateable,Name,SeqNo,Updated,UpdatedBy,Version) VALUES (0,66036,55995,0,13,53518,'SPS_Menu_ID',TO_TIMESTAMP('2013-07-03 11:45:07','YYYY-MM-DD HH24:MI:SS'),100,'ECA01',22,'Y','N','N','N','Y','Y','N','N','N','N','N','Menu Option',0,TO_TIMESTAMP('2013-07-03 11:45:07','YYYY-MM-DD HH24:MI:SS'),100,1)
 ;
 
 -- Jul 3, 2013 11:45:08 AM VET
@@ -263,7 +263,7 @@ INSERT INTO AD_Column_Trl (AD_Language,AD_Column_ID, Name, IsTranslated,AD_Clien
 
 -- Jul 3, 2013 11:59:22 AM VET
 -- SFAndroid Contribution
-INSERT INTO AD_Column (AD_Client_ID,AD_Column_ID,AD_Element_ID,AD_Org_ID,AD_Reference_ID,AD_Table_ID,ColumnName,Created,CreatedBy,EntityType,FieldLength,IsActive,IsAllowLogging,IsAlwaysUpdateable,IsAutocomplete,IsEncrypted,IsIdentifier,IsKey,IsMandatory,IsParent,IsSelectionColumn,IsSyncDatabase,IsTranslated,IsUpdateable,MandatoryLogic,Name,SeqNo,Updated,UpdatedBy,Version) VALUES (0,66052,55949,0,19,53518,'SFA_SyncTable_ID',TO_TIMESTAMP('2013-07-03 11:59:18','YYYY-MM-DD HH24:MI:SS'),100,'ECA01',10,'Y','Y','N','N','N','N','N','N','N','N','N','N','Y','@DeploymentType@ = ''L'' | @DeploymentType@ = ''W'' | @DeploymentType@ = ''M''''','Synchronizing Table',0,TO_TIMESTAMP('2013-07-03 11:59:18','YYYY-MM-DD HH24:MI:SS'),100,0)
+INSERT INTO AD_Column (AD_Client_ID,AD_Column_ID,AD_Element_ID,AD_Org_ID,AD_Reference_ID,AD_Table_ID,ColumnName,Created,CreatedBy,EntityType,FieldLength,IsActive,IsAllowLogging,IsAlwaysUpdateable,IsAutocomplete,IsEncrypted,IsIdentifier,IsKey,IsMandatory,IsParent,IsSelectionColumn,IsSyncDatabase,IsTranslated,IsUpdateable,MandatoryLogic,Name,SeqNo,Updated,UpdatedBy,Version) VALUES (0,66052,55949,0,19,53518,'SPS_SyncTable_ID',TO_TIMESTAMP('2013-07-03 11:59:18','YYYY-MM-DD HH24:MI:SS'),100,'ECA01',10,'Y','Y','N','N','N','N','N','N','N','N','N','N','Y','@DeploymentType@ = ''L'' | @DeploymentType@ = ''W'' | @DeploymentType@ = ''M''''','Synchronizing Table',0,TO_TIMESTAMP('2013-07-03 11:59:18','YYYY-MM-DD HH24:MI:SS'),100,0)
 ;
 
 -- Jul 3, 2013 11:59:22 AM VET
@@ -308,7 +308,7 @@ UPDATE AD_Table SET AD_Window_ID=53234,Updated=TO_TIMESTAMP('2013-07-03 12:02:17
 
 -- Jul 3, 2013 12:03:53 PM VET
 -- SFAndroid Contribution
-INSERT INTO AD_Table (AccessLevel,AD_Client_ID,AD_Org_ID,AD_Table_ID,AD_Window_ID,CopyColumnsFromTable,Created,CreatedBy,EntityType,ImportTable,IsActive,IsCentrallyMaintained,IsChangeLog,IsDeleteable,IsHighVolume,IsSecurityEnabled,IsView,LoadSeq,Name,ReplicationType,TableName,Updated,UpdatedBy) VALUES ('4',0,0,53520,53234,'N',TO_TIMESTAMP('2013-07-03 12:03:49','YYYY-MM-DD HH24:MI:SS'),100,'ECA01','N','Y','Y','N','Y','N','N','N',0,'Translation Option Menu','L','SFA_Menu_Trl',TO_TIMESTAMP('2013-07-03 12:03:49','YYYY-MM-DD HH24:MI:SS'),100)
+INSERT INTO AD_Table (AccessLevel,AD_Client_ID,AD_Org_ID,AD_Table_ID,AD_Window_ID,CopyColumnsFromTable,Created,CreatedBy,EntityType,ImportTable,IsActive,IsCentrallyMaintained,IsChangeLog,IsDeleteable,IsHighVolume,IsSecurityEnabled,IsView,LoadSeq,Name,ReplicationType,TableName,Updated,UpdatedBy) VALUES ('4',0,0,53520,53234,'N',TO_TIMESTAMP('2013-07-03 12:03:49','YYYY-MM-DD HH24:MI:SS'),100,'ECA01','N','Y','Y','N','Y','N','N','N',0,'Translation Option Menu','L','SPS_Menu_Trl',TO_TIMESTAMP('2013-07-03 12:03:49','YYYY-MM-DD HH24:MI:SS'),100)
 ;
 
 -- Jul 3, 2013 12:03:53 PM VET
@@ -318,7 +318,7 @@ INSERT INTO AD_Table_Trl (AD_Language,AD_Table_ID, Name, IsTranslated,AD_Client_
 
 -- Jul 3, 2013 12:03:54 PM VET
 -- SFAndroid Contribution
-INSERT INTO AD_Sequence (AD_Client_ID,AD_Org_ID,AD_Sequence_ID,Created,CreatedBy,CurrentNext,CurrentNextSys,Description,IncrementNo,IsActive,IsAudited,IsAutoSequence,IsTableID,Name,StartNewYear,StartNo,Updated,UpdatedBy) VALUES (0,0,53648,TO_TIMESTAMP('2013-07-03 12:03:53','YYYY-MM-DD HH24:MI:SS'),100,1000000,50000,'Table SFA_Menu_Trl',1,'Y','N','Y','Y','SFA_Menu_Trl','N',1000000,TO_TIMESTAMP('2013-07-03 12:03:53','YYYY-MM-DD HH24:MI:SS'),100)
+INSERT INTO AD_Sequence (AD_Client_ID,AD_Org_ID,AD_Sequence_ID,Created,CreatedBy,CurrentNext,CurrentNextSys,Description,IncrementNo,IsActive,IsAudited,IsAutoSequence,IsTableID,Name,StartNewYear,StartNo,Updated,UpdatedBy) VALUES (0,0,53648,TO_TIMESTAMP('2013-07-03 12:03:53','YYYY-MM-DD HH24:MI:SS'),100,1000000,50000,'Table SPS_Menu_Trl',1,'Y','N','Y','Y','SPS_Menu_Trl','N',1000000,TO_TIMESTAMP('2013-07-03 12:03:53','YYYY-MM-DD HH24:MI:SS'),100)
 ;
 
 -- Jul 3, 2013 12:04:07 PM VET
@@ -401,7 +401,7 @@ INSERT INTO AD_Column_Trl (AD_Language,AD_Column_ID, Name, IsTranslated,AD_Clien
 
 -- Jul 3, 2013 12:04:20 PM VET
 -- SFAndroid Contribution
-INSERT INTO AD_Element (AD_Client_ID,AD_Element_ID,AD_Org_ID,ColumnName,Created,CreatedBy,EntityType,IsActive,Name,PrintName,Updated,UpdatedBy) VALUES (0,55996,0,'SFA_Menu_Trl_ID',TO_TIMESTAMP('2013-07-03 12:04:19','YYYY-MM-DD HH24:MI:SS'),100,'ECA01','Y','Translation Option Menu','Translation Option Menu',TO_TIMESTAMP('2013-07-03 12:04:19','YYYY-MM-DD HH24:MI:SS'),100)
+INSERT INTO AD_Element (AD_Client_ID,AD_Element_ID,AD_Org_ID,ColumnName,Created,CreatedBy,EntityType,IsActive,Name,PrintName,Updated,UpdatedBy) VALUES (0,55996,0,'SPS_Menu_Trl_ID',TO_TIMESTAMP('2013-07-03 12:04:19','YYYY-MM-DD HH24:MI:SS'),100,'ECA01','Y','Translation Option Menu','Translation Option Menu',TO_TIMESTAMP('2013-07-03 12:04:19','YYYY-MM-DD HH24:MI:SS'),100)
 ;
 
 -- Jul 3, 2013 12:04:20 PM VET
@@ -411,7 +411,7 @@ INSERT INTO AD_Element_Trl (AD_Language,AD_Element_ID, Description,Help,Name,PO_
 
 -- Jul 3, 2013 12:04:21 PM VET
 -- SFAndroid Contribution
-INSERT INTO AD_Column (AD_Client_ID,AD_Column_ID,AD_Element_ID,AD_Org_ID,AD_Reference_ID,AD_Table_ID,ColumnName,Created,CreatedBy,EntityType,FieldLength,IsActive,IsAlwaysUpdateable,IsEncrypted,IsIdentifier,IsKey,IsMandatory,IsParent,IsSelectionColumn,IsSyncDatabase,IsTranslated,IsUpdateable,Name,SeqNo,Updated,UpdatedBy,Version) VALUES (0,66061,55996,0,13,53520,'SFA_Menu_Trl_ID',TO_TIMESTAMP('2013-07-03 12:04:19','YYYY-MM-DD HH24:MI:SS'),100,'ECA01',22,'Y','N','N','N','Y','Y','N','N','N','N','N','Translation Option Menu',0,TO_TIMESTAMP('2013-07-03 12:04:19','YYYY-MM-DD HH24:MI:SS'),100,1)
+INSERT INTO AD_Column (AD_Client_ID,AD_Column_ID,AD_Element_ID,AD_Org_ID,AD_Reference_ID,AD_Table_ID,ColumnName,Created,CreatedBy,EntityType,FieldLength,IsActive,IsAlwaysUpdateable,IsEncrypted,IsIdentifier,IsKey,IsMandatory,IsParent,IsSelectionColumn,IsSyncDatabase,IsTranslated,IsUpdateable,Name,SeqNo,Updated,UpdatedBy,Version) VALUES (0,66061,55996,0,13,53520,'SPS_Menu_Trl_ID',TO_TIMESTAMP('2013-07-03 12:04:19','YYYY-MM-DD HH24:MI:SS'),100,'ECA01',22,'Y','N','N','N','Y','Y','N','N','N','N','N','Translation Option Menu',0,TO_TIMESTAMP('2013-07-03 12:04:19','YYYY-MM-DD HH24:MI:SS'),100,1)
 ;
 
 -- Jul 3, 2013 12:04:21 PM VET
@@ -451,7 +451,7 @@ DELETE FROM AD_Column WHERE AD_Column_ID=66061
 
 -- Jul 3, 2013 12:05:53 PM VET
 -- SFAndroid Contribution
-INSERT INTO AD_Column (AD_Client_ID,AD_Column_ID,AD_Element_ID,AD_Org_ID,AD_Reference_ID,AD_Table_ID,ColumnName,Created,CreatedBy,EntityType,FieldLength,IsActive,IsAllowLogging,IsAlwaysUpdateable,IsAutocomplete,IsEncrypted,IsIdentifier,IsKey,IsMandatory,IsParent,IsSelectionColumn,IsSyncDatabase,IsTranslated,IsUpdateable,Name,SeqNo,Updated,UpdatedBy,Version) VALUES (0,66064,55995,0,19,53520,'SFA_Menu_ID',TO_TIMESTAMP('2013-07-03 12:05:49','YYYY-MM-DD HH24:MI:SS'),100,'ECA01',10,'Y','Y','N','N','N','N','N','Y','Y','N','N','N','N','Menu Option',0,TO_TIMESTAMP('2013-07-03 12:05:49','YYYY-MM-DD HH24:MI:SS'),100,0)
+INSERT INTO AD_Column (AD_Client_ID,AD_Column_ID,AD_Element_ID,AD_Org_ID,AD_Reference_ID,AD_Table_ID,ColumnName,Created,CreatedBy,EntityType,FieldLength,IsActive,IsAllowLogging,IsAlwaysUpdateable,IsAutocomplete,IsEncrypted,IsIdentifier,IsKey,IsMandatory,IsParent,IsSelectionColumn,IsSyncDatabase,IsTranslated,IsUpdateable,Name,SeqNo,Updated,UpdatedBy,Version) VALUES (0,66064,55995,0,19,53520,'SPS_Menu_ID',TO_TIMESTAMP('2013-07-03 12:05:49','YYYY-MM-DD HH24:MI:SS'),100,'ECA01',10,'Y','Y','N','N','N','N','N','Y','Y','N','N','N','N','Menu Option',0,TO_TIMESTAMP('2013-07-03 12:05:49','YYYY-MM-DD HH24:MI:SS'),100,0)
 ;
 
 -- Jul 3, 2013 12:05:53 PM VET

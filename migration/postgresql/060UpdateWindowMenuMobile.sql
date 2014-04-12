@@ -130,7 +130,7 @@ INSERT INTO AD_Column_Trl (AD_Language,AD_Column_ID, Name, IsTranslated,AD_Clien
 
 -- Mar 15, 2014 5:05:29 PM VET
 -- SFAndroid Server
-INSERT INTO AD_Val_Rule (AD_Client_ID,AD_Org_ID,AD_Val_Rule_ID,Code,Created,CreatedBy,EntityType,IsActive,Name,Type,Updated,UpdatedBy) VALUES (0,0,52333,'AD_Ref_List.Value=''A''',TO_TIMESTAMP('2014-03-15 17:05:28','YYYY-MM-DD HH24:MI:SS'),100,'ECA02','Y','SFA_Menu Activity','S',TO_TIMESTAMP('2014-03-15 17:05:28','YYYY-MM-DD HH24:MI:SS'),100)
+INSERT INTO AD_Val_Rule (AD_Client_ID,AD_Org_ID,AD_Val_Rule_ID,Code,Created,CreatedBy,EntityType,IsActive,Name,Type,Updated,UpdatedBy) VALUES (0,0,52333,'AD_Ref_List.Value=''A''',TO_TIMESTAMP('2014-03-15 17:05:28','YYYY-MM-DD HH24:MI:SS'),100,'ECA02','Y','SPS_Menu Activity','S',TO_TIMESTAMP('2014-03-15 17:05:28','YYYY-MM-DD HH24:MI:SS'),100)
 ;
 
 -- Mar 15, 2014 5:05:37 PM VET
@@ -140,12 +140,12 @@ UPDATE AD_Column SET AD_Val_Rule_ID=52333,Updated=TO_TIMESTAMP('2014-03-15 17:05
 
 -- Mar 15, 2014 5:07:07 PM VET
 -- SFAndroid Server
-UPDATE AD_Val_Rule SET Code='SFA_Menu.IsSummary = ''Y'' AND AD_Ref_List.Value=''Q''',Updated=TO_TIMESTAMP('2014-03-15 17:07:07','YYYY-MM-DD HH24:MI:SS'),UpdatedBy=100 WHERE AD_Val_Rule_ID=52179
+UPDATE AD_Val_Rule SET Code='SPS_Menu.IsSummary = ''Y'' AND AD_Ref_List.Value=''Q''',Updated=TO_TIMESTAMP('2014-03-15 17:07:07','YYYY-MM-DD HH24:MI:SS'),UpdatedBy=100 WHERE AD_Val_Rule_ID=52179
 ;
 
 -- Mar 15, 2014 5:07:25 PM VET
 -- SFAndroid Server
-UPDATE AD_Val_Rule SET Code='SFA_Menu.IsSummary = ''Y'' AND AD_Ref_List.Value=''A''', EntityType='ECA01', Name='SFA_Menu Activity Is Sumary',Updated=TO_TIMESTAMP('2014-03-15 17:07:25','YYYY-MM-DD HH24:MI:SS'),UpdatedBy=100 WHERE AD_Val_Rule_ID=52333
+UPDATE AD_Val_Rule SET Code='SPS_Menu.IsSummary = ''Y'' AND AD_Ref_List.Value=''A''', EntityType='ECA01', Name='SPS_Menu Activity Is Sumary',Updated=TO_TIMESTAMP('2014-03-15 17:07:25','YYYY-MM-DD HH24:MI:SS'),UpdatedBy=100 WHERE AD_Val_Rule_ID=52333
 ;
 
 -- Mar 15, 2014 5:08:22 PM VET
@@ -245,12 +245,12 @@ UPDATE AD_Field SET DisplayLogic=NULL,Updated=TO_TIMESTAMP('2014-03-15 17:09:31'
 
 -- Mar 15, 2014 5:13:17 PM VET
 -- SFAndroid Server
-UPDATE AD_Val_Rule SET Code='SFA_Menu.IsSummary = ''Y'' AND SFA_Menu.MenuType  = ''A''',Updated=TO_TIMESTAMP('2014-03-15 17:13:17','YYYY-MM-DD HH24:MI:SS'),UpdatedBy=100 WHERE AD_Val_Rule_ID=52333
+UPDATE AD_Val_Rule SET Code='SPS_Menu.IsSummary = ''Y'' AND SPS_Menu.MenuType  = ''A''',Updated=TO_TIMESTAMP('2014-03-15 17:13:17','YYYY-MM-DD HH24:MI:SS'),UpdatedBy=100 WHERE AD_Val_Rule_ID=52333
 ;
 
 -- Mar 15, 2014 5:17:59 PM VET
 -- SFAndroid Server
-UPDATE AD_Val_Rule SET Code='SFA_Menu.IsSummary = ''Y'' AND SFA_Menu.MenuType=''Q''',Updated=TO_TIMESTAMP('2014-03-15 17:17:59','YYYY-MM-DD HH24:MI:SS'),UpdatedBy=100 WHERE AD_Val_Rule_ID=52179
+UPDATE AD_Val_Rule SET Code='SPS_Menu.IsSummary = ''Y'' AND SPS_Menu.MenuType=''Q''',Updated=TO_TIMESTAMP('2014-03-15 17:17:59','YYYY-MM-DD HH24:MI:SS'),UpdatedBy=100 WHERE AD_Val_Rule_ID=52179
 ;
 
 -- Mar 15, 2014 5:21:43 PM VET
@@ -978,12 +978,12 @@ UPDATE AD_Tab_Trl SET Name='Menú del Contexto',Description='Menú del Contexto'
 
 -- Mar 15, 2014 6:03:12 PM VET
 -- SFAndroid Server
-UPDATE AD_Tab SET WhereClause='SFA_Menu.MenuType <> ''M''',Updated=TO_TIMESTAMP('2014-03-15 18:03:12','YYYY-MM-DD HH24:MI:SS'),UpdatedBy=100 WHERE AD_Tab_ID=53917
+UPDATE AD_Tab SET WhereClause='SPS_Menu.MenuType <> ''M''',Updated=TO_TIMESTAMP('2014-03-15 18:03:12','YYYY-MM-DD HH24:MI:SS'),UpdatedBy=100 WHERE AD_Tab_ID=53917
 ;
 
 -- Mar 15, 2014 6:03:22 PM VET
 -- SFAndroid Server
-UPDATE AD_Tab SET WhereClause='SFA_Menu.MenuType <> ''M''',Updated=TO_TIMESTAMP('2014-03-15 18:03:22','YYYY-MM-DD HH24:MI:SS'),UpdatedBy=100 WHERE AD_Tab_ID=53677
+UPDATE AD_Tab SET WhereClause='SPS_Menu.MenuType <> ''M''',Updated=TO_TIMESTAMP('2014-03-15 18:03:22','YYYY-MM-DD HH24:MI:SS'),UpdatedBy=100 WHERE AD_Tab_ID=53677
 ;
 
 -- Mar 15, 2014 6:03:33 PM VET

@@ -1,6 +1,6 @@
 -- Jan 29, 2014 2:46:56 PM VET
 -- Sales Force From Android client with ADempiere
-INSERT INTO AD_Reference (AD_Client_ID,AD_Org_ID,AD_Reference_ID,Created,CreatedBy,EntityType,IsActive,IsOrderByValue,Name,Updated,UpdatedBy,ValidationType) VALUES (0,0,53650,TO_TIMESTAMP('2014-01-29 14:46:53','YYYY-MM-DD HH24:MI:SS'),100,'ECA01','Y','N','SFA_SyncMenu',TO_TIMESTAMP('2014-01-29 14:46:53','YYYY-MM-DD HH24:MI:SS'),100,'T')
+INSERT INTO AD_Reference (AD_Client_ID,AD_Org_ID,AD_Reference_ID,Created,CreatedBy,EntityType,IsActive,IsOrderByValue,Name,Updated,UpdatedBy,ValidationType) VALUES (0,0,53650,TO_TIMESTAMP('2014-01-29 14:46:53','YYYY-MM-DD HH24:MI:SS'),100,'ECA01','Y','N','SPS_SyncMenu',TO_TIMESTAMP('2014-01-29 14:46:53','YYYY-MM-DD HH24:MI:SS'),100,'T')
 ;
 
 -- Jan 29, 2014 2:46:56 PM VET

@@ -1,6 +1,6 @@
 -- Feb 13, 2014 2:47:55 PM VET
 -- SFAndroid Server
-INSERT INTO AD_Val_Rule (AD_Client_ID,AD_Org_ID,AD_Val_Rule_ID,Code,Created,CreatedBy,EntityType,IsActive,Name,Type,Updated,UpdatedBy) VALUES (0,0,52310,'SFA_SyncColumn.SFA_SyncTable_ID = @SFA_SyncTable_ID@',TO_TIMESTAMP('2014-02-13 14:47:53','YYYY-MM-DD HH24:MI:SS'),100,'ECA02','Y','SFA_SyncColumn of SFA SyncTable','S',TO_TIMESTAMP('2014-02-13 14:47:53','YYYY-MM-DD HH24:MI:SS'),100)
+INSERT INTO AD_Val_Rule (AD_Client_ID,AD_Org_ID,AD_Val_Rule_ID,Code,Created,CreatedBy,EntityType,IsActive,Name,Type,Updated,UpdatedBy) VALUES (0,0,52310,'SPS_SyncColumn.SPS_SyncTable_ID = @SPS_SyncTable_ID@',TO_TIMESTAMP('2014-02-13 14:47:53','YYYY-MM-DD HH24:MI:SS'),100,'ECA02','Y','SPS_SyncColumn of SFA SyncTable','S',TO_TIMESTAMP('2014-02-13 14:47:53','YYYY-MM-DD HH24:MI:SS'),100)
 ;
 
 -- Feb 13, 2014 2:48:05 PM VET
@@ -155,7 +155,7 @@ UPDATE AD_Column SET IsMandatory='Y',Updated=TO_TIMESTAMP('2014-02-13 15:50:30',
 
 -- Feb 13, 2014 3:52:51 PM VET
 -- SFAndroid Server
-UPDATE AD_Column SET DefaultValue='@SQL=SELECT COALESCE(MAX(SeqNo),0)+10 AS DefaultValue FROM SFA_Tab WHERE SFA_Window_ID=@SFA_Window_ID@',Updated=TO_TIMESTAMP('2014-02-13 15:52:51','YYYY-MM-DD HH24:MI:SS'),UpdatedBy=100 WHERE AD_Column_ID=71642
+UPDATE AD_Column SET DefaultValue='@SQL=SELECT COALESCE(MAX(SeqNo),0)+10 AS DefaultValue FROM SPS_Tab WHERE SPS_Window_ID=@SPS_Window_ID@',Updated=TO_TIMESTAMP('2014-02-13 15:52:51','YYYY-MM-DD HH24:MI:SS'),UpdatedBy=100 WHERE AD_Column_ID=71642
 ;
 
 -- Feb 13, 2014 4:51:23 PM VET
@@ -170,7 +170,7 @@ UPDATE AD_Column SET Callout='org.sfandroid.model.CalloutTab.syncTable',Updated=
 
 -- Feb 13, 2014 5:05:27 PM VET
 -- SFAndroid Server
-INSERT INTO AD_Process (AccessLevel,AD_Client_ID,AD_Org_ID,AD_Process_ID,Classname,CopyFromProcess,Created,CreatedBy,EntityType,IsActive,IsBetaFunctionality,IsDirectPrint,IsReport,IsServerProcess,Name,ShowHelp,Statistic_Count,Statistic_Seconds,Updated,UpdatedBy,Value) VALUES ('4',0,0,53577,'org.sfandroid.process.CopyTabs','N',TO_TIMESTAMP('2014-02-13 17:05:24','YYYY-MM-DD HH24:MI:SS'),100,'ECA01','Y','N','N','N','N','Copy Tabs','Y',0,0,TO_TIMESTAMP('2014-02-13 17:05:24','YYYY-MM-DD HH24:MI:SS'),100,'SFA_Window CopyTabs')
+INSERT INTO AD_Process (AccessLevel,AD_Client_ID,AD_Org_ID,AD_Process_ID,Classname,CopyFromProcess,Created,CreatedBy,EntityType,IsActive,IsBetaFunctionality,IsDirectPrint,IsReport,IsServerProcess,Name,ShowHelp,Statistic_Count,Statistic_Seconds,Updated,UpdatedBy,Value) VALUES ('4',0,0,53577,'org.sfandroid.process.CopyTabs','N',TO_TIMESTAMP('2014-02-13 17:05:24','YYYY-MM-DD HH24:MI:SS'),100,'ECA01','Y','N','N','N','N','Copy Tabs','Y',0,0,TO_TIMESTAMP('2014-02-13 17:05:24','YYYY-MM-DD HH24:MI:SS'),100,'SPS_Window CopyTabs')
 ;
 
 -- Feb 13, 2014 5:05:27 PM VET
@@ -180,7 +180,7 @@ INSERT INTO AD_Process_Trl (AD_Language,AD_Process_ID, Description,Help,Name, Is
 
 -- Feb 13, 2014 5:05:55 PM VET
 -- SFAndroid Server
-INSERT INTO AD_Process_Para (AD_Client_ID,AD_Element_ID,AD_Org_ID,AD_Process_ID,AD_Process_Para_ID,AD_Reference_ID,ColumnName,Created,CreatedBy,EntityType,FieldLength,IsActive,IsCentrallyMaintained,IsMandatory,IsRange,Name,SeqNo,Updated,UpdatedBy) VALUES (0,57036,0,53577,54478,19,'SFA_Window_ID',TO_TIMESTAMP('2014-02-13 17:05:53','YYYY-MM-DD HH24:MI:SS'),100,'ECA01',0,'Y','Y','Y','N','Window Mobile',10,TO_TIMESTAMP('2014-02-13 17:05:53','YYYY-MM-DD HH24:MI:SS'),100)
+INSERT INTO AD_Process_Para (AD_Client_ID,AD_Element_ID,AD_Org_ID,AD_Process_ID,AD_Process_Para_ID,AD_Reference_ID,ColumnName,Created,CreatedBy,EntityType,FieldLength,IsActive,IsCentrallyMaintained,IsMandatory,IsRange,Name,SeqNo,Updated,UpdatedBy) VALUES (0,57036,0,53577,54478,19,'SPS_Window_ID',TO_TIMESTAMP('2014-02-13 17:05:53','YYYY-MM-DD HH24:MI:SS'),100,'ECA01',0,'Y','Y','Y','N','Window Mobile',10,TO_TIMESTAMP('2014-02-13 17:05:53','YYYY-MM-DD HH24:MI:SS'),100)
 ;
 
 -- Feb 13, 2014 5:05:55 PM VET
@@ -215,7 +215,7 @@ UPDATE AD_Field SET DisplayLength=10,Updated=TO_TIMESTAMP('2014-02-13 17:07:12',
 
 -- Feb 13, 2014 5:19:06 PM VET
 -- SFAndroid Server
-UPDATE AD_Process SET Classname='org.sfandroid.process.TabCreateFields', Description='Create Field from Table Sync Column, which do not exist in the Tab yet', Help='Based on the table sync columns of this Tab, this procedure creates the missing Fields', Name='Create Fields', Value='SFA_Tab CreateFields',Updated=TO_TIMESTAMP('2014-02-13 17:19:06','YYYY-MM-DD HH24:MI:SS'),UpdatedBy=100 WHERE AD_Process_ID=53576
+UPDATE AD_Process SET Classname='org.sfandroid.process.TabCreateFields', Description='Create Field from Table Sync Column, which do not exist in the Tab yet', Help='Based on the table sync columns of this Tab, this procedure creates the missing Fields', Name='Create Fields', Value='SPS_Tab CreateFields',Updated=TO_TIMESTAMP('2014-02-13 17:19:06','YYYY-MM-DD HH24:MI:SS'),UpdatedBy=100 WHERE AD_Process_ID=53576
 ;
 
 -- Feb 13, 2014 5:19:06 PM VET
@@ -240,7 +240,7 @@ UPDATE AD_Field SET Name='Process Now', Description=NULL, Help=NULL WHERE AD_Col
 
 -- Feb 13, 2014 5:21:04 PM VET
 -- SFAndroid Server
-UPDATE AD_Process SET Classname='org.sfandroid.process.TabCopy', Description='Copy Fields from other Tab', Name='Copy Tab Fields', Value='SFA_Tab TabCopy',Updated=TO_TIMESTAMP('2014-02-13 17:21:04','YYYY-MM-DD HH24:MI:SS'),UpdatedBy=100 WHERE AD_Process_ID=53575
+UPDATE AD_Process SET Classname='org.sfandroid.process.TabCopy', Description='Copy Fields from other Tab', Name='Copy Tab Fields', Value='SPS_Tab TabCopy',Updated=TO_TIMESTAMP('2014-02-13 17:21:04','YYYY-MM-DD HH24:MI:SS'),UpdatedBy=100 WHERE AD_Process_ID=53575
 ;
 
 -- Feb 13, 2014 5:21:04 PM VET
@@ -255,7 +255,7 @@ UPDATE AD_Process_Para SET EntityType='ECA01',Updated=TO_TIMESTAMP('2014-02-13 1
 
 -- Feb 13, 2014 5:29:07 PM VET
 -- SFAndroid Server
-INSERT INTO AD_Val_Rule (AD_Client_ID,AD_Org_ID,AD_Val_Rule_ID,Code,Created,CreatedBy,EntityType,IsActive,Name,Type,Updated,UpdatedBy) VALUES (0,0,52311,'SFA_Window.SFA_Window_ID <> @SFA_Window_ID@',TO_TIMESTAMP('2014-02-13 17:29:06','YYYY-MM-DD HH24:MI:SS'),100,'ECA01','Y','SFA_Window not Context ','S',TO_TIMESTAMP('2014-02-13 17:29:06','YYYY-MM-DD HH24:MI:SS'),100)
+INSERT INTO AD_Val_Rule (AD_Client_ID,AD_Org_ID,AD_Val_Rule_ID,Code,Created,CreatedBy,EntityType,IsActive,Name,Type,Updated,UpdatedBy) VALUES (0,0,52311,'SPS_Window.SPS_Window_ID <> @SPS_Window_ID@',TO_TIMESTAMP('2014-02-13 17:29:06','YYYY-MM-DD HH24:MI:SS'),100,'ECA01','Y','SPS_Window not Context ','S',TO_TIMESTAMP('2014-02-13 17:29:06','YYYY-MM-DD HH24:MI:SS'),100)
 ;
 
 -- Feb 13, 2014 5:29:14 PM VET
@@ -265,7 +265,7 @@ UPDATE AD_Process_Para SET AD_Val_Rule_ID=52311,Updated=TO_TIMESTAMP('2014-02-13
 
 -- Feb 13, 2014 5:32:40 PM VET
 -- SFAndroid Server
-INSERT INTO AD_Val_Rule (AD_Client_ID,AD_Org_ID,AD_Val_Rule_ID,Code,Created,CreatedBy,EntityType,IsActive,Name,Type,Updated,UpdatedBy) VALUES (0,0,52312,'SFA_Tab.SFA_SyncTable_ID=@SFA_SyncTable_ID@',TO_TIMESTAMP('2014-02-13 17:32:39','YYYY-MM-DD HH24:MI:SS'),100,'ECA01','Y','SFA_Tab equal SFA_SyncTable of Context','S',TO_TIMESTAMP('2014-02-13 17:32:39','YYYY-MM-DD HH24:MI:SS'),100)
+INSERT INTO AD_Val_Rule (AD_Client_ID,AD_Org_ID,AD_Val_Rule_ID,Code,Created,CreatedBy,EntityType,IsActive,Name,Type,Updated,UpdatedBy) VALUES (0,0,52312,'SPS_Tab.SPS_SyncTable_ID=@SPS_SyncTable_ID@',TO_TIMESTAMP('2014-02-13 17:32:39','YYYY-MM-DD HH24:MI:SS'),100,'ECA01','Y','SPS_Tab equal SPS_SyncTable of Context','S',TO_TIMESTAMP('2014-02-13 17:32:39','YYYY-MM-DD HH24:MI:SS'),100)
 ;
 
 -- Feb 13, 2014 5:32:47 PM VET
@@ -290,7 +290,7 @@ UPDATE AD_Process_Para SET AD_Val_Rule_ID=NULL,Updated=TO_TIMESTAMP('2014-02-13 
 
 -- Feb 13, 2014 5:50:32 PM VET
 -- SFAndroid Server
-UPDATE AD_Process SET Classname='org.sfandroid.process.WindowCopy', Value='SFA_Window WindowCopy',Updated=TO_TIMESTAMP('2014-02-13 17:50:32','YYYY-MM-DD HH24:MI:SS'),UpdatedBy=100 WHERE AD_Process_ID=53577
+UPDATE AD_Process SET Classname='org.sfandroid.process.WindowCopy', Value='SPS_Window WindowCopy',Updated=TO_TIMESTAMP('2014-02-13 17:50:32','YYYY-MM-DD HH24:MI:SS'),UpdatedBy=100 WHERE AD_Process_ID=53577
 ;
 
 -- Feb 13, 2014 5:51:31 PM VET

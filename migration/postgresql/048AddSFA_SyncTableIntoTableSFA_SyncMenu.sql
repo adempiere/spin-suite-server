@@ -1,6 +1,6 @@
 -- Feb 6, 2014 11:58:50 AM VET
 -- SFAndroid Server
-INSERT INTO AD_Column (AD_Client_ID,AD_Column_ID,AD_Element_ID,AD_Org_ID,AD_Reference_ID,AD_Table_ID,ColumnName,Created,CreatedBy,EntityType,FieldLength,IsActive,IsAllowLogging,IsAlwaysUpdateable,IsAutocomplete,IsEncrypted,IsIdentifier,IsKey,IsMandatory,IsParent,IsSelectionColumn,IsSyncDatabase,IsTranslated,IsUpdateable,Name,SeqNo,Updated,UpdatedBy,Version) VALUES (0,71529,55949,0,19,53501,'SFA_SyncTable_ID',TO_TIMESTAMP('2014-02-06 11:58:45','YYYY-MM-DD HH24:MI:SS'),100,'ECA01',10,'Y','Y','N','N','N','N','N','N','N','N','N','N','Y','Synchronizing Table',0,TO_TIMESTAMP('2014-02-06 11:58:45','YYYY-MM-DD HH24:MI:SS'),100,0)
+INSERT INTO AD_Column (AD_Client_ID,AD_Column_ID,AD_Element_ID,AD_Org_ID,AD_Reference_ID,AD_Table_ID,ColumnName,Created,CreatedBy,EntityType,FieldLength,IsActive,IsAllowLogging,IsAlwaysUpdateable,IsAutocomplete,IsEncrypted,IsIdentifier,IsKey,IsMandatory,IsParent,IsSelectionColumn,IsSyncDatabase,IsTranslated,IsUpdateable,Name,SeqNo,Updated,UpdatedBy,Version) VALUES (0,71529,55949,0,19,53501,'SPS_SyncTable_ID',TO_TIMESTAMP('2014-02-06 11:58:45','YYYY-MM-DD HH24:MI:SS'),100,'ECA01',10,'Y','Y','N','N','N','N','N','N','N','N','N','N','Y','Synchronizing Table',0,TO_TIMESTAMP('2014-02-06 11:58:45','YYYY-MM-DD HH24:MI:SS'),100,0)
 ;
 
 -- Feb 6, 2014 11:58:50 AM VET

@@ -1,6 +1,6 @@
 -- Jun 26, 2013 11:20:43 AM VET
 -- SFAndroid Contribution
-INSERT INTO AD_Table (AccessLevel,AD_Client_ID,AD_Org_ID,AD_Table_ID,CopyColumnsFromTable,Created,CreatedBy,EntityType,ImportTable,IsActive,IsCentrallyMaintained,IsChangeLog,IsDeleteable,IsHighVolume,IsSecurityEnabled,IsView,LoadSeq,Name,ReplicationType,TableName,Updated,UpdatedBy) VALUES ('4',0,0,53504,'N',TO_TIMESTAMP('2013-06-26 11:20:38','YYYY-MM-DD HH24:MI:SS'),100,'ECA01','N','Y','Y','N','Y','N','N','N',0,'Synchronizing Table Translation','L','SFA_SyncTable_Trl',TO_TIMESTAMP('2013-06-26 11:20:38','YYYY-MM-DD HH24:MI:SS'),100)
+INSERT INTO AD_Table (AccessLevel,AD_Client_ID,AD_Org_ID,AD_Table_ID,CopyColumnsFromTable,Created,CreatedBy,EntityType,ImportTable,IsActive,IsCentrallyMaintained,IsChangeLog,IsDeleteable,IsHighVolume,IsSecurityEnabled,IsView,LoadSeq,Name,ReplicationType,TableName,Updated,UpdatedBy) VALUES ('4',0,0,53504,'N',TO_TIMESTAMP('2013-06-26 11:20:38','YYYY-MM-DD HH24:MI:SS'),100,'ECA01','N','Y','Y','N','Y','N','N','N',0,'Synchronizing Table Translation','L','SPS_SyncTable_Trl',TO_TIMESTAMP('2013-06-26 11:20:38','YYYY-MM-DD HH24:MI:SS'),100)
 ;
 
 -- Jun 26, 2013 11:20:43 AM VET
@@ -63,7 +63,7 @@ INSERT INTO AD_Column_Trl (AD_Language,AD_Column_ID, Name, IsTranslated,AD_Clien
 
 -- Jun 26, 2013 11:21:00 AM VET
 -- SFAndroid Contribution
-INSERT INTO AD_Element (AD_Client_ID,AD_Element_ID,AD_Org_ID,ColumnName,Created,CreatedBy,EntityType,IsActive,Name,PrintName,Updated,UpdatedBy) VALUES (0,55964,0,'SFA_SyncTable_Trl_ID',TO_TIMESTAMP('2013-06-26 11:20:59','YYYY-MM-DD HH24:MI:SS'),100,'ECA01','Y','Synchronizing Table Translation','Synchronizing Table Translation',TO_TIMESTAMP('2013-06-26 11:20:59','YYYY-MM-DD HH24:MI:SS'),100)
+INSERT INTO AD_Element (AD_Client_ID,AD_Element_ID,AD_Org_ID,ColumnName,Created,CreatedBy,EntityType,IsActive,Name,PrintName,Updated,UpdatedBy) VALUES (0,55964,0,'SPS_SyncTable_Trl_ID',TO_TIMESTAMP('2013-06-26 11:20:59','YYYY-MM-DD HH24:MI:SS'),100,'ECA01','Y','Synchronizing Table Translation','Synchronizing Table Translation',TO_TIMESTAMP('2013-06-26 11:20:59','YYYY-MM-DD HH24:MI:SS'),100)
 ;
 
 -- Jun 26, 2013 11:21:00 AM VET
@@ -73,7 +73,7 @@ INSERT INTO AD_Element_Trl (AD_Language,AD_Element_ID, Description,Help,Name,PO_
 
 -- Jun 26, 2013 11:21:00 AM VET
 -- SFAndroid Contribution
-INSERT INTO AD_Column (AD_Client_ID,AD_Column_ID,AD_Element_ID,AD_Org_ID,AD_Reference_ID,AD_Table_ID,ColumnName,Created,CreatedBy,EntityType,FieldLength,IsActive,IsAlwaysUpdateable,IsEncrypted,IsIdentifier,IsKey,IsMandatory,IsParent,IsSelectionColumn,IsSyncDatabase,IsTranslated,IsUpdateable,Name,SeqNo,Updated,UpdatedBy,Version) VALUES (0,65791,55964,0,13,53504,'SFA_SyncTable_Trl_ID',TO_TIMESTAMP('2013-06-26 11:20:59','YYYY-MM-DD HH24:MI:SS'),100,'ECA01',22,'Y','N','N','N','Y','Y','N','N','N','N','N','Synchronizing Table Translation',0,TO_TIMESTAMP('2013-06-26 11:20:59','YYYY-MM-DD HH24:MI:SS'),100,1)
+INSERT INTO AD_Column (AD_Client_ID,AD_Column_ID,AD_Element_ID,AD_Org_ID,AD_Reference_ID,AD_Table_ID,ColumnName,Created,CreatedBy,EntityType,FieldLength,IsActive,IsAlwaysUpdateable,IsEncrypted,IsIdentifier,IsKey,IsMandatory,IsParent,IsSelectionColumn,IsSyncDatabase,IsTranslated,IsUpdateable,Name,SeqNo,Updated,UpdatedBy,Version) VALUES (0,65791,55964,0,13,53504,'SPS_SyncTable_Trl_ID',TO_TIMESTAMP('2013-06-26 11:20:59','YYYY-MM-DD HH24:MI:SS'),100,'ECA01',22,'Y','N','N','N','Y','Y','N','N','N','N','N','Synchronizing Table Translation',0,TO_TIMESTAMP('2013-06-26 11:20:59','YYYY-MM-DD HH24:MI:SS'),100,1)
 ;
 
 -- Jun 26, 2013 11:21:00 AM VET
@@ -143,7 +143,7 @@ INSERT INTO AD_Column_Trl (AD_Language,AD_Column_ID, Name, IsTranslated,AD_Clien
 
 -- Jun 26, 2013 11:23:39 AM VET
 -- SFAndroid Contribution
-UPDATE AD_Column SET AD_Element_ID=55949, AD_Reference_ID=19, ColumnName='SFA_SyncTable_ID', Description=NULL, FieldLength=10, Help=NULL, IsUpdateable='N', Name='Synchronizing Table',Updated=TO_TIMESTAMP('2013-06-26 11:23:39','YYYY-MM-DD HH24:MI:SS'),UpdatedBy=100 WHERE AD_Column_ID=65791
+UPDATE AD_Column SET AD_Element_ID=55949, AD_Reference_ID=19, ColumnName='SPS_SyncTable_ID', Description=NULL, FieldLength=10, Help=NULL, IsUpdateable='N', Name='Synchronizing Table',Updated=TO_TIMESTAMP('2013-06-26 11:23:39','YYYY-MM-DD HH24:MI:SS'),UpdatedBy=100 WHERE AD_Column_ID=65791
 ;
 
 -- Jun 26, 2013 11:23:39 AM VET

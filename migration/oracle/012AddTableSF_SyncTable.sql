@@ -113,12 +113,12 @@ INSERT INTO AD_Column_Trl (AD_Language,AD_Column_ID, Name, IsTranslated,AD_Clien
 
 -- Jun 26, 2013 11:10:54 AM VET
 -- SFAndroid Contribution
-UPDATE AD_Table SET TableName='SFA_SyncTable',Updated=TO_DATE('2013-06-26 11:10:54','YYYY-MM-DD HH24:MI:SS'),UpdatedBy=100 WHERE AD_Table_ID=53503
+UPDATE AD_Table SET TableName='SPS_SyncTable',Updated=TO_DATE('2013-06-26 11:10:54','YYYY-MM-DD HH24:MI:SS'),UpdatedBy=100 WHERE AD_Table_ID=53503
 ;
 
 -- Jun 26, 2013 11:10:57 AM VET
 -- SFAndroid Contribution
-INSERT INTO AD_Sequence (AD_Client_ID,AD_Org_ID,AD_Sequence_ID,Created,CreatedBy,CurrentNext,CurrentNextSys,Description,IncrementNo,IsActive,IsAudited,IsAutoSequence,IsTableID,Name,StartNewYear,StartNo,Updated,UpdatedBy) VALUES (0,0,53630,TO_DATE('2013-06-26 11:10:54','YYYY-MM-DD HH24:MI:SS'),100,1000000,50000,'Table SFA_SyncTable',1,'Y','N','Y','Y','SFA_SyncTable','N',1000000,TO_DATE('2013-06-26 11:10:54','YYYY-MM-DD HH24:MI:SS'),100)
+INSERT INTO AD_Sequence (AD_Client_ID,AD_Org_ID,AD_Sequence_ID,Created,CreatedBy,CurrentNext,CurrentNextSys,Description,IncrementNo,IsActive,IsAudited,IsAutoSequence,IsTableID,Name,StartNewYear,StartNo,Updated,UpdatedBy) VALUES (0,0,53630,TO_DATE('2013-06-26 11:10:54','YYYY-MM-DD HH24:MI:SS'),100,1000000,50000,'Table SPS_SyncTable',1,'Y','N','Y','Y','SPS_SyncTable','N',1000000,TO_DATE('2013-06-26 11:10:54','YYYY-MM-DD HH24:MI:SS'),100)
 ;
 
 -- Jun 26, 2013 11:11:18 AM VET
@@ -133,7 +133,7 @@ DELETE FROM AD_Element WHERE AD_Element_ID=55963
 
 -- Jun 26, 2013 11:11:27 AM VET
 -- SFAndroid Contribution
-UPDATE AD_Column SET AD_Element_ID=55949, ColumnName='SFA_SyncTable_ID', Description=NULL, Help=NULL, IsUpdateable='N', Name='Synchronizing Table',Updated=TO_DATE('2013-06-26 11:11:27','YYYY-MM-DD HH24:MI:SS'),UpdatedBy=100 WHERE AD_Column_ID=65774
+UPDATE AD_Column SET AD_Element_ID=55949, ColumnName='SPS_SyncTable_ID', Description=NULL, Help=NULL, IsUpdateable='N', Name='Synchronizing Table',Updated=TO_DATE('2013-06-26 11:11:27','YYYY-MM-DD HH24:MI:SS'),UpdatedBy=100 WHERE AD_Column_ID=65774
 ;
 
 -- Jun 26, 2013 11:11:27 AM VET

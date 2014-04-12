@@ -1,6 +1,6 @@
 -- Feb 20, 2014 3:40:13 PM VET
 -- SFAndroid Server
-INSERT INTO AD_Column (AD_Client_ID,AD_Column_ID,AD_Element_ID,AD_Org_ID,AD_Reference_ID,AD_Table_ID,AD_Val_Rule_ID,ColumnName,Created,CreatedBy,EntityType,FieldLength,IsActive,IsAllowLogging,IsAlwaysUpdateable,IsAutocomplete,IsEncrypted,IsIdentifier,IsKey,IsMandatory,IsParent,IsSelectionColumn,IsSyncDatabase,IsTranslated,IsUpdateable,Name,SeqNo,Updated,UpdatedBy,Version) VALUES (0,72073,55947,0,19,53754,52166,'SFA_Column_ID',TO_TIMESTAMP('2014-02-20 15:40:09','YYYY-MM-DD HH24:MI:SS'),100,'ECA01',10,'Y','Y','N','N','N','N','N','N','N','N','N','N','Y','Mobile Column',0,TO_TIMESTAMP('2014-02-20 15:40:09','YYYY-MM-DD HH24:MI:SS'),100,0)
+INSERT INTO AD_Column (AD_Client_ID,AD_Column_ID,AD_Element_ID,AD_Org_ID,AD_Reference_ID,AD_Table_ID,AD_Val_Rule_ID,ColumnName,Created,CreatedBy,EntityType,FieldLength,IsActive,IsAllowLogging,IsAlwaysUpdateable,IsAutocomplete,IsEncrypted,IsIdentifier,IsKey,IsMandatory,IsParent,IsSelectionColumn,IsSyncDatabase,IsTranslated,IsUpdateable,Name,SeqNo,Updated,UpdatedBy,Version) VALUES (0,72073,55947,0,19,53754,52166,'SPS_Column_ID',TO_TIMESTAMP('2014-02-20 15:40:09','YYYY-MM-DD HH24:MI:SS'),100,'ECA01',10,'Y','Y','N','N','N','N','N','N','N','N','N','N','Y','Mobile Column',0,TO_TIMESTAMP('2014-02-20 15:40:09','YYYY-MM-DD HH24:MI:SS'),100,0)
 ;
 
 -- Feb 20, 2014 3:40:13 PM VET
@@ -10,7 +10,7 @@ INSERT INTO AD_Column_Trl (AD_Language,AD_Column_ID, Name, IsTranslated,AD_Clien
 
 -- Feb 20, 2014 3:42:02 PM VET
 -- SFAndroid Server
-INSERT INTO AD_Reference (AD_Client_ID,AD_Org_ID,AD_Reference_ID,Created,CreatedBy,Description,EntityType,IsActive,IsOrderByValue,Name,Updated,UpdatedBy,ValidationType) VALUES (0,0,53664,TO_TIMESTAMP('2014-02-20 15:42:01','YYYY-MM-DD HH24:MI:SS'),100,'Column selection','ECA02','Y','N','SFA_Column Name',TO_TIMESTAMP('2014-02-20 15:42:01','YYYY-MM-DD HH24:MI:SS'),100,'T')
+INSERT INTO AD_Reference (AD_Client_ID,AD_Org_ID,AD_Reference_ID,Created,CreatedBy,Description,EntityType,IsActive,IsOrderByValue,Name,Updated,UpdatedBy,ValidationType) VALUES (0,0,53664,TO_TIMESTAMP('2014-02-20 15:42:01','YYYY-MM-DD HH24:MI:SS'),100,'Column selection','ECA02','Y','N','SPS_Column Name',TO_TIMESTAMP('2014-02-20 15:42:01','YYYY-MM-DD HH24:MI:SS'),100,'T')
 ;
 
 -- Feb 20, 2014 3:42:02 PM VET
@@ -36,15 +36,15 @@ INSERT INTO AD_Column_Trl (AD_Language,AD_Column_ID, Name, IsTranslated,AD_Clien
 -- Feb 20, 2014 3:44:03 PM VET
 -- SFAndroid Server
 INSERT INTO AD_Val_Rule (AD_Client_ID,AD_Org_ID,AD_Val_Rule_ID,Code,Created,CreatedBy,EntityType,IsActive,Name,Type,Updated,UpdatedBy) VALUES (0,0,52324,'/* attempt to get the columns in the parent tab table */
-SFA_Column.SFA_Table_ID IN (SELECT t.SFA_Table_ID FROM SFA_Tab t
-                                                   WHERE t.SFA_Window_ID = @SFA_Window_ID@
+SPS_Column.SPS_Table_ID IN (SELECT t.SPS_Table_ID FROM SPS_Tab t
+                                                   WHERE t.SPS_Window_ID = @SPS_Window_ID@
 	                         AND t.TabLevel = @TabLevel@-1
 		AND t.SeqNo < @SeqNo@
-		AND NOT EXISTS (SELECT 1 FROM SFA_Tab t2
-                                                      where t2.SFA_Window_ID=t.SFA_Window_ID
+		AND NOT EXISTS (SELECT 1 FROM SPS_Tab t2
+                                                      where t2.SPS_Window_ID=t.SPS_Window_ID
                                                       AND t2.TabLevel = t.TabLevel
 		AND t2.SeqNo < @SeqNo@
-                                                     AND t2.SeqNo > t.SeqNo) )',TO_TIMESTAMP('2014-02-20 15:44:02','YYYY-MM-DD HH24:MI:SS'),100,'ECA02','Y','SFA_Column (Parent tab link column)','S',TO_TIMESTAMP('2014-02-20 15:44:02','YYYY-MM-DD HH24:MI:SS'),100)
+                                                     AND t2.SeqNo > t.SeqNo) )',TO_TIMESTAMP('2014-02-20 15:44:02','YYYY-MM-DD HH24:MI:SS'),100,'ECA02','Y','SPS_Column (Parent tab link column)','S',TO_TIMESTAMP('2014-02-20 15:44:02','YYYY-MM-DD HH24:MI:SS'),100)
 ;
 
 -- Feb 20, 2014 3:44:24 PM VET
@@ -174,17 +174,17 @@ UPDATE AD_Field SET DisplayLogic=NULL,Updated=TO_TIMESTAMP('2014-02-20 15:52:51'
 
 -- Feb 20, 2014 3:57:19 PM VET
 -- SFAndroid Server
-UPDATE AD_Val_Rule SET Code='EXISTS(SELECT 1 FROM SFA_Table st WHERE st.SFA_Table_ID = @SFA_Table_ID@ AND st.AD_Table_ID = SFA_Column.AD_Table_ID)',Updated=TO_TIMESTAMP('2014-02-20 15:57:19','YYYY-MM-DD HH24:MI:SS'),UpdatedBy=100 WHERE AD_Val_Rule_ID=52166
+UPDATE AD_Val_Rule SET Code='EXISTS(SELECT 1 FROM SPS_Table st WHERE st.SPS_Table_ID = @SPS_Table_ID@ AND st.AD_Table_ID = SPS_Column.AD_Table_ID)',Updated=TO_TIMESTAMP('2014-02-20 15:57:19','YYYY-MM-DD HH24:MI:SS'),UpdatedBy=100 WHERE AD_Val_Rule_ID=52166
 ;
 
 -- Feb 20, 2014 3:57:24 PM VET
 -- SFAndroid Server
-UPDATE AD_Val_Rule SET Name='SFA_Column_ID EXISTS in SFA_Table',Updated=TO_TIMESTAMP('2014-02-20 15:57:24','YYYY-MM-DD HH24:MI:SS'),UpdatedBy=100 WHERE AD_Val_Rule_ID=52166
+UPDATE AD_Val_Rule SET Name='SPS_Column_ID EXISTS in SPS_Table',Updated=TO_TIMESTAMP('2014-02-20 15:57:24','YYYY-MM-DD HH24:MI:SS'),UpdatedBy=100 WHERE AD_Val_Rule_ID=52166
 ;
 
 -- Feb 20, 2014 4:10:59 PM VET
 -- SFAndroid Server
-UPDATE AD_Val_Rule SET Code='EXISTS(SELECT 1 FROM SFA_Table st WHERE st.SFA_Table_ID = @SFA_Table_ID@ AND st.AD_Table_ID = AD_Column.AD_Table_ID)', Name='AD_Column_ID EXISTS in SFA_Table',Updated=TO_TIMESTAMP('2014-02-20 16:10:59','YYYY-MM-DD HH24:MI:SS'),UpdatedBy=100 WHERE AD_Val_Rule_ID=52166
+UPDATE AD_Val_Rule SET Code='EXISTS(SELECT 1 FROM SPS_Table st WHERE st.SPS_Table_ID = @SPS_Table_ID@ AND st.AD_Table_ID = AD_Column.AD_Table_ID)', Name='AD_Column_ID EXISTS in SPS_Table',Updated=TO_TIMESTAMP('2014-02-20 16:10:59','YYYY-MM-DD HH24:MI:SS'),UpdatedBy=100 WHERE AD_Val_Rule_ID=52166
 ;
 
 -- Feb 20, 2014 4:13:25 PM VET
@@ -199,7 +199,7 @@ UPDATE AD_Column SET AD_Val_Rule_ID=NULL,Updated=TO_TIMESTAMP('2014-02-20 16:13:
 
 -- Feb 20, 2014 4:21:25 PM VET
 -- SFAndroid Server
-INSERT INTO AD_Val_Rule (AD_Client_ID,AD_Org_ID,AD_Val_Rule_ID,Code,Created,CreatedBy,Description,EntityType,IsActive,Name,Type,Updated,UpdatedBy) VALUES (0,0,52325,'SFA_Column.SFA_Table_ID=@SFA_Table_ID@',TO_TIMESTAMP('2014-02-20 16:21:24','YYYY-MM-DD HH24:MI:SS'),100,'Table must be previously defined','ECA02','Y','SFA_Column in SFA_Table','S',TO_TIMESTAMP('2014-02-20 16:21:24','YYYY-MM-DD HH24:MI:SS'),100)
+INSERT INTO AD_Val_Rule (AD_Client_ID,AD_Org_ID,AD_Val_Rule_ID,Code,Created,CreatedBy,Description,EntityType,IsActive,Name,Type,Updated,UpdatedBy) VALUES (0,0,52325,'SPS_Column.SPS_Table_ID=@SPS_Table_ID@',TO_TIMESTAMP('2014-02-20 16:21:24','YYYY-MM-DD HH24:MI:SS'),100,'Table must be previously defined','ECA02','Y','SPS_Column in SPS_Table','S',TO_TIMESTAMP('2014-02-20 16:21:24','YYYY-MM-DD HH24:MI:SS'),100)
 ;
 
 -- Feb 20, 2014 4:21:33 PM VET

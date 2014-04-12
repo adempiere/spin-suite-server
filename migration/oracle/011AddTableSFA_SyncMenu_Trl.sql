@@ -1,6 +1,6 @@
 -- Jun 26, 2013 11:02:50 AM VET
 -- SFAndroid Contribution
-INSERT INTO AD_Table (AccessLevel,AD_Client_ID,AD_Org_ID,AD_Table_ID,CopyColumnsFromTable,Created,CreatedBy,EntityType,ImportTable,IsActive,IsCentrallyMaintained,IsChangeLog,IsDeleteable,IsHighVolume,IsSecurityEnabled,IsView,LoadSeq,Name,ReplicationType,TableName,Updated,UpdatedBy) VALUES ('4',0,0,53502,'N',TO_DATE('2013-06-26 11:02:46','YYYY-MM-DD HH24:MI:SS'),100,'ECA01','N','Y','Y','N','Y','N','N','N',0,'Translation Sync/Option Menu','L','SFA_SyncMenu_Trl',TO_DATE('2013-06-26 11:02:46','YYYY-MM-DD HH24:MI:SS'),100)
+INSERT INTO AD_Table (AccessLevel,AD_Client_ID,AD_Org_ID,AD_Table_ID,CopyColumnsFromTable,Created,CreatedBy,EntityType,ImportTable,IsActive,IsCentrallyMaintained,IsChangeLog,IsDeleteable,IsHighVolume,IsSecurityEnabled,IsView,LoadSeq,Name,ReplicationType,TableName,Updated,UpdatedBy) VALUES ('4',0,0,53502,'N',TO_DATE('2013-06-26 11:02:46','YYYY-MM-DD HH24:MI:SS'),100,'ECA01','N','Y','Y','N','Y','N','N','N',0,'Translation Sync/Option Menu','L','SPS_SyncMenu_Trl',TO_DATE('2013-06-26 11:02:46','YYYY-MM-DD HH24:MI:SS'),100)
 ;
 
 -- Jun 26, 2013 11:02:50 AM VET
@@ -10,7 +10,7 @@ INSERT INTO AD_Table_Trl (AD_Language,AD_Table_ID, Name, IsTranslated,AD_Client_
 
 -- Jun 26, 2013 11:02:51 AM VET
 -- SFAndroid Contribution
-INSERT INTO AD_Sequence (AD_Client_ID,AD_Org_ID,AD_Sequence_ID,Created,CreatedBy,CurrentNext,CurrentNextSys,Description,IncrementNo,IsActive,IsAudited,IsAutoSequence,IsTableID,Name,StartNewYear,StartNo,Updated,UpdatedBy) VALUES (0,0,53628,TO_DATE('2013-06-26 11:02:50','YYYY-MM-DD HH24:MI:SS'),100,1000000,50000,'Table SFA_SyncMenu_Trl',1,'Y','N','Y','Y','SFA_SyncMenu_Trl','N',1000000,TO_DATE('2013-06-26 11:02:50','YYYY-MM-DD HH24:MI:SS'),100)
+INSERT INTO AD_Sequence (AD_Client_ID,AD_Org_ID,AD_Sequence_ID,Created,CreatedBy,CurrentNext,CurrentNextSys,Description,IncrementNo,IsActive,IsAudited,IsAutoSequence,IsTableID,Name,StartNewYear,StartNo,Updated,UpdatedBy) VALUES (0,0,53628,TO_DATE('2013-06-26 11:02:50','YYYY-MM-DD HH24:MI:SS'),100,1000000,50000,'Table SPS_SyncMenu_Trl',1,'Y','N','Y','Y','SPS_SyncMenu_Trl','N',1000000,TO_DATE('2013-06-26 11:02:50','YYYY-MM-DD HH24:MI:SS'),100)
 ;
 
 -- Jun 26, 2013 11:03:00 AM VET
@@ -73,7 +73,7 @@ INSERT INTO AD_Column_Trl (AD_Language,AD_Column_ID, Name, IsTranslated,AD_Clien
 
 -- Jun 26, 2013 11:03:14 AM VET
 -- SFAndroid Contribution
-INSERT INTO AD_Element (AD_Client_ID,AD_Element_ID,AD_Org_ID,ColumnName,Created,CreatedBy,EntityType,IsActive,Name,PrintName,Updated,UpdatedBy) VALUES (0,55962,0,'SFA_SyncMenu_Trl_ID',TO_DATE('2013-06-26 11:03:14','YYYY-MM-DD HH24:MI:SS'),100,'ECA01','Y','Translation Sync/Option Menu','Translation Sync/Option Menu',TO_DATE('2013-06-26 11:03:14','YYYY-MM-DD HH24:MI:SS'),100)
+INSERT INTO AD_Element (AD_Client_ID,AD_Element_ID,AD_Org_ID,ColumnName,Created,CreatedBy,EntityType,IsActive,Name,PrintName,Updated,UpdatedBy) VALUES (0,55962,0,'SPS_SyncMenu_Trl_ID',TO_DATE('2013-06-26 11:03:14','YYYY-MM-DD HH24:MI:SS'),100,'ECA01','Y','Translation Sync/Option Menu','Translation Sync/Option Menu',TO_DATE('2013-06-26 11:03:14','YYYY-MM-DD HH24:MI:SS'),100)
 ;
 
 -- Jun 26, 2013 11:03:14 AM VET
@@ -83,7 +83,7 @@ INSERT INTO AD_Element_Trl (AD_Language,AD_Element_ID, Description,Help,Name,PO_
 
 -- Jun 26, 2013 11:03:15 AM VET
 -- SFAndroid Contribution
-INSERT INTO AD_Column (AD_Client_ID,AD_Column_ID,AD_Element_ID,AD_Org_ID,AD_Reference_ID,AD_Table_ID,ColumnName,Created,CreatedBy,EntityType,FieldLength,IsActive,IsAlwaysUpdateable,IsEncrypted,IsIdentifier,IsKey,IsMandatory,IsParent,IsSelectionColumn,IsSyncDatabase,IsTranslated,IsUpdateable,Name,SeqNo,Updated,UpdatedBy,Version) VALUES (0,65762,55962,0,13,53502,'SFA_SyncMenu_Trl_ID',TO_DATE('2013-06-26 11:03:14','YYYY-MM-DD HH24:MI:SS'),100,'ECA01',22,'Y','N','N','N','Y','Y','N','N','N','N','N','Translation Sync/Option Menu',0,TO_DATE('2013-06-26 11:03:14','YYYY-MM-DD HH24:MI:SS'),100,1)
+INSERT INTO AD_Column (AD_Client_ID,AD_Column_ID,AD_Element_ID,AD_Org_ID,AD_Reference_ID,AD_Table_ID,ColumnName,Created,CreatedBy,EntityType,FieldLength,IsActive,IsAlwaysUpdateable,IsEncrypted,IsIdentifier,IsKey,IsMandatory,IsParent,IsSelectionColumn,IsSyncDatabase,IsTranslated,IsUpdateable,Name,SeqNo,Updated,UpdatedBy,Version) VALUES (0,65762,55962,0,13,53502,'SPS_SyncMenu_Trl_ID',TO_DATE('2013-06-26 11:03:14','YYYY-MM-DD HH24:MI:SS'),100,'ECA01',22,'Y','N','N','N','Y','Y','N','N','N','N','N','Translation Sync/Option Menu',0,TO_DATE('2013-06-26 11:03:14','YYYY-MM-DD HH24:MI:SS'),100,1)
 ;
 
 -- Jun 26, 2013 11:03:15 AM VET
@@ -153,7 +153,7 @@ INSERT INTO AD_Column_Trl (AD_Language,AD_Column_ID, Name, IsTranslated,AD_Clien
 
 -- Jun 26, 2013 11:06:19 AM VET
 -- SFAndroid Contribution
-UPDATE AD_Column SET AD_Element_ID=55948, AD_Reference_ID=19, ColumnName='SFA_SyncMenu_ID', Description=NULL, FieldLength=10, Help=NULL, IsKey='N', IsParent='Y', IsUpdateable='N', Name='Sync/Option Menu',Updated=TO_DATE('2013-06-26 11:06:19','YYYY-MM-DD HH24:MI:SS'),UpdatedBy=100 WHERE AD_Column_ID=65762
+UPDATE AD_Column SET AD_Element_ID=55948, AD_Reference_ID=19, ColumnName='SPS_SyncMenu_ID', Description=NULL, FieldLength=10, Help=NULL, IsKey='N', IsParent='Y', IsUpdateable='N', Name='Sync/Option Menu',Updated=TO_DATE('2013-06-26 11:06:19','YYYY-MM-DD HH24:MI:SS'),UpdatedBy=100 WHERE AD_Column_ID=65762
 ;
 
 -- Jun 26, 2013 11:06:19 AM VET

@@ -105,6 +105,6 @@ UPDATE AD_Field SET IsSameLine='Y',Updated=TO_DATE('2014-02-18 14:38:28','YYYY-M
 
 -- Feb 18, 2014 3:30:59 PM VET
 -- SFAndroid Server
-UPDATE AD_Val_Rule SET Code='SFA_Tab.SFA_Table_ID=@SFA_Table_ID@', Name='SFA_Tab equal SFA_Table of Context',Updated=TO_DATE('2014-02-18 15:30:59','YYYY-MM-DD HH24:MI:SS'),UpdatedBy=100 WHERE AD_Val_Rule_ID=52312
+UPDATE AD_Val_Rule SET Code='SPS_Tab.SPS_Table_ID=@SPS_Table_ID@', Name='SPS_Tab equal SPS_Table of Context',Updated=TO_DATE('2014-02-18 15:30:59','YYYY-MM-DD HH24:MI:SS'),UpdatedBy=100 WHERE AD_Val_Rule_ID=52312
 ;
 
