@@ -171,7 +171,6 @@ public class ModelClassGenerator
 			 .append("public class ").append(className)
 			 	.append(" extends PO")
 			 	.append(" implements I_").append(tableName)
-			 	.append(", I_Persistent ")
 			 	.append(NL)
 			 .append("{").append(NL)
 
