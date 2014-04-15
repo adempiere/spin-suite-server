@@ -16,24 +16,19 @@
  *****************************************************************************/
 package org.spinsuite.model;
 
-import java.sql.PreparedStatement;
 import java.sql.ResultSet;
-import java.util.ArrayList;
 import java.util.List;
 import java.util.Properties;
-import java.util.logging.Level;
 
 import org.adempiere.exceptions.AdempiereException;
-import org.compiere.model.MField;
 import org.compiere.model.Query;
-import org.compiere.util.DB;
 
 /**
  * @author <a href="mailto:dixon.22martinez@gmail.com">Dixon Martinez</a>
  * @author <a href="mailto:yamelsenih@gmail.com">Yamel Senih</a>
  * Add before save method
  */
-public class MSFATab extends X_SFA_Tab
+public class MSPSTab extends X_SPS_Tab
 {
 
 	/**
@@ -42,19 +37,19 @@ public class MSFATab extends X_SFA_Tab
 	private static final long serialVersionUID = -4624331682737671235L;
 	
 	/**	The Fields						*/
-	private MSFAField []		m_SFAFields 	= null;
+	private MSPSField []		m_SFAFields 	= null;
 	
 
 	/**
 	 * *** Constructor ***
 	 * @author <a href="mailto:dixon.22martinez@gmail.com">Dixon Martinez</a> 13/02/2014, 12:22:48
 	 * @param ctx
-	 * @param SFA_Tab_ID
+	 * @param SPS_Tab_ID
 	 * @param trxName
 	 */
-	public MSFATab(Properties ctx, int SFA_Tab_ID, String trxName)
+	public MSPSTab(Properties ctx, int SPS_Tab_ID, String trxName)
 	{
-		super(ctx, SFA_Tab_ID, trxName);
+		super(ctx, SPS_Tab_ID, trxName);
 	}
 
 	/**
@@ -64,7 +59,7 @@ public class MSFATab extends X_SFA_Tab
 	 * @param rs
 	 * @param trxName
 	 */
-	public MSFATab(Properties ctx, ResultSet rs, String trxName)
+	public MSPSTab(Properties ctx, ResultSet rs, String trxName)
 	{
 		super(ctx, rs, trxName);
 	}
@@ -75,7 +70,7 @@ public class MSFATab extends X_SFA_Tab
 	 * @param m_WindowTo
 	 * @param oldTab
 	 */
-	public MSFATab(MSFAWindow m_WindowTo, MSFATab oldTab)
+	public MSPSTab(MSPSWindow m_WindowTo, MSPSTab oldTab)
 	{
 		//	Create new SFA Tab
 		this (m_WindowTo.getCtx(), 0, m_WindowTo.get_TrxName());
@@ -87,7 +82,7 @@ public class MSFATab extends X_SFA_Tab
 		setClientOrg(m_WindowTo);
 		
 		//	Set SFA Window ID
-		setSFA_Window_ID(m_WindowTo.getSFA_Window_ID());
+		setSPS_Window_ID(m_WindowTo.getSPS_Window_ID());
 		
 		//	Set Entity Type
 		setEntityType(m_WindowTo.getEntityType());
@@ -104,7 +99,7 @@ public class MSFATab extends X_SFA_Tab
 	 * @return
 	 * @return MSFAField[]
 	 */
-	public MSFAField[] getSFAFields(boolean reload, String get_TrxName)
+	public MSPSField[] getSFAFields(boolean reload, String get_TrxName)
 	{
 		//	Validate m_SFAFields not instanced or reload is true
 		if	(m_SFAFields != null
@@ -112,16 +107,16 @@ public class MSFATab extends X_SFA_Tab
 			return m_SFAFields;
 	
 		//	Where clause
-		final String whereClause = I_SFA_Field.COLUMNNAME_SFA_Tab_ID + "=?";
+		final String whereClause = I_SPS_Field.COLUMNNAME_SPS_Tab_ID + "=?";
 		
 		//	Lists of SFA Fields
-		List<MSFAField> list = new Query(getCtx(), I_SFA_Field.Table_Name, whereClause, get_TrxName)
-			.setParameters(getSFA_Tab_ID())
-			.setOrderBy(I_SFA_Field.COLUMNNAME_SeqNo)
+		List<MSPSField> list = new Query(getCtx(), I_SPS_Field.Table_Name, whereClause, get_TrxName)
+			.setParameters(getSPS_Tab_ID())
+			.setOrderBy(I_SPS_Field.COLUMNNAME_SeqNo)
 			.list();
 		
 		//	Instanced SFA Field 
-		m_SFAFields = new MSFAField[list.size()];
+		m_SFAFields = new MSPSField[list.size()];
 		list.toArray(m_SFAFields);
 			
 		return m_SFAFields;
@@ -137,10 +132,10 @@ public class MSFATab extends X_SFA_Tab
 	{
 		super.beforeSave(newRecord);
 		//	Verify if exists class path to form
-		if(getSFA_Table_ID() == 0){
+		if(getSPS_Table_ID() == 0){
 			if(getClassname() == null
 					|| getClassname().trim().length() == 0)
-				throw new AdempiereException("@SFA_SyncTable_ID@ @IsMandatory@");
+				throw new AdempiereException("@SPS_SyncTable_ID@ @IsMandatory@");
 		}
 		return true;
 	}	//	beforeSave

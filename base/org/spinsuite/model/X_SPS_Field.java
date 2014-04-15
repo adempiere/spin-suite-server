@@ -22,34 +22,34 @@ import java.util.Properties;
 import org.compiere.model.*;
 import org.compiere.util.KeyNamePair;
 
-/** Generated Model for SFA_Field
+/** Generated Model for SPS_Field
  *  @author Adempiere (generated) 
  *  @version Release 3.7.0LTS (1252452765) - $Id$ */
-public class X_SFA_Field extends PO implements I_SFA_Field, I_Persistent 
+public class X_SPS_Field extends PO implements I_SPS_Field, I_Persistent 
 {
 
 	/**
 	 *
 	 */
-	private static final long serialVersionUID = 20140320L;
+	private static final long serialVersionUID = 20140415L;
 
     /** Standard Constructor */
-    public X_SFA_Field (Properties ctx, int SFA_Field_ID, String trxName)
+    public X_SPS_Field (Properties ctx, int SPS_Field_ID, String trxName)
     {
-      super (ctx, SFA_Field_ID, trxName);
-      /** if (SFA_Field_ID == 0)
+      super (ctx, SPS_Field_ID, trxName);
+      /** if (SPS_Field_ID == 0)
         {
 			setEntityType (null);
 // ECA01
 			setName (null);
-			setSFA_Column_ID (0);
-			setSFA_Field_ID (0);
-			setSFA_Tab_ID (0);
+			setSPS_Column_ID (0);
+			setSPS_Field_ID (0);
+			setSPS_Tab_ID (0);
         } */
     }
 
     /** Load Constructor */
-    public X_SFA_Field (Properties ctx, ResultSet rs, String trxName)
+    public X_SPS_Field (Properties ctx, ResultSet rs, String trxName)
     {
       super (ctx, rs, trxName);
     }
@@ -71,7 +71,7 @@ public class X_SFA_Field extends PO implements I_SFA_Field, I_Persistent
 
     public String toString()
     {
-      StringBuffer sb = new StringBuffer ("X_SFA_Field[")
+      StringBuffer sb = new StringBuffer ("X_SPS_Field[")
         .append(get_ID()).append("]");
       return sb.toString();
     }
@@ -465,71 +465,71 @@ public class X_SFA_Field extends PO implements I_SFA_Field, I_Persistent
 		return ii.intValue();
 	}
 
-	public org.spinsuite.model.I_SFA_Column getSFA_Column() throws RuntimeException
+	public org.spinsuite.model.I_SPS_Column getSPS_Column() throws RuntimeException
     {
-		return (org.spinsuite.model.I_SFA_Column)MTable.get(getCtx(), org.spinsuite.model.I_SFA_Column.Table_Name)
-			.getPO(getSFA_Column_ID(), get_TrxName());	}
+		return (org.spinsuite.model.I_SPS_Column)MTable.get(getCtx(), org.spinsuite.model.I_SPS_Column.Table_Name)
+			.getPO(getSPS_Column_ID(), get_TrxName());	}
 
 	/** Set Mobile Column.
-		@param SFA_Column_ID Mobile Column	  */
-	public void setSFA_Column_ID (int SFA_Column_ID)
+		@param SPS_Column_ID Mobile Column	  */
+	public void setSPS_Column_ID (int SPS_Column_ID)
 	{
-		if (SFA_Column_ID < 1) 
-			set_Value (COLUMNNAME_SFA_Column_ID, null);
+		if (SPS_Column_ID < 1) 
+			set_Value (COLUMNNAME_SPS_Column_ID, null);
 		else 
-			set_Value (COLUMNNAME_SFA_Column_ID, Integer.valueOf(SFA_Column_ID));
+			set_Value (COLUMNNAME_SPS_Column_ID, Integer.valueOf(SPS_Column_ID));
 	}
 
 	/** Get Mobile Column.
 		@return Mobile Column	  */
-	public int getSFA_Column_ID () 
+	public int getSPS_Column_ID () 
 	{
-		Integer ii = (Integer)get_Value(COLUMNNAME_SFA_Column_ID);
+		Integer ii = (Integer)get_Value(COLUMNNAME_SPS_Column_ID);
 		if (ii == null)
 			 return 0;
 		return ii.intValue();
 	}
 
 	/** Set Field.
-		@param SFA_Field_ID Field	  */
-	public void setSFA_Field_ID (int SFA_Field_ID)
+		@param SPS_Field_ID Field	  */
+	public void setSPS_Field_ID (int SPS_Field_ID)
 	{
-		if (SFA_Field_ID < 1) 
-			set_ValueNoCheck (COLUMNNAME_SFA_Field_ID, null);
+		if (SPS_Field_ID < 1) 
+			set_ValueNoCheck (COLUMNNAME_SPS_Field_ID, null);
 		else 
-			set_ValueNoCheck (COLUMNNAME_SFA_Field_ID, Integer.valueOf(SFA_Field_ID));
+			set_ValueNoCheck (COLUMNNAME_SPS_Field_ID, Integer.valueOf(SPS_Field_ID));
 	}
 
 	/** Get Field.
 		@return Field	  */
-	public int getSFA_Field_ID () 
+	public int getSPS_Field_ID () 
 	{
-		Integer ii = (Integer)get_Value(COLUMNNAME_SFA_Field_ID);
+		Integer ii = (Integer)get_Value(COLUMNNAME_SPS_Field_ID);
 		if (ii == null)
 			 return 0;
 		return ii.intValue();
 	}
 
-	public org.spinsuite.model.I_SFA_Tab getSFA_Tab() throws RuntimeException
+	public org.spinsuite.model.I_SPS_Tab getSPS_Tab() throws RuntimeException
     {
-		return (org.spinsuite.model.I_SFA_Tab)MTable.get(getCtx(), org.spinsuite.model.I_SFA_Tab.Table_Name)
-			.getPO(getSFA_Tab_ID(), get_TrxName());	}
+		return (org.spinsuite.model.I_SPS_Tab)MTable.get(getCtx(), org.spinsuite.model.I_SPS_Tab.Table_Name)
+			.getPO(getSPS_Tab_ID(), get_TrxName());	}
 
 	/** Set Tab.
-		@param SFA_Tab_ID Tab	  */
-	public void setSFA_Tab_ID (int SFA_Tab_ID)
+		@param SPS_Tab_ID Tab	  */
+	public void setSPS_Tab_ID (int SPS_Tab_ID)
 	{
-		if (SFA_Tab_ID < 1) 
-			set_ValueNoCheck (COLUMNNAME_SFA_Tab_ID, null);
+		if (SPS_Tab_ID < 1) 
+			set_ValueNoCheck (COLUMNNAME_SPS_Tab_ID, null);
 		else 
-			set_ValueNoCheck (COLUMNNAME_SFA_Tab_ID, Integer.valueOf(SFA_Tab_ID));
+			set_ValueNoCheck (COLUMNNAME_SPS_Tab_ID, Integer.valueOf(SPS_Tab_ID));
 	}
 
 	/** Get Tab.
 		@return Tab	  */
-	public int getSFA_Tab_ID () 
+	public int getSPS_Tab_ID () 
 	{
-		Integer ii = (Integer)get_Value(COLUMNNAME_SFA_Tab_ID);
+		Integer ii = (Integer)get_Value(COLUMNNAME_SPS_Tab_ID);
 		if (ii == null)
 			 return 0;
 		return ii.intValue();

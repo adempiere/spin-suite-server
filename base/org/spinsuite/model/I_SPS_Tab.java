@@ -21,17 +21,17 @@ import java.sql.Timestamp;
 import org.compiere.model.*;
 import org.compiere.util.KeyNamePair;
 
-/** Generated Interface for SFA_Field
+/** Generated Interface for SPS_Tab
  *  @author Adempiere (generated) 
  *  @version Release 3.7.0LTS (1252452765)
  */
-public interface I_SFA_Field 
+public interface I_SPS_Tab 
 {
 
-    /** TableName=SFA_Field */
-    public static final String Table_Name = "SFA_Field";
+    /** TableName=SPS_Tab */
+    public static final String Table_Name = "SPS_Tab";
 
-    /** AD_Table_ID=53756 */
+    /** AD_Table_ID=53754 */
     public static final int Table_ID = MTable.getTable_ID(Table_Name);
 
     KeyNamePair Model = new KeyNamePair(Table_ID, Table_Name);
@@ -50,21 +50,6 @@ public interface I_SFA_Field
 	  */
 	public int getAD_Client_ID();
 
-    /** Column name AD_FieldGroup_ID */
-    public static final String COLUMNNAME_AD_FieldGroup_ID = "AD_FieldGroup_ID";
-
-	/** Set Field Group.
-	  * Logical grouping of fields
-	  */
-	public void setAD_FieldGroup_ID (int AD_FieldGroup_ID);
-
-	/** Get Field Group.
-	  * Logical grouping of fields
-	  */
-	public int getAD_FieldGroup_ID();
-
-	public org.compiere.model.I_AD_FieldGroup getAD_FieldGroup() throws RuntimeException;
-
     /** Column name AD_Org_ID */
     public static final String COLUMNNAME_AD_Org_ID = "AD_Org_ID";
 
@@ -78,50 +63,33 @@ public interface I_SFA_Field
 	  */
 	public int getAD_Org_ID();
 
-    /** Column name AD_Reference_ID */
-    public static final String COLUMNNAME_AD_Reference_ID = "AD_Reference_ID";
+    /** Column name AD_Process_ID */
+    public static final String COLUMNNAME_AD_Process_ID = "AD_Process_ID";
 
-	/** Set Reference.
-	  * System Reference and Validation
+	/** Set Process.
+	  * Process or Report
 	  */
-	public void setAD_Reference_ID (int AD_Reference_ID);
+	public void setAD_Process_ID (int AD_Process_ID);
 
-	/** Get Reference.
-	  * System Reference and Validation
+	/** Get Process.
+	  * Process or Report
 	  */
-	public int getAD_Reference_ID();
+	public int getAD_Process_ID();
 
-	public org.compiere.model.I_AD_Reference getAD_Reference() throws RuntimeException;
+	public org.compiere.model.I_AD_Process getAD_Process() throws RuntimeException;
 
-    /** Column name AD_Reference_Value_ID */
-    public static final String COLUMNNAME_AD_Reference_Value_ID = "AD_Reference_Value_ID";
+    /** Column name Classname */
+    public static final String COLUMNNAME_Classname = "Classname";
 
-	/** Set Reference Key.
-	  * Required to specify, if data type is Table or List
+	/** Set Classname.
+	  * Java Classname
 	  */
-	public void setAD_Reference_Value_ID (int AD_Reference_Value_ID);
+	public void setClassname (String Classname);
 
-	/** Get Reference Key.
-	  * Required to specify, if data type is Table or List
+	/** Get Classname.
+	  * Java Classname
 	  */
-	public int getAD_Reference_Value_ID();
-
-	public org.compiere.model.I_AD_Reference getAD_Reference_Value() throws RuntimeException;
-
-    /** Column name AD_Val_Rule_ID */
-    public static final String COLUMNNAME_AD_Val_Rule_ID = "AD_Val_Rule_ID";
-
-	/** Set Dynamic Validation.
-	  * Dynamic Validation Rule
-	  */
-	public void setAD_Val_Rule_ID (int AD_Val_Rule_ID);
-
-	/** Get Dynamic Validation.
-	  * Dynamic Validation Rule
-	  */
-	public int getAD_Val_Rule_ID();
-
-	public org.compiere.model.I_AD_Val_Rule getAD_Val_Rule() throws RuntimeException;
+	public String getClassname();
 
     /** Column name Created */
     public static final String COLUMNNAME_Created = "Created";
@@ -139,21 +107,6 @@ public interface I_SFA_Field
 	  */
 	public int getCreatedBy();
 
-    /** Column name DefaultValue */
-    public static final String COLUMNNAME_DefaultValue = "DefaultValue";
-
-	/** Set Default Logic.
-	  * Default value hierarchy, separated by ;
-
-	  */
-	public void setDefaultValue (String DefaultValue);
-
-	/** Get Default Logic.
-	  * Default value hierarchy, separated by ;
-
-	  */
-	public String getDefaultValue();
-
     /** Column name Description */
     public static final String COLUMNNAME_Description = "Description";
 
@@ -166,19 +119,6 @@ public interface I_SFA_Field
 	  * Optional short description of the record
 	  */
 	public String getDescription();
-
-    /** Column name DisplayLogic */
-    public static final String COLUMNNAME_DisplayLogic = "DisplayLogic";
-
-	/** Set Display Logic.
-	  * If the Field is displayed, the result determines if the field is actually displayed
-	  */
-	public void setDisplayLogic (String DisplayLogic);
-
-	/** Get Display Logic.
-	  * If the Field is displayed, the result determines if the field is actually displayed
-	  */
-	public String getDisplayLogic();
 
     /** Column name EntityType */
     public static final String COLUMNNAME_EntityType = "EntityType";
@@ -208,6 +148,19 @@ public interface I_SFA_Field
 	  */
 	public String getHelp();
 
+    /** Column name ImportFields */
+    public static final String COLUMNNAME_ImportFields = "ImportFields";
+
+	/** Set Import Fields.
+	  * Create Fields from Table Columns
+	  */
+	public void setImportFields (String ImportFields);
+
+	/** Get Import Fields.
+	  * Create Fields from Table Columns
+	  */
+	public String getImportFields();
+
     /** Column name IsActive */
     public static final String COLUMNNAME_IsActive = "IsActive";
 
@@ -221,57 +174,18 @@ public interface I_SFA_Field
 	  */
 	public boolean isActive();
 
-    /** Column name IsCentrallyMaintained */
-    public static final String COLUMNNAME_IsCentrallyMaintained = "IsCentrallyMaintained";
+    /** Column name IsInsertRecord */
+    public static final String COLUMNNAME_IsInsertRecord = "IsInsertRecord";
 
-	/** Set Centrally maintained.
-	  * Information maintained in System Element table
+	/** Set Insert Record.
+	  * The user can insert a new Record
 	  */
-	public void setIsCentrallyMaintained (boolean IsCentrallyMaintained);
+	public void setIsInsertRecord (boolean IsInsertRecord);
 
-	/** Get Centrally maintained.
-	  * Information maintained in System Element table
+	/** Get Insert Record.
+	  * The user can insert a new Record
 	  */
-	public boolean isCentrallyMaintained();
-
-    /** Column name IsDisplayed */
-    public static final String COLUMNNAME_IsDisplayed = "IsDisplayed";
-
-	/** Set Displayed.
-	  * Determines, if this field is displayed
-	  */
-	public void setIsDisplayed (boolean IsDisplayed);
-
-	/** Get Displayed.
-	  * Determines, if this field is displayed
-	  */
-	public boolean isDisplayed();
-
-    /** Column name IsEncrypted */
-    public static final String COLUMNNAME_IsEncrypted = "IsEncrypted";
-
-	/** Set Encrypted.
-	  * Display or Storage is encrypted
-	  */
-	public void setIsEncrypted (boolean IsEncrypted);
-
-	/** Get Encrypted.
-	  * Display or Storage is encrypted
-	  */
-	public boolean isEncrypted();
-
-    /** Column name IsMandatory */
-    public static final String COLUMNNAME_IsMandatory = "IsMandatory";
-
-	/** Set Mandatory.
-	  * Data entry is required in this column
-	  */
-	public void setIsMandatory (String IsMandatory);
-
-	/** Get Mandatory.
-	  * Data entry is required in this column
-	  */
-	public String getIsMandatory();
+	public boolean isInsertRecord();
 
     /** Column name IsReadOnly */
     public static final String COLUMNNAME_IsReadOnly = "IsReadOnly";
@@ -286,19 +200,6 @@ public interface I_SFA_Field
 	  */
 	public boolean isReadOnly();
 
-    /** Column name IsSameLine */
-    public static final String COLUMNNAME_IsSameLine = "IsSameLine";
-
-	/** Set Same Line.
-	  * Displayed on same line as previous field
-	  */
-	public void setIsSameLine (boolean IsSameLine);
-
-	/** Get Same Line.
-	  * Displayed on same line as previous field
-	  */
-	public boolean isSameLine();
-
     /** Column name Name */
     public static final String COLUMNNAME_Name = "Name";
 
@@ -311,6 +212,43 @@ public interface I_SFA_Field
 	  * Alphanumeric identifier of the entity
 	  */
 	public String getName();
+
+    /** Column name OrderByClause */
+    public static final String COLUMNNAME_OrderByClause = "OrderByClause";
+
+	/** Set Sql ORDER BY.
+	  * Fully qualified ORDER BY clause
+	  */
+	public void setOrderByClause (String OrderByClause);
+
+	/** Get Sql ORDER BY.
+	  * Fully qualified ORDER BY clause
+	  */
+	public String getOrderByClause();
+
+    /** Column name Parent_Column_ID */
+    public static final String COLUMNNAME_Parent_Column_ID = "Parent_Column_ID";
+
+	/** Set Parent Column.
+	  * The link column on the parent tab.
+	  */
+	public void setParent_Column_ID (int Parent_Column_ID);
+
+	/** Get Parent Column.
+	  * The link column on the parent tab.
+	  */
+	public int getParent_Column_ID();
+
+	public org.spinsuite.model.I_SPS_Column getParent_Column() throws RuntimeException;
+
+    /** Column name Processing */
+    public static final String COLUMNNAME_Processing = "Processing";
+
+	/** Set Process Now	  */
+	public void setProcessing (boolean Processing);
+
+	/** Get Process Now	  */
+	public boolean isProcessing();
 
     /** Column name SeqNo */
     public static final String COLUMNNAME_SeqNo = "SeqNo";
@@ -327,36 +265,60 @@ public interface I_SFA_Field
 	  */
 	public int getSeqNo();
 
-    /** Column name SFA_Column_ID */
-    public static final String COLUMNNAME_SFA_Column_ID = "SFA_Column_ID";
+    /** Column name SPS_Column_ID */
+    public static final String COLUMNNAME_SPS_Column_ID = "SPS_Column_ID";
 
 	/** Set Mobile Column	  */
-	public void setSFA_Column_ID (int SFA_Column_ID);
+	public void setSPS_Column_ID (int SPS_Column_ID);
 
 	/** Get Mobile Column	  */
-	public int getSFA_Column_ID();
+	public int getSPS_Column_ID();
 
-	public org.spinsuite.model.I_SFA_Column getSFA_Column() throws RuntimeException;
+	public org.spinsuite.model.I_SPS_Column getSPS_Column() throws RuntimeException;
 
-    /** Column name SFA_Field_ID */
-    public static final String COLUMNNAME_SFA_Field_ID = "SFA_Field_ID";
-
-	/** Set Field	  */
-	public void setSFA_Field_ID (int SFA_Field_ID);
-
-	/** Get Field	  */
-	public int getSFA_Field_ID();
-
-    /** Column name SFA_Tab_ID */
-    public static final String COLUMNNAME_SFA_Tab_ID = "SFA_Tab_ID";
+    /** Column name SPS_Tab_ID */
+    public static final String COLUMNNAME_SPS_Tab_ID = "SPS_Tab_ID";
 
 	/** Set Tab	  */
-	public void setSFA_Tab_ID (int SFA_Tab_ID);
+	public void setSPS_Tab_ID (int SPS_Tab_ID);
 
 	/** Get Tab	  */
-	public int getSFA_Tab_ID();
+	public int getSPS_Tab_ID();
 
-	public org.spinsuite.model.I_SFA_Tab getSFA_Tab() throws RuntimeException;
+    /** Column name SPS_Table_ID */
+    public static final String COLUMNNAME_SPS_Table_ID = "SPS_Table_ID";
+
+	/** Set Mobile Table	  */
+	public void setSPS_Table_ID (int SPS_Table_ID);
+
+	/** Get Mobile Table	  */
+	public int getSPS_Table_ID();
+
+	public org.spinsuite.model.I_SPS_Table getSPS_Table() throws RuntimeException;
+
+    /** Column name SPS_Window_ID */
+    public static final String COLUMNNAME_SPS_Window_ID = "SPS_Window_ID";
+
+	/** Set Window Mobile	  */
+	public void setSPS_Window_ID (int SPS_Window_ID);
+
+	/** Get Window Mobile	  */
+	public int getSPS_Window_ID();
+
+	public org.spinsuite.model.I_SPS_Window getSPS_Window() throws RuntimeException;
+
+    /** Column name TabLevel */
+    public static final String COLUMNNAME_TabLevel = "TabLevel";
+
+	/** Set Tab Level.
+	  * Hierarchical Tab Level (0 = top)
+	  */
+	public void setTabLevel (int TabLevel);
+
+	/** Get Tab Level.
+	  * Hierarchical Tab Level (0 = top)
+	  */
+	public int getTabLevel();
 
     /** Column name Updated */
     public static final String COLUMNNAME_Updated = "Updated";
@@ -373,4 +335,17 @@ public interface I_SFA_Field
 	  * User who updated this records
 	  */
 	public int getUpdatedBy();
+
+    /** Column name WhereClause */
+    public static final String COLUMNNAME_WhereClause = "WhereClause";
+
+	/** Set Sql WHERE.
+	  * Fully qualified SQL WHERE clause
+	  */
+	public void setWhereClause (String WhereClause);
+
+	/** Get Sql WHERE.
+	  * Fully qualified SQL WHERE clause
+	  */
+	public String getWhereClause();
 }

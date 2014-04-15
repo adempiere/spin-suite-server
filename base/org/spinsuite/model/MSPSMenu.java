@@ -19,24 +19,26 @@ package org.spinsuite.model;
 import java.sql.ResultSet;
 import java.util.Properties;
 
-import org.compiere.model.MTree_Base;
-
 /**
  * @author <a href="mailto:dixon.22martinez@gmail.com">Dixon Martinez</a>
  *
  */
-public class MSFAMenu extends X_SFA_Menu {
+public class MSPSMenu extends X_SPS_Menu {
+	
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = -2610126086775610063L;
 
 	/**
 	 * *** Constructor ***
 	 * @author <a href="mailto:dixon.22martinez@gmail.com">Dixon Martinez</a> 03/07/2013, 14:11:08
 	 * @param ctx
-	 * @param SFA_Menu_ID
+	 * @param SPS_Menu_ID
 	 * @param trxName
 	 */
-	public MSFAMenu(Properties ctx, int SFA_Menu_ID, String trxName) {
-		super(ctx, SFA_Menu_ID, trxName);
-		// TODO Auto-generated constructor stub
+	public MSPSMenu(Properties ctx, int SPS_Menu_ID, String trxName) {
+		super(ctx, SPS_Menu_ID, trxName);
 	}
 
 	/**
@@ -46,9 +48,8 @@ public class MSFAMenu extends X_SFA_Menu {
 	 * @param rs
 	 * @param trxName
 	 */
-	public MSFAMenu(Properties ctx, ResultSet rs, String trxName) {
+	public MSPSMenu(Properties ctx, ResultSet rs, String trxName) {
 		super(ctx, rs, trxName);
-		// TODO Auto-generated constructor stub
 	}
 	
 

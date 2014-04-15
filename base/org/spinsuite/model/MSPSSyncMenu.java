@@ -32,7 +32,7 @@ import org.compiere.util.Env;
  * @author <a href="mailto:yamelsenih@gmail.com">Yamel Senih</a>
  *
  */
-public class MSFASyncMenu extends X_SFA_SyncMenu implements I_SFA_SyncMenu {
+public class MSPSSyncMenu extends X_SPS_SyncMenu implements I_SPS_SyncMenu {
 
 	/**
 	 * 
@@ -43,11 +43,11 @@ public class MSFASyncMenu extends X_SFA_SyncMenu implements I_SFA_SyncMenu {
 	 * *** Constructor ***
 	 * @author <a href="mailto:yamelsenih@gmail.com">Yamel Senih</a> 22/05/2013, 01:25:27
 	 * @param ctx
-	 * @param SFA_SyncMenu_ID
+	 * @param SPS_SyncMenu_ID
 	 * @param trxName
 	 */
-	public MSFASyncMenu(Properties ctx, int SFA_SyncMenu_ID, String trxName) {
-		super(ctx, SFA_SyncMenu_ID, trxName);
+	public MSPSSyncMenu(Properties ctx, int SPS_SyncMenu_ID, String trxName) {
+		super(ctx, SPS_SyncMenu_ID, trxName);
 	}
 
 	/**
@@ -57,7 +57,7 @@ public class MSFASyncMenu extends X_SFA_SyncMenu implements I_SFA_SyncMenu {
 	 * @param rs
 	 * @param trxName
 	 */
-	public MSFASyncMenu(Properties ctx, ResultSet rs, String trxName) {
+	public MSPSSyncMenu(Properties ctx, ResultSet rs, String trxName) {
 		super(ctx, rs, trxName);
 	}
 	
@@ -69,12 +69,12 @@ public class MSFASyncMenu extends X_SFA_SyncMenu implements I_SFA_SyncMenu {
 	 * @return
 	 * @return List<MSFASyncMenu>
 	 */
-	public static List<MSFASyncMenu> getNodes(int p_ParentNode,String p_WebServiceDefinition) {
+	public static List<MSPSSyncMenu> getNodes(int p_ParentNode,String p_WebServiceDefinition) {
 		
 		StringBuffer sql = new StringBuffer();
 		PreparedStatement ps = null;
 		ResultSet rs = null;
-		List<MSFASyncMenu> items = new ArrayList<MSFASyncMenu>();
+		List<MSPSSyncMenu> items = new ArrayList<MSPSSyncMenu>();
 				
 		sql.append( "SELECT treend.Parent_ID,treend.Node_ID,treend.SeqNo,CASE WHEN Qty IS NULL THEN 'N' ELSE 'Y' END As HasNodes " + 
 					"FROM " +
@@ -82,14 +82,14 @@ public class MSFASyncMenu extends X_SFA_SyncMenu implements I_SFA_SyncMenu {
 					"INNER JOIN AD_Table tab ON tree.AD_Table_ID = tab.AD_Table_ID " +
 					"INNER JOIN AD_TreeNode treend On treend.AD_Tree_ID = tree.AD_Tree_ID "+
 					"LEFT JOIN (SELECT Count(1) Qty,Parent_ID,AD_Tree_ID FROM AD_TreeNode GROUP BY Parent_ID,AD_Tree_ID) hasnodes ON hasnodes.Parent_ID=treend.Node_ID AND hasnodes.AD_Tree_ID=treend.AD_Tree_ID " +
-					"LEFT JOIN SFA_SyncMenu sm ON treend.Node_ID = sm.SFA_SyncMenu_ID " +
+					"LEFT JOIN SPS_SyncMenu sm ON treend.Node_ID = sm.SPS_SyncMenu_ID " +
 					"LEFT JOIN WS_WebService ws ON ws.WS_WebService_ID = sm.WS_WebService_ID " +
 					"WHERE tab.TableName = ? AND treend.Parent_ID = ? AND ws.Value = ? AND sm.IsActive ='Y' AND ws.IsActive='Y' " +
 					"ORDER By treend.SeqNo ");
 		
 		try{
 			ps = DB.prepareStatement(sql.toString(),null);
-			ps.setString(1, MSFASyncMenu.Table_Name);
+			ps.setString(1, MSPSSyncMenu.Table_Name);
 			ps.setInt(2, p_ParentNode);
 			ps.setString(3, p_WebServiceDefinition);
 			rs = ps.executeQuery();
@@ -98,7 +98,7 @@ public class MSFASyncMenu extends X_SFA_SyncMenu implements I_SFA_SyncMenu {
 				if (rs.getString("HasNodes").equals("Y"))
 					items.addAll(getNodes(rs.getInt("Node_ID"),p_WebServiceDefinition));
 				else
-					items.add(new MSFASyncMenu(Env.getCtx(), rs.getInt("Node_ID"), null));
+					items.add(new MSPSSyncMenu(Env.getCtx(), rs.getInt("Node_ID"), null));
 			}
 		}
 		catch(SQLException ex){

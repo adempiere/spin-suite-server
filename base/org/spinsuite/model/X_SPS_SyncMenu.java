@@ -22,35 +22,35 @@ import java.util.Properties;
 import org.compiere.model.*;
 import org.compiere.util.KeyNamePair;
 
-/** Generated Model for SFA_SyncMenu
+/** Generated Model for SPS_SyncMenu
  *  @author Adempiere (generated) 
  *  @version Release 3.7.0LTS (1252452765) - $Id$ */
-public class X_SFA_SyncMenu extends PO implements I_SFA_SyncMenu, I_Persistent 
+public class X_SPS_SyncMenu extends PO implements I_SPS_SyncMenu, I_Persistent 
 {
 
 	/**
 	 *
 	 */
-	private static final long serialVersionUID = 20140320L;
+	private static final long serialVersionUID = 20140415L;
 
     /** Standard Constructor */
-    public X_SFA_SyncMenu (Properties ctx, int SFA_SyncMenu_ID, String trxName)
+    public X_SPS_SyncMenu (Properties ctx, int SPS_SyncMenu_ID, String trxName)
     {
-      super (ctx, SFA_SyncMenu_ID, trxName);
-      /** if (SFA_SyncMenu_ID == 0)
+      super (ctx, SPS_SyncMenu_ID, trxName);
+      /** if (SPS_SyncMenu_ID == 0)
         {
 			setEntityType (null);
 // ECA01
 			setIsSummary (false);
 // N
 			setName (null);
-			setSFA_SyncMenu_ID (0);
-			setSFA_Table_ID (0);
+			setSPS_SyncMenu_ID (0);
+			setSPS_Table_ID (0);
         } */
     }
 
     /** Load Constructor */
-    public X_SFA_SyncMenu (Properties ctx, ResultSet rs, String trxName)
+    public X_SPS_SyncMenu (Properties ctx, ResultSet rs, String trxName)
     {
       super (ctx, rs, trxName);
     }
@@ -72,7 +72,7 @@ public class X_SFA_SyncMenu extends PO implements I_SFA_SyncMenu, I_Persistent
 
     public String toString()
     {
-      StringBuffer sb = new StringBuffer ("X_SFA_SyncMenu[")
+      StringBuffer sb = new StringBuffer ("X_SPS_SyncMenu[")
         .append(get_ID()).append("]");
       return sb.toString();
     }
@@ -245,45 +245,45 @@ public class X_SFA_SyncMenu extends PO implements I_SFA_SyncMenu, I_Persistent
     }
 
 	/** Set Sync/Option Menu.
-		@param SFA_SyncMenu_ID Sync/Option Menu	  */
-	public void setSFA_SyncMenu_ID (int SFA_SyncMenu_ID)
+		@param SPS_SyncMenu_ID Sync/Option Menu	  */
+	public void setSPS_SyncMenu_ID (int SPS_SyncMenu_ID)
 	{
-		if (SFA_SyncMenu_ID < 1) 
-			set_ValueNoCheck (COLUMNNAME_SFA_SyncMenu_ID, null);
+		if (SPS_SyncMenu_ID < 1) 
+			set_ValueNoCheck (COLUMNNAME_SPS_SyncMenu_ID, null);
 		else 
-			set_ValueNoCheck (COLUMNNAME_SFA_SyncMenu_ID, Integer.valueOf(SFA_SyncMenu_ID));
+			set_ValueNoCheck (COLUMNNAME_SPS_SyncMenu_ID, Integer.valueOf(SPS_SyncMenu_ID));
 	}
 
 	/** Get Sync/Option Menu.
 		@return Sync/Option Menu	  */
-	public int getSFA_SyncMenu_ID () 
+	public int getSPS_SyncMenu_ID () 
 	{
-		Integer ii = (Integer)get_Value(COLUMNNAME_SFA_SyncMenu_ID);
+		Integer ii = (Integer)get_Value(COLUMNNAME_SPS_SyncMenu_ID);
 		if (ii == null)
 			 return 0;
 		return ii.intValue();
 	}
 
-	public org.spinsuite.model.I_SFA_Table getSFA_Table() throws RuntimeException
+	public org.spinsuite.model.I_SPS_Table getSPS_Table() throws RuntimeException
     {
-		return (org.spinsuite.model.I_SFA_Table)MTable.get(getCtx(), org.spinsuite.model.I_SFA_Table.Table_Name)
-			.getPO(getSFA_Table_ID(), get_TrxName());	}
+		return (org.spinsuite.model.I_SPS_Table)MTable.get(getCtx(), org.spinsuite.model.I_SPS_Table.Table_Name)
+			.getPO(getSPS_Table_ID(), get_TrxName());	}
 
 	/** Set Mobile Table.
-		@param SFA_Table_ID Mobile Table	  */
-	public void setSFA_Table_ID (int SFA_Table_ID)
+		@param SPS_Table_ID Mobile Table	  */
+	public void setSPS_Table_ID (int SPS_Table_ID)
 	{
-		if (SFA_Table_ID < 1) 
-			set_Value (COLUMNNAME_SFA_Table_ID, null);
+		if (SPS_Table_ID < 1) 
+			set_Value (COLUMNNAME_SPS_Table_ID, null);
 		else 
-			set_Value (COLUMNNAME_SFA_Table_ID, Integer.valueOf(SFA_Table_ID));
+			set_Value (COLUMNNAME_SPS_Table_ID, Integer.valueOf(SPS_Table_ID));
 	}
 
 	/** Get Mobile Table.
 		@return Mobile Table	  */
-	public int getSFA_Table_ID () 
+	public int getSPS_Table_ID () 
 	{
-		Integer ii = (Integer)get_Value(COLUMNNAME_SFA_Table_ID);
+		Integer ii = (Integer)get_Value(COLUMNNAME_SPS_Table_ID);
 		if (ii == null)
 			 return 0;
 		return ii.intValue();

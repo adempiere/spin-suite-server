@@ -21,17 +21,17 @@ import java.sql.Timestamp;
 import org.compiere.model.*;
 import org.compiere.util.KeyNamePair;
 
-/** Generated Interface for SFA_Tab
+/** Generated Interface for SPS_Menu
  *  @author Adempiere (generated) 
  *  @version Release 3.7.0LTS (1252452765)
  */
-public interface I_SFA_Tab 
+public interface I_SPS_Menu 
 {
 
-    /** TableName=SFA_Tab */
-    public static final String Table_Name = "SFA_Tab";
+    /** TableName=SPS_Menu */
+    public static final String Table_Name = "SPS_Menu";
 
-    /** AD_Table_ID=53754 */
+    /** AD_Table_ID=53518 */
     public static final int Table_ID = MTable.getTable_ID(Table_Name);
 
     KeyNamePair Model = new KeyNamePair(Table_ID, Table_Name);
@@ -42,6 +42,30 @@ public interface I_SFA_Tab
 
     /** Load Meta Data */
 
+    /** Column name Action */
+    public static final String COLUMNNAME_Action = "Action";
+
+	/** Set Action.
+	  * Indicates the Action to be performed
+	  */
+	public void setAction (String Action);
+
+	/** Get Action.
+	  * Indicates the Action to be performed
+	  */
+	public String getAction();
+
+    /** Column name ActivityMenu_ID */
+    public static final String COLUMNNAME_ActivityMenu_ID = "ActivityMenu_ID";
+
+	/** Set Activity Menu	  */
+	public void setActivityMenu_ID (int ActivityMenu_ID);
+
+	/** Get Activity Menu	  */
+	public int getActivityMenu_ID();
+
+	public org.spinsuite.model.I_SPS_Menu getActivityMenu() throws RuntimeException;
+
     /** Column name AD_Client_ID */
     public static final String COLUMNNAME_AD_Client_ID = "AD_Client_ID";
 
@@ -49,6 +73,21 @@ public interface I_SFA_Tab
 	  * Client/Tenant for this installation.
 	  */
 	public int getAD_Client_ID();
+
+    /** Column name AD_Form_ID */
+    public static final String COLUMNNAME_AD_Form_ID = "AD_Form_ID";
+
+	/** Set Special Form.
+	  * Special Form
+	  */
+	public void setAD_Form_ID (int AD_Form_ID);
+
+	/** Get Special Form.
+	  * Special Form
+	  */
+	public int getAD_Form_ID();
+
+	public org.compiere.model.I_AD_Form getAD_Form() throws RuntimeException;
 
     /** Column name AD_Org_ID */
     public static final String COLUMNNAME_AD_Org_ID = "AD_Org_ID";
@@ -78,19 +117,6 @@ public interface I_SFA_Tab
 
 	public org.compiere.model.I_AD_Process getAD_Process() throws RuntimeException;
 
-    /** Column name Classname */
-    public static final String COLUMNNAME_Classname = "Classname";
-
-	/** Set Classname.
-	  * Java Classname
-	  */
-	public void setClassname (String Classname);
-
-	/** Get Classname.
-	  * Java Classname
-	  */
-	public String getClassname();
-
     /** Column name Created */
     public static final String COLUMNNAME_Created = "Created";
 
@@ -106,6 +132,15 @@ public interface I_SFA_Tab
 	  * User who created this records
 	  */
 	public int getCreatedBy();
+
+    /** Column name DeploymentType */
+    public static final String COLUMNNAME_DeploymentType = "DeploymentType";
+
+	/** Set Deployment Type	  */
+	public void setDeploymentType (String DeploymentType);
+
+	/** Get Deployment Type	  */
+	public String getDeploymentType();
 
     /** Column name Description */
     public static final String COLUMNNAME_Description = "Description";
@@ -135,31 +170,36 @@ public interface I_SFA_Tab
 	  */
 	public String getEntityType();
 
-    /** Column name Help */
-    public static final String COLUMNNAME_Help = "Help";
+    /** Column name ErrImgUrl */
+    public static final String COLUMNNAME_ErrImgUrl = "ErrImgUrl";
 
-	/** Set Comment/Help.
-	  * Comment or Hint
+	/** Set Error Image URL	  */
+	public void setErrImgUrl (String ErrImgUrl);
+
+	/** Get Error Image URL	  */
+	public String getErrImgUrl();
+
+    /** Column name GroupByClause */
+    public static final String COLUMNNAME_GroupByClause = "GroupByClause";
+
+	/** Set GROUP BY Clause	  */
+	public void setGroupByClause (String GroupByClause);
+
+	/** Get GROUP BY Clause	  */
+	public String getGroupByClause();
+
+    /** Column name ImageURL */
+    public static final String COLUMNNAME_ImageURL = "ImageURL";
+
+	/** Set Image URL.
+	  * URL of  image
 	  */
-	public void setHelp (String Help);
+	public void setImageURL (String ImageURL);
 
-	/** Get Comment/Help.
-	  * Comment or Hint
+	/** Get Image URL.
+	  * URL of  image
 	  */
-	public String getHelp();
-
-    /** Column name ImportFields */
-    public static final String COLUMNNAME_ImportFields = "ImportFields";
-
-	/** Set Import Fields.
-	  * Create Fields from Table Columns
-	  */
-	public void setImportFields (String ImportFields);
-
-	/** Get Import Fields.
-	  * Create Fields from Table Columns
-	  */
-	public String getImportFields();
+	public String getImageURL();
 
     /** Column name IsActive */
     public static final String COLUMNNAME_IsActive = "IsActive";
@@ -174,6 +214,19 @@ public interface I_SFA_Tab
 	  */
 	public boolean isActive();
 
+    /** Column name IsCentrallyMaintained */
+    public static final String COLUMNNAME_IsCentrallyMaintained = "IsCentrallyMaintained";
+
+	/** Set Centrally maintained.
+	  * Information maintained in System Element table
+	  */
+	public void setIsCentrallyMaintained (boolean IsCentrallyMaintained);
+
+	/** Get Centrally maintained.
+	  * Information maintained in System Element table
+	  */
+	public boolean isCentrallyMaintained();
+
     /** Column name IsInsertRecord */
     public static final String COLUMNNAME_IsInsertRecord = "IsInsertRecord";
 
@@ -187,18 +240,40 @@ public interface I_SFA_Tab
 	  */
 	public boolean isInsertRecord();
 
-    /** Column name IsReadOnly */
-    public static final String COLUMNNAME_IsReadOnly = "IsReadOnly";
+    /** Column name IsReadWrite */
+    public static final String COLUMNNAME_IsReadWrite = "IsReadWrite";
 
-	/** Set Read Only.
-	  * Field is read only
+	/** Set Read Write.
+	  * Field is read / write
 	  */
-	public void setIsReadOnly (boolean IsReadOnly);
+	public void setIsReadWrite (boolean IsReadWrite);
 
-	/** Get Read Only.
-	  * Field is read only
+	/** Get Read Write.
+	  * Field is read / write
 	  */
-	public boolean isReadOnly();
+	public boolean isReadWrite();
+
+    /** Column name IsSummary */
+    public static final String COLUMNNAME_IsSummary = "IsSummary";
+
+	/** Set Summary Level.
+	  * This is a summary entity
+	  */
+	public void setIsSummary (boolean IsSummary);
+
+	/** Get Summary Level.
+	  * This is a summary entity
+	  */
+	public boolean isSummary();
+
+    /** Column name MenuType */
+    public static final String COLUMNNAME_MenuType = "MenuType";
+
+	/** Set Menu Type	  */
+	public void setMenuType (String MenuType);
+
+	/** Get Menu Type	  */
+	public String getMenuType();
 
     /** Column name Name */
     public static final String COLUMNNAME_Name = "Name";
@@ -226,99 +301,58 @@ public interface I_SFA_Tab
 	  */
 	public String getOrderByClause();
 
-    /** Column name Parent_Column_ID */
-    public static final String COLUMNNAME_Parent_Column_ID = "Parent_Column_ID";
+    /** Column name QuickActionMenu_ID */
+    public static final String COLUMNNAME_QuickActionMenu_ID = "QuickActionMenu_ID";
 
-	/** Set Parent Column.
-	  * The link column on the parent tab.
-	  */
-	public void setParent_Column_ID (int Parent_Column_ID);
+	/** Set Quick Action Menu	  */
+	public void setQuickActionMenu_ID (int QuickActionMenu_ID);
 
-	/** Get Parent Column.
-	  * The link column on the parent tab.
-	  */
-	public int getParent_Column_ID();
+	/** Get Quick Action Menu	  */
+	public int getQuickActionMenu_ID();
 
-	public org.spinsuite.model.I_SFA_Column getParent_Column() throws RuntimeException;
+	public org.spinsuite.model.I_SPS_Menu getQuickActionMenu() throws RuntimeException;
 
-    /** Column name Processing */
-    public static final String COLUMNNAME_Processing = "Processing";
+    /** Column name SPS_Menu_ID */
+    public static final String COLUMNNAME_SPS_Menu_ID = "SPS_Menu_ID";
 
-	/** Set Process Now	  */
-	public void setProcessing (boolean Processing);
+	/** Set Menu Option	  */
+	public void setSPS_Menu_ID (int SPS_Menu_ID);
 
-	/** Get Process Now	  */
-	public boolean isProcessing();
+	/** Get Menu Option	  */
+	public int getSPS_Menu_ID();
 
-    /** Column name SeqNo */
-    public static final String COLUMNNAME_SeqNo = "SeqNo";
+    /** Column name SPS_SyncMenu_ID */
+    public static final String COLUMNNAME_SPS_SyncMenu_ID = "SPS_SyncMenu_ID";
 
-	/** Set Sequence.
-	  * Method of ordering records;
- lowest number comes first
-	  */
-	public void setSeqNo (int SeqNo);
+	/** Set Sync/Option Menu	  */
+	public void setSPS_SyncMenu_ID (int SPS_SyncMenu_ID);
 
-	/** Get Sequence.
-	  * Method of ordering records;
- lowest number comes first
-	  */
-	public int getSeqNo();
+	/** Get Sync/Option Menu	  */
+	public int getSPS_SyncMenu_ID();
 
-    /** Column name SFA_Column_ID */
-    public static final String COLUMNNAME_SFA_Column_ID = "SFA_Column_ID";
+	public org.spinsuite.model.I_SPS_SyncMenu getSPS_SyncMenu() throws RuntimeException;
 
-	/** Set Mobile Column	  */
-	public void setSFA_Column_ID (int SFA_Column_ID);
-
-	/** Get Mobile Column	  */
-	public int getSFA_Column_ID();
-
-	public org.spinsuite.model.I_SFA_Column getSFA_Column() throws RuntimeException;
-
-    /** Column name SFA_Tab_ID */
-    public static final String COLUMNNAME_SFA_Tab_ID = "SFA_Tab_ID";
-
-	/** Set Tab	  */
-	public void setSFA_Tab_ID (int SFA_Tab_ID);
-
-	/** Get Tab	  */
-	public int getSFA_Tab_ID();
-
-    /** Column name SFA_Table_ID */
-    public static final String COLUMNNAME_SFA_Table_ID = "SFA_Table_ID";
+    /** Column name SPS_Table_ID */
+    public static final String COLUMNNAME_SPS_Table_ID = "SPS_Table_ID";
 
 	/** Set Mobile Table	  */
-	public void setSFA_Table_ID (int SFA_Table_ID);
+	public void setSPS_Table_ID (int SPS_Table_ID);
 
 	/** Get Mobile Table	  */
-	public int getSFA_Table_ID();
+	public int getSPS_Table_ID();
 
-	public org.spinsuite.model.I_SFA_Table getSFA_Table() throws RuntimeException;
+	public org.spinsuite.model.I_SPS_Table getSPS_Table() throws RuntimeException;
 
-    /** Column name SFA_Window_ID */
-    public static final String COLUMNNAME_SFA_Window_ID = "SFA_Window_ID";
+    /** Column name SPS_Window_ID */
+    public static final String COLUMNNAME_SPS_Window_ID = "SPS_Window_ID";
 
 	/** Set Window Mobile	  */
-	public void setSFA_Window_ID (int SFA_Window_ID);
+	public void setSPS_Window_ID (int SPS_Window_ID);
 
 	/** Get Window Mobile	  */
-	public int getSFA_Window_ID();
+	public int getSPS_Window_ID();
 
-	public org.spinsuite.model.I_SFA_Window getSFA_Window() throws RuntimeException;
-
-    /** Column name TabLevel */
-    public static final String COLUMNNAME_TabLevel = "TabLevel";
-
-	/** Set Tab Level.
-	  * Hierarchical Tab Level (0 = top)
-	  */
-	public void setTabLevel (int TabLevel);
-
-	/** Get Tab Level.
-	  * Hierarchical Tab Level (0 = top)
-	  */
-	public int getTabLevel();
+	public org.spinsuite.model.I_SPS_Window getSPS_Window() throws RuntimeException;
 
     /** Column name Updated */
     public static final String COLUMNNAME_Updated = "Updated";

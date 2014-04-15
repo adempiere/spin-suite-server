@@ -21,22 +21,22 @@ import java.sql.ResultSet;
 import java.util.Properties;
 import org.compiere.model.*;
 
-/** Generated Model for SFA_UserDocSequence
+/** Generated Model for SPS_UserDocSequence
  *  @author Adempiere (generated) 
  *  @version Release 3.7.0LTS (1252452765) - $Id$ */
-public class X_SFA_UserDocSequence extends PO implements I_SFA_UserDocSequence, I_Persistent 
+public class X_SPS_UserDocSequence extends PO implements I_SPS_UserDocSequence, I_Persistent 
 {
 
 	/**
 	 *
 	 */
-	private static final long serialVersionUID = 20140320L;
+	private static final long serialVersionUID = 20140415L;
 
     /** Standard Constructor */
-    public X_SFA_UserDocSequence (Properties ctx, int SFA_UserDocSequence_ID, String trxName)
+    public X_SPS_UserDocSequence (Properties ctx, int SPS_UserDocSequence_ID, String trxName)
     {
-      super (ctx, SFA_UserDocSequence_ID, trxName);
-      /** if (SFA_UserDocSequence_ID == 0)
+      super (ctx, SPS_UserDocSequence_ID, trxName);
+      /** if (SPS_UserDocSequence_ID == 0)
         {
 			setAD_Sequence_ID (0);
 			setAD_User_ID (0);
@@ -45,7 +45,7 @@ public class X_SFA_UserDocSequence extends PO implements I_SFA_UserDocSequence, 
     }
 
     /** Load Constructor */
-    public X_SFA_UserDocSequence (Properties ctx, ResultSet rs, String trxName)
+    public X_SPS_UserDocSequence (Properties ctx, ResultSet rs, String trxName)
     {
       super (ctx, rs, trxName);
     }
@@ -67,7 +67,7 @@ public class X_SFA_UserDocSequence extends PO implements I_SFA_UserDocSequence, 
 
     public String toString()
     {
-      StringBuffer sb = new StringBuffer ("X_SFA_UserDocSequence[")
+      StringBuffer sb = new StringBuffer ("X_SPS_UserDocSequence[")
         .append(get_ID()).append("]");
       return sb.toString();
     }
@@ -105,7 +105,7 @@ public class X_SFA_UserDocSequence extends PO implements I_SFA_UserDocSequence, 
 		return (org.compiere.model.I_AD_User)MTable.get(getCtx(), org.compiere.model.I_AD_User.Table_Name)
 			.getPO(getAD_User_ID(), get_TrxName());	}
 
-	/** Set Usuario.
+	/** Set User/Contact.
 		@param AD_User_ID 
 		User within the system - Internal or Business Partner Contact
 	  */
@@ -117,7 +117,7 @@ public class X_SFA_UserDocSequence extends PO implements I_SFA_UserDocSequence, 
 			set_ValueNoCheck (COLUMNNAME_AD_User_ID, Integer.valueOf(AD_User_ID));
 	}
 
-	/** Get Usuario.
+	/** Get User/Contact.
 		@return User within the system - Internal or Business Partner Contact
 	  */
 	public int getAD_User_ID () 

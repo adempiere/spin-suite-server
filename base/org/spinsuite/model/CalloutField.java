@@ -58,7 +58,7 @@ public class CalloutField extends CalloutEngine
 		//	Validate
 		if(p_MSFASyncColumn_ID.intValue() != 0){
 			//	Objects Sync Column
-			MSFAColumn m_MSFASyncColumn = new MSFAColumn(ctx, p_MSFASyncColumn_ID, null);
+			MSPSColumn m_MSFASyncColumn = new MSPSColumn(ctx, p_MSFASyncColumn_ID, null);
 			
 			//	Set Values
 			mTab.setValue("Name", m_MSFASyncColumn.getName());	

@@ -20,34 +20,33 @@ import java.sql.ResultSet;
 import java.util.List;
 import java.util.Properties;
 
-import org.compiere.model.I_AD_Tab;
-import org.compiere.model.MTab;
 import org.compiere.model.Query;
-import org.python.antlr.PythonParser.return_stmt_return;
 
 /**
  * @author <a href="mailto:dixon.22martinez@gmail.com">Dixon Martinez</a>
  *
  */
-public class MSFAWindow extends X_SFA_Window
-{
-
+public class MSPSWindow extends X_SPS_Window
+{	
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = -5063117578595987820L;
 	
 	/**	The Tabs						*/
-	private MSFATab[]		m_SFATabs	= null;
+	private MSPSTab[]		m_SPSTabs	= null;
 
 	
 	/**
 	 * *** Constructor ***
 	 * @author <a href="mailto:dixon.22martinez@gmail.com">Dixon Martinez</a> 13/02/2014, 12:22:24
 	 * @param ctx
-	 * @param SFA_Window_ID
+	 * @param SPS_Window_ID
 	 * @param trxName
 	 */
-	public MSFAWindow(Properties ctx, int SFA_Window_ID, String trxName)
+	public MSPSWindow(Properties ctx, int SPS_Window_ID, String trxName)
 	{
-		super(ctx, SFA_Window_ID, trxName);
-		// TODO Auto-generated constructor stub
+		super(ctx, SPS_Window_ID, trxName);
 	}
 
 	/**
@@ -57,10 +56,9 @@ public class MSFAWindow extends X_SFA_Window
 	 * @param rs
 	 * @param trxName
 	 */
-	public MSFAWindow(Properties ctx, ResultSet rs, String trxName)
+	public MSPSWindow(Properties ctx, ResultSet rs, String trxName)
 	{
 		super(ctx, rs, trxName);
-		// TODO Auto-generated constructor stub
 	}
 
 	
@@ -72,25 +70,25 @@ public class MSFAWindow extends X_SFA_Window
 	 * @return
 	 * @return MSFATab[]
 	 */
-	public MSFATab[] get(boolean reload, String get_TrxName)
+	public MSPSTab[] get(boolean reload, String get_TrxName)
 	{
 		//	Validate m_SFATabs not instanced or reload is true
-		if (m_SFATabs != null && !reload)
-			return m_SFATabs;
+		if (m_SPSTabs != null && !reload)
+			return m_SPSTabs;
 		
 		//	Where clause
-		final String whereClause = I_SFA_Tab.COLUMNNAME_SFA_Window_ID + "=?";
+		final String whereClause = I_SPS_Tab.COLUMNNAME_SPS_Window_ID + "=?";
 
 		//	Lists of SFA Tab
-		List<MSFATab> list = new Query(getCtx(), I_SFA_Tab.Table_Name, whereClause, get_TrxName)
-			.setParameters(getSFA_Window_ID())
-			.setOrderBy(I_SFA_Tab.COLUMNNAME_SeqNo)
+		List<MSPSTab> list = new Query(getCtx(), I_SPS_Tab.Table_Name, whereClause, get_TrxName)
+			.setParameters(getSPS_Window_ID())
+			.setOrderBy(I_SPS_Tab.COLUMNNAME_SeqNo)
 			.list();
 		
 		//	Instanced SFA Tab
-		m_SFATabs = new MSFATab[list.size()];
-		list.toArray(m_SFATabs);
-		return m_SFATabs;
+		m_SPSTabs = new MSPSTab[list.size()];
+		list.toArray(m_SPSTabs);
+		return m_SPSTabs;
 		
 	}//	get Tabs
 

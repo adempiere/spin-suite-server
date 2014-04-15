@@ -28,7 +28,7 @@ import org.compiere.util.DisplayType;
  * @author <a href="mailto:yamelsenih@gmail.com">Yamel Senih</a>
  *  <li>Add support to SQLite Script Crate
  */
-public class MSFAColumn extends X_SFA_Column {
+public class MSPSColumn extends X_SPS_Column {
 
 	/**
 	 * 
@@ -36,18 +36,17 @@ public class MSFAColumn extends X_SFA_Column {
 	private static final long serialVersionUID = 8081251048073987582L;
 	
 	/**	Logger	*/
-	private static CLogger s_log = CLogger.getCLogger (MSFAColumn.class);
+	private static CLogger s_log = CLogger.getCLogger (MSPSColumn.class);
 
 	/**
 	 * *** Class Constructor ***
 	 * @author Dixon Martinez 08/02/2013, 17:21:47
 	 * @param ctx
-	 * @param SFA_SyncColumn_ID
+	 * @param SPS_SyncColumn_ID
 	 * @param trxName
 	 */
-	public MSFAColumn(Properties ctx, int SFA_SyncColumn_ID, String trxName) {
-		super(ctx, SFA_SyncColumn_ID, trxName);
-		// TODO Auto-generated constructor stub
+	public MSPSColumn(Properties ctx, int SPS_SyncColumn_ID, String trxName) {
+		super(ctx, SPS_SyncColumn_ID, trxName);
 	}
 
 	/**
@@ -57,20 +56,19 @@ public class MSFAColumn extends X_SFA_Column {
 	 * @param rs
 	 * @param trxName
 	 */
-	public MSFAColumn(Properties ctx, ResultSet rs, String trxName) {
+	public MSPSColumn(Properties ctx, ResultSet rs, String trxName) {
 		super(ctx, rs, trxName);
-		// TODO Auto-generated constructor stub
 	}
 	
 	/**
 	 * 	Parent Constructor
 	 *	@param parent table
 	 */
-	public MSFAColumn (MSFATable parent)
+	public MSPSColumn (MSPSTable parent)
 	{
 		this (parent.getCtx(), 0, parent.get_TrxName());
 		setClientOrg(parent);
-		setSFA_Table_ID(parent.getSFA_Table_ID());
+		setSPS_Table_ID(parent.getSPS_Table_ID());
 	}
 	
 	/**
@@ -189,7 +187,7 @@ public class MSFAColumn extends X_SFA_Column {
 		{
 			if (displayType == DisplayType.Image 	//	FIXTHIS
 				&& columnName.equals("BinaryData"))
-				return "TEXT";
+				return "BLOB";
 			//	ID, CreatedBy/UpdatedBy, Acct
 			else if (columnName.endsWith("_ID") 
 				|| columnName.endsWith("tedBy") 

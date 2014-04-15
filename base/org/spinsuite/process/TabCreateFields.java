@@ -18,18 +18,14 @@ package org.spinsuite.process;
 
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
-import java.util.List;
 import java.util.logging.Level;
 
-import org.compiere.model.MColumn;
-import org.compiere.model.MField;
-import org.compiere.model.MTab;
 import org.compiere.process.SvrProcess;
 import org.compiere.util.AdempiereSystemError;
 import org.compiere.util.DB;
-import org.spinsuite.model.MSFAColumn;
-import org.spinsuite.model.MSFAField;
-import org.spinsuite.model.MSFATab;
+import org.spinsuite.model.MSPSColumn;
+import org.spinsuite.model.MSPSField;
+import org.spinsuite.model.MSPSTab;
 
 /**
  * @author <a href="mailto:dixon.22martinez@gmail.com">Dixon Martinez</a>
@@ -39,7 +35,7 @@ public class TabCreateFields extends SvrProcess
 {
 
 	/**	Tab Numer 			 */
-	private int p_SFA_Tab_ID 		=	0;
+	private int p_SPS_Tab_ID 		=	0;
 	
 	/**
 	 * *** Constructor ***
@@ -57,7 +53,7 @@ public class TabCreateFields extends SvrProcess
 	protected void prepare(){
 		
 		//	Inicialize tab ID
-		p_SFA_Tab_ID = getRecord_ID();
+		p_SPS_Tab_ID = getRecord_ID();
 				
 	}
 
@@ -67,23 +63,23 @@ public class TabCreateFields extends SvrProcess
 	@Override
 	protected String doIt() throws Exception{
 		
-		MSFATab m_SFA_Tab = new MSFATab(getCtx(),p_SFA_Tab_ID, get_TrxName());
+		MSPSTab m_SPS_Tab = new MSPSTab(getCtx(),p_SPS_Tab_ID, get_TrxName());
 		
-		if(p_SFA_Tab_ID == 0 
-				|| m_SFA_Tab == null
-					|| m_SFA_Tab.get_ID() == 0)
-			throw new AdempiereSystemError("@NotFound@: @SFA_Tab_ID@ " + p_SFA_Tab_ID);
+		if(p_SPS_Tab_ID == 0 
+				|| m_SPS_Tab == null
+					|| m_SPS_Tab.get_ID() == 0)
+			throw new AdempiereSystemError("@NotFound@: @SPS_Tab_ID@ " + p_SPS_Tab_ID);
 		
-		log.info(m_SFA_Tab.toString());
+		log.info(m_SPS_Tab.toString());
 		
 		int count = 0;
 		
-		String sql = "SELECT * FROM SFA_Column c "
-			+ "WHERE NOT EXISTS (SELECT * FROM SFA_Field f "
-				+ "WHERE c.SFA_Column_ID=f.SFA_Column_ID"
-				+ " AND c.SFA_Table_ID=?"	//	#1
-				+ " AND f.SFA_Tab_ID=?)"		//	#2
-			+ " AND SFA_Table_ID=?"			//	#3
+		String sql = "SELECT * FROM SPS_Column c "
+			+ "WHERE NOT EXISTS (SELECT * FROM SPS_Field f "
+				+ "WHERE c.SPS_Column_ID=f.SPS_Column_ID"
+				+ " AND c.SPS_Table_ID=?"	//	#1
+				+ " AND f.SPS_Tab_ID=?)"		//	#2
+			+ " AND SPS_Table_ID=?"			//	#3
 			+ " AND NOT (Name LIKE 'Created%' OR Name LIKE 'Updated%')"
 			+ " AND IsActive='Y' "
 			+ "ORDER BY Name";
@@ -92,15 +88,15 @@ public class TabCreateFields extends SvrProcess
 		try
 		{
 			pstmt = DB.prepareStatement (sql, get_TrxName());
-			pstmt.setInt (1, m_SFA_Tab.getSFA_Table_ID());
-			pstmt.setInt (2, m_SFA_Tab.getSFA_Tab_ID());
-			pstmt.setInt (3, m_SFA_Tab.getSFA_Table_ID());
+			pstmt.setInt (1, m_SPS_Tab.getSPS_Table_ID());
+			pstmt.setInt (2, m_SPS_Tab.getSPS_Tab_ID());
+			pstmt.setInt (3, m_SPS_Tab.getSPS_Table_ID());
 			rs = pstmt.executeQuery ();
 			while (rs.next ())
 			{
-				MSFAColumn m_SFAColumn = new MSFAColumn(getCtx(), rs, get_TrxName());
+				MSPSColumn m_SFAColumn = new MSPSColumn(getCtx(), rs, get_TrxName());
 				
-				MSFAField m_SFAField = new MSFAField(m_SFA_Tab);
+				MSPSField m_SFAField = new MSPSField(m_SPS_Tab);
 				
 				m_SFAField.setColumn(m_SFAColumn);
 				

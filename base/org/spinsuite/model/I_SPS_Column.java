@@ -21,15 +21,15 @@ import java.sql.Timestamp;
 import org.compiere.model.*;
 import org.compiere.util.KeyNamePair;
 
-/** Generated Interface for SFA_Column
+/** Generated Interface for SPS_Column
  *  @author Adempiere (generated) 
  *  @version Release 3.7.0LTS (1252452765)
  */
-public interface I_SFA_Column 
+public interface I_SPS_Column 
 {
 
-    /** TableName=SFA_Column */
-    public static final String Table_Name = "SFA_Column";
+    /** TableName=SPS_Column */
+    public static final String Table_Name = "SPS_Column";
 
     /** AD_Table_ID=53499 */
     public static final int Table_ID = MTable.getTable_ID(Table_Name);
@@ -92,6 +92,21 @@ public interface I_SFA_Column
 	  * Organizational entity within client
 	  */
 	public int getAD_Org_ID();
+
+    /** Column name AD_Process_ID */
+    public static final String COLUMNNAME_AD_Process_ID = "AD_Process_ID";
+
+	/** Set Process.
+	  * Process or Report
+	  */
+	public void setAD_Process_ID (int AD_Process_ID);
+
+	/** Get Process.
+	  * Process or Report
+	  */
+	public int getAD_Process_ID();
+
+	public org.compiere.model.I_AD_Process getAD_Process() throws RuntimeException;
 
     /** Column name AD_Reference_ID */
     public static final String COLUMNNAME_AD_Reference_ID = "AD_Reference_ID";
@@ -442,25 +457,25 @@ public interface I_SFA_Column
 	  */
 	public int getSeqNo();
 
-    /** Column name SFA_Column_ID */
-    public static final String COLUMNNAME_SFA_Column_ID = "SFA_Column_ID";
+    /** Column name SPS_Column_ID */
+    public static final String COLUMNNAME_SPS_Column_ID = "SPS_Column_ID";
 
 	/** Set Mobile Column	  */
-	public void setSFA_Column_ID (int SFA_Column_ID);
+	public void setSPS_Column_ID (int SPS_Column_ID);
 
 	/** Get Mobile Column	  */
-	public int getSFA_Column_ID();
+	public int getSPS_Column_ID();
 
-    /** Column name SFA_Table_ID */
-    public static final String COLUMNNAME_SFA_Table_ID = "SFA_Table_ID";
+    /** Column name SPS_Table_ID */
+    public static final String COLUMNNAME_SPS_Table_ID = "SPS_Table_ID";
 
 	/** Set Mobile Table	  */
-	public void setSFA_Table_ID (int SFA_Table_ID);
+	public void setSPS_Table_ID (int SPS_Table_ID);
 
 	/** Get Mobile Table	  */
-	public int getSFA_Table_ID();
+	public int getSPS_Table_ID();
 
-	public org.spinsuite.model.I_SFA_Table getSFA_Table() throws RuntimeException;
+	public org.spinsuite.model.I_SPS_Table getSPS_Table() throws RuntimeException;
 
     /** Column name Updated */
     public static final String COLUMNNAME_Updated = "Updated";

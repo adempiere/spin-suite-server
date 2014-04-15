@@ -21,15 +21,15 @@ import java.sql.Timestamp;
 import org.compiere.model.*;
 import org.compiere.util.KeyNamePair;
 
-/** Generated Interface for SFA_UserDocSequence
+/** Generated Interface for SPS_UserDocSequence
  *  @author Adempiere (generated) 
  *  @version Release 3.7.0LTS (1252452765)
  */
-public interface I_SFA_UserDocSequence 
+public interface I_SPS_UserDocSequence 
 {
 
-    /** TableName=SFA_UserDocSequence */
-    public static final String Table_Name = "SFA_UserDocSequence";
+    /** TableName=SPS_UserDocSequence */
+    public static final String Table_Name = "SPS_UserDocSequence";
 
     /** AD_Table_ID=53505 */
     public static final int Table_ID = MTable.getTable_ID(Table_Name);
@@ -81,12 +81,12 @@ public interface I_SFA_UserDocSequence
     /** Column name AD_User_ID */
     public static final String COLUMNNAME_AD_User_ID = "AD_User_ID";
 
-	/** Set Usuario.
+	/** Set User/Contact.
 	  * User within the system - Internal or Business Partner Contact
 	  */
 	public void setAD_User_ID (int AD_User_ID);
 
-	/** Get Usuario.
+	/** Get User/Contact.
 	  * User within the system - Internal or Business Partner Contact
 	  */
 	public int getAD_User_ID();

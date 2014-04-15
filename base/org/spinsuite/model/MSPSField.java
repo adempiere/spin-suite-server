@@ -23,7 +23,7 @@ import java.util.Properties;
  * @author <a href="mailto:dixon.22martinez@gmail.com">Dixon Martinez</a>
  *
  */
-public class MSFAField extends X_SFA_Field
+public class MSPSField extends X_SPS_Field
 {
 
 	/**
@@ -37,12 +37,12 @@ public class MSFAField extends X_SFA_Field
 	 * SFA Field ID
 	 * @author <a href="mailto:dixon.22martinez@gmail.com">Dixon Martinez</a> 13/02/2014, 22:58:37
 	 * @param ctx
-	 * @param SFA_Field_ID
+	 * @param SPS_Field_ID
 	 * @param trxName
 	 */
-	public MSFAField(Properties ctx, int SFA_Field_ID, String trxName)
+	public MSPSField(Properties ctx, int SPS_Field_ID, String trxName)
 	{
-		super(ctx, SFA_Field_ID, trxName);
+		super(ctx, SPS_Field_ID, trxName);
 	}
 	/**
 	 * *** Constructor ***
@@ -52,7 +52,7 @@ public class MSFAField extends X_SFA_Field
 	 * @param rs
 	 * @param trxName
 	 */
-	public MSFAField(Properties ctx, ResultSet rs, String trxName)
+	public MSPSField(Properties ctx, ResultSet rs, String trxName)
 	{
 		super(ctx, rs, trxName);
 		// TODO Auto-generated constructor stub
@@ -66,7 +66,7 @@ public class MSFAField extends X_SFA_Field
 	 * @param newTab
 	 * @param oldField
 	 */
-	public MSFAField(MSFATab newTab, MSFAField oldField){
+	public MSPSField(MSPSTab newTab, MSPSField oldField){
 		//	Create new SFA Field
 		this (newTab.getCtx(), 0, oldField.get_TrxName());
 		//	Copy Values
@@ -74,7 +74,7 @@ public class MSFAField extends X_SFA_Field
 		//	Set Client and  Organization
 		setClientOrg(newTab);
 		//	Set SFA Window ID
-		setSFA_Tab_ID(newTab.getSFA_Tab_ID());
+		setSPS_Tab_ID(newTab.getSPS_Tab_ID());
 		//	Set Entity Type
 		setEntityType(newTab.getEntityType());
 	}//	Copy Constructors MSFAField
@@ -84,11 +84,11 @@ public class MSFAField extends X_SFA_Field
 	 * @author <a href="mailto:yamelsenih@gmail.com">Yamel Senih</a> 14/02/2014, 15:51:06
 	 * @param parent
 	 */
-	public MSFAField(MSFATab parent)
+	public MSPSField(MSPSTab parent)
 	{
 		this(parent.getCtx(),0,parent.get_TrxName());
 		setClientOrg(parent);
-		setSFA_Tab_ID(parent.getSFA_Tab_ID());
+		setSPS_Tab_ID(parent.getSPS_Tab_ID());
 	}
 	
 	/**
@@ -97,9 +97,9 @@ public class MSFAField extends X_SFA_Field
 	 * @param m_SFAColumn
 	 * @return void
 	 */
-	public void setColumn(MSFAColumn m_SFAColumn)
+	public void setColumn(MSPSColumn m_SFAColumn)
 	{
-		setSFA_Column_ID(m_SFAColumn.getSFA_Column_ID());
+		setSPS_Column_ID(m_SFAColumn.getSPS_Column_ID());
 		setName(m_SFAColumn.getName());
 		setDescription(m_SFAColumn.getDescription());
 		setEntityType(m_SFAColumn.getEntityType());

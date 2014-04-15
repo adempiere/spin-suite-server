@@ -874,7 +874,7 @@ public class SynchronizeTerminology extends SvrProcess
 			
 			// Create Elements from ColumnNames
 			sql="SELECT DISTINCT ColumnName, Name, Description, EntityType "
-				+"FROM	SFA_Column c WHERE NOT EXISTS "
+				+"FROM	SPS_Column c WHERE NOT EXISTS "
 				+"(SELECT 1 FROM AD_ELEMENT e "
 				+" WHERE UPPER(c.ColumnName)=UPPER(e.ColumnName))"
 				+" AND c.isActive = 'Y'";
@@ -901,7 +901,7 @@ public class SynchronizeTerminology extends SvrProcess
 			
 			//  Column Name + Element
 			log.info("Synchronizing Column with Element");
-			sql="UPDATE SFA_Column c"
+			sql="UPDATE SPS_Column c"
 				+" SET (Name,Description) =" 
 				+" (SELECT e.Name,e.Description "
 				+" FROM AD_ELEMENT e WHERE c.AD_Element_ID=e.AD_Element_ID)"
@@ -911,13 +911,13 @@ public class SynchronizeTerminology extends SvrProcess
 				+" AND c.Name<>e.Name)";
 			no = DB.executeUpdate(sql, false, get_TrxName());	  	
 			log.info("  rows updated: "+no);
-			sql="UPDATE SFA_Column_TRL ct"
+			sql="UPDATE SPS_Column_TRL ct"
 				+" SET Name = (SELECT e.Name"
-				+" FROM SFA_Column c INNER JOIN AD_ELEMENT_TRL e ON (c.AD_Element_ID=e.AD_Element_ID)"
-				+" WHERE ct.SFA_Column_ID=c.SFA_Column_ID AND ct.AD_LANGUAGE=e.AD_LANGUAGE)"
+				+" FROM SPS_Column c INNER JOIN AD_ELEMENT_TRL e ON (c.AD_Element_ID=e.AD_Element_ID)"
+				+" WHERE ct.SPS_Column_ID=c.SPS_Column_ID AND ct.AD_LANGUAGE=e.AD_LANGUAGE)"
 				+" WHERE EXISTS "
-				+" (SELECT 1 FROM SFA_Column c INNER JOIN AD_ELEMENT_TRL e ON (c.AD_Element_ID=e.AD_Element_ID)"
-				+" WHERE ct.SFA_Column_ID=c.SFA_Column_ID AND ct.AD_LANGUAGE=e.AD_LANGUAGE"
+				+" (SELECT 1 FROM SPS_Column c INNER JOIN AD_ELEMENT_TRL e ON (c.AD_Element_ID=e.AD_Element_ID)"
+				+" WHERE ct.SPS_Column_ID=c.SPS_Column_ID AND ct.AD_LANGUAGE=e.AD_LANGUAGE"
 				+" AND ct.Name<>e.Name)";
 			no = DB.executeUpdate(sql, false, get_TrxName());	  	
 			log.info("  rows updated: "+no);
@@ -926,7 +926,7 @@ public class SynchronizeTerminology extends SvrProcess
 */
 			//  Table Name + Element
 			log.info("Synchronizing Table with Element");
-/*			sql="UPDATE SFA_Table t "
+/*			sql="UPDATE SPS_Table t "
 				+"SET (Name,Description) = (SELECT e.Name,e.Description FROM AD_ELEMENT e " 
 				+"WHERE t.TableName||'_ID'=e.ColumnName) "
 				+"WHERE EXISTS (SELECT 1 FROM AD_ELEMENT e " 
@@ -936,15 +936,15 @@ public class SynchronizeTerminology extends SvrProcess
 			trx.commit(true);*/
 
 			log.info("  rows updated: " +no);
-			sql="UPDATE SFA_Table_TRL tt" 
+			sql="UPDATE SPS_Table_TRL tt" 
 				+" SET Name = (SELECT e.Name "
-				+" FROM SFA_Table t INNER JOIN AD_ELEMENT ex ON (t.TableName||'_ID'=ex.ColumnName)"
+				+" FROM SPS_Table t INNER JOIN AD_ELEMENT ex ON (t.TableName||'_ID'=ex.ColumnName)"
 				+" INNER JOIN AD_ELEMENT_TRL e ON (ex.AD_Element_ID=e.AD_Element_ID)"
-				+" WHERE tt.SFA_Table_ID=t.SFA_Table_ID AND tt.AD_LANGUAGE=e.AD_LANGUAGE)"
+				+" WHERE tt.SPS_Table_ID=t.SPS_Table_ID AND tt.AD_LANGUAGE=e.AD_LANGUAGE)"
 				+" WHERE EXISTS (SELECT 1 "
-				+" FROM SFA_Table t INNER JOIN AD_ELEMENT ex ON (t.TableName||'_ID'=ex.ColumnName)"
+				+" FROM SPS_Table t INNER JOIN AD_ELEMENT ex ON (t.TableName||'_ID'=ex.ColumnName)"
 				+" INNER JOIN AD_ELEMENT_TRL e ON (ex.AD_Element_ID=e.AD_Element_ID)"
-				+" WHERE tt.SFA_Table_ID=t.SFA_Table_ID AND tt.AD_LANGUAGE=e.AD_LANGUAGE"
+				+" WHERE tt.SPS_Table_ID=t.SPS_Table_ID AND tt.AD_LANGUAGE=e.AD_LANGUAGE"
 				+" AND tt.Name<>e.Name)";
 			no = DB.executeUpdate(sql, false, get_TrxName());	  	
 			log.info("  trl rows updated: "+no);
@@ -952,7 +952,7 @@ public class SynchronizeTerminology extends SvrProcess
 
 	
 			//  Trl Table Name + Element
-			/*sql="UPDATE SFA_Table t"
+			/*sql="UPDATE SPS_Table t"
 				+" SET (Name,Description) = (SELECT e.Name||' Trl', e.Description "
 				+" FROM AD_ELEMENT e "
 				+" WHERE SUBSTR(t.TableName,1,LENGTH(t.TableName)-4)||'_ID'=e.ColumnName)"
@@ -964,17 +964,17 @@ public class SynchronizeTerminology extends SvrProcess
 			log.info("  trl rows updated: "+no);
 			trx.commit(true);
 			*/
-			sql=" UPDATE SFA_Table_TRL tt"
+			sql=" UPDATE SPS_Table_TRL tt"
 				+" SET Name = (SELECT e.Name "
-				+" FROM SFA_Table t " +
-				" 	INNER JOIN SFA_Column c ON (c.SFA_Table_ID = t.SFA_Table_ID)" +
+				+" FROM SPS_Table t " +
+				" 	INNER JOIN SPS_Column c ON (c.SPS_Table_ID = t.SPS_Table_ID)" +
 				"  INNER JOIN AD_ELEMENT ex ON (ex.AD_Element_ID = c.AD_Element_ID)"
 				+" INNER JOIN AD_ELEMENT_TRL e ON (ex.AD_Element_ID=e.AD_Element_ID)"
-				+" WHERE tt.SFA_Table_ID=t.SFA_Table_ID AND tt.AD_LANGUAGE=e.AD_LANGUAGE)"
+				+" WHERE tt.SPS_Table_ID=t.SPS_Table_ID AND tt.AD_LANGUAGE=e.AD_LANGUAGE)"
 				+" WHERE EXISTS (SELECT 1 "
-				+" FROM SFA_Table t INNER JOIN AD_ELEMENT ex ON (SUBSTR(t.TableName,1,LENGTH(t.TableName)-4)||'_ID'=ex.ColumnName)"
+				+" FROM SPS_Table t INNER JOIN AD_ELEMENT ex ON (SUBSTR(t.TableName,1,LENGTH(t.TableName)-4)||'_ID'=ex.ColumnName)"
 				+" INNER JOIN AD_ELEMENT_TRL e ON (ex.AD_Element_ID=e.AD_Element_ID)"
-				+" WHERE tt.SFA_Table_ID=t.SFA_Table_ID AND tt.AD_LANGUAGE=e.AD_LANGUAGE )";
+				+" WHERE tt.SPS_Table_ID=t.SPS_Table_ID AND tt.AD_LANGUAGE=e.AD_LANGUAGE )";
 				//+" AND t.TableName LIKE '%_Trl'"
 				//+" AND tt.Name<>e.Name" 
 				//+" )";
@@ -985,7 +985,7 @@ public class SynchronizeTerminology extends SvrProcess
 		
 			
 			log.info("Synchronizing Column of Mobile with Element");
-			sql="UPDATE SFA_Column c"
+			sql="UPDATE SPS_Column c"
 				+" SET (Name,Description) = " 
 				+" (SELECT e.Name,e.Description "
 				+" FROM AD_ELEMENT e WHERE c.AD_Element_ID=e.AD_Element_ID)"
@@ -996,22 +996,22 @@ public class SynchronizeTerminology extends SvrProcess
 			no = DB.executeUpdate(sql, false, get_TrxName());	  	
 			log.info("  rows updated: "+no);
 			
-			sql="UPDATE SFA_Column_TRL ct"
+			sql="UPDATE SPS_Column_TRL ct"
 				+" SET Name = (" 
 				+" SELECT e.Name"
-				+" FROM SFA_Column c " 
+				+" FROM SPS_Column c " 
 				+" INNER JOIN AD_ELEMENT_TRL e ON (c.AD_Element_ID=e.AD_Element_ID)"
 				+" WHERE " 
-				+" ct.SFA_Column_ID=c.SFA_Column_ID " 
+				+" ct.SPS_Column_ID=c.SPS_Column_ID " 
 				+" AND ct.AD_LANGUAGE=e.AD_LANGUAGE" 
 				+" )"
 				+" WHERE EXISTS "
 				+" (" 
 				+" SELECT 1 " 
-				+" FROM SFA_Column c " 
+				+" FROM SPS_Column c " 
 				+" INNER JOIN AD_ELEMENT_TRL e ON (c.AD_Element_ID=e.AD_Element_ID)"
 				+" WHERE " 
-				+" ct.SFA_Column_ID=c.SFA_Column_ID " 
+				+" ct.SPS_Column_ID=c.SPS_Column_ID " 
 				+" AND ct.AD_LANGUAGE=e.AD_LANGUAGE" 
 				+" )";
 			no = DB.executeUpdate(sql, false, get_TrxName());	  	
@@ -1019,19 +1019,19 @@ public class SynchronizeTerminology extends SvrProcess
 			trx.commit(true);
 /*
 			log.info("Synchronizing Tables of Mobile with Element");
-			sql=" UPDATE SFA_Table tt"
+			sql=" UPDATE SPS_Table tt"
 					+" SET Name = (" +
 					"	SELECT MAX(e.Name)" +
 					" FROM AD_Table  t"+
 					" INNER JOIN AD_ELEMENT ex ON (t.TableName||'_ID'=ex.ColumnName)" +
 					" INNER JOIN AD_ELEMENT_TRL e ON (ex.AD_Element_ID=e.AD_Element_ID)" +
-					" INNER JOIN SFA_Table_Trl st ON (tt.AD_Table_ID = t.AD_Table_ID )" +
+					" INNER JOIN SPS_Table_Trl st ON (tt.AD_Table_ID = t.AD_Table_ID )" +
 					" WHERE t.AD_Table_ID=tt.AD_Table_ID" +
 					" AND st.AD_LANGUAGE=e.AD_LANGUAGE)"					
 					+" WHERE EXISTS ( SELECT 1 FROM AD_Table t" +
 					" INNER JOIN AD_ELEMENT ex ON (t.TableName||'_ID'=ex.ColumnName)" +
 					" INNER JOIN AD_ELEMENT_TRL e ON (ex.AD_Element_ID=e.AD_Element_ID)" +
-					" INNER JOIN SFA_Table_Trl st ON (tt.AD_Table_ID = t.AD_Table_ID)" +
+					" INNER JOIN SPS_Table_Trl st ON (tt.AD_Table_ID = t.AD_Table_ID)" +
 					" WHERE tt.AD_Table_ID=t.AD_Table_ID" +
 					" AND st.AD_LANGUAGE=e.AD_LANGUAGE)" 
 					;
@@ -1041,17 +1041,17 @@ public class SynchronizeTerminology extends SvrProcess
 			log.info("  trl rows updated: "+no);
 			trx.commit(true);
 			
-			sql=" UPDATE SFA_Table_TRL tt"
+			sql=" UPDATE SPS_Table_TRL tt"
 				+" SET Name = (SELECT e.Name "
-				+" FROM SFA_Table  t " 
+				+" FROM SPS_Table  t " 
 				+" INNER JOIN AD_ELEMENT ex ON (t.TableName||'_ID'=ex.ColumnName)"
 				+" INNER JOIN AD_ELEMENT_TRL e ON (ex.AD_Element_ID=e.AD_Element_ID)"
-				+" WHERE tt.SFA_Table_ID=t.SFA_Table_ID AND tt.AD_LANGUAGE=e.AD_LANGUAGE)"
+				+" WHERE tt.SPS_Table_ID=t.SPS_Table_ID AND tt.AD_LANGUAGE=e.AD_LANGUAGE)"
 				+" WHERE EXISTS (SELECT 1 "
-				+" FROM SFA_Table t INNER JOIN AD_ELEMENT ex ON (t.TableName||'_ID'=ex.ColumnName)"
+				+" FROM SPS_Table t INNER JOIN AD_ELEMENT ex ON (t.TableName||'_ID'=ex.ColumnName)"
 				+" INNER JOIN AD_ELEMENT_TRL e ON (ex.AD_Element_ID=e.AD_Element_ID)" +
-				" INNER JOIN SFA_Table st ON (st.SFA_Table_ID = t.SFA_Table_ID) "+
-				" WHERE st.SFA_Table_ID=t.SFA_Table_ID "+
+				" INNER JOIN SPS_Table st ON (st.SPS_Table_ID = t.SPS_Table_ID) "+
+				" WHERE st.SPS_Table_ID=t.SPS_Table_ID "+
 				"AND tt.AD_LANGUAGE=e.AD_LANGUAGE"
 				+")"
 				;
@@ -1061,10 +1061,10 @@ public class SynchronizeTerminology extends SvrProcess
 */
 			//	Sync Names - Window
 			log.info("Synchronizing Menu with Window");
-			sql="UPDATE	SFA_MENU m"
-				+" SET		Name = (SELECT Name FROM SFA_WINDOW w WHERE m.SFA_Window_ID=w.SFA_Window_ID),"
-				+" Description = (SELECT Description FROM SFA_WINDOW w WHERE m.SFA_Window_ID=w.SFA_Window_ID)"
-				+" WHERE	m.SFA_Window_ID IS NOT NULL"
+			sql="UPDATE	SPS_MENU m"
+				+" SET		Name = (SELECT Name FROM SPS_WINDOW w WHERE m.SPS_Window_ID=w.SPS_Window_ID),"
+				+" Description = (SELECT Description FROM SPS_WINDOW w WHERE m.SPS_Window_ID=w.SPS_Window_ID)"
+				+" WHERE	m.SPS_Window_ID IS NOT NULL"
 				+"  AND m.Action = 'W'"
 				+"  AND m.IsCentrallyMaintained='Y' AND m.IsActive='Y'"
 				;
@@ -1072,20 +1072,20 @@ public class SynchronizeTerminology extends SvrProcess
 			log.info("  rows updated: "+no);
 			trx.commit(true);
 
-			sql="UPDATE	SFA_MENU_TRL mt"
-				+" SET		Name = (SELECT wt.Name FROM SFA_WINDOW_TRL wt, SFA_MENU m "
-				+" WHERE mt.SFA_Menu_ID=m.SFA_Menu_ID AND m.SFA_Window_ID=wt.SFA_Window_ID "
+			sql="UPDATE	SPS_MENU_TRL mt"
+				+" SET		Name = (SELECT wt.Name FROM SPS_WINDOW_TRL wt, SPS_MENU m "
+				+" WHERE mt.SPS_Menu_ID=m.SPS_Menu_ID AND m.SPS_Window_ID=wt.SPS_Window_ID "
 				+" AND mt.AD_LANGUAGE=wt.AD_LANGUAGE),"
-				+" Description = (SELECT wt.Description FROM SFA_WINDOW_TRL wt, SFA_MENU m "
-				+" WHERE mt.SFA_Menu_ID=m.SFA_Menu_ID AND m.SFA_Window_ID=wt.SFA_Window_ID "
+				+" Description = (SELECT wt.Description FROM SPS_WINDOW_TRL wt, SPS_MENU m "
+				+" WHERE mt.SPS_Menu_ID=m.SPS_Menu_ID AND m.SPS_Window_ID=wt.SPS_Window_ID "
 				+" AND mt.AD_LANGUAGE=wt.AD_LANGUAGE),"
-				+" IsTranslated = (SELECT wt.IsTranslated FROM SFA_WINDOW_TRL wt, SFA_MENU m "
-				+" WHERE mt.SFA_Menu_ID=m.SFA_Menu_ID AND m.SFA_Window_ID=wt.SFA_Window_ID "
+				+" IsTranslated = (SELECT wt.IsTranslated FROM SPS_WINDOW_TRL wt, SPS_MENU m "
+				+" WHERE mt.SPS_Menu_ID=m.SPS_Menu_ID AND m.SPS_Window_ID=wt.SPS_Window_ID "
 				+" AND mt.AD_LANGUAGE=wt.AD_LANGUAGE)"
-				+" WHERE EXISTS (SELECT 1 FROM SFA_WINDOW_TRL wt, SFA_MENU m "
-				+" WHERE mt.SFA_Menu_ID=m.SFA_Menu_ID AND m.SFA_Window_ID=wt.SFA_Window_ID "
+				+" WHERE EXISTS (SELECT 1 FROM SPS_WINDOW_TRL wt, SPS_MENU m "
+				+" WHERE mt.SPS_Menu_ID=m.SPS_Menu_ID AND m.SPS_Window_ID=wt.SPS_Window_ID "
 				+" AND mt.AD_LANGUAGE=wt.AD_LANGUAGE"
-				+" AND m.SFA_Window_ID IS NOT NULL"
+				+" AND m.SPS_Window_ID IS NOT NULL"
 				+" AND m.Action = 'W'"
 				+" AND m.IsCentrallyMaintained='Y' AND m.IsActive='Y'"
 				+")";
@@ -1095,7 +1095,7 @@ public class SynchronizeTerminology extends SvrProcess
 
 			// Sync Names - Process
 			log.info("Synchronizing Menu with Processes");
-			sql="UPDATE	SFA_MENU m"
+			sql="UPDATE	SPS_MENU m"
 				+" SET		Name = (SELECT p.Name FROM AD_PROCESS p WHERE m.AD_Process_ID=p.AD_Process_ID),"
 				+" Description = (SELECT p.Description FROM AD_PROCESS p WHERE m.AD_Process_ID=p.AD_Process_ID)"
 				+" WHERE m.AD_Process_ID IS NOT NULL"
@@ -1106,18 +1106,18 @@ public class SynchronizeTerminology extends SvrProcess
 			log.info("  rows updated: "+no);
 			trx.commit(true);
 
-			sql="UPDATE	SFA_MENU_TRL mt"
-				+" SET		Name = (SELECT pt.Name FROM AD_PROCESS_TRL pt, SFA_MENU m"
-				+" WHERE mt.SFA_Menu_ID=m.SFA_Menu_ID AND m.AD_Process_ID=pt.AD_Process_ID"
+			sql="UPDATE	SPS_MENU_TRL mt"
+				+" SET		Name = (SELECT pt.Name FROM AD_PROCESS_TRL pt, SPS_MENU m"
+				+" WHERE mt.SPS_Menu_ID=m.SPS_Menu_ID AND m.AD_Process_ID=pt.AD_Process_ID"
 				+" AND mt.AD_LANGUAGE=pt.AD_LANGUAGE),"
-				+" Description = (SELECT pt.Description FROM AD_PROCESS_TRL pt, SFA_MENU m"
-				+" WHERE mt.SFA_Menu_ID=m.SFA_Menu_ID AND m.AD_Process_ID=pt.AD_Process_ID"
+				+" Description = (SELECT pt.Description FROM AD_PROCESS_TRL pt, SPS_MENU m"
+				+" WHERE mt.SPS_Menu_ID=m.SPS_Menu_ID AND m.AD_Process_ID=pt.AD_Process_ID"
 				+" AND mt.AD_LANGUAGE=pt.AD_LANGUAGE),"
-				+" IsTranslated = (SELECT pt.IsTranslated FROM AD_PROCESS_TRL pt, SFA_MENU m"
-				+" WHERE mt.SFA_Menu_ID=m.SFA_Menu_ID AND m.AD_Process_ID=pt.AD_Process_ID"
+				+" IsTranslated = (SELECT pt.IsTranslated FROM AD_PROCESS_TRL pt, SPS_MENU m"
+				+" WHERE mt.SPS_Menu_ID=m.SPS_Menu_ID AND m.AD_Process_ID=pt.AD_Process_ID"
 				+" AND mt.AD_LANGUAGE=pt.AD_LANGUAGE)"
-				+" WHERE EXISTS (SELECT 1 FROM AD_PROCESS_TRL pt, SFA_MENU m"
-				+" WHERE mt.SFA_Menu_ID=m.SFA_Menu_ID AND m.AD_Process_ID=pt.AD_Process_ID"
+				+" WHERE EXISTS (SELECT 1 FROM AD_PROCESS_TRL pt, SPS_MENU m"
+				+" WHERE mt.SPS_Menu_ID=m.SPS_Menu_ID AND m.AD_Process_ID=pt.AD_Process_ID"
 				+" AND mt.AD_LANGUAGE=pt.AD_LANGUAGE"
 				+" AND m.AD_Process_ID IS NOT NULL"
 				+" AND m.Action IN ('R', 'P')"
@@ -1130,7 +1130,7 @@ public class SynchronizeTerminology extends SvrProcess
 
 			//	Sync Names = Form
 			log.info("Synchronizing Menu with Forms");
-			sql="UPDATE	SFA_MENU m"
+			sql="UPDATE	SPS_MENU m"
 				+" SET		Name = (SELECT Name FROM AD_FORM f WHERE m.AD_Form_ID=f.AD_Form_ID),"
 				+" Description = (SELECT Description FROM AD_FORM f WHERE m.AD_Form_ID=f.AD_Form_ID)"
 				+" WHERE m.AD_Form_ID IS NOT NULL"
@@ -1141,18 +1141,18 @@ public class SynchronizeTerminology extends SvrProcess
 			log.info("  rows updated: "+no);
 			trx.commit(true);
 
-			sql="UPDATE	SFA_MENU_TRL mt"
-				+" SET		Name = (SELECT ft.Name FROM AD_FORM_TRL ft, SFA_MENU m"
-				+" WHERE mt.SFA_Menu_ID=m.SFA_Menu_ID AND m.AD_Form_ID=ft.AD_Form_ID"
+			sql="UPDATE	SPS_MENU_TRL mt"
+				+" SET		Name = (SELECT ft.Name FROM AD_FORM_TRL ft, SPS_MENU m"
+				+" WHERE mt.SPS_Menu_ID=m.SPS_Menu_ID AND m.AD_Form_ID=ft.AD_Form_ID"
 				+" AND mt.AD_LANGUAGE=ft.AD_LANGUAGE),"
-				+" Description = (SELECT ft.Description FROM AD_FORM_TRL ft, SFA_MENU m"
-				+" WHERE mt.SFA_Menu_ID=m.SFA_Menu_ID AND m.AD_Form_ID=ft.AD_Form_ID"
+				+" Description = (SELECT ft.Description FROM AD_FORM_TRL ft, SPS_MENU m"
+				+" WHERE mt.SPS_Menu_ID=m.SPS_Menu_ID AND m.AD_Form_ID=ft.AD_Form_ID"
 				+" AND mt.AD_LANGUAGE=ft.AD_LANGUAGE),"
-				+" IsTranslated = (SELECT ft.IsTranslated FROM AD_FORM_TRL ft, SFA_MENU m"
-				+" WHERE mt.SFA_Menu_ID=m.SFA_Menu_ID AND m.AD_Form_ID=ft.AD_Form_ID"
+				+" IsTranslated = (SELECT ft.IsTranslated FROM AD_FORM_TRL ft, SPS_MENU m"
+				+" WHERE mt.SPS_Menu_ID=m.SPS_Menu_ID AND m.AD_Form_ID=ft.AD_Form_ID"
 				+" AND mt.AD_LANGUAGE=ft.AD_LANGUAGE)"
-				+" WHERE EXISTS (SELECT 1 FROM AD_FORM_TRL ft, SFA_MENU m"
-				+" WHERE mt.SFA_Menu_ID=m.SFA_Menu_ID AND m.AD_Form_ID=ft.AD_Form_ID"
+				+" WHERE EXISTS (SELECT 1 FROM AD_FORM_TRL ft, SPS_MENU m"
+				+" WHERE mt.SPS_Menu_ID=m.SPS_Menu_ID AND m.AD_Form_ID=ft.AD_Form_ID"
 				+" AND mt.AD_LANGUAGE=ft.AD_LANGUAGE"
 				+" AND m.AD_Form_ID IS NOT NULL"
 				+" AND m.Action = 'X'"

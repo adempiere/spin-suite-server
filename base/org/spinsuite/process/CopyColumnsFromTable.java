@@ -28,8 +28,8 @@ import org.compiere.util.DB;
 import org.compiere.util.Env;
 import org.compiere.util.Msg;
 import org.compiere.util.Trx;
-import org.spinsuite.model.MSFAColumn;
-import org.spinsuite.model.MSFATable;
+import org.spinsuite.model.MSPSColumn;
+import org.spinsuite.model.MSPSTable;
 
 /**
  * Copy columns from one table to other
@@ -87,9 +87,9 @@ public class CopyColumnsFromTable extends SvrProcess {
 		log.info("Source AD_Table_ID=" + p_source_AD_Table_ID
 				+ ", Target AD_Table_ID=" + p_target_AD_Table_ID);
 
-		MSFATable targetTable = new MSFATable(getCtx(),
+		MSPSTable targetTable = new MSPSTable(getCtx(),
 				p_target_AD_Table_ID, get_TrxName());
-		MSFAColumn[] targetColumns = targetTable.getColumns();
+		MSPSColumn[] targetColumns = targetTable.getColumns();
 
 		if (targetColumns != null && targetColumns.length > 0)
 			throw new AdempiereSystemError(Msg.getMsg(Env.getCtx(),
@@ -111,7 +111,7 @@ public class CopyColumnsFromTable extends SvrProcess {
 		targetTable.save();
 
 		for (int i = 0; i < sourceColumns.length; i++) {
-			MSFAColumn colTarget = new MSFAColumn(targetTable);
+			MSPSColumn colTarget = new MSPSColumn(targetTable);
 
 			Trx trx = Trx.get(get_TrxName(), false);
 
@@ -166,7 +166,7 @@ public class CopyColumnsFromTable extends SvrProcess {
 						+ "FROM AD_Column_Trl WHERE AD_Column_ID = "
 						+ sourceColumns[i].getAD_Column_ID();
 				
-				delete = "DELETE FROM SFA_Column_Trl WHERE SFA_Column_ID = " +colTarget.get_ID();
+				delete = "DELETE FROM SPS_Column_Trl WHERE SPS_Column_ID = " +colTarget.get_ID();
 				no = DB.executeUpdate(delete, false, get_TrxName());
 				log.info("  rows delete: " + no);
 				trx.commit(true);
@@ -177,7 +177,7 @@ public class CopyColumnsFromTable extends SvrProcess {
 				pstmt = DB.prepareStatement(sql, get_TrxName());
 				rs = pstmt.executeQuery();
 				while (rs.next()) {
-					sql = "INSERT INTO SFA_Column_Trl (AD_Language,SFA_Column_ID, Name, IsTranslated," +
+					sql = "INSERT INTO SPS_Column_Trl (AD_Language,SPS_Column_ID, Name, IsTranslated," +
 							"AD_Client_ID,AD_Org_ID,Created,Createdby,Updated,UpdatedBy)"
 							+ "VALUES ('"
 							+ rs.getString(1)

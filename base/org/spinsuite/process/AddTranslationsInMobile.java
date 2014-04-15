@@ -26,18 +26,14 @@ public class AddTranslationsInMobile extends SvrProcess {
 
 	
 	/** Target Table */
-	private int p_target_SFA_Menu_ID = 0;
-	
-	/** Source Table */
-	private int p_source_AD_Table_ID = 0;
-	
+	private int p_target_SPS_Menu_ID = 0;
 
 	/* (non-Javadoc)
 	 * @see org.compiere.process.SvrProcess#prepare()
 	 */
 	@Override
 	protected void prepare() {
-		p_target_SFA_Menu_ID = getRecord_ID();
+		p_target_SPS_Menu_ID = getRecord_ID();
 	}
 
 	/* (non-Javadoc)
@@ -45,7 +41,7 @@ public class AddTranslationsInMobile extends SvrProcess {
 	 */
 	@Override
 	protected String doIt() throws Exception {
-		return String.valueOf( p_target_SFA_Menu_ID);
+		return String.valueOf( p_target_SPS_Menu_ID);
 	}
 
 }

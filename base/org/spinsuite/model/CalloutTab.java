@@ -58,7 +58,7 @@ public class CalloutTab extends CalloutEngine
 		//	Validate
 		if(p_MSFASyncTable_ID.intValue() != 0){
 			//	Objects Sync Column
-			MSFATable m_MSFATable = new MSFATable(ctx, p_MSFASyncTable_ID, null);
+			MSPSTable m_MSFATable = new MSPSTable(ctx, p_MSFASyncTable_ID, null);
 			//	Set Values
 			mTab.setValue("Name", m_MSFATable.getName());	
 			mTab.setValue("Description", m_MSFATable.getDescription());

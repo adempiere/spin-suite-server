@@ -22,22 +22,22 @@ import java.util.Properties;
 import org.compiere.model.*;
 import org.compiere.util.KeyNamePair;
 
-/** Generated Model for SFA_Column
+/** Generated Model for SPS_Column
  *  @author Adempiere (generated) 
  *  @version Release 3.7.0LTS (1252452765) - $Id$ */
-public class X_SFA_Column extends PO implements I_SFA_Column, I_Persistent 
+public class X_SPS_Column extends PO implements I_SPS_Column, I_Persistent 
 {
 
 	/**
 	 *
 	 */
-	private static final long serialVersionUID = 20140320L;
+	private static final long serialVersionUID = 20140415L;
 
     /** Standard Constructor */
-    public X_SFA_Column (Properties ctx, int SFA_Column_ID, String trxName)
+    public X_SPS_Column (Properties ctx, int SPS_Column_ID, String trxName)
     {
-      super (ctx, SFA_Column_ID, trxName);
-      /** if (SFA_Column_ID == 0)
+      super (ctx, SPS_Column_ID, trxName);
+      /** if (SPS_Column_ID == 0)
         {
 			setAD_Element_ID (0);
 			setAD_Reference_ID (0);
@@ -59,13 +59,13 @@ public class X_SFA_Column extends PO implements I_SFA_Column, I_Persistent
 			setIsUpdateable (true);
 // Y
 			setName (null);
-			setSFA_Column_ID (0);
-			setSFA_Table_ID (0);
+			setSPS_Column_ID (0);
+			setSPS_Table_ID (0);
         } */
     }
 
     /** Load Constructor */
-    public X_SFA_Column (Properties ctx, ResultSet rs, String trxName)
+    public X_SPS_Column (Properties ctx, ResultSet rs, String trxName)
     {
       super (ctx, rs, trxName);
     }
@@ -87,7 +87,7 @@ public class X_SFA_Column extends PO implements I_SFA_Column, I_Persistent
 
     public String toString()
     {
-      StringBuffer sb = new StringBuffer ("X_SFA_Column[")
+      StringBuffer sb = new StringBuffer ("X_SPS_Column[")
         .append(get_ID()).append("]");
       return sb.toString();
     }
@@ -143,6 +143,34 @@ public class X_SFA_Column extends PO implements I_SFA_Column, I_Persistent
 	public int getAD_Element_ID () 
 	{
 		Integer ii = (Integer)get_Value(COLUMNNAME_AD_Element_ID);
+		if (ii == null)
+			 return 0;
+		return ii.intValue();
+	}
+
+	public org.compiere.model.I_AD_Process getAD_Process() throws RuntimeException
+    {
+		return (org.compiere.model.I_AD_Process)MTable.get(getCtx(), org.compiere.model.I_AD_Process.Table_Name)
+			.getPO(getAD_Process_ID(), get_TrxName());	}
+
+	/** Set Process.
+		@param AD_Process_ID 
+		Process or Report
+	  */
+	public void setAD_Process_ID (int AD_Process_ID)
+	{
+		if (AD_Process_ID < 1) 
+			set_Value (COLUMNNAME_AD_Process_ID, null);
+		else 
+			set_Value (COLUMNNAME_AD_Process_ID, Integer.valueOf(AD_Process_ID));
+	}
+
+	/** Get Process.
+		@return Process or Report
+	  */
+	public int getAD_Process_ID () 
+	{
+		Integer ii = (Integer)get_Value(COLUMNNAME_AD_Process_ID);
 		if (ii == null)
 			 return 0;
 		return ii.intValue();
@@ -670,45 +698,45 @@ public class X_SFA_Column extends PO implements I_SFA_Column, I_Persistent
 	}
 
 	/** Set Mobile Column.
-		@param SFA_Column_ID Mobile Column	  */
-	public void setSFA_Column_ID (int SFA_Column_ID)
+		@param SPS_Column_ID Mobile Column	  */
+	public void setSPS_Column_ID (int SPS_Column_ID)
 	{
-		if (SFA_Column_ID < 1) 
-			set_ValueNoCheck (COLUMNNAME_SFA_Column_ID, null);
+		if (SPS_Column_ID < 1) 
+			set_ValueNoCheck (COLUMNNAME_SPS_Column_ID, null);
 		else 
-			set_ValueNoCheck (COLUMNNAME_SFA_Column_ID, Integer.valueOf(SFA_Column_ID));
+			set_ValueNoCheck (COLUMNNAME_SPS_Column_ID, Integer.valueOf(SPS_Column_ID));
 	}
 
 	/** Get Mobile Column.
 		@return Mobile Column	  */
-	public int getSFA_Column_ID () 
+	public int getSPS_Column_ID () 
 	{
-		Integer ii = (Integer)get_Value(COLUMNNAME_SFA_Column_ID);
+		Integer ii = (Integer)get_Value(COLUMNNAME_SPS_Column_ID);
 		if (ii == null)
 			 return 0;
 		return ii.intValue();
 	}
 
-	public org.spinsuite.model.I_SFA_Table getSFA_Table() throws RuntimeException
+	public org.spinsuite.model.I_SPS_Table getSPS_Table() throws RuntimeException
     {
-		return (org.spinsuite.model.I_SFA_Table)MTable.get(getCtx(), org.spinsuite.model.I_SFA_Table.Table_Name)
-			.getPO(getSFA_Table_ID(), get_TrxName());	}
+		return (org.spinsuite.model.I_SPS_Table)MTable.get(getCtx(), org.spinsuite.model.I_SPS_Table.Table_Name)
+			.getPO(getSPS_Table_ID(), get_TrxName());	}
 
 	/** Set Mobile Table.
-		@param SFA_Table_ID Mobile Table	  */
-	public void setSFA_Table_ID (int SFA_Table_ID)
+		@param SPS_Table_ID Mobile Table	  */
+	public void setSPS_Table_ID (int SPS_Table_ID)
 	{
-		if (SFA_Table_ID < 1) 
-			set_ValueNoCheck (COLUMNNAME_SFA_Table_ID, null);
+		if (SPS_Table_ID < 1) 
+			set_ValueNoCheck (COLUMNNAME_SPS_Table_ID, null);
 		else 
-			set_ValueNoCheck (COLUMNNAME_SFA_Table_ID, Integer.valueOf(SFA_Table_ID));
+			set_ValueNoCheck (COLUMNNAME_SPS_Table_ID, Integer.valueOf(SPS_Table_ID));
 	}
 
 	/** Get Mobile Table.
 		@return Mobile Table	  */
-	public int getSFA_Table_ID () 
+	public int getSPS_Table_ID () 
 	{
-		Integer ii = (Integer)get_Value(COLUMNNAME_SFA_Table_ID);
+		Integer ii = (Integer)get_Value(COLUMNNAME_SPS_Table_ID);
 		if (ii == null)
 			 return 0;
 		return ii.intValue();

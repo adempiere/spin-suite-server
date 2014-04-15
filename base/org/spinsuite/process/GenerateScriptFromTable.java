@@ -22,8 +22,8 @@ import org.compiere.process.SvrProcess;
 import org.compiere.util.AdempiereSystemError;
 import org.compiere.util.Env;
 import org.compiere.util.Msg;
-import org.spinsuite.model.MSFAColumn;
-import org.spinsuite.model.MSFATable;
+import org.spinsuite.model.MSPSColumn;
+import org.spinsuite.model.MSPSTable;
 
 /**
  * @author <a href="mailto:yamelsenih@gmail.com">Yamel Senih</a>
@@ -34,7 +34,7 @@ public class GenerateScriptFromTable extends SvrProcess {
 	/**	Record Identifier	*/
 	private int 			m_Record_ID = 0;
 	/**	Table for Sync wit mobile	*/
-	private MSFATable 	m_Table = null;
+	private MSPSTable 	m_Table = null;
 	@Override
 	protected void prepare() {
 		m_Record_ID = getRecord_ID();
@@ -43,9 +43,9 @@ public class GenerateScriptFromTable extends SvrProcess {
 	
 	@Override
 	protected String doIt() throws Exception {
-		m_Table = new MSFATable(getCtx(), m_Record_ID, get_TrxName());
+		m_Table = new MSPSTable(getCtx(), m_Record_ID, get_TrxName());
 		//	Verify exists columns
-		MSFAColumn[] columns = m_Table.getColumns();
+		MSPSColumn[] columns = m_Table.getColumns();
 		//	
 		if (columns == null 
 				|| columns.length == 0)

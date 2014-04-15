@@ -21,17 +21,17 @@ import java.sql.Timestamp;
 import org.compiere.model.*;
 import org.compiere.util.KeyNamePair;
 
-/** Generated Interface for SFA_Window
+/** Generated Interface for SPS_Table
  *  @author Adempiere (generated) 
  *  @version Release 3.7.0LTS (1252452765)
  */
-public interface I_SFA_Window 
+public interface I_SPS_Table 
 {
 
-    /** TableName=SFA_Window */
-    public static final String Table_Name = "SFA_Window";
+    /** TableName=SPS_Table */
+    public static final String Table_Name = "SPS_Table";
 
-    /** AD_Table_ID=53752 */
+    /** AD_Table_ID=53503 */
     public static final int Table_ID = MTable.getTable_ID(Table_Name);
 
     KeyNamePair Model = new KeyNamePair(Table_ID, Table_Name);
@@ -62,6 +62,41 @@ public interface I_SFA_Window
 	  * Organizational entity within client
 	  */
 	public int getAD_Org_ID();
+
+    /** Column name AD_Rule_ID */
+    public static final String COLUMNNAME_AD_Rule_ID = "AD_Rule_ID";
+
+	/** Set Rule	  */
+	public void setAD_Rule_ID (int AD_Rule_ID);
+
+	/** Get Rule	  */
+	public int getAD_Rule_ID();
+
+	public org.compiere.model.I_AD_Rule getAD_Rule() throws RuntimeException;
+
+    /** Column name AD_Table_ID */
+    public static final String COLUMNNAME_AD_Table_ID = "AD_Table_ID";
+
+	/** Set Table.
+	  * Database Table information
+	  */
+	public void setAD_Table_ID (int AD_Table_ID);
+
+	/** Get Table.
+	  * Database Table information
+	  */
+	public int getAD_Table_ID();
+
+	public org.compiere.model.I_AD_Table getAD_Table() throws RuntimeException;
+
+    /** Column name CopyColumnsFromTable */
+    public static final String COLUMNNAME_CopyColumnsFromTable = "CopyColumnsFromTable";
+
+	/** Set Copy Columns From Table	  */
+	public void setCopyColumnsFromTable (String CopyColumnsFromTable);
+
+	/** Get Copy Columns From Table	  */
+	public String getCopyColumnsFromTable();
 
     /** Column name Created */
     public static final String COLUMNNAME_Created = "Created";
@@ -107,18 +142,14 @@ public interface I_SFA_Window
 	  */
 	public String getEntityType();
 
-    /** Column name Help */
-    public static final String COLUMNNAME_Help = "Help";
+    /** Column name GenerateScriptFromTable */
+    public static final String COLUMNNAME_GenerateScriptFromTable = "GenerateScriptFromTable";
 
-	/** Set Comment/Help.
-	  * Comment or Hint
-	  */
-	public void setHelp (String Help);
+	/** Set Generate Script From Table	  */
+	public void setGenerateScriptFromTable (String GenerateScriptFromTable);
 
-	/** Get Comment/Help.
-	  * Comment or Hint
-	  */
-	public String getHelp();
+	/** Get Generate Script From Table	  */
+	public String getGenerateScriptFromTable();
 
     /** Column name IsActive */
     public static final String COLUMNNAME_IsActive = "IsActive";
@@ -133,6 +164,45 @@ public interface I_SFA_Window
 	  */
 	public boolean isActive();
 
+    /** Column name IsCentrallyMaintained */
+    public static final String COLUMNNAME_IsCentrallyMaintained = "IsCentrallyMaintained";
+
+	/** Set Centrally maintained.
+	  * Information maintained in System Element table
+	  */
+	public void setIsCentrallyMaintained (boolean IsCentrallyMaintained);
+
+	/** Get Centrally maintained.
+	  * Information maintained in System Element table
+	  */
+	public boolean isCentrallyMaintained();
+
+    /** Column name IsDeleteable */
+    public static final String COLUMNNAME_IsDeleteable = "IsDeleteable";
+
+	/** Set Records deletable.
+	  * Indicates if records can be deleted from the database
+	  */
+	public void setIsDeleteable (boolean IsDeleteable);
+
+	/** Get Records deletable.
+	  * Indicates if records can be deleted from the database
+	  */
+	public boolean isDeleteable();
+
+    /** Column name IsView */
+    public static final String COLUMNNAME_IsView = "IsView";
+
+	/** Set View.
+	  * This is a view
+	  */
+	public void setIsView (boolean IsView);
+
+	/** Get View.
+	  * This is a view
+	  */
+	public boolean isView();
+
     /** Column name Name */
     public static final String COLUMNNAME_Name = "Name";
 
@@ -146,23 +216,27 @@ public interface I_SFA_Window
 	  */
 	public String getName();
 
-    /** Column name Processing */
-    public static final String COLUMNNAME_Processing = "Processing";
+    /** Column name SPS_Table_ID */
+    public static final String COLUMNNAME_SPS_Table_ID = "SPS_Table_ID";
 
-	/** Set Process Now	  */
-	public void setProcessing (boolean Processing);
+	/** Set Mobile Table	  */
+	public void setSPS_Table_ID (int SPS_Table_ID);
 
-	/** Get Process Now	  */
-	public boolean isProcessing();
+	/** Get Mobile Table	  */
+	public int getSPS_Table_ID();
 
-    /** Column name SFA_Window_ID */
-    public static final String COLUMNNAME_SFA_Window_ID = "SFA_Window_ID";
+    /** Column name TableName */
+    public static final String COLUMNNAME_TableName = "TableName";
 
-	/** Set Window Mobile	  */
-	public void setSFA_Window_ID (int SFA_Window_ID);
+	/** Set DB Table Name.
+	  * Name of the table in the database
+	  */
+	public void setTableName (String TableName);
 
-	/** Get Window Mobile	  */
-	public int getSFA_Window_ID();
+	/** Get DB Table Name.
+	  * Name of the table in the database
+	  */
+	public String getTableName();
 
     /** Column name Updated */
     public static final String COLUMNNAME_Updated = "Updated";

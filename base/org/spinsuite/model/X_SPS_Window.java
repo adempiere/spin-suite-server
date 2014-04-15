@@ -22,32 +22,32 @@ import java.util.Properties;
 import org.compiere.model.*;
 import org.compiere.util.KeyNamePair;
 
-/** Generated Model for SFA_Window
+/** Generated Model for SPS_Window
  *  @author Adempiere (generated) 
  *  @version Release 3.7.0LTS (1252452765) - $Id$ */
-public class X_SFA_Window extends PO implements I_SFA_Window, I_Persistent 
+public class X_SPS_Window extends PO implements I_SPS_Window, I_Persistent 
 {
 
 	/**
 	 *
 	 */
-	private static final long serialVersionUID = 20140320L;
+	private static final long serialVersionUID = 20140415L;
 
     /** Standard Constructor */
-    public X_SFA_Window (Properties ctx, int SFA_Window_ID, String trxName)
+    public X_SPS_Window (Properties ctx, int SPS_Window_ID, String trxName)
     {
-      super (ctx, SFA_Window_ID, trxName);
-      /** if (SFA_Window_ID == 0)
+      super (ctx, SPS_Window_ID, trxName);
+      /** if (SPS_Window_ID == 0)
         {
 			setEntityType (null);
 // ECA01
 			setName (null);
-			setSFA_Window_ID (0);
+			setSPS_Window_ID (0);
         } */
     }
 
     /** Load Constructor */
-    public X_SFA_Window (Properties ctx, ResultSet rs, String trxName)
+    public X_SPS_Window (Properties ctx, ResultSet rs, String trxName)
     {
       super (ctx, rs, trxName);
     }
@@ -69,7 +69,7 @@ public class X_SFA_Window extends PO implements I_SFA_Window, I_Persistent
 
     public String toString()
     {
-      StringBuffer sb = new StringBuffer ("X_SFA_Window[")
+      StringBuffer sb = new StringBuffer ("X_SPS_Window[")
         .append(get_ID()).append("]");
       return sb.toString();
     }
@@ -175,20 +175,20 @@ public class X_SFA_Window extends PO implements I_SFA_Window, I_Persistent
 	}
 
 	/** Set Window Mobile.
-		@param SFA_Window_ID Window Mobile	  */
-	public void setSFA_Window_ID (int SFA_Window_ID)
+		@param SPS_Window_ID Window Mobile	  */
+	public void setSPS_Window_ID (int SPS_Window_ID)
 	{
-		if (SFA_Window_ID < 1) 
-			set_ValueNoCheck (COLUMNNAME_SFA_Window_ID, null);
+		if (SPS_Window_ID < 1) 
+			set_ValueNoCheck (COLUMNNAME_SPS_Window_ID, null);
 		else 
-			set_ValueNoCheck (COLUMNNAME_SFA_Window_ID, Integer.valueOf(SFA_Window_ID));
+			set_ValueNoCheck (COLUMNNAME_SPS_Window_ID, Integer.valueOf(SPS_Window_ID));
 	}
 
 	/** Get Window Mobile.
 		@return Window Mobile	  */
-	public int getSFA_Window_ID () 
+	public int getSPS_Window_ID () 
 	{
-		Integer ii = (Integer)get_Value(COLUMNNAME_SFA_Window_ID);
+		Integer ii = (Integer)get_Value(COLUMNNAME_SPS_Window_ID);
 		if (ii == null)
 			 return 0;
 		return ii.intValue();

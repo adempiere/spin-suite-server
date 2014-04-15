@@ -22,33 +22,33 @@ import java.util.Properties;
 import org.compiere.model.*;
 import org.compiere.util.KeyNamePair;
 
-/** Generated Model for SFA_Table
+/** Generated Model for SPS_Table
  *  @author Adempiere (generated) 
  *  @version Release 3.7.0LTS (1252452765) - $Id$ */
-public class X_SFA_Table extends PO implements I_SFA_Table, I_Persistent 
+public class X_SPS_Table extends PO implements I_SPS_Table, I_Persistent 
 {
 
 	/**
 	 *
 	 */
-	private static final long serialVersionUID = 20140320L;
+	private static final long serialVersionUID = 20140415L;
 
     /** Standard Constructor */
-    public X_SFA_Table (Properties ctx, int SFA_Table_ID, String trxName)
+    public X_SPS_Table (Properties ctx, int SPS_Table_ID, String trxName)
     {
-      super (ctx, SFA_Table_ID, trxName);
-      /** if (SFA_Table_ID == 0)
+      super (ctx, SPS_Table_ID, trxName);
+      /** if (SPS_Table_ID == 0)
         {
 			setEntityType (null);
 // ECA01
 			setName (null);
-			setSFA_Table_ID (0);
+			setSPS_Table_ID (0);
 			setTableName (null);
         } */
     }
 
     /** Load Constructor */
-    public X_SFA_Table (Properties ctx, ResultSet rs, String trxName)
+    public X_SPS_Table (Properties ctx, ResultSet rs, String trxName)
     {
       super (ctx, rs, trxName);
     }
@@ -70,7 +70,7 @@ public class X_SFA_Table extends PO implements I_SFA_Table, I_Persistent
 
     public String toString()
     {
-      StringBuffer sb = new StringBuffer ("X_SFA_Table[")
+      StringBuffer sb = new StringBuffer ("X_SPS_Table[")
         .append(get_ID()).append("]");
       return sb.toString();
     }
@@ -283,20 +283,20 @@ public class X_SFA_Table extends PO implements I_SFA_Table, I_Persistent
 	}
 
 	/** Set Mobile Table.
-		@param SFA_Table_ID Mobile Table	  */
-	public void setSFA_Table_ID (int SFA_Table_ID)
+		@param SPS_Table_ID Mobile Table	  */
+	public void setSPS_Table_ID (int SPS_Table_ID)
 	{
-		if (SFA_Table_ID < 1) 
-			set_ValueNoCheck (COLUMNNAME_SFA_Table_ID, null);
+		if (SPS_Table_ID < 1) 
+			set_ValueNoCheck (COLUMNNAME_SPS_Table_ID, null);
 		else 
-			set_ValueNoCheck (COLUMNNAME_SFA_Table_ID, Integer.valueOf(SFA_Table_ID));
+			set_ValueNoCheck (COLUMNNAME_SPS_Table_ID, Integer.valueOf(SPS_Table_ID));
 	}
 
 	/** Get Mobile Table.
 		@return Mobile Table	  */
-	public int getSFA_Table_ID () 
+	public int getSPS_Table_ID () 
 	{
-		Integer ii = (Integer)get_Value(COLUMNNAME_SFA_Table_ID);
+		Integer ii = (Integer)get_Value(COLUMNNAME_SPS_Table_ID);
 		if (ii == null)
 			 return 0;
 		return ii.intValue();

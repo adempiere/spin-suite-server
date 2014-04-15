@@ -10,7 +10,7 @@
  * with this program; if not, write to the Free Software Foundation, Inc.,    *
  * 59 Temple Place, Suite 330, Boston, MA 02111-1307 USA.                     *
  * For the text or an alternative of this public license, you may reach us    *
- * Copyright (C) 2003-2013 E.R.P. Consultores y Asociados.                 *
+ * Copyright (C) 2003-2013 E.R.P. Consultores y Asociados.                    *
  * All Rights Reserved.                                                       *
  * Contributor(s): Dixon Martinez www.erpconsultoresyasociados.com            *
  *****************************************************************************/
@@ -30,7 +30,7 @@ import org.compiere.util.DB;
  * <li>Add method for generate Script Create Table
  * <li>Add method for get Columns
  */
-public class MSFATable extends X_SFA_Table {
+public class MSPSTable extends X_SPS_Table {
 	
 	/**
 	 * 
@@ -41,11 +41,11 @@ public class MSFATable extends X_SFA_Table {
 	 * *** Class Constructor ***
 	 * @author Dixon Martinez 08/02/2013, 17:22:40
 	 * @param ctx
-	 * @param SFA_Table_ID
+	 * @param SPS_Table_ID
 	 * @param trxName
 	 */
-	public MSFATable(Properties ctx, int SFA_Table_ID, String trxName) {
-		super(ctx, SFA_Table_ID, trxName);
+	public MSPSTable(Properties ctx, int SPS_Table_ID, String trxName) {
+		super(ctx, SPS_Table_ID, trxName);
 		// TODO Auto-generated constructor stub
 	}
 
@@ -56,7 +56,7 @@ public class MSFATable extends X_SFA_Table {
 	 * @param rs
 	 * @param trxName
 	 */
-	public MSFATable(Properties ctx, ResultSet rs, String trxName) {
+	public MSPSTable(Properties ctx, ResultSet rs, String trxName) {
 		super(ctx, rs, trxName);
 		// TODO Auto-generated constructor stub
 	}
@@ -73,10 +73,10 @@ public class MSFATable extends X_SFA_Table {
 		boolean hasPK = false;
 		boolean hasParents = false;
 		StringBuffer constraints = new StringBuffer();
-		MSFAColumn[] m_columns = getColumns();
+		MSPSColumn[] m_columns = getColumns();
 		for (int i = 0; i < m_columns.length; i++)
 		{
-			MSFAColumn column = m_columns[i];
+			MSPSColumn column = m_columns[i];
 			String colSQL = column.getSQLDDL();
 			if ( colSQL != null )
 			{
@@ -101,7 +101,7 @@ public class MSFATable extends X_SFA_Table {
 			StringBuffer cols = new StringBuffer();
 			for (int i = 0; i < m_columns.length; i++)
 			{
-				MSFAColumn column = m_columns[i];
+				MSPSColumn column = m_columns[i];
 				if (!column.isParent())
 					continue;
 				if (cols.length() > 0)
@@ -123,20 +123,20 @@ public class MSFATable extends X_SFA_Table {
 	 * 	Get Columns
 	 *	@return array of columns
 	 */
-	public MSFAColumn[] getColumns ()
+	public MSPSColumn[] getColumns ()
 	{
-		MSFAColumn[] m_columns;
+		MSPSColumn[] m_columns;
 		
-		String sql = "SELECT * FROM SFA_Column WHERE SFA_Table_ID=? ORDER BY ColumnName";
-		ArrayList<MSFAColumn> list = new ArrayList<MSFAColumn>();
+		String sql = "SELECT * FROM SPS_Column WHERE SPS_Table_ID=? ORDER BY ColumnName";
+		ArrayList<MSPSColumn> list = new ArrayList<MSPSColumn>();
 		PreparedStatement pstmt = null;
 		try
 		{
 			pstmt = DB.prepareStatement (sql, get_TrxName());
-			pstmt.setInt (1, getSFA_Table_ID());
+			pstmt.setInt (1, getSPS_Table_ID());
 			ResultSet rs = pstmt.executeQuery ();
 			while (rs.next ())
-				list.add (new MSFAColumn (getCtx(), rs, get_TrxName()));
+				list.add (new MSPSColumn (getCtx(), rs, get_TrxName()));
 			rs.close ();
 			pstmt.close ();
 			pstmt = null;
@@ -156,7 +156,7 @@ public class MSFATable extends X_SFA_Table {
 			pstmt = null;
 		}
 		//
-		m_columns = new MSFAColumn[list.size ()];
+		m_columns = new MSPSColumn[list.size ()];
 		list.toArray (m_columns);
 		return m_columns;
 	}	//	getColumns

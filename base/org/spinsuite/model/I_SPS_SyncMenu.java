@@ -21,15 +21,15 @@ import java.sql.Timestamp;
 import org.compiere.model.*;
 import org.compiere.util.KeyNamePair;
 
-/** Generated Interface for SFA_SyncMenu
+/** Generated Interface for SPS_SyncMenu
  *  @author Adempiere (generated) 
  *  @version Release 3.7.0LTS (1252452765)
  */
-public interface I_SFA_SyncMenu 
+public interface I_SPS_SyncMenu 
 {
 
-    /** TableName=SFA_SyncMenu */
-    public static final String Table_Name = "SFA_SyncMenu";
+    /** TableName=SPS_SyncMenu */
+    public static final String Table_Name = "SPS_SyncMenu";
 
     /** AD_Table_ID=53501 */
     public static final int Table_ID = MTable.getTable_ID(Table_Name);
@@ -190,25 +190,25 @@ public interface I_SFA_SyncMenu
 	  */
 	public String getName();
 
-    /** Column name SFA_SyncMenu_ID */
-    public static final String COLUMNNAME_SFA_SyncMenu_ID = "SFA_SyncMenu_ID";
+    /** Column name SPS_SyncMenu_ID */
+    public static final String COLUMNNAME_SPS_SyncMenu_ID = "SPS_SyncMenu_ID";
 
 	/** Set Sync/Option Menu	  */
-	public void setSFA_SyncMenu_ID (int SFA_SyncMenu_ID);
+	public void setSPS_SyncMenu_ID (int SPS_SyncMenu_ID);
 
 	/** Get Sync/Option Menu	  */
-	public int getSFA_SyncMenu_ID();
+	public int getSPS_SyncMenu_ID();
 
-    /** Column name SFA_Table_ID */
-    public static final String COLUMNNAME_SFA_Table_ID = "SFA_Table_ID";
+    /** Column name SPS_Table_ID */
+    public static final String COLUMNNAME_SPS_Table_ID = "SPS_Table_ID";
 
 	/** Set Mobile Table	  */
-	public void setSFA_Table_ID (int SFA_Table_ID);
+	public void setSPS_Table_ID (int SPS_Table_ID);
 
 	/** Get Mobile Table	  */
-	public int getSFA_Table_ID();
+	public int getSPS_Table_ID();
 
-	public org.spinsuite.model.I_SFA_Table getSFA_Table() throws RuntimeException;
+	public org.spinsuite.model.I_SPS_Table getSPS_Table() throws RuntimeException;
 
     /** Column name Updated */
     public static final String COLUMNNAME_Updated = "Updated";

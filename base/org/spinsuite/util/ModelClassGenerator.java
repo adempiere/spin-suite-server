@@ -99,23 +99,23 @@ public class ModelClassGenerator
 
 	/**
 	 * 	Add Header info to buffer
-	 * 	@param SFA_Table_ID table
+	 * 	@param SPS_Table_ID table
 	 * 	@param sb buffer
 	 * 	@param mandatory init call for mandatory columns
 	 * 	@param packageName package name
 	 * 	@return class name
 	 */
-	private String createHeader (int SFA_Table_ID, StringBuffer sb, StringBuffer mandatory, String packageName)
+	private String createHeader (int SPS_Table_ID, StringBuffer sb, StringBuffer mandatory, String packageName)
 	{
 		String tableName = "";
 		//int accessLevel = 0;
-		String sql = "SELECT TableName FROM SFA_Table WHERE SFA_Table_ID=?";
+		String sql = "SELECT TableName FROM SPS_Table WHERE SPS_Table_ID=?";
 		PreparedStatement pstmt = null;
 		ResultSet rs = null;
 		try
 		{
 			pstmt = DB.prepareStatement(sql, null);
-			pstmt.setInt(1, SFA_Table_ID);
+			pstmt.setInt(1, SPS_Table_ID);
 			rs = pstmt.executeQuery();
 			if (rs.next())
 			{
@@ -133,7 +133,7 @@ public class ModelClassGenerator
 			rs = null; pstmt = null;
 		}
 		if (tableName == null)
-			throw new RuntimeException ("TableName not found for ID=" + SFA_Table_ID);
+			throw new RuntimeException ("TableName not found for ID=" + SPS_Table_ID);
 		//
 		/*String accessLevelInfo = accessLevel + " ";
 		if (accessLevel >= 4 )
@@ -238,7 +238,7 @@ public class ModelClassGenerator
 			 .append("    /** Load Meta Data */").append(NL)
 			 .append("    protected POInfo initPO (Context ctx)").append(NL)
 			 .append("    {").append(NL)
-			 .append("      POInfo poi = POInfo.getPOInfo (ctx, SFA_Table_ID, get_Connection());").append(NL)
+			 .append("      POInfo poi = POInfo.getPOInfo (ctx, SPS_Table_ID, get_Connection());").append(NL)
 			 .append("      return poi;").append(NL)
 			 .append("    }").append(NL)
 			// initPO
@@ -263,19 +263,19 @@ public class ModelClassGenerator
 
 	/**
 	 * 	Create Column access methods
-	 * 	@param SFA_Table_ID table
+	 * 	@param SPS_Table_ID table
 	 * 	@param mandatory init call for mandatory columns
 	 * 	@return set/get method
 	 */
-	private StringBuffer createColumns (int SFA_Table_ID, StringBuffer mandatory)
+	private StringBuffer createColumns (int SPS_Table_ID, StringBuffer mandatory)
 	{
 		StringBuffer sb = new StringBuffer();
 		String sql = "SELECT c.ColumnName, c.IsUpdateable, c.IsMandatory,"		//	1..3
 			+ " c.AD_Reference_ID, c.AD_Reference_Value_ID, DefaultValue, SeqNo, "	//	4..7
 			+ " c.FieldLength, c.ValueMin, c.ValueMax, c.VFormat, c.Callout, "	//	8..12
 			+ " c.Name, c.Description, c.ColumnSQL, c.IsEncrypted, c.IsKey, c.IsIdentifier "  // 13..18
-			+ "FROM SFA_Column c "
-			+ "WHERE c.SFA_Table_ID=?"
+			+ "FROM SPS_Column c "
+			+ "WHERE c.SPS_Table_ID=?"
 			+ " AND c.ColumnName NOT IN ('AD_Client_ID', 'AD_Org_ID', 'IsActive', 'Created', 'CreatedBy', 'Updated', 'UpdatedBy')"
 			+ " AND c.IsActive='Y'"
 			+ " ORDER BY c.ColumnName";
@@ -285,7 +285,7 @@ public class ModelClassGenerator
 		try
 		{
 			pstmt = DB.prepareStatement(sql, null);
-			pstmt.setInt(1, SFA_Table_ID);
+			pstmt.setInt(1, SPS_Table_ID);
 			rs = pstmt.executeQuery();
 			while (rs.next())
 			{
@@ -315,7 +315,7 @@ public class ModelClassGenerator
 							displayType, AD_Reference_Value_ID, fieldLength,
 							defaultValue, ValueMin, ValueMax, VFormat,
 							Callout, Name, Description, virtualColumn, IsEncrypted, IsKey,
-							SFA_Table_ID)
+							SPS_Table_ID)
 				);
 				//
 				if (seqNo == 1 && IsIdentifier) {
@@ -325,7 +325,7 @@ public class ModelClassGenerator
 					}
 					else {
 						throw new RuntimeException("More than one primary identifier found "
-								+ " (AD_Table_ID=" + SFA_Table_ID + ", ColumnName=" + columnName + ")");
+								+ " (AD_Table_ID=" + SPS_Table_ID + ", ColumnName=" + columnName + ")");
 					}
 				}
 			}

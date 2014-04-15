@@ -119,8 +119,8 @@ public class GenerateModel
 		log.info("Table Like: " + tableLike);
 
 		//	complete sql
-		sql.insert(0, "SELECT SFA_Table_ID "
-			+ "FROM SFA_Table "
+		sql.insert(0, "SELECT SPS_Table_ID "
+			+ "FROM SPS_Table "
 			+ "WHERE (TableName IN ('RV_WarehousePrice','RV_BPartner')"	//	special views
 			+ " OR IsView='N')"
 			+ " AND IsActive = 'Y' AND TableName NOT LIKE '%_Trl' AND ");

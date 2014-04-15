@@ -25,7 +25,6 @@ import org.compiere.model.GridTab;
 import org.compiere.model.MBPartner;
 import org.compiere.model.MBPartnerLocation;
 import org.compiere.model.MRefList;
-import org.compiere.model.X_AD_Reference;
 
 /**
  * 

@@ -106,14 +106,14 @@ public class ModelInterfaceGenerator
 	/** Logger */
 	private static CLogger log = CLogger.getCLogger(ModelInterfaceGenerator.class);
 	
-	public ModelInterfaceGenerator(int SFA_Table_ID, String directory, String packageName) {
+	public ModelInterfaceGenerator(int SPS_Table_ID, String directory, String packageName) {
 		this.packageName = packageName;
 		// create column access methods
 		StringBuffer mandatory = new StringBuffer();
-		StringBuffer sb = createColumns(SFA_Table_ID, mandatory);
+		StringBuffer sb = createColumns(SPS_Table_ID, mandatory);
 		
 		// Header
-		String tableName = createHeader(SFA_Table_ID, sb, mandatory);
+		String tableName = createHeader(SPS_Table_ID, sb, mandatory);
 		
 		// Save
 		if (directory.endsWith("/") || directory.endsWith("\\")) 
@@ -128,21 +128,21 @@ public class ModelInterfaceGenerator
 	/**
 	 * Add Header info to buffer
 	 * 
-	 * @param SFA_Table_ID	table
+	 * @param SPS_Table_ID	table
 	 * @param sb			buffer
 	 * @param mandatory		init call for mandatory columns
 	 * @param packageName	package name
 	 * @return class name
 	 */
-	private String createHeader(int SFA_Table_ID, StringBuffer sb, StringBuffer mandatory) {
+	private String createHeader(int SPS_Table_ID, StringBuffer sb, StringBuffer mandatory) {
 		String tableName = "";
 		//int accessLevel = 0;
-		String sql = "SELECT TableName FROM SFA_Table WHERE SFA_Table_ID=?";
+		String sql = "SELECT TableName FROM SPS_Table WHERE SPS_Table_ID=?";
 		PreparedStatement pstmt = null;
 		ResultSet rs = null;
 		try {
 			pstmt = DB.prepareStatement(sql, null);
-			pstmt.setInt(1, SFA_Table_ID);
+			pstmt.setInt(1, SPS_Table_ID);
 			rs = pstmt.executeQuery();
 			if (rs.next())
 			{
@@ -160,7 +160,7 @@ public class ModelInterfaceGenerator
 			rs = null; pstmt = null;
 		}
 		if (tableName == null)
-			throw new RuntimeException("TableName not found for ID=" + SFA_Table_ID);
+			throw new RuntimeException("TableName not found for ID=" + SPS_Table_ID);
 		//
 		/*String accessLevelInfo = accessLevel + " ";
 		if (accessLevel >= 4 )
@@ -196,11 +196,11 @@ public class ModelInterfaceGenerator
 			 .append("    /** TableName=").append(tableName).append(" */\n")
 			 .append("    public static final String Table_Name = \"").append(tableName).append("\";\n")
 			 
-			 .append("    /** SFA_Table_ID=").append(SFA_Table_ID).append(" */\n")
-			 .append("    public static final int SFA_Table_ID = ").append(SFA_Table_ID).append(";")//MTable.getTable_ID(Table_Name);\n")
+			 .append("    /** SPS_Table_ID=").append(SPS_Table_ID).append(" */\n")
+			 .append("    public static final int SPS_Table_ID = ").append(SPS_Table_ID).append(";")//MTable.getTable_ID(Table_Name);\n")
 			 
 			 //.append("    protected KeyNamePair Model = new KeyNamePair(Table_ID, Table_Name);\n")
-			 .append("    KeyNamePair Model = new KeyNamePair(SFA_Table_ID, Table_Name);\n") // INFO - Should this be here???
+			 .append("    KeyNamePair Model = new KeyNamePair(SPS_Table_ID, Table_Name);\n") // INFO - Should this be here???
 			 
 //			 .append("    /** AccessLevel = ").append("accessLevelInfo").append("\n")
 //			 .append("     */\n")
@@ -223,18 +223,18 @@ public class ModelInterfaceGenerator
 	/**
 	 * Create Column access methods
 	 * 
-	 * @param SFA_Table_ID table
+	 * @param SPS_Table_ID table
 	 * @param mandatory   init call for mandatory columns
 	 * @return set/get method
 	 */
-	private StringBuffer createColumns(int SFA_Table_ID, StringBuffer mandatory) {
+	private StringBuffer createColumns(int SPS_Table_ID, StringBuffer mandatory) {
 		StringBuffer sb = new StringBuffer();
 		String sql = "SELECT c.ColumnName, c.IsUpdateable, c.IsMandatory," // 1..3
 				+ " c.AD_Reference_ID, c.AD_Reference_Value_ID, DefaultValue, SeqNo, " // 4..7
 				+ " c.FieldLength, c.ValueMin, c.ValueMax, c.VFormat, c.Callout, " // 8..12
 				+ " c.Name, c.Description, c.ColumnSQL, c.IsEncrypted, c.IsKey "   // 13..17
-				+ "FROM SFA_Column c "
-				+ "WHERE c.SFA_Table_ID=?"
+				+ "FROM SPS_Column c "
+				+ "WHERE c.SPS_Table_ID=?"
 //				+ " AND c.ColumnName <> 'AD_Client_ID'"
 //				+ " AND c.ColumnName <> 'AD_Org_ID'"
 //				+ " AND c.ColumnName <> 'IsActive'"
@@ -246,7 +246,7 @@ public class ModelInterfaceGenerator
 		ResultSet rs = null;
 		try {
 			pstmt = DB.prepareStatement(sql, null);
-			pstmt.setInt(1, SFA_Table_ID);
+			pstmt.setInt(1, SPS_Table_ID);
 			rs = pstmt.executeQuery();
 			while (rs.next()) {
 				String columnName = rs.getString(1);
@@ -280,7 +280,7 @@ public class ModelInterfaceGenerator
 						isUpdateable, isMandatory, displayType,
 						AD_Reference_Value_ID, fieldLength, defaultValue,
 						ValueMin, ValueMax, VFormat, Callout, Name,
-						Description, virtualColumn, IsEncrypted, IsKey, SFA_Table_ID));
+						Description, virtualColumn, IsEncrypted, IsKey, SPS_Table_ID));
 			}
 		}
 		catch (SQLException e)
@@ -579,13 +579,13 @@ public class ModelInterfaceGenerator
 	
 	/**
 	 * 
-	 * @param SFA_Table_ID
+	 * @param SPS_Table_ID
 	 * @param toEntityType
 	 * @return true if a model getter method (method that is returning referenced PO) should be generated
 	 */
-	public static boolean isGenerateModelGetterForEntity(int SFA_Table_ID, String toEntityType)
+	public static boolean isGenerateModelGetterForEntity(int SPS_Table_ID, String toEntityType)
 	{
-		final String fromEntityType = DB.getSQLValueString(null, "SELECT EntityType FROM SFA_Table where SFA_Table_ID=?", SFA_Table_ID);
+		final String fromEntityType = DB.getSQLValueString(null, "SELECT EntityType FROM SPS_Table where SPS_Table_ID=?", SPS_Table_ID);
 		final MEntityType fromEntity = MEntityType.get(Env.getCtx(), fromEntityType);
 		final MEntityType toEntity = MEntityType.get(Env.getCtx(), toEntityType);
 		return 
@@ -809,7 +809,7 @@ public class ModelInterfaceGenerator
 		log.info("Table Like: " + tableLike);
 		
 		// complete sql
-		sql.insert(0, "SELECT SFA_Table_ID " + "FROM SFA_Table "
+		sql.insert(0, "SELECT SPS_Table_ID " + "FROM SPS_Table "
 				+ "WHERE (TableName IN ('RV_WarehousePrice','RV_BPartner')" // special views
 				+ " OR IsView='N') AND IsActive = 'Y' AND TableName NOT LIKE '%_Trl' AND ");
 		sql.append(" AND TableName LIKE ").append(tableLike);

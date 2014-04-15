@@ -28,7 +28,7 @@ import org.compiere.model.MTable;
  * @author Dixon Martinez
  *
  */
-public class CalloutSFATable extends CalloutEngine {
+public class CalloutSPSTable extends CalloutEngine {
 
 	/**
 	 * 
