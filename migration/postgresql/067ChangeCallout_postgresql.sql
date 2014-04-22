@@ -5,6 +5,6 @@ UPDATE AD_Column SET Callout='org.spinsuite.model.CalloutSPSTable.copyAttFromTab
 
 -- Apr 15, 2014 9:47:37 AM CEST
 -- Spin Suite Standard
-UPDATE AD_Column SET Callout='org.sfandroid.model.CalloutSPSTable.copyAttFromColumn',Updated=TO_TIMESTAMP('2014-04-15 09:47:37','YYYY-MM-DD HH24:MI:SS'),UpdatedBy=100 WHERE AD_Column_ID=65697
+UPDATE AD_Column SET Callout='org.spinsuite.model.CalloutSPSTable.copyAttFromColumn',Updated=TO_TIMESTAMP('2014-04-15 09:47:37','YYYY-MM-DD HH24:MI:SS'),UpdatedBy=100 WHERE AD_Column_ID=65697
 ;
 
