@@ -22,7 +22,10 @@ import java.util.ArrayList;
 import java.util.Properties;
 import java.util.logging.Level;
 
+import org.compiere.model.MSequence;
+import org.compiere.model.M_Element;
 import org.compiere.util.DB;
+import org.compiere.util.DisplayType;
 
 /**
  * @author Dixon Martinez
@@ -161,4 +164,101 @@ public class MSPSTable extends X_SPS_Table {
 		return m_columns;
 	}	//	getColumns
 
+	/**
+	 * 	Before Save
+	 *	@param newRecord new
+	 *	@return true
+	 */
+	protected boolean beforeSave (boolean newRecord)
+	{
+		if (isView() && isDeleteable())
+			setIsDeleteable(false);
+		//
+		return true;
+	}	//	beforeSave
+	
+	/**
+	 * 	After Save
+	 *	@param newRecord new
+	 *	@param success success
+	 *	@return success
+	 */
+	protected boolean afterSave (boolean newRecord, boolean success)
+	{
+		//	Sync Table ID
+		if (newRecord)
+		{
+			createMandatoryColumns();
+			
+			MSequence seq = MSequence.get(getCtx(), getTableName(), get_TrxName());
+			if (seq == null || seq.get_ID() == 0)
+				MSequence.createTableSequence(getCtx(), getTableName(), get_TrxName());
+		}
+		else
+		{
+			MSequence seq = MSequence.get(getCtx(), getTableName(), get_TrxName());
+			if (seq == null || seq.get_ID() == 0)
+				MSequence.createTableSequence(getCtx(), getTableName(), get_TrxName());
+			else if (!seq.getName().equals(getTableName()))
+			{
+				seq.setName(getTableName());
+				seq.save();
+			}
+		}	
+		
+		return success;
+	}	//	afterSave
+	
+	/*
+	 * Create Mandatory Fields
+	 */
+	public void createMandatoryColumns(){		
+		
+		MSPSColumn m_SPS_Column = null;
+		//MColumn column = null;
+		//M_Element.get(getCtx(),COLUMNNAME_AD_Client_ID);
+		
+		m_SPS_Column = new MSPSColumn(this, COLUMNNAME_AD_Client_ID	, 22 , DisplayType.TableDir , "@#AD_Client_ID@");
+		m_SPS_Column.setIsUpdateable(false);
+		m_SPS_Column.setAD_Val_Rule_ID(129);
+		m_SPS_Column.saveEx();
+		m_SPS_Column = new MSPSColumn(this, COLUMNNAME_AD_Org_ID	, 22 , DisplayType.TableDir , "@#AD_Org_ID@");
+		m_SPS_Column.setIsUpdateable(false);
+		m_SPS_Column.setAD_Val_Rule_ID(104);
+		m_SPS_Column.saveEx();
+		m_SPS_Column = new MSPSColumn(this, COLUMNNAME_IsActive	, 1 , DisplayType.YesNo , "Y");
+		m_SPS_Column.setIsUpdateable(false);
+		m_SPS_Column.saveEx();
+		m_SPS_Column = new MSPSColumn(this, COLUMNNAME_Created	, 7 , DisplayType.DateTime , "");
+		m_SPS_Column.saveEx();		
+		m_SPS_Column = new MSPSColumn(this, COLUMNNAME_Updated	, 7 , DisplayType.DateTime , "");
+		m_SPS_Column.saveEx();
+		m_SPS_Column = new MSPSColumn(this, COLUMNNAME_CreatedBy	, 22 , DisplayType.TableDir, "");
+		m_SPS_Column.setAD_Reference_Value_ID(110);
+		m_SPS_Column.saveEx();
+		m_SPS_Column = new MSPSColumn(this, COLUMNNAME_UpdatedBy	, 22 , DisplayType.TableDir, "");
+		m_SPS_Column.setAD_Reference_Value_ID(110);
+		m_SPS_Column.saveEx();
+		if(!isView())
+		{	
+			if(getTableName().endsWith("_Trl") || getTableName().endsWith("_Access"))
+				return;
+			
+			M_Element element = M_Element.get(getCtx(), getTableName()+"_ID", get_TrxName());
+			if(element != null)
+				return;				
+			element = new M_Element(getCtx(), 0 , get_TrxName());
+			element.setColumnName(getTableName()+"_ID");
+			element.setName(getName() + " ID");
+			element.setPrintName(getName() + " ID");
+			element.setEntityType(getEntityType());
+			element.saveEx();
+			
+			m_SPS_Column = new MSPSColumn(this, element.getColumnName(), 22 , DisplayType.ID, "");
+			m_SPS_Column.setAD_Element_ID(element.get_ID());
+			m_SPS_Column.setIsKey(true);
+			m_SPS_Column.setIsMandatory(true);
+			m_SPS_Column.saveEx();
+		}	
+	}
 }

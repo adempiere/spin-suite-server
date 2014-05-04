@@ -19,9 +19,12 @@ package org.spinsuite.model;
 import java.sql.ResultSet;
 import java.util.Properties;
 
+import org.compiere.model.MTable;
+import org.compiere.model.M_Element;
 import org.compiere.util.CLogger;
 import org.compiere.util.DB;
 import org.compiere.util.DisplayType;
+import org.compiere.util.Msg;
 
 /**
  * @author Dixon Martinez
@@ -61,6 +64,37 @@ public class MSPSColumn extends X_SPS_Column {
 	}
 	
 	/**
+	 * create new column FR [ 3426134 ]
+	 * @param parent
+	 * @param columnName
+	 * @param AD_Element_ID
+	 * @param length
+	 * @param AD_Reference
+	 * @param defaultValue
+	 */
+	public MSPSColumn (MSPSTable parent, String columnName, int length , int AD_Reference , String defaultValue)
+	{
+		this (parent.getCtx(), 0, parent.get_TrxName());
+		setClientOrg(parent);
+		setSPS_Table_ID(parent.getSPS_Table_ID());
+		setEntityType(parent.getEntityType());
+		setColumnName(columnName);	
+		M_Element AD_Element = M_Element.get(getCtx(),columnName);
+		if(AD_Element != null )
+		{	
+			setAD_Element_ID(AD_Element.get_ID());
+		}	
+		setName(columnName);
+		setIsActive(true);
+		setIsMandatory(true);
+		setFieldLength(length);
+		setAD_Reference_ID(AD_Reference);
+		setDefaultValue(defaultValue);
+		setUpdateable(false);
+	}	//	MColumn
+	
+	
+	/**
 	 * 	Parent Constructor
 	 *	@param parent table
 	 */
@@ -69,6 +103,56 @@ public class MSPSColumn extends X_SPS_Column {
 		this (parent.getCtx(), 0, parent.get_TrxName());
 		setClientOrg(parent);
 		setSPS_Table_ID(parent.getSPS_Table_ID());
+	}
+	
+	/**
+	 * Set default base on AD_Element FR [ 3426134 ]
+	 * @param ctx context
+	 * @param column AD Column
+	 * @param trxName transaction Name
+	 * @return I_AD_Column
+	 */
+	public static I_SPS_Column setSPS_Column(Properties ctx ,I_SPS_Column column , String trxName)
+	{
+		MSPSTable m_SPS_Table = (MSPSTable) column.getSPS_Table();
+		
+		M_Element element =  new M_Element(ctx, column.getAD_Element_ID() , trxName);
+		if(element.getAD_Reference_ID() == DisplayType.ID)
+		{
+			String columnName = m_SPS_Table.get_TableName()+"_ID";
+			if(!columnName.equals(element.getColumnName()) )
+			{
+				column.setAD_Reference_ID(DisplayType.TableDir);
+			}
+		}
+
+		String entityType = column.getSPS_Table().getEntityType();
+		if(!MTable.ENTITYTYPE_Dictionary.equals(entityType))
+			column.setEntityType(entityType);
+		
+		if(column.getColumnName() == null || column.getColumnName().length() <= 0)
+			column.setColumnName(element.getColumnName());	
+		if(column.getFieldLength() <= 0 )
+			column.setFieldLength(element.getFieldLength());
+		if(column.getAD_Reference_ID() <= 0)	
+			column.setAD_Reference_ID(element.getAD_Reference_ID());
+		if(column.getAD_Reference_Value_ID() <= 0)
+			column.setAD_Reference_Value_ID(element.getAD_Reference_Value_ID());
+		if(column.getName() == null || column.getName().length() <= 0)
+			column.setName(element.getName());
+		if(column.getDescription() == null || column.getDescription().length() <= 0)
+			column.setDescription(element.getDescription());
+		/*if(column.getHelp() == null || column.getHelp().length() <= 0)
+			column.setHelp(element.getHelp());*/
+		if(column.getColumnName().equals("Name") || column.getColumnName().equals("Value"))
+		{	
+			column.setIsIdentifier(true);
+			int seqNo = DB.getSQLValue(trxName,"SELECT MAX(SeqNo) FROM SPS_Column "+
+					"WHERE SPS_Table_ID=?"+
+					" AND IsIdentifier='Y'",column.getSPS_Table_ID());
+			column.setSeqNo(seqNo + 1);
+		}
+		return column;	
 	}
 	
 	/**
@@ -237,5 +321,132 @@ public class MSPSColumn extends X_SPS_Column {
 				
 		return "VARCHAR(" + fieldLength + ")";
 	}	//	getSQLDataType
+	
+	
+	/**
+	 * 	Before Save
+	 *	@param newRecord new
+	 *	@return true
+	 */
+	protected boolean beforeSave (boolean newRecord)
+	{
+		//set column default based in element when is a new column FR [ 3426134 ]
+		if(newRecord)
+			setSPS_Column(getCtx(), this, get_TrxName());
+
+		int displayType = getAD_Reference_ID();
+		if (DisplayType.isLOB(displayType))	//	LOBs are 0
+		{
+			if (getFieldLength() != 0)
+				setFieldLength(0);
+		}
+		else if (getFieldLength() == 0) 
+		{
+			if (DisplayType.isID(displayType))
+				setFieldLength(10);
+			else if (DisplayType.isNumeric (displayType))
+				setFieldLength(14);
+			else if (DisplayType.isDate (displayType))
+				setFieldLength(7);
+			else
+		{
+			log.saveError("FillMandatory", Msg.getElement(getCtx(), "FieldLength"));
+			return false;
+		}
+		}
+		
+		/** Views are not updateable
+		UPDATE AD_Column c
+		SET IsUpdateable='N', IsAlwaysUpdateable='N'
+		WHERE AD_Table_ID IN (SELECT AD_Table_ID FROM AD_Table WHERE IsView='Y')
+		**/
+		
+		/* Diego Ruiz - globalqss - BF [1651899] - AD_Column: Avoid dup. SeqNo for IsIdentifier='Y' */
+		if (isIdentifier())
+		{
+			int cnt = DB.getSQLValue(get_TrxName(),"SELECT COUNT(*) FROM SPS_Column "+
+					"WHERE SPS_Table_ID=?"+
+					" AND SPS_Column_ID!=?"+
+					" AND IsIdentifier='Y'"+
+					" AND SeqNo=?",
+					new Object[] {getSPS_Table_ID(), getAD_Column_ID(), getSeqNo()});
+			if (cnt>0)
+			{
+				log.saveError("SaveErrorNotUnique", Msg.getElement(getCtx(), COLUMNNAME_SeqNo));
+				return false;
+			}
+		}
+		
+		//	Virtual Column
+		if (isVirtualColumn())
+		{
+			if (isMandatory())
+				setIsMandatory(false);
+			if (isUpdateable())
+				setIsUpdateable(false);
+		}
+		//	Updateable
+		if (isParent() || isKey())
+			setIsUpdateable(false);
+		if (isAlwaysUpdateable() && !isUpdateable())
+			setIsAlwaysUpdateable(false);
+		//	Encrypted
+		/*if (isEncrypted()) 
+		{
+			int dt = getAD_Reference_ID();
+			if (isKey() || isParent() || isStandardColumn()
+				|| isVirtualColumn() || isIdentifier() || isTranslated()
+				|| DisplayType.isLookup(dt) || DisplayType.isLOB(dt)
+				|| "DocumentNo".equalsIgnoreCase(getColumnName())
+				|| "Value".equalsIgnoreCase(getColumnName())
+				|| "Name".equalsIgnoreCase(getColumnName()))
+			{
+				log.warning("Encryption not sensible - " + getColumnName());
+				setIsEncrypted(false);
+			}
+		}	
+		*/
+		//	Sync Terminology
+		if ((newRecord || is_ValueChanged ("AD_Element_ID")) 
+			&& getAD_Element_ID() != 0)
+		{
+			M_Element element = new M_Element (getCtx(), getAD_Element_ID (), get_TrxName());
+			setColumnName (element.getColumnName());
+			setName (element.getName());
+			setDescription (element.getDescription());
+			//setHelp (element.getHelp());
+		}
+		return true;
+	}	//	beforeSave
+
+	
+	
+	/**
+	 * 	After Save
+	 *	@param newRecord new
+	 *	@param success success
+	 *	@return success
+	 */
+	protected boolean afterSave (boolean newRecord, boolean success)
+	{
+		//	Update Fields
+		if (!newRecord)
+		{
+			if (   is_ValueChanged(MSPSColumn.COLUMNNAME_Name)
+				|| is_ValueChanged(MSPSColumn.COLUMNNAME_Description)
+				//|| is_ValueChanged(MSPSColumn.COLUMNNAME_Help)
+				) {
+				StringBuffer sql = new StringBuffer("UPDATE AD_Field SET Name=")
+					.append(DB.TO_STRING(getName()))
+					.append(", Description=").append(DB.TO_STRING(getDescription()))
+					//.append(", Help=").append(DB.TO_STRING(getHelp()))
+					.append(" WHERE SPS_Column_ID=").append(get_ID())
+					.append(" AND IsCentrallyMaintained='Y'");
+				int no = DB.executeUpdate(sql.toString(), get_TrxName());
+				log.fine("afterSave - Fields updated #" + no);
+			}
+		}
+		return success;
+	}	//	afterSave
 	
 }
