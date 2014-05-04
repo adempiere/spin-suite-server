@@ -1163,6 +1163,125 @@ public class SynchronizeTerminology extends SvrProcess
 			trx.commit(true);
 			
 	
+			//	Fields should now be synchronized
+				log.info("Synchronize Field");
+				sql=" 	UPDATE SPS_FIELD f"
+					+" 		SET (Name, Description, Help) = "
+					+" 	            (SELECT e.Name, e.Description, e.Help"
+					+" 	            FROM AD_ELEMENT e, SPS_COLUMN c"
+					+" 	    	    WHERE e.AD_Element_ID=c.AD_Element_ID AND c.SPS_COLUMN_ID=f.SPS_COLUMN_ID),"
+					+" 			Updated = SYSDATE"
+					+" 	WHERE f.IsCentrallyMaintained='Y' AND f.IsActive='Y'"
+					+" 	 AND EXISTS (SELECT 1 FROM AD_ELEMENT e, SPS_COLUMN c"
+					+" 				WHERE f.SPS_COLUMN_ID=c.SPS_COLUMN_ID"
+					+" 				  AND c.AD_Element_ID=e.AD_Element_ID AND c.AD_Process_ID IS NULL"
+					+" 				  AND (f.Name <> e.Name OR NVL(f.Description,' ') <> NVL(e.Description,' ') OR NVL(f.Help,' ') <> NVL(e.Help,' ')))";
+				no = DB.executeUpdate(sql, false, get_TrxName());	  	
+				log.info("  rows updated: "+no);
+				trx.commit(true);
+
+				//	Field Translations
+				log.info("Synchronize Field Translations");
+				sql="UPDATE SPS_FIELD_TRL trl"
+					+" SET Name = (SELECT e.Name FROM AD_ELEMENT_TRL e, SPS_COLUMN c, SPS_FIELD f"
+					+"			WHERE e.AD_LANGUAGE=trl.AD_LANGUAGE AND e.AD_Element_ID=c.AD_Element_ID "
+					+"			  AND c.SPS_Column_ID=f.SPS_Column_ID AND f.SPS_Field_ID=trl.SPS_Field_ID),"
+					+"	Description = (SELECT e.Description FROM AD_ELEMENT_TRL e, SPS_COLUMN c, SPS_FIELD f"
+					+"			WHERE e.AD_LANGUAGE=trl.AD_LANGUAGE AND e.AD_Element_ID=c.AD_Element_ID "
+					+"			  AND c.SPS_Column_ID=f.SPS_Column_ID AND f.SPS_Field_ID=trl.SPS_Field_ID),"
+					+"	Help = (SELECT e.Help FROM AD_ELEMENT_TRL e, SPS_COLUMN c, SPS_FIELD f"
+					+"			WHERE e.AD_LANGUAGE=trl.AD_LANGUAGE AND e.AD_Element_ID=c.AD_Element_ID "
+					+"			  AND c.SPS_Column_ID=f.SPS_Column_ID AND f.SPS_Field_ID=trl.SPS_Field_ID),"
+					+"	IsTranslated = (SELECT e.IsTranslated FROM AD_ELEMENT_TRL e, SPS_COLUMN c, SPS_FIELD f"
+					+"			WHERE e.AD_LANGUAGE=trl.AD_LANGUAGE AND e.AD_Element_ID=c.AD_Element_ID "
+					+"			  AND c.SPS_Column_ID=f.SPS_Column_ID AND f.SPS_Field_ID=trl.SPS_Field_ID),"
+					+"	Updated = SYSDATE"
+					+" WHERE EXISTS (SELECT 1 FROM SPS_FIELD f, AD_ELEMENT_TRL e, SPS_COLUMN c"
+					+"		WHERE trl.SPS_Field_ID=f.SPS_Field_ID"
+					+"		  AND f.SPS_Column_ID=c.SPS_Column_ID"
+					+"		  AND c.AD_Element_ID=e.AD_Element_ID AND c.AD_Process_ID IS NULL"
+					+"		  AND trl.AD_LANGUAGE=e.AD_LANGUAGE"
+					+"		  AND f.IsCentrallyMaintained='Y' AND f.IsActive='Y'"
+					+"		  AND (trl.Name <> e.Name OR NVL(trl.Description,' ') <> NVL(e.Description,' ') OR NVL(trl.Help,' ') <> NVL(e.Help,' ')))";
+				no = DB.executeUpdate(sql, false, get_TrxName());	  	
+				log.info("  rows updated: "+no);
+				trx.commit(true);
+/*
+				//	Fields should now be synchronized
+				log.info("Synchronize PO Field");
+				sql="UPDATE AD_FIELD f"
+					+" SET Name = (SELECT e.PO_Name FROM AD_ELEMENT e, AD_COLUMN c"
+					+" 			WHERE e.AD_Element_ID=c.AD_Element_ID AND c.AD_Column_ID=f.AD_Column_ID),"
+					+" 	Description = (SELECT e.PO_Description FROM AD_ELEMENT e, AD_COLUMN c"
+					+" 			WHERE e.AD_Element_ID=c.AD_Element_ID AND c.AD_Column_ID=f.AD_Column_ID),"
+					+" 	Help = (SELECT e.PO_Help FROM AD_ELEMENT e, AD_COLUMN c"
+					+" 			WHERE e.AD_Element_ID=c.AD_Element_ID AND c.AD_Column_ID=f.AD_Column_ID),"
+					+" 	Updated = SYSDATE"
+					+" WHERE f.IsCentrallyMaintained='Y' AND f.IsActive='Y'"
+					+" AND EXISTS (SELECT 1 FROM AD_ELEMENT e, AD_COLUMN c"
+					+" 		WHERE f.AD_Column_ID=c.AD_Column_ID"
+					+" 		  AND c.AD_Element_ID=e.AD_Element_ID AND c.AD_Process_ID IS NULL"
+					+" 		  AND (f.Name <> e.PO_Name OR NVL(f.Description,' ') <> NVL(e.PO_Description,' ') OR NVL(f.Help,' ') <> NVL(e.PO_Help,' '))"
+					+" 		  AND e.PO_Name IS NOT NULL)"
+					+" AND EXISTS (SELECT 1 FROM AD_TAB t, AD_WINDOW w"
+					+" 		WHERE f.AD_Tab_ID=t.AD_Tab_ID"
+					+" 		  AND t.AD_Window_ID=w.AD_Window_ID"
+					+" 		  AND w.IsSOTrx='N')";
+				no = DB.executeUpdate(sql, false, get_TrxName());	  	
+				log.info("  rows updated: "+no);
+				trx.commit(true);
+
+				//	Field Translations
+				log.info("Synchronize PO Field Translations");
+				sql=" UPDATE AD_FIELD_TRL trl"
+					+" SET Name = (SELECT e.PO_Name FROM AD_ELEMENT_TRL e, AD_COLUMN c, AD_FIELD f"
+					+" 		WHERE e.AD_LANGUAGE=trl.AD_LANGUAGE AND e.AD_Element_ID=c.AD_Element_ID" 
+					+" 		  AND c.AD_Column_ID=f.AD_Column_ID AND f.AD_Field_ID=trl.AD_Field_ID),"
+					+" Description = (SELECT e.PO_Description FROM AD_ELEMENT_TRL e, AD_COLUMN c, AD_FIELD f"
+					+" 		WHERE e.AD_LANGUAGE=trl.AD_LANGUAGE AND e.AD_Element_ID=c.AD_Element_ID "
+					+" 		  AND c.AD_Column_ID=f.AD_Column_ID AND f.AD_Field_ID=trl.AD_Field_ID),"
+					+" Help = (SELECT e.PO_Help FROM AD_ELEMENT_TRL e, AD_COLUMN c, AD_FIELD f"
+					+" 		WHERE e.AD_LANGUAGE=trl.AD_LANGUAGE AND e.AD_Element_ID=c.AD_Element_ID" 
+					+" 		  AND c.AD_Column_ID=f.AD_Column_ID AND f.AD_Field_ID=trl.AD_Field_ID),"
+					+" IsTranslated = (SELECT e.IsTranslated FROM AD_ELEMENT_TRL e, AD_COLUMN c, AD_FIELD f"
+					+" 		WHERE e.AD_LANGUAGE=trl.AD_LANGUAGE AND e.AD_Element_ID=c.AD_Element_ID "
+					+" 		  AND c.AD_Column_ID=f.AD_Column_ID AND f.AD_Field_ID=trl.AD_Field_ID),"
+					+" Updated = SYSDATE"
+					+" WHERE EXISTS (SELECT 1 FROM AD_FIELD f, AD_ELEMENT_TRL e, AD_COLUMN c"
+					+" 	WHERE trl.AD_Field_ID=f.AD_Field_ID"
+					+" 	  AND f.AD_Column_ID=c.AD_Column_ID"
+					+" 	  AND c.AD_Element_ID=e.AD_Element_ID AND c.AD_Process_ID IS NULL"
+					+" 	  AND trl.AD_LANGUAGE=e.AD_LANGUAGE"
+					+" 	  AND f.IsCentrallyMaintained='Y' AND f.IsActive='Y'"
+					+" 	  AND (trl.Name <> e.PO_Name OR NVL(trl.Description,' ') <> NVL(e.PO_Description,' ') OR NVL(trl.Help,' ') <> NVL(e.PO_Help,' '))"
+					+" 	  AND e.PO_Name IS NOT NULL)"
+					+" AND EXISTS (SELECT 1 FROM AD_FIELD f, AD_TAB t, AD_WINDOW w"
+					+" 	WHERE trl.AD_Field_ID=f.AD_Field_ID"
+					+" 	  AND f.AD_Tab_ID=t.AD_Tab_ID"
+					+" 	  AND t.AD_Window_ID=w.AD_Window_ID"
+					+" 	  AND w.IsSOTrx='N')";
+				no = DB.executeUpdate(sql, false, get_TrxName());	  	
+				log.info("  rows updated: "+no);
+				trx.commit(true);
+
+				//	Fields from Process
+				log.info("Synchronize Field from Process");
+				sql="UPDATE AD_FIELD f"
+					+" SET Name = (SELECT p.Name FROM AD_PROCESS p, AD_COLUMN c WHERE p.AD_Process_ID=c.AD_Process_ID"
+					+" 			AND c.AD_Column_ID=f.AD_Column_ID),"
+					+" 	Description = (SELECT p.Description FROM AD_PROCESS p, AD_COLUMN c WHERE p.AD_Process_ID=c.AD_Process_ID"
+					+" 			AND c.AD_Column_ID=f.AD_Column_ID),"
+					+" 	Help = (SELECT p.Help FROM AD_PROCESS p, AD_COLUMN c WHERE p.AD_Process_ID=c.AD_Process_ID"
+					+" 			AND c.AD_Column_ID=f.AD_Column_ID),"
+					+" 	Updated = SYSDATE"
+					+" WHERE f.IsCentrallyMaintained='Y' AND f.IsActive='Y'" 
+					+" AND EXISTS (SELECT 1 FROM AD_PROCESS p, AD_COLUMN c"
+					+" 		WHERE c.AD_Process_ID=p.AD_Process_ID AND f.AD_Column_ID=c.AD_Column_ID"
+					+" 		AND (f.Name<>p.Name OR NVL(f.Description,' ')<>NVL(p.Description,' ') OR NVL(f.Help,' ')<>NVL(p.Help,' ')))";
+				no = DB.executeUpdate(sql, false, get_TrxName());	  	
+				log.info("  rows updated: "+no);
+				trx.commit(true);
+			*/
 			// 	End Dixon Martinez
 
 			
