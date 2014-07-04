@@ -16,11 +16,22 @@
  *****************************************************************************/
 package org.spinsuite.process;
 
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
 import java.util.logging.Level;
 
 import org.adempiere.exceptions.AdempiereException;
+import org.compiere.model.I_AD_Form;
+import org.compiere.model.I_AD_Process;
+import org.compiere.model.I_AD_Window;
+import org.compiere.model.MProcess;
+import org.compiere.model.MTable;
+import org.compiere.model.Query;
 import org.compiere.process.ProcessInfoParameter;
 import org.compiere.process.SvrProcess;
+import org.compiere.util.DB;
+import org.spinsuite.model.I_SPS_SyncMenu;
+import org.spinsuite.model.MSPSTable;
 
 /**
  * @author <a href="mailto:dixon.22martinez@gmail.com">Dixon Martinez</a>
@@ -31,7 +42,7 @@ public class CopyMenuItems extends SvrProcess {
 	/**	Constant							*/
 	
 	/**	Form								*/
-	//private static final String FORM		= "X";
+	private static final String FORM		= "X";
 	/**	Process								*/
 	private static final String PROCESS		= "P";
 	
@@ -41,22 +52,22 @@ public class CopyMenuItems extends SvrProcess {
 	private String p_Action					=	null;
 	
 	/**	Form								*/
-	//private int p_AD_Form_ID				=	-1;
+	private int p_AD_Form_ID				=	-1;
 	
 	/** Process								*/
 	private int p_AD_Process_ID				=	-1;
 	
 	/**	Sync Menu							*/
-	//private int p_SPS_SyncMenu_ID			=	-1;
+	private int p_SPS_SyncMenu_ID			=	-1;
 	
 	/**	Window								*/
-	//private int p_AD_Window_ID				=	-1;
+	private int p_AD_Window_ID				=	-1;
 	
 	
 	/**	Where Clause						*/
 	private StringBuffer whereClause		= 	null;
 	
-	
+	String sql ;
 	
 	
 	@Override
@@ -68,21 +79,27 @@ public class CopyMenuItems extends SvrProcess {
 				;
 			else if(name.equals("Action"))
 				p_Action = para.getParameter().toString();
-			/*else if(name.equals(I_AD_Form.COLUMNNAME_AD_Form_ID))
+			else if(name.equals(I_AD_Form.COLUMNNAME_AD_Form_ID))
 				p_AD_Form_ID = para.getParameterAsInt();
 			else if(name.equals(I_AD_Process.COLUMNNAME_AD_Process_ID))
 				p_AD_Process_ID = para.getParameterAsInt();
 			else if(name.equals(I_SPS_SyncMenu.COLUMNNAME_SPS_SyncMenu_ID))
 				p_SPS_SyncMenu_ID = para.getParameterAsInt();
 			else if(name.equals(I_AD_Window.COLUMNNAME_AD_Window_ID))
-				p_AD_Window_ID = para.getParameterAsInt();*/
+				p_AD_Window_ID = para.getParameterAsInt();
 			else
 				log.log(Level.SEVERE, "prepare - Unknown Parameter: " + name);
 		}
 		
+		whereClause = 
+				new StringBuffer();
 		
-		if(p_AD_Process_ID > 0)
-			whereClause.append("AND AD_Process_ID = " + p_AD_Process_ID);
+		if(p_AD_Process_ID > 0){
+			//whereClause.append("AND AD_Process_ID = " + p_AD_Process_ID);
+			sql = "SELECT AD_Process_ID FROM AD_Process ";
+			
+		}
+			
 		
 		
 		
@@ -99,12 +116,22 @@ public class CopyMenuItems extends SvrProcess {
 		
 		//	Validate Action Type
 		if(p_Action.equals(PROCESS)){
-			/*MProcess m_Process = new Query(getCtx(), I_AD_Process.Table_Name, whereClause.toString(), get_TrxName())
-				.setParameters(p_AD_Process_ID)
-				.firstOnly();
-			*/
-				
-			
+
+			PreparedStatement pstmt = null;
+			ResultSet rs = null;
+			try	{
+				pstmt = DB.prepareStatement(sql,get_TrxName());
+				rs = pstmt.executeQuery();
+				while(rs.next()){
+					
+				}
+			}catch (Exception e){
+				log.log(Level.SEVERE, sql, e);
+			}
+			finally{
+				DB.close(rs,pstmt);
+				rs = null; pstmt = null;
+			}
 		}
 			
 		
