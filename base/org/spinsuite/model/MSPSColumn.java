@@ -361,22 +361,6 @@ public class MSPSColumn extends X_SPS_Column {
 		WHERE AD_Table_ID IN (SELECT AD_Table_ID FROM AD_Table WHERE IsView='Y')
 		**/
 		
-		/* Diego Ruiz - globalqss - BF [1651899] - AD_Column: Avoid dup. SeqNo for IsIdentifier='Y' */
-		if (isIdentifier())
-		{
-			int cnt = DB.getSQLValue(get_TrxName(),"SELECT COUNT(*) FROM SPS_Column "+
-					"WHERE SPS_Table_ID=?"+
-					" AND SPS_Column_ID!=?"+
-					" AND IsIdentifier='Y'"+
-					" AND SeqNo=?",
-					new Object[] {getSPS_Table_ID(), getAD_Column_ID(), getSeqNo()});
-			if (cnt>0)
-			{
-				log.saveError("SaveErrorNotUnique", Msg.getElement(getCtx(), COLUMNNAME_SeqNo));
-				return false;
-			}
-		}
-		
 		//	Virtual Column
 		if (isVirtualColumn())
 		{
