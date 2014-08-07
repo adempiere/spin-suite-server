@@ -69,7 +69,7 @@ public class MSPSSyncMenu extends X_SPS_SyncMenu implements I_SPS_SyncMenu {
 	 * @return
 	 * @return List<MSFASyncMenu>
 	 */
-	public static List<MSPSSyncMenu> getNodes(int p_ParentNode,String p_WebServiceDefinition) {
+	public static List<MSPSSyncMenu> getNodes(int p_ParentNode,String p_WebServiceSecurityValue) {
 		
 		StringBuffer sql = new StringBuffer();
 		PreparedStatement ps = null;
@@ -83,20 +83,20 @@ public class MSPSSyncMenu extends X_SPS_SyncMenu implements I_SPS_SyncMenu {
 					"INNER JOIN AD_TreeNode treend On treend.AD_Tree_ID = tree.AD_Tree_ID "+
 					"LEFT JOIN (SELECT Count(1) Qty,Parent_ID,AD_Tree_ID FROM AD_TreeNode GROUP BY Parent_ID,AD_Tree_ID) hasnodes ON hasnodes.Parent_ID=treend.Node_ID AND hasnodes.AD_Tree_ID=treend.AD_Tree_ID " +
 					"LEFT JOIN SPS_SyncMenu sm ON treend.Node_ID = sm.SPS_SyncMenu_ID " +
-					"LEFT JOIN WS_WebService ws ON ws.WS_WebService_ID = sm.WS_WebService_ID " +
-					"WHERE tab.TableName = ? AND treend.Parent_ID = ? AND ws.Value = ? AND sm.IsActive ='Y' AND ws.IsActive='Y' " +
+					"LEFT JOIN WS_WebServiceType wst ON wst.WS_WebServiceType_ID = sm.WS_WebServiceType_ID " +
+					"WHERE tab.TableName = ? AND treend.Parent_ID = ? AND wst.Value = ? AND sm.IsActive ='Y' AND wst.IsActive='Y' " +
 					"ORDER By treend.SeqNo ");
 		
 		try{
 			ps = DB.prepareStatement(sql.toString(),null);
 			ps.setString(1, MSPSSyncMenu.Table_Name);
 			ps.setInt(2, p_ParentNode);
-			ps.setString(3, p_WebServiceDefinition);
+			ps.setString(3, p_WebServiceSecurityValue);
 			rs = ps.executeQuery();
 			
 			while (rs.next()){
 				if (rs.getString("HasNodes").equals("Y"))
-					items.addAll(getNodes(rs.getInt("Node_ID"),p_WebServiceDefinition));
+					items.addAll(getNodes(rs.getInt("Node_ID"),p_WebServiceSecurityValue));
 				else
 					items.add(new MSPSSyncMenu(Env.getCtx(), rs.getInt("Node_ID"), null));
 			}
