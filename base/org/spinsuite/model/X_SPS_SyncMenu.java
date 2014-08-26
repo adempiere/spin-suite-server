@@ -24,14 +24,14 @@ import org.compiere.util.KeyNamePair;
 
 /** Generated Model for SPS_SyncMenu
  *  @author Adempiere (generated) 
- *  @version Release 3.7.0LTS (1252452765) - $Id$ */
+ *  @version Release 3.7.0LTS - $Id$ */
 public class X_SPS_SyncMenu extends PO implements I_SPS_SyncMenu, I_Persistent 
 {
 
 	/**
 	 *
 	 */
-	private static final long serialVersionUID = 20140415L;
+	private static final long serialVersionUID = 20140824L;
 
     /** Standard Constructor */
     public X_SPS_SyncMenu (Properties ctx, int SPS_SyncMenu_ID, String trxName)
@@ -45,7 +45,6 @@ public class X_SPS_SyncMenu extends PO implements I_SPS_SyncMenu, I_Persistent
 // N
 			setName (null);
 			setSPS_SyncMenu_ID (0);
-			setSPS_Table_ID (0);
         } */
     }
 
@@ -326,6 +325,31 @@ public class X_SPS_SyncMenu extends PO implements I_SPS_SyncMenu, I_Persistent
 	public int getWS_WebService_ID () 
 	{
 		Integer ii = (Integer)get_Value(COLUMNNAME_WS_WebService_ID);
+		if (ii == null)
+			 return 0;
+		return ii.intValue();
+	}
+
+	public org.compiere.model.I_WS_WebServiceMethod getWS_WebServiceMethod() throws RuntimeException
+    {
+		return (org.compiere.model.I_WS_WebServiceMethod)MTable.get(getCtx(), org.compiere.model.I_WS_WebServiceMethod.Table_Name)
+			.getPO(getWS_WebServiceMethod_ID(), get_TrxName());	}
+
+	/** Set Web Service Method.
+		@param WS_WebServiceMethod_ID Web Service Method	  */
+	public void setWS_WebServiceMethod_ID (int WS_WebServiceMethod_ID)
+	{
+		if (WS_WebServiceMethod_ID < 1) 
+			set_Value (COLUMNNAME_WS_WebServiceMethod_ID, null);
+		else 
+			set_Value (COLUMNNAME_WS_WebServiceMethod_ID, Integer.valueOf(WS_WebServiceMethod_ID));
+	}
+
+	/** Get Web Service Method.
+		@return Web Service Method	  */
+	public int getWS_WebServiceMethod_ID () 
+	{
+		Integer ii = (Integer)get_Value(COLUMNNAME_WS_WebServiceMethod_ID);
 		if (ii == null)
 			 return 0;
 		return ii.intValue();

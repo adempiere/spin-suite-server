@@ -76,17 +76,17 @@ public class MSPSSyncMenu extends X_SPS_SyncMenu implements I_SPS_SyncMenu {
 		ResultSet rs = null;
 		List<MSPSSyncMenu> items = new ArrayList<MSPSSyncMenu>();
 				
-		sql.append( "SELECT treend.Parent_ID,treend.Node_ID,treend.SeqNo,CASE WHEN Qty IS NULL THEN 'N' ELSE 'Y' END As HasNodes " + 
+		sql.append( "SELECT treend.Parent_ID, treend.Node_ID, treend.SeqNo, CASE WHEN Qty IS NULL THEN 'N' ELSE 'Y' END As HasNodes, wst.Value As ValueType, wsm.Value As ValueMethod " + 
 					"FROM " +
 					"AD_Tree tree " + 
 					"INNER JOIN AD_Table tab ON tree.AD_Table_ID = tab.AD_Table_ID " +
 					"INNER JOIN AD_TreeNode treend On treend.AD_Tree_ID = tree.AD_Tree_ID "+
 					"LEFT JOIN (SELECT Count(1) Qty,Parent_ID,AD_Tree_ID FROM AD_TreeNode GROUP BY Parent_ID,AD_Tree_ID) hasnodes ON hasnodes.Parent_ID=treend.Node_ID AND hasnodes.AD_Tree_ID=treend.AD_Tree_ID " +
 					"INNER JOIN SPS_SyncMenu sm ON treend.Node_ID = sm.SPS_SyncMenu_ID " +
-					"INNER JOIN WS_WebServiceType wst ON wst.WS_WebServiceType_ID = sm.WS_WebServiceType_ID " +
-					"INNER JOIN WS_WebServiceMethod wsm ON wst.WS_WebServiceMethod_ID = wsm.WS_WebServiceMethod_ID " +
-					"INNER JOIN WS_WebService ws ON ws.WS_WebService_ID = wsm.WS_WebService_ID AND sm.WS_WebService_ID = ws.WS_WebService_ID " +
-					"WHERE tab.TableName = ? AND treend.Parent_ID = ? AND ws.Value = ? AND wsm.Value = ? AND wst.Value = ?  AND sm.IsActive ='Y' AND wst.IsActive='Y' " +
+					"INNER JOIN WS_WebService ws ON sm.WS_WebService_ID = ws.WS_WebService_ID " +
+					"LEFT JOIN WS_WebServiceType wst ON sm.WS_WebServiceType_ID = wst.WS_WebServiceType_ID " +
+					"LEFT JOIN WS_WebServiceMethod wsm ON sm.WS_WebServiceMethod_ID = wsm.WS_WebServiceMethod_ID OR wst.WS_WebServiceMethod_ID = wsm.WS_WebServiceMethod_ID " +
+					"WHERE tab.TableName = ? AND treend.Parent_ID = ? AND ws.Value = ? AND sm.IsActive ='Y'" +
 					"ORDER By treend.SeqNo ");
 		
 		try{
@@ -94,15 +94,25 @@ public class MSPSSyncMenu extends X_SPS_SyncMenu implements I_SPS_SyncMenu {
 			ps.setString(1, MSPSSyncMenu.Table_Name);
 			ps.setInt(2, p_ParentNode);
 			ps.setString(3, p_WebServiceDefinitionValue);
-			ps.setString(4, p_WebServiceMethodValue);
-			ps.setString(5, p_WebServiceTypeValue);
 			rs = ps.executeQuery();
 			
 			while (rs.next()){
-				if (rs.getString("HasNodes").equals("Y"))
-					items.addAll(getNodes(rs.getInt("Node_ID"),p_WebServiceDefinitionValue,p_WebServiceMethodValue,p_WebServiceTypeValue));
-				else
-					items.add(new MSPSSyncMenu(Env.getCtx(), rs.getInt("Node_ID"), null));
+				MSPSSyncMenu item = new MSPSSyncMenu(Env.getCtx(), rs.getInt("Node_ID"), null);
+				
+				if (rs.getString("HasNodes").equals("Y")){
+						items.addAll(getNodes(rs.getInt("Node_ID"),p_WebServiceDefinitionValue,p_WebServiceMethodValue,p_WebServiceTypeValue));					
+				}
+				else{
+					if ((item.getWS_WebServiceType_ID()!=0 
+							&& p_WebServiceTypeValue!=null
+								&& p_WebServiceTypeValue.equals(rs.getString("ValueType")))
+						||
+						(p_WebServiceMethodValue!=null
+								&&  p_WebServiceMethodValue.equals(rs.getString("ValueMethod"))))						
+							items.add(item);
+
+					
+				}
 			}
 		}
 		catch(SQLException ex){
@@ -112,6 +122,7 @@ public class MSPSSyncMenu extends X_SPS_SyncMenu implements I_SPS_SyncMenu {
 			DB.close(rs, ps);
 		    rs = null; ps = null;	
 		}
+		
 		return items;
 	}//getNodes
 
@@ -138,7 +149,4 @@ public class MSPSSyncMenu extends X_SPS_SyncMenu implements I_SPS_SyncMenu {
 		}*/
 		return true;
 	}	//	beforeSave
-
-	
-	
 }

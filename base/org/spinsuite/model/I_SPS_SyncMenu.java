@@ -23,7 +23,7 @@ import org.compiere.util.KeyNamePair;
 
 /** Generated Interface for SPS_SyncMenu
  *  @author Adempiere (generated) 
- *  @version Release 3.7.0LTS (1252452765)
+ *  @version Release 3.7.0LTS
  */
 public interface I_SPS_SyncMenu 
 {
@@ -249,6 +249,17 @@ public interface I_SPS_SyncMenu
 	public int getWS_WebService_ID();
 
 	public org.compiere.model.I_WS_WebService getWS_WebService() throws RuntimeException;
+
+    /** Column name WS_WebServiceMethod_ID */
+    public static final String COLUMNNAME_WS_WebServiceMethod_ID = "WS_WebServiceMethod_ID";
+
+	/** Set Web Service Method	  */
+	public void setWS_WebServiceMethod_ID (int WS_WebServiceMethod_ID);
+
+	/** Get Web Service Method	  */
+	public int getWS_WebServiceMethod_ID();
+
+	public org.compiere.model.I_WS_WebServiceMethod getWS_WebServiceMethod() throws RuntimeException;
 
     /** Column name WS_WebServiceType_ID */
     public static final String COLUMNNAME_WS_WebServiceType_ID = "WS_WebServiceType_ID";
