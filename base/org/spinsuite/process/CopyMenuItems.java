@@ -95,13 +95,8 @@ public class CopyMenuItems extends SvrProcess {
 				new StringBuffer();
 		
 		if(p_AD_Process_ID > 0){
-			//whereClause.append("AND AD_Process_ID = " + p_AD_Process_ID);
-			sql = "SELECT AD_Process_ID FROM AD_Process ";
-			
+			whereClause.append("AND AD_Process_ID = " + p_AD_Process_ID);
 		}
-			
-		
-		
 		
 	}
 
@@ -116,20 +111,47 @@ public class CopyMenuItems extends SvrProcess {
 		
 		//	Validate Action Type
 		if(p_Action.equals(PROCESS)){
-
+			String sql = "SELECT * FROM AD_Process WHERE AD_Process_ID = "  + p_AD_Process_ID;
 			PreparedStatement pstmt = null;
 			ResultSet rs = null;
-			try	{
-				pstmt = DB.prepareStatement(sql,get_TrxName());
-				rs = pstmt.executeQuery();
-				while(rs.next()){
+			try
+			{
+				pstmt = DB.prepareStatement (sql, get_TrxName());
+				rs = pstmt.executeQuery ();
+				while (rs.next ()) {
+					MProcess m_ProcessSource = new MProcess(getCtx(), rs, get_TrxName());
+					int m_SPS_Process_ID = DB.getSQLValue(get_TrxName(), "SELECT SPS_Process_ID FROM SPS_Process WHERE Value = ?", m_ProcessSource.getValue());
 					
+					MTable m_Table = new MTable(getCtx(), rs, get_TrxName());
+					int m_SPS_Table_ID = DB.getSQLValue(get_TrxName(), 
+							"SELECT SPS_Table_ID FROM SPS_Table WHERE TableName = ?", 
+							m_Table.getTableName());
+					//	
+					MSPSTable m_spsTable = null;
+					if(m_SPS_Table_ID < 0)
+						m_SPS_Table_ID = 0;
+					
+					m_spsTable = new MSPSTable(getCtx(), m_SPS_Table_ID, get_TrxName());
+					
+					m_spsTable.setTableName(m_Table.getTableName());
+					m_spsTable.setName(m_Table.getName());
+					m_spsTable.setDescription(m_Table.getDescription());
+					m_spsTable.setIsView(m_Table.isView());
+					m_spsTable.setIsDeleteable(m_Table.isDeleteable());
+					m_spsTable.setAD_Table_ID(m_Table.getAD_Table_ID());
+					m_spsTable.saveEx();
+					System.out.println("Table = " + m_spsTable.getTableName());
+					//copyColumns(m_spsTable);
+					//generateScript(m_spsTable);
 				}
-			}catch (Exception e){
-				log.log(Level.SEVERE, sql, e);
+	 		}
+			catch (Exception e)
+			{
+				log.log (Level.SEVERE, sql, e);
 			}
-			finally{
-				DB.close(rs,pstmt);
+			finally
+			{
+				DB.close(rs, pstmt);
 				rs = null; pstmt = null;
 			}
 		}
@@ -139,3 +161,5 @@ public class CopyMenuItems extends SvrProcess {
 	}
 
 }
+
+//AD_Process - AD_Process_ID=1000001

@@ -31,7 +31,7 @@ public class X_SPS_Menu extends PO implements I_SPS_Menu, I_Persistent
 	/**
 	 *
 	 */
-	private static final long serialVersionUID = 20140824L;
+	private static final long serialVersionUID = 20140829L;
 
     /** Standard Constructor */
     public X_SPS_Menu (Properties ctx, int SPS_Menu_ID, String trxName)

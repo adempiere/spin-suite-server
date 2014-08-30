@@ -21,12 +21,11 @@ import java.util.logging.Level;
 
 import org.compiere.model.MColumn;
 import org.compiere.model.MTable;
+import org.compiere.model.M_Element;
 import org.compiere.process.ProcessInfoParameter;
 import org.compiere.process.SvrProcess;
 import org.compiere.util.AdempiereSystemError;
 import org.compiere.util.DB;
-import org.compiere.util.Env;
-import org.compiere.util.Msg;
 import org.compiere.util.Trx;
 import org.spinsuite.model.MSPSColumn;
 import org.spinsuite.model.MSPSTable;
@@ -91,10 +90,6 @@ public class CopyColumnsFromTable extends SvrProcess {
 				p_target_AD_Table_ID, get_TrxName());
 		MSPSColumn[] targetColumns = targetTable.getColumns();
 
-		if (targetColumns != null && targetColumns.length > 0)
-			throw new AdempiereSystemError(Msg.getMsg(Env.getCtx(),
-					"HaveColumns"));// ("Target table must not have columns");
-
 		p_source_AD_Table_ID = targetTable.get_ValueAsInt("AD_Table_ID");
 
 		if (p_source_AD_Table_ID == 0)
@@ -111,29 +106,72 @@ public class CopyColumnsFromTable extends SvrProcess {
 		targetTable.save();
 
 		for (int i = 0; i < sourceColumns.length; i++) {
+			
+			
 			MSPSColumn colTarget = new MSPSColumn(targetTable);
 
+			//[FR1784588] logic to validate exist columns
+			boolean foundColumn = false;
+			for(MSPSColumn col:targetColumns)
+			{
+				String columnName = null;
+				if (sourceColumns[i].getColumnName().equals(sourceTable.getTableName()+"_ID")) 
+				{
+					columnName = new String(targetTable.getTableName()+"_ID");	
+				}
+				else
+				{
+					columnName = sourceColumns[i].getColumnName();
+				}
+				
+				if(col.getColumnName().equals(columnName))
+				{
+					foundColumn = true;
+					
+					break;
+				}
+			}
+			if(foundColumn)
+				continue;
+			
 			Trx trx = Trx.get(get_TrxName(), false);
 
 			// special case the key -> sourceTable_ID
-			if (sourceColumns[i].getColumnName().equals(
-					sourceTable.getTableName() + "_ID")) {
-				String targetColumnName = new String(targetTable.getTableName()
-						+ "_ID");
+			if (sourceColumns[i].getColumnName().equals(sourceTable.getTableName() + "_ID")) {
+				String targetColumnName = new String(targetTable.getTableName()	+ "_ID");
 				colTarget.setColumnName(targetColumnName);
+				// if the element don't exist, create it 
+				M_Element element = M_Element.get (getCtx (), targetColumnName);
+				if (element == null)
+				{
+					element = new M_Element (getCtx (), targetColumnName, targetTable.getEntityType(), get_TrxName ());
+					if (targetColumnName.equalsIgnoreCase (targetTable.getTableName() + "_ID")) {
+						element.setColumnName(targetTable.getTableName() + "_ID");
+						element.setName(targetTable.getName());
+						element.setPrintName(targetTable.getName());
+					}
+					element.save (get_TrxName());
+				}
+				colTarget.setAD_Element_ID(element.getAD_Element_ID());
 				colTarget.setName(targetTable.getName());
 				colTarget.setDescription(targetTable.getDescription());
 			} else {
 				colTarget.setColumnName(sourceColumns[i].getColumnName());
 				colTarget.setName(sourceColumns[i].getName());
 				colTarget.setDescription(sourceColumns[i].getDescription());
+				M_Element element = M_Element.get (getCtx (), targetTable.getTableName() + "_ID");
+				if (element != null){
+					colTarget.setAD_Element_ID(sourceColumns[i].getAD_Element_ID());
+				} else {
+					colTarget.setAD_Element_ID(sourceColumns[i].getAD_Element_ID());
+				}
 			}
 			// Dixon Martinez
 			// If you want to reference the columns
 			if (referencingColumn) {
 				colTarget.setAD_Column_ID(sourceColumns[i].getAD_Column_ID());
-			}
-			colTarget.setAD_Element_ID(sourceColumns[i].getAD_Element_ID());
+			} 
+			
 			colTarget.setAD_Val_Rule_ID(sourceColumns[i].getAD_Val_Rule_ID());
 			colTarget.setDefaultValue(sourceColumns[i].getDefaultValue());
 			colTarget.setFieldLength(sourceColumns[i].getFieldLength());

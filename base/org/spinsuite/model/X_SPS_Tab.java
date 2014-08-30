@@ -31,7 +31,7 @@ public class X_SPS_Tab extends PO implements I_SPS_Tab, I_Persistent
 	/**
 	 *
 	 */
-	private static final long serialVersionUID = 20140824L;
+	private static final long serialVersionUID = 20140829L;
 
     /** Standard Constructor */
     public X_SPS_Tab (Properties ctx, int SPS_Tab_ID, String trxName)

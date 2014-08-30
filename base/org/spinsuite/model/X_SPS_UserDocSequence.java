@@ -30,7 +30,7 @@ public class X_SPS_UserDocSequence extends PO implements I_SPS_UserDocSequence, 
 	/**
 	 *
 	 */
-	private static final long serialVersionUID = 20140824L;
+	private static final long serialVersionUID = 20140829L;
 
     /** Standard Constructor */
     public X_SPS_UserDocSequence (Properties ctx, int SPS_UserDocSequence_ID, String trxName)
@@ -105,7 +105,7 @@ public class X_SPS_UserDocSequence extends PO implements I_SPS_UserDocSequence, 
 		return (org.compiere.model.I_AD_User)MTable.get(getCtx(), org.compiere.model.I_AD_User.Table_Name)
 			.getPO(getAD_User_ID(), get_TrxName());	}
 
-	/** Set User/Contact.
+	/** Set Usuario.
 		@param AD_User_ID 
 		User within the system - Internal or Business Partner Contact
 	  */
@@ -117,7 +117,7 @@ public class X_SPS_UserDocSequence extends PO implements I_SPS_UserDocSequence, 
 			set_ValueNoCheck (COLUMNNAME_AD_User_ID, Integer.valueOf(AD_User_ID));
 	}
 
-	/** Get User/Contact.
+	/** Get Usuario.
 		@return User within the system - Internal or Business Partner Contact
 	  */
 	public int getAD_User_ID () 
