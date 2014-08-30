@@ -245,14 +245,14 @@ public class MSPSTable extends X_SPS_Table {
 				return;
 			
 			M_Element element = M_Element.get(getCtx(), getTableName()+"_ID", get_TrxName());
-			if(element != null)
-				return;				
-			element = new M_Element(getCtx(), 0 , get_TrxName());
-			element.setColumnName(getTableName()+"_ID");
-			element.setName(getName() + " ID");
-			element.setPrintName(getName() + " ID");
-			element.setEntityType(getEntityType());
-			element.saveEx();
+			if(element == null) {
+				element = new M_Element(getCtx(), 0 , get_TrxName());
+				element.setColumnName(getTableName()+"_ID");
+				element.setName(getName() + " ID");
+				element.setPrintName(getName() + " ID");
+				element.setEntityType(getEntityType());
+				element.saveEx();
+			}
 			
 			m_SPS_Column = new MSPSColumn(this, element.getColumnName(), 22 , DisplayType.ID, "");
 			m_SPS_Column.setAD_Element_ID(element.get_ID());
