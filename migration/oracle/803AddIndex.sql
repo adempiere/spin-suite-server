@@ -1,0 +1,1 @@
+CREATE UNIQUE INDEX UK_SPS_SyncTable_Name ON SPS_SyncTable (AD_Client_ID,AD_Table_ID,Name);
