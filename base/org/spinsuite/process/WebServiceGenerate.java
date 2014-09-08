@@ -16,13 +16,11 @@
  *****************************************************************************/
 package org.spinsuite.process;
 
-import org.compiere.model.MRule;
-import org.compiere.model.X_AD_Rule;
+import org.adempiere.exceptions.AdempiereException;
+import org.compiere.model.X_WS_WebServiceMethod;
+import org.compiere.model.X_WS_WebServiceType;
+import org.compiere.process.ProcessInfoParameter;
 import org.compiere.process.SvrProcess;
-import org.compiere.util.AdempiereSystemError;
-import org.compiere.util.Env;
-import org.compiere.util.Msg;
-import org.spinsuite.model.MSPSColumn;
 import org.spinsuite.model.MSPSTable;
 
 /**
@@ -33,17 +31,76 @@ public class WebServiceGenerate extends SvrProcess {
 	
 	/**	Record Identifier	*/
 	private int 			m_Record_ID = 0;
+	
+	/** Web Service */
+	private int p_WS_WebService_ID = 0;
+	
+	/** Web SerSvice Method*/
+	private String 			p_WS_WebServiceMethodValue = ""; 
+	
+	/** Table*/
+	private int 			p_AD_Table_ID = 0;
+	
+	/** Reference*/
+	private int 			p_AD_Reference_ID = 0;
+	
+	/** Menu*/
+	private int 			p_AD_Menu_ID = 0;
+	
 	/**	Table for Sync wit mobile	*/
-	private MSPSTable 	m_Table = null;
+	private MSPSTable 		m_Table = null;
+	
 	@Override
 	protected void prepare() {
 		m_Record_ID = getRecord_ID();
+		
+		ProcessInfoParameter[] params = getParameter();
+		
+		for (int i=0;i < params.length;i++){
+			ProcessInfoParameter para = params[i];
+			if (para.getParameterName().equals("WS_WebService_ID"))
+				p_WS_WebService_ID = para.getParameterAsInt();
+			else if (para.getParameterName().equals(X_WS_WebServiceMethod.COLUMNNAME_WS_WebServiceMethod_ID))
+				p_WS_WebServiceMethodValue = para.getParameter().toString();
+			else if (para.getParameterName().equals("AD_Table_ID"))
+				p_AD_Table_ID = para.getParameterAsInt();
+			else if (para.getParameterName().equals("AD_Reference_ID"))
+				p_AD_Reference_ID = para.getParameterAsInt();
+			else if (para.getParameterName().equals("AD_Menu_ID"))
+				p_AD_Menu_ID = para.getParameterAsInt();
+		}
 	}
 
 	
 	@Override
 	protected String doIt() throws Exception {
-		m_Table = new MSPSTable(getCtx(), m_Record_ID, get_TrxName());
+
+		System.out.println(p_WS_WebServiceMethodValue);
+		
+		if (p_WS_WebService_ID == 0)
+			throw new AdempiereException("@Invalid@ @WS_WebService_ID@");
+		
+		if (p_WS_WebServiceMethodValue == "")
+			throw new AdempiereException("@Invalid@ @WS_WebServiceMethod_ID@");
+		
+		/*X_WS_WebServiceMethod wsm = new X_WS_WebServiceMethod(getCtx(), p_WS_WebServiceMethod_ID, get_TrxName());
+		
+		if (wsm !=null){
+			if (wsm.getValue().equals("readData") 
+					|| wsm.getValue().equals("queryData")
+						|| wsm.getValue().equals("deleteData")
+							|| wsm.getValue().equals("updateData")
+								|| wsm.getValue().equals("createData")
+								){
+			
+			}
+		}
+		
+		if (p_WS_WebServiceMethod_ID == 0)
+			throw new AdempiereException("@Invalid@ @WS_WebServiceMethod_ID@");
+		*/
+		//X_WS_WebServiceType wst = new WS
+		/*m_Table = new MSPSTable(getCtx(), m_Record_ID, get_TrxName());
 		//	Verify exists columns
 		MSPSColumn[] columns = m_Table.getColumns();
 		//	
@@ -71,9 +128,10 @@ public class WebServiceGenerate extends SvrProcess {
 		ruleSQL.saveEx();
 		//	Set Rule on Sync Table
 		m_Table.setAD_Rule_ID(ruleSQL.getAD_Rule_ID());
-		m_Table.saveEx();
+		m_Table.saveEx();*/
 		//	
-		return sqlCreate;
-	}
+		//return sqlCreate;
+		return null;
+	}// doIt
 
 }
