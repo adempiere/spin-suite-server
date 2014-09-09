@@ -1,4 +1,4 @@
--- Sep 8, 2014 10:47:27 AM VET
+﻿-- Sep 8, 2014 10:47:27 AM VET
 -- SPS
 INSERT INTO AD_Process (AccessLevel,AD_Client_ID,AD_Org_ID,AD_Process_ID,Classname,CopyFromProcess,Created,CreatedBy,EntityType,IsActive,IsBetaFunctionality,IsDirectPrint,IsReport,IsServerProcess,Name,ShowHelp,Statistic_Count,Statistic_Seconds,Updated,UpdatedBy,Value) VALUES ('3',0,0,53697,'org.spin.process.ChangeConstantValue','N',TO_TIMESTAMP('2014-09-08 10:47:25','YYYY-MM-DD HH24:MI:SS'),100,'ECA01','Y','N','N','N','N','Change Constant Value','Y',0,0,TO_TIMESTAMP('2014-09-08 10:47:25','YYYY-MM-DD HH24:MI:SS'),100,'prc_WS_WebService_Para C_ConstantValue')
 ;
@@ -283,24 +283,9 @@ INSERT INTO AD_Ref_List_Trl (AD_Language,AD_Ref_List_ID, Description,Name, IsTra
 UPDATE AD_Ref_List_Trl SET Name='Filtro',Updated=TO_TIMESTAMP('2014-09-08 11:07:31','YYYY-MM-DD HH24:MI:SS'),UpdatedBy=100 WHERE AD_Ref_List_ID=54476 AND AD_Language='es_MX'
 ;
 
--- Sep 8, 2014 11:09:03 AM VET
--- SPS
-INSERT INTO AD_Column (AD_Client_ID,AD_Column_ID,AD_Element_ID,AD_Org_ID,AD_Process_ID,AD_Reference_ID,AD_Table_ID,ColumnName,ColumnSQL,Created,CreatedBy,Description,EntityType,FieldLength,IsActive,IsAllowLogging,IsAlwaysUpdateable,IsAutocomplete,IsEncrypted,IsIdentifier,IsKey,IsMandatory,IsParent,IsSelectionColumn,IsSyncDatabase,IsTranslated,IsUpdateable,Name,ReadOnlyLogic,SeqNo,Updated,UpdatedBy,Version) VALUES (0,74387,1322,0,53697,10,53165,'ConstantValue','(ConstantValue)',TO_TIMESTAMP('2014-09-08 11:09:02','YYYY-MM-DD HH24:MI:SS'),100,'Constant value','U',60,'Y','Y','N','N','N','N','N','N','N','N','N','N','N','Constant Value','@ParameterType@!C',0,TO_TIMESTAMP('2014-09-08 11:09:02','YYYY-MM-DD HH24:MI:SS'),100,0)
-;
-
--- Sep 8, 2014 11:09:39 AM VET
--- SPS
-INSERT INTO AD_Column (AD_Client_ID,AD_Column_ID,AD_Element_ID,AD_Org_ID,AD_Process_ID,AD_Reference_ID,AD_Table_ID,ColumnName,ColumnSQL,Created,CreatedBy,Description,EntityType,FieldLength,IsActive,IsAllowLogging,IsAlwaysUpdateable,IsAutocomplete,IsEncrypted,IsIdentifier,IsKey,IsMandatory,IsParent,IsSelectionColumn,IsSyncDatabase,IsTranslated,IsUpdateable,Name,ReadOnlyLogic,SeqNo,Updated,UpdatedBy,Version) VALUES (0,74388,1322,0,53697,10,53165,'ConstantValue','ConstantValue',TO_TIMESTAMP('2014-09-08 11:09:38','YYYY-MM-DD HH24:MI:SS'),100,'Constant value','U',60,'Y','Y','N','N','N','N','N','N','N','N','N','N','N','Constant Value','@ParameterType@!C',0,TO_TIMESTAMP('2014-09-08 11:09:38','YYYY-MM-DD HH24:MI:SS'),100,0)
-;
-
--- Sep 8, 2014 11:11:23 AM VET
--- SPS
-UPDATE AD_Column SET ColumnName='ConstantValue2',Updated=TO_TIMESTAMP('2014-09-08 11:11:23','YYYY-MM-DD HH24:MI:SS'),UpdatedBy=100 WHERE AD_Column_ID=56745
-;
-
 -- Sep 8, 2014 11:11:36 AM VET
 -- SPS
-INSERT INTO AD_Column (AD_Client_ID,AD_Column_ID,AD_Element_ID,AD_Org_ID,AD_Reference_ID,AD_Table_ID,ColumnName,ColumnSQL,Created,CreatedBy,Description,EntityType,FieldLength,IsActive,IsAllowLogging,IsAlwaysUpdateable,IsAutocomplete,IsEncrypted,IsIdentifier,IsKey,IsMandatory,IsParent,IsSelectionColumn,IsSyncDatabase,IsTranslated,IsUpdateable,Name,SeqNo,Updated,UpdatedBy,Version) VALUES (0,74389,1322,0,10,53165,'ConstantValue','ConstantValue',TO_TIMESTAMP('2014-09-08 11:11:34','YYYY-MM-DD HH24:MI:SS'),100,'Constant value','U',60,'Y','Y','N','N','N','N','N','N','N','N','N','N','N','Constant Value',0,TO_TIMESTAMP('2014-09-08 11:11:34','YYYY-MM-DD HH24:MI:SS'),100,0)
+INSERT INTO AD_Column (AD_Client_ID,AD_Column_ID,AD_Element_ID,AD_Org_ID,AD_Reference_ID,AD_Table_ID,ColumnName,ColumnSQL,Created,CreatedBy,Description,EntityType,FieldLength,IsActive,IsAllowLogging,IsAlwaysUpdateable,IsAutocomplete,IsEncrypted,IsIdentifier,IsKey,IsMandatory,IsParent,IsSelectionColumn,IsSyncDatabase,IsTranslated,IsUpdateable,Name,SeqNo,Updated,UpdatedBy,Version) VALUES (0,74389,1322,0,10,53165,'ConstantValue2','ConstantValue',TO_TIMESTAMP('2014-09-08 11:11:34','YYYY-MM-DD HH24:MI:SS'),100,'Constant value','U',60,'Y','Y','N','N','N','N','N','N','N','N','N','N','N','Constant Value',0,TO_TIMESTAMP('2014-09-08 11:11:34','YYYY-MM-DD HH24:MI:SS'),100,0)
 ;
 
 -- Sep 8, 2014 11:11:36 AM VET
@@ -363,24 +348,9 @@ DELETE FROM AD_Field_Trl WHERE AD_Field_ID=74526
 DELETE FROM AD_Field WHERE AD_Field_ID=74526
 ;
 
--- Sep 8, 2014 11:14:42 AM VET
--- SPS
-UPDATE AD_Column SET ColumnName='ConstantValue',Updated=TO_TIMESTAMP('2014-09-08 11:14:42','YYYY-MM-DD HH24:MI:SS'),UpdatedBy=100 WHERE AD_Column_ID=56745
-;
-
--- Sep 8, 2014 11:14:44 AM VET
--- SPS
-UPDATE AD_Column SET ColumnName='ConstantValue',Updated=TO_TIMESTAMP('2014-09-08 11:14:44','YYYY-MM-DD HH24:MI:SS'),UpdatedBy=100 WHERE AD_Column_ID=56745
-;
-
 -- Sep 8, 2014 11:15:37 AM VET
 -- SPS
-UPDATE AD_Column SET ColumnName='ConstantValue3',Updated=TO_TIMESTAMP('2014-09-08 11:15:37','YYYY-MM-DD HH24:MI:SS'),UpdatedBy=100 WHERE AD_Column_ID=74389
-;
-
--- Sep 8, 2014 11:15:42 AM VET
--- SPS
-UPDATE AD_Column SET ColumnName='ConstantValue',Updated=TO_TIMESTAMP('2014-09-08 11:15:42','YYYY-MM-DD HH24:MI:SS'),UpdatedBy=100 WHERE AD_Column_ID=56745
+UPDATE AD_Column SET ColumnName='ConstantValue2',Updated=TO_TIMESTAMP('2014-09-08 11:15:37','YYYY-MM-DD HH24:MI:SS'),UpdatedBy=100 WHERE AD_Column_ID=74389
 ;
 
 -- Sep 8, 2014 11:16:03 AM VET

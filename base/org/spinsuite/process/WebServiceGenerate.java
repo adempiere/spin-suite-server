@@ -80,7 +80,7 @@ public class WebServiceGenerate extends SvrProcess {
 		if (p_WS_WebService_ID == 0)
 			throw new AdempiereException("@Invalid@ @WS_WebService_ID@");
 		
-		if (p_WS_WebServiceMethodValue == "")
+		if (p_WS_WebServiceMethodValue.equals(""))
 			throw new AdempiereException("@Invalid@ @WS_WebServiceMethod_ID@");
 		
 		/*X_WS_WebServiceMethod wsm = new X_WS_WebServiceMethod(getCtx(), p_WS_WebServiceMethod_ID, get_TrxName());
