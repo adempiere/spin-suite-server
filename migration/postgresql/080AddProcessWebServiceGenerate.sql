@@ -1,13 +1,3 @@
--- Sep 8, 2014 11:51:42 AM VET
--- SPS
-DELETE FROM AD_TreeBar WHERE AD_Tree_ID=10 AND AD_User_ID=100 AND Node_ID=53765
-;
-
--- Sep 8, 2014 11:51:44 AM VET
--- SPS
-INSERT INTO AD_TreeBar (AD_Tree_ID,AD_User_ID,Node_ID, AD_Client_ID,AD_Org_ID, IsActive,Created,CreatedBy,Updated,UpdatedBy)VALUES (10,100,53538,0,0,'Y',CURRENT_TIMESTAMP,100,CURRENT_TIMESTAMP,100)
-;
-
 -- Sep 8, 2014 11:53:01 AM VET
 -- SPS
 INSERT INTO AD_Column (AD_Client_ID,AD_Column_ID,AD_Element_ID,AD_Org_ID,AD_Reference_ID,AD_Table_ID,ColumnName,Created,CreatedBy,EntityType,FieldLength,IsActive,IsAllowLogging,IsAlwaysUpdateable,IsAutocomplete,IsEncrypted,IsIdentifier,IsKey,IsMandatory,IsParent,IsSelectionColumn,IsSyncDatabase,IsTranslated,IsUpdateable,Name,SeqNo,Updated,UpdatedBy,Version) VALUES (0,74390,524,0,28,53501,'Processing',TO_TIMESTAMP('2014-09-08 11:53:00','YYYY-MM-DD HH24:MI:SS'),100,'ECA01',1,'Y','Y','N','N','N','N','N','N','N','N','N','N','Y','Process Now',0,TO_TIMESTAMP('2014-09-08 11:53:00','YYYY-MM-DD HH24:MI:SS'),100,0)
@@ -211,7 +201,7 @@ INSERT INTO AD_Element_Trl (AD_Language,AD_Element_ID, Description,Help,Name,PO_
 
 -- Sep 8, 2014 12:22:07 PM VET
 -- SPS
-UPDATE AD_Element_Trl SET Name='Establezca Servicio Web Generado',PrintName='Establezca Servicio Web Generado',Updated=TO_TIMESTAMP('2014-09-08 12:22:07','YYYY-MM-DD HH24:MI:SS'),UpdatedBy=100 WHERE AD_Element_ID=57441 AND AD_Language='es_MX'
+UPDATE AD_Element_Trl SET Name='Establecer Servicio Web Generado',PrintName='Establecer Servicio Web Generado',Updated=TO_TIMESTAMP('2014-09-08 12:22:07','YYYY-MM-DD HH24:MI:SS'),UpdatedBy=100 WHERE AD_Element_ID=57441 AND AD_Language='es_MX'
 ;
 
 -- Sep 8, 2014 12:22:20 PM VET
