@@ -16,7 +16,11 @@
  *****************************************************************************/
 package org.spinsuite.process;
 
+import java.util.List;
+
 import org.adempiere.exceptions.AdempiereException;
+import org.compiere.model.Query;
+import org.compiere.model.X_WS_WebService;
 import org.compiere.model.X_WS_WebServiceMethod;
 import org.compiere.model.X_WS_WebServiceType;
 import org.compiere.process.ProcessInfoParameter;
@@ -50,6 +54,12 @@ public class WebServiceGenerate extends SvrProcess {
 	/**	Table for Sync wit mobile	*/
 	private MSPSTable 		m_Table = null;
 	
+	/** Constant Value */
+	private String 			p_ConstantValue = "";
+	
+	/**Web Service Type Value*/
+	private String 			p_WST_Value = "";
+	
 	@Override
 	protected void prepare() {
 		m_Record_ID = getRecord_ID();
@@ -68,20 +78,34 @@ public class WebServiceGenerate extends SvrProcess {
 				p_AD_Reference_ID = para.getParameterAsInt();
 			else if (para.getParameterName().equals("AD_Menu_ID"))
 				p_AD_Menu_ID = para.getParameterAsInt();
+			else if (para.getParameterName().equals("ConstantValue"))
+				p_ConstantValue = para.getParameter().toString();
+			else if (para.getParameterName().equals("Value"))
+				p_WST_Value = para.getParameter().toString();
 		}
 	}
 
 	
 	@Override
 	protected String doIt() throws Exception {
-
-		System.out.println(p_WS_WebServiceMethodValue);
 		
 		if (p_WS_WebService_ID == 0)
 			throw new AdempiereException("@Invalid@ @WS_WebService_ID@");
 		
 		if (p_WS_WebServiceMethodValue.equals(""))
 			throw new AdempiereException("@Invalid@ @WS_WebServiceMethod_ID@");
+		
+		
+		//X_WS_WebService ws = new X_WS_WebService(getCtx(), p_WS_WebService_ID, get_TrxName());
+		
+		X_WS_WebServiceMethod wsm = new Query(getCtx(), X_WS_WebServiceMethod.Table_Name, "WS_WebService_ID=? AND Value=?", get_TrxName())
+										.setParameters(p_WS_WebService_ID,p_WS_WebServiceMethodValue)
+										.first();  
+		
+		if (wsm!=null){
+			X_WS_WebServiceType wst = new X_WS_WebServiceType(getCtx(), 0, get_TrxName());
+				wst.setValue(Value)
+		}
 		
 		/*X_WS_WebServiceMethod wsm = new X_WS_WebServiceMethod(getCtx(), p_WS_WebServiceMethod_ID, get_TrxName());
 		
