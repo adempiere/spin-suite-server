@@ -16,16 +16,20 @@
  *****************************************************************************/
 package org.spinsuite.process;
 
-import java.util.List;
-
 import org.adempiere.exceptions.AdempiereException;
+import org.compiere.model.MColumn;
+import org.compiere.model.MMenu;
+import org.compiere.model.MTable;
 import org.compiere.model.Query;
 import org.compiere.model.X_WS_WebService;
+import org.compiere.model.X_WS_WebServiceFieldInput;
+import org.compiere.model.X_WS_WebServiceFieldOutput;
 import org.compiere.model.X_WS_WebServiceMethod;
 import org.compiere.model.X_WS_WebServiceType;
+import org.compiere.model.X_WS_WebService_Para;
 import org.compiere.process.ProcessInfoParameter;
 import org.compiere.process.SvrProcess;
-import org.spinsuite.model.MSPSTable;
+import org.spinsuite.model.MSPSSyncMenu;
 
 /**
  * @author <a href="mailto:yamelsenih@gmail.com">Yamel Senih</a>
@@ -45,14 +49,8 @@ public class WebServiceGenerate extends SvrProcess {
 	/** Table*/
 	private int 			p_AD_Table_ID = 0;
 	
-	/** Reference*/
-	private int 			p_AD_Reference_ID = 0;
-	
 	/** Menu*/
 	private int 			p_AD_Menu_ID = 0;
-	
-	/**	Table for Sync wit mobile	*/
-	private MSPSTable 		m_Table = null;
 	
 	/** Constant Value */
 	private String 			p_ConstantValue = "";
@@ -60,6 +58,38 @@ public class WebServiceGenerate extends SvrProcess {
 	/**Web Service Type Value*/
 	private String 			p_WST_Value = "";
 	
+	/** Web Service Parameter Action */
+	private static String Action 		= "Action";
+	
+	/** Web Service Parameter TableName */
+	private static String TableName 	= "TableName";
+	
+	/** Web Service Parameter RecordID */
+	private static String RecordID 		= "RecordID";
+	
+	/** Web Service Parameter AD_Menu_ID */
+	private static String AD_Menu_ID 	= "AD_MenuID";
+	
+	/** Web Service Parameter ConstantValue_Create */
+	private static String ConstantValue_Create 	= "Create";
+	
+	/** Web Service Parameter ConstantValue_Read */
+	private static String ConstantValue_Read 	= "Read";
+	
+	/** Web Service Parameter AD_Process_ID */
+	private static String AD_Process_ID 	= "AD_Process_ID";
+	
+	/** Web Service Definition */
+	private static String ModelADService= "ModelADService";
+	
+	/** Web Service Method Run Process */
+	private static String runProcess 	= "runProcess";
+	
+	/** Web Services Created */ 
+	private int m_Created = 0 ;
+	
+	/** Set Web Service To Sync Menu*/
+	private boolean p_IsSetWebService = false;
 	@Override
 	protected void prepare() {
 		m_Record_ID = getRecord_ID();
@@ -74,14 +104,15 @@ public class WebServiceGenerate extends SvrProcess {
 				p_WS_WebServiceMethodValue = para.getParameter().toString();
 			else if (para.getParameterName().equals("AD_Table_ID"))
 				p_AD_Table_ID = para.getParameterAsInt();
-			else if (para.getParameterName().equals("AD_Reference_ID"))
-				p_AD_Reference_ID = para.getParameterAsInt();
 			else if (para.getParameterName().equals("AD_Menu_ID"))
 				p_AD_Menu_ID = para.getParameterAsInt();
 			else if (para.getParameterName().equals("ConstantValue"))
 				p_ConstantValue = para.getParameter().toString();
 			else if (para.getParameterName().equals("Value"))
 				p_WST_Value = para.getParameter().toString();
+			else if (para.getParameterName().equals("IsSetWebService"))
+				p_IsSetWebService = para.getParameterAsBoolean();
+			
 		}
 	}
 
@@ -95,67 +126,136 @@ public class WebServiceGenerate extends SvrProcess {
 		if (p_WS_WebServiceMethodValue.equals(""))
 			throw new AdempiereException("@Invalid@ @WS_WebServiceMethod_ID@");
 		
+		if (m_Record_ID == 0)
+			throw new AdempiereException("@Invalid@ @SPS_SyncMenu_ID@");
 		
-		//X_WS_WebService ws = new X_WS_WebService(getCtx(), p_WS_WebService_ID, get_TrxName());
+		X_WS_WebService ws = new X_WS_WebService(getCtx(), p_WS_WebService_ID, get_TrxName());
+		
+		MTable table = new MTable(getCtx(), p_AD_Table_ID, get_TrxName());
+		
+		MSPSSyncMenu sm = new MSPSSyncMenu(getCtx(), m_Record_ID, get_TrxName());
 		
 		X_WS_WebServiceMethod wsm = new Query(getCtx(), X_WS_WebServiceMethod.Table_Name, "WS_WebService_ID=? AND Value=?", get_TrxName())
 										.setParameters(p_WS_WebService_ID,p_WS_WebServiceMethodValue)
 										.first();  
 		
+		//Generate Web Service
 		if (wsm!=null){
 			X_WS_WebServiceType wst = new X_WS_WebServiceType(getCtx(), 0, get_TrxName());
-				wst.setValue(Value)
-		}
-		
-		/*X_WS_WebServiceMethod wsm = new X_WS_WebServiceMethod(getCtx(), p_WS_WebServiceMethod_ID, get_TrxName());
-		
-		if (wsm !=null){
-			if (wsm.getValue().equals("readData") 
-					|| wsm.getValue().equals("queryData")
-						|| wsm.getValue().equals("deleteData")
-							|| wsm.getValue().equals("updateData")
-								|| wsm.getValue().equals("createData")
-								){
+			wst.setValue(p_WST_Value);
+			wst.setName(sm.getName());
+			wst.setWS_WebService_ID(p_WS_WebService_ID);
+			wst.setWS_WebServiceMethod_ID(wsm.getWS_WebServiceMethod_ID());
+			wst.setAD_Table_ID(p_AD_Table_ID);
+			wst.setDescription(sm.getDescription());
+			wst.saveEx(get_TrxName());
 			
+			if (wst.getWS_WebServiceType_ID()!=0){
+				
+				//Begin Create Generic Parameters  
+				if (!p_ConstantValue.equals(""))
+					create_WS_Parameter(wst.getWS_WebServiceType_ID(), Action, X_WS_WebService_Para.PARAMETERTYPE_Constant, p_ConstantValue);
+				
+				if (!p_ConstantValue.equals("") && 
+						ws.getValue().equals(ModelADService)){
+					
+					create_WS_Parameter(wst.getWS_WebServiceType_ID(), RecordID, X_WS_WebService_Para.PARAMETERTYPE_Free, "");
+					
+					if (table != null)
+						create_WS_Parameter(wst.getWS_WebServiceType_ID(), TableName, X_WS_WebService_Para.PARAMETERTYPE_Constant, table.get_TableName());
+				}
+				
+				//End Create Generic Parameters
+				
+				// Begin Service Process
+				if (p_WS_WebServiceMethodValue.equals(runProcess) &&
+						ws.getValue().equals(ModelADService))
+					if (p_AD_Menu_ID !=0){
+						MMenu menu = new MMenu(getCtx(), p_AD_Menu_ID, get_TrxName());
+						if (menu.getAD_Process_ID()!=0){
+							
+							create_WS_Parameter(wst.getWS_WebServiceType_ID(), AD_Menu_ID, X_WS_WebService_Para.PARAMETERTYPE_Constant, new Integer(p_AD_Menu_ID).toString());
+							create_WS_Parameter(wst.getWS_WebServiceType_ID(), AD_Process_ID, X_WS_WebService_Para.PARAMETERTYPE_Constant, new Integer(menu.getAD_Process_ID()).toString());
+							//Don't Support to Web Service Parameters 
+							/*
+							MProcess process = new MProcess(getCtx(), menu.getAD_Process_ID(), get_TrxName());
+							MProcessPara[] params = process.getParameters();
+							*/
+						}
+					}
+				// Begin Service Process
+				
+				if (table!= null)
+				{
+					MColumn[] columns = table.getColumns(false);
+					if (p_ConstantValue.equals(ConstantValue_Create))
+						for (int i=0; i < columns.length; i++)
+							create_WS_InputOutput(wst.getWS_WebServiceType_ID(),
+													columns[i].getAD_Column_ID(),
+														p_WS_WebServiceMethodValue.equals(ModelADService));
+					
+					if (p_ConstantValue.equals(ConstantValue_Read))
+						for (int i=0; i < columns.length; i++)
+							create_WS_InputOutput(wst.getWS_WebServiceType_ID(),
+													columns[i].getAD_Column_ID(),
+														false);
+						
+				}
+				//End Create Parameters
+				
+				m_Created ++;
+				
+				if (p_IsSetWebService){
+					sm.setWS_WebServiceType_ID(wst.getWS_WebServiceType_ID());
+					sm.setWS_WebService_ID(wst.getWS_WebService_ID());
+					sm.saveEx(get_TrxName());
+				}
 			}
 		}
 		
-		if (p_WS_WebServiceMethod_ID == 0)
-			throw new AdempiereException("@Invalid@ @WS_WebServiceMethod_ID@");
-		*/
-		//X_WS_WebServiceType wst = new WS
-		/*m_Table = new MSPSTable(getCtx(), m_Record_ID, get_TrxName());
-		//	Verify exists columns
-		MSPSColumn[] columns = m_Table.getColumns();
-		//	
-		if (columns == null 
-				|| columns.length == 0)
-			throw new AdempiereSystemError("Table must have columns");
-		
-		String sqlCreate = m_Table.getSQLCreate();
-		
-		int m_AD_Rule_ID = m_Table.getAD_Rule_ID();
-		
-		MRule ruleSQL = new MRule(getCtx(), m_AD_Rule_ID, get_TrxName());
-		//	if not exists
-		if(m_AD_Rule_ID == 0){
-			ruleSQL.setAD_Org_ID(Env.getAD_Org_ID(getCtx()));
-			ruleSQL.setValue("SQL:Create_" + m_Table.getTableName());
-			ruleSQL.setName(Msg.translate(getCtx(), "AD_Rule_ID") 
-					+ " Create Table " + m_Table.getName());
-			ruleSQL.setEventType(X_AD_Rule.EVENTTYPE_Process);
-			ruleSQL.setRuleType(X_AD_Rule.RULETYPE_SQL);
-			ruleSQL.setAccessLevel(X_AD_Rule.ACCESSLEVEL_SystemOnly);
-			ruleSQL.setEntityType("ECA01");
-		}
-		ruleSQL.setScript(sqlCreate);
-		ruleSQL.saveEx();
-		//	Set Rule on Sync Table
-		m_Table.setAD_Rule_ID(ruleSQL.getAD_Rule_ID());
-		m_Table.saveEx();*/
-		//	
-		//return sqlCreate;
-		return null;
+		return "@Create@ " + m_Created + " " + p_WST_Value;
 	}// doIt
 
+	/**
+	 * 	
+	 * @author <a href="mailto:carlosaparadam@gmail.com">Carlos Parada</a> 10/09/2014, 21:16:57
+	 * @param WS_WebServiceType_ID
+	 * @param ParameterName
+	 * @param ParameterType
+	 * @param ConstantValue
+	 * @return void
+	 */
+	private void create_WS_Parameter(int WS_WebServiceType_ID,String ParameterName,String ParameterType,String ConstantValue){
+		X_WS_WebService_Para para = new X_WS_WebService_Para(getCtx(), 0, get_TrxName());
+		
+		para.setWS_WebServiceType_ID(WS_WebServiceType_ID);
+		para.setParameterName(ParameterName);
+		para.setParameterType(ParameterType);
+		para.setConstantValue(ConstantValue);
+		para.saveEx(get_TrxName());
+	}
+	
+	/**
+	 * 
+	 * @author <a href="mailto:carlosaparadam@gmail.com">Carlos Parada</a> 10/09/2014, 21:17:50
+	 * @param WS_WebServiceType_ID
+	 * @param AD_Column_ID
+	 * @param isInput
+	 * @return void
+	 */
+	private void create_WS_InputOutput(int WS_WebServiceType_ID,int AD_Column_ID, boolean isInput){
+		if (isInput){
+			X_WS_WebServiceFieldInput wfi = new X_WS_WebServiceFieldInput(getCtx(), 0, get_TrxName());
+			wfi.setWS_WebServiceType_ID(WS_WebServiceType_ID);
+			wfi.setAD_Column_ID(AD_Column_ID);
+			wfi.saveEx(get_TrxName());
+		}else{
+			X_WS_WebServiceFieldOutput wfo = new X_WS_WebServiceFieldOutput(getCtx(), 0, get_TrxName());
+			wfo.setWS_WebServiceType_ID(WS_WebServiceType_ID);
+			wfo.setAD_Column_ID(AD_Column_ID);
+			wfo.saveEx(get_TrxName());
+		}
+		
+	}
+	
 }
