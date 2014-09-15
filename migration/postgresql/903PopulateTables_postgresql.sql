@@ -8858,11 +8858,6 @@ DELETE FROM SPS_Column_Trl WHERE SPS_Column_ID = 53739
 INSERT INTO SPS_Column_Trl (AD_Language,SPS_Column_ID, Name, IsTranslated,AD_Client_ID,AD_Org_ID,Created,Createdby,Updated,UpdatedBy)VALUES ('es_MX',53739,'Nombre','N',0,0,'2006-11-10',100,'2006-11-10',100)
 ;
 
--- Aug 30, 2014 11:43:56 AM VET
--- SPS
-INSERT INTO SPS_Table (AD_Client_ID,AD_Org_ID,AD_Table_ID,CopyColumnsFromTable,Created,CreatedBy,Description,EntityType,GenerateScriptFromTable,IsActive,IsCentrallyMaintained,IsDeleteable,IsView,Name,SPS_Table_ID,TableName,Updated,UpdatedBy) VALUES (0,0,190,'N',TO_TIMESTAMP('2014-08-30 11:43:55','YYYY-MM-DD HH24:MI:SS'),100,'Storage Warehouse and Service Point','ECA01','N','Y','Y','N','N','Warehouse',50200,'M_Warehouse',TO_TIMESTAMP('2014-08-30 11:43:55','YYYY-MM-DD HH24:MI:SS'),100)
-;
-
 -- Aug 30, 2014 11:44:55 AM VET
 -- SPS
 INSERT INTO SPS_Table (AD_Client_ID,AD_Org_ID,AD_Table_ID,CopyColumnsFromTable,Created,CreatedBy,EntityType,GenerateScriptFromTable,IsActive,IsCentrallyMaintained,IsDeleteable,IsView,Name,SPS_Table_ID,TableName,Updated,UpdatedBy) VALUES (0,0,53162,'N',TO_TIMESTAMP('2014-08-30 11:44:54','YYYY-MM-DD HH24:MI:SS'),100,'ECA01','N','Y','Y','Y','N','Web Service',50201,'WS_WebService',TO_TIMESTAMP('2014-08-30 11:44:54','YYYY-MM-DD HH24:MI:SS'),100)
