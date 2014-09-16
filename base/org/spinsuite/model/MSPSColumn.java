@@ -276,7 +276,7 @@ public class MSPSColumn extends X_SPS_Column {
 			else if (columnName.endsWith("_ID") 
 				|| columnName.endsWith("tedBy") 
 				|| columnName.endsWith("_Acct") )
-				return "NUMBERIC(10)";
+				return "NUMERIC(10)";
 			else if (fieldLength < 4)
 				return "CHAR(" + fieldLength + ")";
 			else	//	EntityType, AD_Language	fallback
