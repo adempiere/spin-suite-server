@@ -66,5 +66,5 @@ ALTER TABLE AD_PrintFormatItem ALTER COLUMN AD_Column_ID DROP NOT NULL
 
 -- Sep 15, 2014 4:23:40 PM VET
 -- SPS
-INSERT INTO t_alter_column values('ad_rule','Script','VARCHAR(6000)',null,'NULL')
+ALTER TABLE AD_Rule ALTER COLUMN  Script TYPE VARCHAR(6000)
 ;
