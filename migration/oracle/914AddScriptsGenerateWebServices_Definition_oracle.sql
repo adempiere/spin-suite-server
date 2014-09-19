@@ -1,0 +1,780 @@
+-- Sep 19, 2014 4:26:19 PM VET
+-- SPS
+UPDATE AD_TreeNode SET Parent_ID=50001, SeqNo=47,Updated=TO_DATE('2014-09-19 16:26:19','YYYY-MM-DD HH24:MI:SS'),UpdatedBy=100 WHERE AD_Tree_ID=50005 AND Node_ID=50066
+;
+
+-- Sep 19, 2014 4:26:19 PM VET
+-- SPS
+UPDATE AD_TreeNode SET Parent_ID=50001, SeqNo=48,Updated=TO_DATE('2014-09-19 16:26:19','YYYY-MM-DD HH24:MI:SS'),UpdatedBy=100 WHERE AD_Tree_ID=50005 AND Node_ID=50067
+;
+
+-- Sep 19, 2014 4:26:20 PM VET
+-- SPS
+UPDATE AD_TreeNode SET Parent_ID=50001, SeqNo=49,Updated=TO_DATE('2014-09-19 16:26:20','YYYY-MM-DD HH24:MI:SS'),UpdatedBy=100 WHERE AD_Tree_ID=50005 AND Node_ID=50069
+;
+
+-- Sep 19, 2014 4:26:20 PM VET
+-- SPS
+UPDATE AD_TreeNode SET Parent_ID=50001, SeqNo=50,Updated=TO_DATE('2014-09-19 16:26:20','YYYY-MM-DD HH24:MI:SS'),UpdatedBy=100 WHERE AD_Tree_ID=50005 AND Node_ID=50072
+;
+
+-- Sep 19, 2014 4:26:20 PM VET
+-- SPS
+UPDATE AD_TreeNode SET Parent_ID=50001, SeqNo=51,Updated=TO_DATE('2014-09-19 16:26:20','YYYY-MM-DD HH24:MI:SS'),UpdatedBy=100 WHERE AD_Tree_ID=50005 AND Node_ID=50071
+;
+
+-- Sep 19, 2014 4:26:20 PM VET
+-- SPS
+UPDATE AD_TreeNode SET Parent_ID=50001, SeqNo=52,Updated=TO_DATE('2014-09-19 16:26:20','YYYY-MM-DD HH24:MI:SS'),UpdatedBy=100 WHERE AD_Tree_ID=50005 AND Node_ID=50068
+;
+
+-- Sep 19, 2014 4:26:20 PM VET
+-- SPS
+UPDATE AD_TreeNode SET Parent_ID=50001, SeqNo=53,Updated=TO_DATE('2014-09-19 16:26:20','YYYY-MM-DD HH24:MI:SS'),UpdatedBy=100 WHERE AD_Tree_ID=50005 AND Node_ID=50073
+;
+
+-- Sep 19, 2014 4:26:20 PM VET
+-- SPS
+UPDATE AD_TreeNode SET Parent_ID=50001, SeqNo=54,Updated=TO_DATE('2014-09-19 16:26:20','YYYY-MM-DD HH24:MI:SS'),UpdatedBy=100 WHERE AD_Tree_ID=50005 AND Node_ID=50075
+;
+
+-- Sep 19, 2014 4:26:20 PM VET
+-- SPS
+UPDATE AD_TreeNode SET Parent_ID=50001, SeqNo=55,Updated=TO_DATE('2014-09-19 16:26:20','YYYY-MM-DD HH24:MI:SS'),UpdatedBy=100 WHERE AD_Tree_ID=50005 AND Node_ID=50074
+;
+
+-- Sep 19, 2014 4:26:20 PM VET
+-- SPS
+UPDATE AD_TreeNode SET Parent_ID=50001, SeqNo=56,Updated=TO_DATE('2014-09-19 16:26:20','YYYY-MM-DD HH24:MI:SS'),UpdatedBy=100 WHERE AD_Tree_ID=50005 AND Node_ID=50070
+;
+
+-- Sep 19, 2014 4:26:20 PM VET
+-- SPS
+UPDATE AD_TreeNode SET Parent_ID=50001, SeqNo=57,Updated=TO_DATE('2014-09-19 16:26:20','YYYY-MM-DD HH24:MI:SS'),UpdatedBy=100 WHERE AD_Tree_ID=50005 AND Node_ID=50078
+;
+
+-- Sep 19, 2014 4:26:20 PM VET
+-- SPS
+UPDATE AD_TreeNode SET Parent_ID=50001, SeqNo=58,Updated=TO_DATE('2014-09-19 16:26:20','YYYY-MM-DD HH24:MI:SS'),UpdatedBy=100 WHERE AD_Tree_ID=50005 AND Node_ID=50077
+;
+
+-- Sep 19, 2014 4:26:20 PM VET
+-- SPS
+UPDATE AD_TreeNode SET Parent_ID=50001, SeqNo=59,Updated=TO_DATE('2014-09-19 16:26:20','YYYY-MM-DD HH24:MI:SS'),UpdatedBy=100 WHERE AD_Tree_ID=50005 AND Node_ID=50079
+;
+
+-- Sep 19, 2014 4:26:20 PM VET
+-- SPS
+UPDATE AD_TreeNode SET Parent_ID=50001, SeqNo=60,Updated=TO_DATE('2014-09-19 16:26:20','YYYY-MM-DD HH24:MI:SS'),UpdatedBy=100 WHERE AD_Tree_ID=50005 AND Node_ID=50076
+;
+
+-- Sep 19, 2014 4:26:20 PM VET
+-- SPS
+UPDATE AD_TreeNode SET Parent_ID=50001, SeqNo=61,Updated=TO_DATE('2014-09-19 16:26:20','YYYY-MM-DD HH24:MI:SS'),UpdatedBy=100 WHERE AD_Tree_ID=50005 AND Node_ID=50083
+;
+
+-- Sep 19, 2014 4:26:20 PM VET
+-- SPS
+UPDATE AD_TreeNode SET Parent_ID=50001, SeqNo=62,Updated=TO_DATE('2014-09-19 16:26:20','YYYY-MM-DD HH24:MI:SS'),UpdatedBy=100 WHERE AD_Tree_ID=50005 AND Node_ID=50081
+;
+
+-- Sep 19, 2014 4:26:20 PM VET
+-- SPS
+UPDATE AD_TreeNode SET Parent_ID=50001, SeqNo=63,Updated=TO_DATE('2014-09-19 16:26:20','YYYY-MM-DD HH24:MI:SS'),UpdatedBy=100 WHERE AD_Tree_ID=50005 AND Node_ID=50082
+;
+
+-- Sep 19, 2014 4:26:20 PM VET
+-- SPS
+UPDATE AD_TreeNode SET Parent_ID=50001, SeqNo=64,Updated=TO_DATE('2014-09-19 16:26:20','YYYY-MM-DD HH24:MI:SS'),UpdatedBy=100 WHERE AD_Tree_ID=50005 AND Node_ID=50085
+;
+
+-- Sep 19, 2014 4:26:20 PM VET
+-- SPS
+UPDATE AD_TreeNode SET Parent_ID=50001, SeqNo=65,Updated=TO_DATE('2014-09-19 16:26:20','YYYY-MM-DD HH24:MI:SS'),UpdatedBy=100 WHERE AD_Tree_ID=50005 AND Node_ID=50086
+;
+
+-- Sep 19, 2014 4:26:20 PM VET
+-- SPS
+UPDATE AD_TreeNode SET Parent_ID=50001, SeqNo=66,Updated=TO_DATE('2014-09-19 16:26:20','YYYY-MM-DD HH24:MI:SS'),UpdatedBy=100 WHERE AD_Tree_ID=50005 AND Node_ID=50087
+;
+
+-- Sep 19, 2014 4:26:20 PM VET
+-- SPS
+UPDATE AD_TreeNode SET Parent_ID=50001, SeqNo=67,Updated=TO_DATE('2014-09-19 16:26:20','YYYY-MM-DD HH24:MI:SS'),UpdatedBy=100 WHERE AD_Tree_ID=50005 AND Node_ID=50080
+;
+
+-- Sep 19, 2014 4:26:20 PM VET
+-- SPS
+UPDATE AD_TreeNode SET Parent_ID=50001, SeqNo=68,Updated=TO_DATE('2014-09-19 16:26:20','YYYY-MM-DD HH24:MI:SS'),UpdatedBy=100 WHERE AD_Tree_ID=50005 AND Node_ID=50084
+;
+
+-- Sep 19, 2014 4:26:21 PM VET
+-- SPS
+UPDATE AD_TreeNode SET Parent_ID=50001, SeqNo=69,Updated=TO_DATE('2014-09-19 16:26:21','YYYY-MM-DD HH24:MI:SS'),UpdatedBy=100 WHERE AD_Tree_ID=50005 AND Node_ID=50090
+;
+
+-- Sep 19, 2014 4:26:21 PM VET
+-- SPS
+UPDATE AD_TreeNode SET Parent_ID=50001, SeqNo=70,Updated=TO_DATE('2014-09-19 16:26:21','YYYY-MM-DD HH24:MI:SS'),UpdatedBy=100 WHERE AD_Tree_ID=50005 AND Node_ID=50088
+;
+
+-- Sep 19, 2014 4:26:21 PM VET
+-- SPS
+UPDATE AD_TreeNode SET Parent_ID=50001, SeqNo=71,Updated=TO_DATE('2014-09-19 16:26:21','YYYY-MM-DD HH24:MI:SS'),UpdatedBy=100 WHERE AD_Tree_ID=50005 AND Node_ID=50093
+;
+
+-- Sep 19, 2014 4:26:21 PM VET
+-- SPS
+UPDATE AD_TreeNode SET Parent_ID=50001, SeqNo=72,Updated=TO_DATE('2014-09-19 16:26:21','YYYY-MM-DD HH24:MI:SS'),UpdatedBy=100 WHERE AD_Tree_ID=50005 AND Node_ID=50091
+;
+
+-- Sep 19, 2014 4:26:21 PM VET
+-- SPS
+UPDATE AD_TreeNode SET Parent_ID=50001, SeqNo=73,Updated=TO_DATE('2014-09-19 16:26:21','YYYY-MM-DD HH24:MI:SS'),UpdatedBy=100 WHERE AD_Tree_ID=50005 AND Node_ID=50094
+;
+
+-- Sep 19, 2014 4:26:21 PM VET
+-- SPS
+UPDATE AD_TreeNode SET Parent_ID=50001, SeqNo=74,Updated=TO_DATE('2014-09-19 16:26:21','YYYY-MM-DD HH24:MI:SS'),UpdatedBy=100 WHERE AD_Tree_ID=50005 AND Node_ID=50089
+;
+
+-- Sep 19, 2014 4:26:21 PM VET
+-- SPS
+UPDATE AD_TreeNode SET Parent_ID=50001, SeqNo=75,Updated=TO_DATE('2014-09-19 16:26:21','YYYY-MM-DD HH24:MI:SS'),UpdatedBy=100 WHERE AD_Tree_ID=50005 AND Node_ID=50092
+;
+
+-- Sep 19, 2014 4:26:21 PM VET
+-- SPS
+UPDATE AD_TreeNode SET Parent_ID=50001, SeqNo=76,Updated=TO_DATE('2014-09-19 16:26:21','YYYY-MM-DD HH24:MI:SS'),UpdatedBy=100 WHERE AD_Tree_ID=50005 AND Node_ID=50095
+;
+
+-- Sep 19, 2014 4:26:21 PM VET
+-- SPS
+UPDATE AD_TreeNode SET Parent_ID=50001, SeqNo=77,Updated=TO_DATE('2014-09-19 16:26:21','YYYY-MM-DD HH24:MI:SS'),UpdatedBy=100 WHERE AD_Tree_ID=50005 AND Node_ID=50101
+;
+
+-- Sep 19, 2014 4:26:21 PM VET
+-- SPS
+UPDATE AD_TreeNode SET Parent_ID=50001, SeqNo=78,Updated=TO_DATE('2014-09-19 16:26:21','YYYY-MM-DD HH24:MI:SS'),UpdatedBy=100 WHERE AD_Tree_ID=50005 AND Node_ID=50103
+;
+
+-- Sep 19, 2014 4:26:21 PM VET
+-- SPS
+UPDATE AD_TreeNode SET Parent_ID=50001, SeqNo=79,Updated=TO_DATE('2014-09-19 16:26:21','YYYY-MM-DD HH24:MI:SS'),UpdatedBy=100 WHERE AD_Tree_ID=50005 AND Node_ID=50099
+;
+
+-- Sep 19, 2014 4:26:21 PM VET
+-- SPS
+UPDATE AD_TreeNode SET Parent_ID=50001, SeqNo=80,Updated=TO_DATE('2014-09-19 16:26:21','YYYY-MM-DD HH24:MI:SS'),UpdatedBy=100 WHERE AD_Tree_ID=50005 AND Node_ID=50096
+;
+
+-- Sep 19, 2014 4:26:21 PM VET
+-- SPS
+UPDATE AD_TreeNode SET Parent_ID=50001, SeqNo=81,Updated=TO_DATE('2014-09-19 16:26:21','YYYY-MM-DD HH24:MI:SS'),UpdatedBy=100 WHERE AD_Tree_ID=50005 AND Node_ID=50100
+;
+
+-- Sep 19, 2014 4:26:21 PM VET
+-- SPS
+UPDATE AD_TreeNode SET Parent_ID=50001, SeqNo=82,Updated=TO_DATE('2014-09-19 16:26:21','YYYY-MM-DD HH24:MI:SS'),UpdatedBy=100 WHERE AD_Tree_ID=50005 AND Node_ID=50097
+;
+
+-- Sep 19, 2014 4:26:21 PM VET
+-- SPS
+UPDATE AD_TreeNode SET Parent_ID=50001, SeqNo=83,Updated=TO_DATE('2014-09-19 16:26:21','YYYY-MM-DD HH24:MI:SS'),UpdatedBy=100 WHERE AD_Tree_ID=50005 AND Node_ID=50102
+;
+
+-- Sep 19, 2014 4:26:21 PM VET
+-- SPS
+UPDATE AD_TreeNode SET Parent_ID=50001, SeqNo=84,Updated=TO_DATE('2014-09-19 16:26:21','YYYY-MM-DD HH24:MI:SS'),UpdatedBy=100 WHERE AD_Tree_ID=50005 AND Node_ID=50098
+;
+
+-- Sep 19, 2014 4:26:22 PM VET
+-- SPS
+UPDATE AD_TreeNode SET Parent_ID=50001, SeqNo=85,Updated=TO_DATE('2014-09-19 16:26:22','YYYY-MM-DD HH24:MI:SS'),UpdatedBy=100 WHERE AD_Tree_ID=50005 AND Node_ID=50065
+;
+
+-- Sep 19, 2014 4:26:22 PM VET
+-- SPS
+UPDATE AD_TreeNode SET Parent_ID=50001, SeqNo=86,Updated=TO_DATE('2014-09-19 16:26:22','YYYY-MM-DD HH24:MI:SS'),UpdatedBy=100 WHERE AD_Tree_ID=50005 AND Node_ID=50005
+;
+
+-- Sep 19, 2014 4:26:25 PM VET
+-- SPS
+UPDATE AD_TreeNode SET Parent_ID=50001, SeqNo=85,Updated=TO_DATE('2014-09-19 16:26:25','YYYY-MM-DD HH24:MI:SS'),UpdatedBy=100 WHERE AD_Tree_ID=50005 AND Node_ID=50062
+;
+
+-- Sep 19, 2014 4:26:25 PM VET
+-- SPS
+UPDATE AD_TreeNode SET Parent_ID=50001, SeqNo=86,Updated=TO_DATE('2014-09-19 16:26:25','YYYY-MM-DD HH24:MI:SS'),UpdatedBy=100 WHERE AD_Tree_ID=50005 AND Node_ID=50065
+;
+
+-- Sep 19, 2014 4:26:25 PM VET
+-- SPS
+UPDATE AD_TreeNode SET Parent_ID=50001, SeqNo=87,Updated=TO_DATE('2014-09-19 16:26:25','YYYY-MM-DD HH24:MI:SS'),UpdatedBy=100 WHERE AD_Tree_ID=50005 AND Node_ID=50005
+;
+
+-- Sep 19, 2014 4:26:26 PM VET
+-- SPS
+UPDATE AD_TreeNode SET Parent_ID=50001, SeqNo=84,Updated=TO_DATE('2014-09-19 16:26:26','YYYY-MM-DD HH24:MI:SS'),UpdatedBy=100 WHERE AD_Tree_ID=50005 AND Node_ID=50063
+;
+
+-- Sep 19, 2014 4:26:26 PM VET
+-- SPS
+UPDATE AD_TreeNode SET Parent_ID=50001, SeqNo=85,Updated=TO_DATE('2014-09-19 16:26:26','YYYY-MM-DD HH24:MI:SS'),UpdatedBy=100 WHERE AD_Tree_ID=50005 AND Node_ID=50098
+;
+
+-- Sep 19, 2014 4:26:26 PM VET
+-- SPS
+UPDATE AD_TreeNode SET Parent_ID=50001, SeqNo=86,Updated=TO_DATE('2014-09-19 16:26:26','YYYY-MM-DD HH24:MI:SS'),UpdatedBy=100 WHERE AD_Tree_ID=50005 AND Node_ID=50062
+;
+
+-- Sep 19, 2014 4:26:26 PM VET
+-- SPS
+UPDATE AD_TreeNode SET Parent_ID=50001, SeqNo=87,Updated=TO_DATE('2014-09-19 16:26:26','YYYY-MM-DD HH24:MI:SS'),UpdatedBy=100 WHERE AD_Tree_ID=50005 AND Node_ID=50065
+;
+
+-- Sep 19, 2014 4:26:26 PM VET
+-- SPS
+UPDATE AD_TreeNode SET Parent_ID=50001, SeqNo=88,Updated=TO_DATE('2014-09-19 16:26:26','YYYY-MM-DD HH24:MI:SS'),UpdatedBy=100 WHERE AD_Tree_ID=50005 AND Node_ID=50005
+;
+
+-- Sep 19, 2014 4:26:27 PM VET
+-- SPS
+UPDATE AD_TreeNode SET Parent_ID=50001, SeqNo=85,Updated=TO_DATE('2014-09-19 16:26:27','YYYY-MM-DD HH24:MI:SS'),UpdatedBy=100 WHERE AD_Tree_ID=50005 AND Node_ID=50061
+;
+
+-- Sep 19, 2014 4:26:27 PM VET
+-- SPS
+UPDATE AD_TreeNode SET Parent_ID=50001, SeqNo=86,Updated=TO_DATE('2014-09-19 16:26:27','YYYY-MM-DD HH24:MI:SS'),UpdatedBy=100 WHERE AD_Tree_ID=50005 AND Node_ID=50098
+;
+
+-- Sep 19, 2014 4:26:27 PM VET
+-- SPS
+UPDATE AD_TreeNode SET Parent_ID=50001, SeqNo=87,Updated=TO_DATE('2014-09-19 16:26:27','YYYY-MM-DD HH24:MI:SS'),UpdatedBy=100 WHERE AD_Tree_ID=50005 AND Node_ID=50062
+;
+
+-- Sep 19, 2014 4:26:28 PM VET
+-- SPS
+UPDATE AD_TreeNode SET Parent_ID=50001, SeqNo=88,Updated=TO_DATE('2014-09-19 16:26:28','YYYY-MM-DD HH24:MI:SS'),UpdatedBy=100 WHERE AD_Tree_ID=50005 AND Node_ID=50065
+;
+
+-- Sep 19, 2014 4:26:28 PM VET
+-- SPS
+UPDATE AD_TreeNode SET Parent_ID=50001, SeqNo=89,Updated=TO_DATE('2014-09-19 16:26:28','YYYY-MM-DD HH24:MI:SS'),UpdatedBy=100 WHERE AD_Tree_ID=50005 AND Node_ID=50005
+;
+
+-- Sep 19, 2014 4:26:29 PM VET
+-- SPS
+UPDATE AD_TreeNode SET Parent_ID=50001, SeqNo=85,Updated=TO_DATE('2014-09-19 16:26:29','YYYY-MM-DD HH24:MI:SS'),UpdatedBy=100 WHERE AD_Tree_ID=50005 AND Node_ID=50059
+;
+
+-- Sep 19, 2014 4:26:29 PM VET
+-- SPS
+UPDATE AD_TreeNode SET Parent_ID=50001, SeqNo=86,Updated=TO_DATE('2014-09-19 16:26:29','YYYY-MM-DD HH24:MI:SS'),UpdatedBy=100 WHERE AD_Tree_ID=50005 AND Node_ID=50061
+;
+
+-- Sep 19, 2014 4:26:29 PM VET
+-- SPS
+UPDATE AD_TreeNode SET Parent_ID=50001, SeqNo=87,Updated=TO_DATE('2014-09-19 16:26:29','YYYY-MM-DD HH24:MI:SS'),UpdatedBy=100 WHERE AD_Tree_ID=50005 AND Node_ID=50098
+;
+
+-- Sep 19, 2014 4:26:29 PM VET
+-- SPS
+UPDATE AD_TreeNode SET Parent_ID=50001, SeqNo=88,Updated=TO_DATE('2014-09-19 16:26:29','YYYY-MM-DD HH24:MI:SS'),UpdatedBy=100 WHERE AD_Tree_ID=50005 AND Node_ID=50062
+;
+
+-- Sep 19, 2014 4:26:29 PM VET
+-- SPS
+UPDATE AD_TreeNode SET Parent_ID=50001, SeqNo=89,Updated=TO_DATE('2014-09-19 16:26:29','YYYY-MM-DD HH24:MI:SS'),UpdatedBy=100 WHERE AD_Tree_ID=50005 AND Node_ID=50065
+;
+
+-- Sep 19, 2014 4:26:29 PM VET
+-- SPS
+UPDATE AD_TreeNode SET Parent_ID=50001, SeqNo=90,Updated=TO_DATE('2014-09-19 16:26:29','YYYY-MM-DD HH24:MI:SS'),UpdatedBy=100 WHERE AD_Tree_ID=50005 AND Node_ID=50005
+;
+
+-- Sep 19, 2014 4:26:30 PM VET
+-- SPS
+UPDATE AD_TreeNode SET Parent_ID=50001, SeqNo=86,Updated=TO_DATE('2014-09-19 16:26:30','YYYY-MM-DD HH24:MI:SS'),UpdatedBy=100 WHERE AD_Tree_ID=50005 AND Node_ID=50060
+;
+
+-- Sep 19, 2014 4:26:30 PM VET
+-- SPS
+UPDATE AD_TreeNode SET Parent_ID=50001, SeqNo=87,Updated=TO_DATE('2014-09-19 16:26:30','YYYY-MM-DD HH24:MI:SS'),UpdatedBy=100 WHERE AD_Tree_ID=50005 AND Node_ID=50061
+;
+
+-- Sep 19, 2014 4:26:30 PM VET
+-- SPS
+UPDATE AD_TreeNode SET Parent_ID=50001, SeqNo=88,Updated=TO_DATE('2014-09-19 16:26:30','YYYY-MM-DD HH24:MI:SS'),UpdatedBy=100 WHERE AD_Tree_ID=50005 AND Node_ID=50098
+;
+
+-- Sep 19, 2014 4:26:30 PM VET
+-- SPS
+UPDATE AD_TreeNode SET Parent_ID=50001, SeqNo=89,Updated=TO_DATE('2014-09-19 16:26:30','YYYY-MM-DD HH24:MI:SS'),UpdatedBy=100 WHERE AD_Tree_ID=50005 AND Node_ID=50062
+;
+
+-- Sep 19, 2014 4:26:30 PM VET
+-- SPS
+UPDATE AD_TreeNode SET Parent_ID=50001, SeqNo=90,Updated=TO_DATE('2014-09-19 16:26:30','YYYY-MM-DD HH24:MI:SS'),UpdatedBy=100 WHERE AD_Tree_ID=50005 AND Node_ID=50065
+;
+
+-- Sep 19, 2014 4:26:30 PM VET
+-- SPS
+UPDATE AD_TreeNode SET Parent_ID=50001, SeqNo=91,Updated=TO_DATE('2014-09-19 16:26:30','YYYY-MM-DD HH24:MI:SS'),UpdatedBy=100 WHERE AD_Tree_ID=50005 AND Node_ID=50005
+;
+
+-- Sep 19, 2014 4:26:31 PM VET
+-- SPS
+UPDATE AD_TreeNode SET Parent_ID=50001, SeqNo=87,Updated=TO_DATE('2014-09-19 16:26:31','YYYY-MM-DD HH24:MI:SS'),UpdatedBy=100 WHERE AD_Tree_ID=50005 AND Node_ID=50058
+;
+
+-- Sep 19, 2014 4:26:31 PM VET
+-- SPS
+UPDATE AD_TreeNode SET Parent_ID=50001, SeqNo=88,Updated=TO_DATE('2014-09-19 16:26:31','YYYY-MM-DD HH24:MI:SS'),UpdatedBy=100 WHERE AD_Tree_ID=50005 AND Node_ID=50061
+;
+
+-- Sep 19, 2014 4:26:31 PM VET
+-- SPS
+UPDATE AD_TreeNode SET Parent_ID=50001, SeqNo=89,Updated=TO_DATE('2014-09-19 16:26:31','YYYY-MM-DD HH24:MI:SS'),UpdatedBy=100 WHERE AD_Tree_ID=50005 AND Node_ID=50098
+;
+
+-- Sep 19, 2014 4:26:31 PM VET
+-- SPS
+UPDATE AD_TreeNode SET Parent_ID=50001, SeqNo=90,Updated=TO_DATE('2014-09-19 16:26:31','YYYY-MM-DD HH24:MI:SS'),UpdatedBy=100 WHERE AD_Tree_ID=50005 AND Node_ID=50062
+;
+
+-- Sep 19, 2014 4:26:31 PM VET
+-- SPS
+UPDATE AD_TreeNode SET Parent_ID=50001, SeqNo=91,Updated=TO_DATE('2014-09-19 16:26:31','YYYY-MM-DD HH24:MI:SS'),UpdatedBy=100 WHERE AD_Tree_ID=50005 AND Node_ID=50065
+;
+
+-- Sep 19, 2014 4:26:31 PM VET
+-- SPS
+UPDATE AD_TreeNode SET Parent_ID=50001, SeqNo=92,Updated=TO_DATE('2014-09-19 16:26:31','YYYY-MM-DD HH24:MI:SS'),UpdatedBy=100 WHERE AD_Tree_ID=50005 AND Node_ID=50005
+;
+
+-- Sep 19, 2014 4:26:32 PM VET
+-- SPS
+UPDATE AD_TreeNode SET Parent_ID=50001, SeqNo=87,Updated=TO_DATE('2014-09-19 16:26:32','YYYY-MM-DD HH24:MI:SS'),UpdatedBy=100 WHERE AD_Tree_ID=50005 AND Node_ID=50057
+;
+
+-- Sep 19, 2014 4:26:32 PM VET
+-- SPS
+UPDATE AD_TreeNode SET Parent_ID=50001, SeqNo=88,Updated=TO_DATE('2014-09-19 16:26:32','YYYY-MM-DD HH24:MI:SS'),UpdatedBy=100 WHERE AD_Tree_ID=50005 AND Node_ID=50058
+;
+
+-- Sep 19, 2014 4:26:32 PM VET
+-- SPS
+UPDATE AD_TreeNode SET Parent_ID=50001, SeqNo=89,Updated=TO_DATE('2014-09-19 16:26:32','YYYY-MM-DD HH24:MI:SS'),UpdatedBy=100 WHERE AD_Tree_ID=50005 AND Node_ID=50061
+;
+
+-- Sep 19, 2014 4:26:33 PM VET
+-- SPS
+UPDATE AD_TreeNode SET Parent_ID=50001, SeqNo=90,Updated=TO_DATE('2014-09-19 16:26:33','YYYY-MM-DD HH24:MI:SS'),UpdatedBy=100 WHERE AD_Tree_ID=50005 AND Node_ID=50098
+;
+
+-- Sep 19, 2014 4:26:33 PM VET
+-- SPS
+UPDATE AD_TreeNode SET Parent_ID=50001, SeqNo=91,Updated=TO_DATE('2014-09-19 16:26:33','YYYY-MM-DD HH24:MI:SS'),UpdatedBy=100 WHERE AD_Tree_ID=50005 AND Node_ID=50062
+;
+
+-- Sep 19, 2014 4:26:33 PM VET
+-- SPS
+UPDATE AD_TreeNode SET Parent_ID=50001, SeqNo=92,Updated=TO_DATE('2014-09-19 16:26:33','YYYY-MM-DD HH24:MI:SS'),UpdatedBy=100 WHERE AD_Tree_ID=50005 AND Node_ID=50065
+;
+
+-- Sep 19, 2014 4:26:33 PM VET
+-- SPS
+UPDATE AD_TreeNode SET Parent_ID=50001, SeqNo=93,Updated=TO_DATE('2014-09-19 16:26:33','YYYY-MM-DD HH24:MI:SS'),UpdatedBy=100 WHERE AD_Tree_ID=50005 AND Node_ID=50005
+;
+
+-- Sep 19, 2014 4:26:34 PM VET
+-- SPS
+UPDATE AD_TreeNode SET Parent_ID=50001, SeqNo=91,Updated=TO_DATE('2014-09-19 16:26:34','YYYY-MM-DD HH24:MI:SS'),UpdatedBy=100 WHERE AD_Tree_ID=50005 AND Node_ID=50055
+;
+
+-- Sep 19, 2014 4:26:34 PM VET
+-- SPS
+UPDATE AD_TreeNode SET Parent_ID=50001, SeqNo=92,Updated=TO_DATE('2014-09-19 16:26:34','YYYY-MM-DD HH24:MI:SS'),UpdatedBy=100 WHERE AD_Tree_ID=50005 AND Node_ID=50062
+;
+
+-- Sep 19, 2014 4:26:34 PM VET
+-- SPS
+UPDATE AD_TreeNode SET Parent_ID=50001, SeqNo=93,Updated=TO_DATE('2014-09-19 16:26:34','YYYY-MM-DD HH24:MI:SS'),UpdatedBy=100 WHERE AD_Tree_ID=50005 AND Node_ID=50065
+;
+
+-- Sep 19, 2014 4:26:34 PM VET
+-- SPS
+UPDATE AD_TreeNode SET Parent_ID=50001, SeqNo=94,Updated=TO_DATE('2014-09-19 16:26:34','YYYY-MM-DD HH24:MI:SS'),UpdatedBy=100 WHERE AD_Tree_ID=50005 AND Node_ID=50005
+;
+
+-- Sep 19, 2014 4:26:35 PM VET
+-- SPS
+UPDATE AD_TreeNode SET Parent_ID=50001, SeqNo=93,Updated=TO_DATE('2014-09-19 16:26:35','YYYY-MM-DD HH24:MI:SS'),UpdatedBy=100 WHERE AD_Tree_ID=50005 AND Node_ID=50054
+;
+
+-- Sep 19, 2014 4:26:35 PM VET
+-- SPS
+UPDATE AD_TreeNode SET Parent_ID=50001, SeqNo=94,Updated=TO_DATE('2014-09-19 16:26:35','YYYY-MM-DD HH24:MI:SS'),UpdatedBy=100 WHERE AD_Tree_ID=50005 AND Node_ID=50065
+;
+
+-- Sep 19, 2014 4:26:35 PM VET
+-- SPS
+UPDATE AD_TreeNode SET Parent_ID=50001, SeqNo=95,Updated=TO_DATE('2014-09-19 16:26:35','YYYY-MM-DD HH24:MI:SS'),UpdatedBy=100 WHERE AD_Tree_ID=50005 AND Node_ID=50005
+;
+
+-- Sep 19, 2014 4:26:36 PM VET
+-- SPS
+UPDATE AD_TreeNode SET Parent_ID=50001, SeqNo=95,Updated=TO_DATE('2014-09-19 16:26:36','YYYY-MM-DD HH24:MI:SS'),UpdatedBy=100 WHERE AD_Tree_ID=50005 AND Node_ID=50056
+;
+
+-- Sep 19, 2014 4:26:36 PM VET
+-- SPS
+UPDATE AD_TreeNode SET Parent_ID=50001, SeqNo=96,Updated=TO_DATE('2014-09-19 16:26:36','YYYY-MM-DD HH24:MI:SS'),UpdatedBy=100 WHERE AD_Tree_ID=50005 AND Node_ID=50005
+;
+
+-- Sep 19, 2014 4:26:38 PM VET
+-- SPS
+UPDATE AD_TreeNode SET Parent_ID=50001, SeqNo=96,Updated=TO_DATE('2014-09-19 16:26:38','YYYY-MM-DD HH24:MI:SS'),UpdatedBy=100 WHERE AD_Tree_ID=50005 AND Node_ID=50052
+;
+
+-- Sep 19, 2014 4:26:38 PM VET
+-- SPS
+UPDATE AD_TreeNode SET Parent_ID=50001, SeqNo=97,Updated=TO_DATE('2014-09-19 16:26:38','YYYY-MM-DD HH24:MI:SS'),UpdatedBy=100 WHERE AD_Tree_ID=50005 AND Node_ID=50005
+;
+
+-- Sep 19, 2014 4:26:39 PM VET
+-- SPS
+UPDATE AD_TreeNode SET Parent_ID=50001, SeqNo=97,Updated=TO_DATE('2014-09-19 16:26:39','YYYY-MM-DD HH24:MI:SS'),UpdatedBy=100 WHERE AD_Tree_ID=50005 AND Node_ID=50053
+;
+
+-- Sep 19, 2014 4:26:39 PM VET
+-- SPS
+UPDATE AD_TreeNode SET Parent_ID=50001, SeqNo=98,Updated=TO_DATE('2014-09-19 16:26:39','YYYY-MM-DD HH24:MI:SS'),UpdatedBy=100 WHERE AD_Tree_ID=50005 AND Node_ID=50005
+;
+
+-- Sep 19, 2014 4:26:40 PM VET
+-- SPS
+UPDATE AD_TreeNode SET Parent_ID=50001, SeqNo=97,Updated=TO_DATE('2014-09-19 16:26:40','YYYY-MM-DD HH24:MI:SS'),UpdatedBy=100 WHERE AD_Tree_ID=50005 AND Node_ID=50064
+;
+
+-- Sep 19, 2014 4:26:40 PM VET
+-- SPS
+UPDATE AD_TreeNode SET Parent_ID=50001, SeqNo=98,Updated=TO_DATE('2014-09-19 16:26:40','YYYY-MM-DD HH24:MI:SS'),UpdatedBy=100 WHERE AD_Tree_ID=50005 AND Node_ID=50053
+;
+
+-- Sep 19, 2014 4:26:41 PM VET
+-- SPS
+UPDATE AD_TreeNode SET Parent_ID=50001, SeqNo=99,Updated=TO_DATE('2014-09-19 16:26:41','YYYY-MM-DD HH24:MI:SS'),UpdatedBy=100 WHERE AD_Tree_ID=50005 AND Node_ID=50005
+;
+
+-- Sep 19, 2014 4:33:31 PM VET
+-- SPS
+INSERT INTO SPS_SyncMenu (AD_Client_ID,AD_Org_ID,Created,CreatedBy,EntityType,IsActive,IsSummary,Name,Processing,SPS_SyncMenu_ID,SPS_Table_ID,Updated,UpdatedBy,WS_WebService_ID) VALUES (0,0,TO_DATE('2014-09-19 16:33:21','YYYY-MM-DD HH24:MI:SS'),100,'ECA01','Y','N','Create Web Service Definition Client','N',50104,50098,TO_DATE('2014-09-19 16:33:21','YYYY-MM-DD HH24:MI:SS'),100,50006)
+;
+
+-- Sep 19, 2014 4:33:31 PM VET
+-- SPS
+INSERT INTO SPS_SyncMenu_Trl (AD_Language,SPS_SyncMenu_ID, Description,Name, IsTranslated,AD_Client_ID,AD_Org_ID,Created,Createdby,Updated,UpdatedBy) SELECT l.AD_Language,t.SPS_SyncMenu_ID, t.Description,t.Name, 'N',t.AD_Client_ID,t.AD_Org_ID,t.Created,t.Createdby,t.Updated,t.UpdatedBy FROM AD_Language l, SPS_SyncMenu t WHERE l.IsActive='Y' AND l.IsSystemLanguage='Y' AND l.IsBaseLanguage='N' AND t.SPS_SyncMenu_ID=50104 AND NOT EXISTS (SELECT * FROM SPS_SyncMenu_Trl tt WHERE tt.AD_Language=l.AD_Language AND tt.SPS_SyncMenu_ID=t.SPS_SyncMenu_ID)
+;
+
+-- Sep 19, 2014 4:33:31 PM VET
+-- SPS
+INSERT INTO AD_TreeNode (AD_Client_ID,AD_Org_ID, IsActive,Created,CreatedBy,Updated,UpdatedBy, AD_Tree_ID, Node_ID, Parent_ID, SeqNo) SELECT t.AD_Client_ID,0, 'Y', SysDate, 0, SysDate, 0,t.AD_Tree_ID, 50104, 0, 999 FROM AD_Tree t WHERE t.AD_Client_ID=0 AND t.IsActive='Y' AND t.IsAllNodes='Y' AND t.AD_Table_ID=53501 AND NOT EXISTS (SELECT * FROM AD_TreeNode e WHERE e.AD_Tree_ID=t.AD_Tree_ID AND Node_ID=50104)
+;
+
+-- Sep 19, 2014 4:35:44 PM VET
+-- SPS
+INSERT INTO WS_WebServiceType (AD_Client_ID,AD_Org_ID,AD_Table_ID,Created,CreatedBy,IsActive,Name,Updated,UpdatedBy,Value,WS_WebService_ID,WS_WebServiceMethod_ID,WS_WebServiceType_ID) VALUES (0,0,112,TO_DATE('2014-09-19 16:35:42','YYYY-MM-DD HH24:MI:SS'),100,'Y','Create Web Service Definition Client',TO_DATE('2014-09-19 16:35:42','YYYY-MM-DD HH24:MI:SS'),100,'Create Web Service Definition Client',50006,50047,50147)
+;
+
+-- Sep 19, 2014 4:35:45 PM VET
+-- SPS
+INSERT INTO WS_WebService_Para (AD_Client_ID,AD_Org_ID,ConstantValue,Created,CreatedBy,IsActive,ParameterName,ParameterType,Updated,UpdatedBy,WS_WebService_Para_ID,WS_WebServiceType_ID) VALUES (0,0,'Create',TO_DATE('2014-09-19 16:35:44','YYYY-MM-DD HH24:MI:SS'),100,'Y','Action','C',TO_DATE('2014-09-19 16:35:44','YYYY-MM-DD HH24:MI:SS'),100,50239,50147)
+;
+
+-- Sep 19, 2014 4:35:46 PM VET
+-- SPS
+INSERT INTO WS_WebServiceFieldOutput (AD_Client_ID,AD_Column_ID,AD_Org_ID,Created,CreatedBy,IsActive,Updated,UpdatedBy,WS_WebServiceFieldOutput_ID,WS_WebServiceType_ID) VALUES (0,207,0,TO_DATE('2014-09-19 16:35:45','YYYY-MM-DD HH24:MI:SS'),100,'Y',TO_DATE('2014-09-19 16:35:45','YYYY-MM-DD HH24:MI:SS'),100,50075,50147)
+;
+
+-- Sep 19, 2014 4:35:47 PM VET
+-- SPS
+INSERT INTO WS_WebServiceFieldOutput (AD_Client_ID,AD_Column_ID,AD_Org_ID,Created,CreatedBy,IsActive,Updated,UpdatedBy,WS_WebServiceFieldOutput_ID,WS_WebServiceType_ID) VALUES (0,6556,0,TO_DATE('2014-09-19 16:35:46','YYYY-MM-DD HH24:MI:SS'),100,'Y',TO_DATE('2014-09-19 16:35:46','YYYY-MM-DD HH24:MI:SS'),100,50076,50147)
+;
+
+-- Sep 19, 2014 4:35:48 PM VET
+-- SPS
+INSERT INTO WS_WebServiceFieldOutput (AD_Client_ID,AD_Column_ID,AD_Org_ID,Created,CreatedBy,IsActive,Updated,UpdatedBy,WS_WebServiceFieldOutput_ID,WS_WebServiceType_ID) VALUES (0,414,0,TO_DATE('2014-09-19 16:35:47','YYYY-MM-DD HH24:MI:SS'),100,'Y',TO_DATE('2014-09-19 16:35:47','YYYY-MM-DD HH24:MI:SS'),100,50077,50147)
+;
+
+-- Sep 19, 2014 4:35:49 PM VET
+-- SPS
+INSERT INTO WS_WebServiceFieldOutput (AD_Client_ID,AD_Column_ID,AD_Org_ID,Created,CreatedBy,IsActive,Updated,UpdatedBy,WS_WebServiceFieldOutput_ID,WS_WebServiceType_ID) VALUES (0,54635,0,TO_DATE('2014-09-19 16:35:48','YYYY-MM-DD HH24:MI:SS'),100,'Y',TO_DATE('2014-09-19 16:35:48','YYYY-MM-DD HH24:MI:SS'),100,50078,50147)
+;
+
+-- Sep 19, 2014 4:35:50 PM VET
+-- SPS
+INSERT INTO WS_WebServiceFieldOutput (AD_Client_ID,AD_Column_ID,AD_Org_ID,Created,CreatedBy,IsActive,Updated,UpdatedBy,WS_WebServiceFieldOutput_ID,WS_WebServiceType_ID) VALUES (0,13074,0,TO_DATE('2014-09-19 16:35:49','YYYY-MM-DD HH24:MI:SS'),100,'Y',TO_DATE('2014-09-19 16:35:49','YYYY-MM-DD HH24:MI:SS'),100,50079,50147)
+;
+
+-- Sep 19, 2014 4:35:51 PM VET
+-- SPS
+INSERT INTO WS_WebServiceFieldOutput (AD_Client_ID,AD_Column_ID,AD_Org_ID,Created,CreatedBy,IsActive,Updated,UpdatedBy,WS_WebServiceFieldOutput_ID,WS_WebServiceType_ID) VALUES (0,618,0,TO_DATE('2014-09-19 16:35:50','YYYY-MM-DD HH24:MI:SS'),100,'Y',TO_DATE('2014-09-19 16:35:50','YYYY-MM-DD HH24:MI:SS'),100,50080,50147)
+;
+
+-- Sep 19, 2014 4:35:52 PM VET
+-- SPS
+INSERT INTO WS_WebServiceFieldOutput (AD_Client_ID,AD_Column_ID,AD_Org_ID,Created,CreatedBy,IsActive,Updated,UpdatedBy,WS_WebServiceFieldOutput_ID,WS_WebServiceType_ID) VALUES (0,619,0,TO_DATE('2014-09-19 16:35:51','YYYY-MM-DD HH24:MI:SS'),100,'Y',TO_DATE('2014-09-19 16:35:51','YYYY-MM-DD HH24:MI:SS'),100,50081,50147)
+;
+
+-- Sep 19, 2014 4:35:53 PM VET
+-- SPS
+INSERT INTO WS_WebServiceFieldOutput (AD_Client_ID,AD_Column_ID,AD_Org_ID,Created,CreatedBy,IsActive,Updated,UpdatedBy,WS_WebServiceFieldOutput_ID,WS_WebServiceType_ID) VALUES (0,209,0,TO_DATE('2014-09-19 16:35:52','YYYY-MM-DD HH24:MI:SS'),100,'Y',TO_DATE('2014-09-19 16:35:52','YYYY-MM-DD HH24:MI:SS'),100,50082,50147)
+;
+
+-- Sep 19, 2014 4:35:55 PM VET
+-- SPS
+INSERT INTO WS_WebServiceFieldOutput (AD_Client_ID,AD_Column_ID,AD_Org_ID,Created,CreatedBy,IsActive,Updated,UpdatedBy,WS_WebServiceFieldOutput_ID,WS_WebServiceType_ID) VALUES (0,14088,0,TO_DATE('2014-09-19 16:35:53','YYYY-MM-DD HH24:MI:SS'),100,'Y',TO_DATE('2014-09-19 16:35:53','YYYY-MM-DD HH24:MI:SS'),100,50083,50147)
+;
+
+-- Sep 19, 2014 4:35:55 PM VET
+-- SPS
+INSERT INTO WS_WebServiceFieldOutput (AD_Client_ID,AD_Column_ID,AD_Org_ID,Created,CreatedBy,IsActive,Updated,UpdatedBy,WS_WebServiceFieldOutput_ID,WS_WebServiceType_ID) VALUES (0,14083,0,TO_DATE('2014-09-19 16:35:55','YYYY-MM-DD HH24:MI:SS'),100,'Y',TO_DATE('2014-09-19 16:35:55','YYYY-MM-DD HH24:MI:SS'),100,50084,50147)
+;
+
+-- Sep 19, 2014 4:35:56 PM VET
+-- SPS
+INSERT INTO WS_WebServiceFieldOutput (AD_Client_ID,AD_Column_ID,AD_Org_ID,Created,CreatedBy,IsActive,Updated,UpdatedBy,WS_WebServiceFieldOutput_ID,WS_WebServiceType_ID) VALUES (0,617,0,TO_DATE('2014-09-19 16:35:55','YYYY-MM-DD HH24:MI:SS'),100,'Y',TO_DATE('2014-09-19 16:35:55','YYYY-MM-DD HH24:MI:SS'),100,50085,50147)
+;
+
+-- Sep 19, 2014 4:35:57 PM VET
+-- SPS
+INSERT INTO WS_WebServiceFieldOutput (AD_Client_ID,AD_Column_ID,AD_Org_ID,Created,CreatedBy,IsActive,Updated,UpdatedBy,WS_WebServiceFieldOutput_ID,WS_WebServiceType_ID) VALUES (0,14403,0,TO_DATE('2014-09-19 16:35:56','YYYY-MM-DD HH24:MI:SS'),100,'Y',TO_DATE('2014-09-19 16:35:56','YYYY-MM-DD HH24:MI:SS'),100,50086,50147)
+;
+
+-- Sep 19, 2014 4:35:58 PM VET
+-- SPS
+INSERT INTO WS_WebServiceFieldOutput (AD_Client_ID,AD_Column_ID,AD_Org_ID,Created,CreatedBy,IsActive,Updated,UpdatedBy,WS_WebServiceFieldOutput_ID,WS_WebServiceType_ID) VALUES (0,7567,0,TO_DATE('2014-09-19 16:35:57','YYYY-MM-DD HH24:MI:SS'),100,'Y',TO_DATE('2014-09-19 16:35:57','YYYY-MM-DD HH24:MI:SS'),100,50087,50147)
+;
+
+-- Sep 19, 2014 4:35:59 PM VET
+-- SPS
+INSERT INTO WS_WebServiceFieldOutput (AD_Client_ID,AD_Column_ID,AD_Org_ID,Created,CreatedBy,IsActive,Updated,UpdatedBy,WS_WebServiceFieldOutput_ID,WS_WebServiceType_ID) VALUES (0,14402,0,TO_DATE('2014-09-19 16:35:58','YYYY-MM-DD HH24:MI:SS'),100,'Y',TO_DATE('2014-09-19 16:35:58','YYYY-MM-DD HH24:MI:SS'),100,50088,50147)
+;
+
+-- Sep 19, 2014 4:36:00 PM VET
+-- SPS
+INSERT INTO WS_WebServiceFieldOutput (AD_Client_ID,AD_Column_ID,AD_Org_ID,Created,CreatedBy,IsActive,Updated,UpdatedBy,WS_WebServiceFieldOutput_ID,WS_WebServiceType_ID) VALUES (0,14085,0,TO_DATE('2014-09-19 16:35:59','YYYY-MM-DD HH24:MI:SS'),100,'Y',TO_DATE('2014-09-19 16:35:59','YYYY-MM-DD HH24:MI:SS'),100,50089,50147)
+;
+
+-- Sep 19, 2014 4:36:01 PM VET
+-- SPS
+INSERT INTO WS_WebServiceFieldOutput (AD_Client_ID,AD_Column_ID,AD_Org_ID,Created,CreatedBy,IsActive,Updated,UpdatedBy,WS_WebServiceFieldOutput_ID,WS_WebServiceType_ID) VALUES (0,7792,0,TO_DATE('2014-09-19 16:36:00','YYYY-MM-DD HH24:MI:SS'),100,'Y',TO_DATE('2014-09-19 16:36:00','YYYY-MM-DD HH24:MI:SS'),100,50090,50147)
+;
+
+-- Sep 19, 2014 4:36:02 PM VET
+-- SPS
+INSERT INTO WS_WebServiceFieldOutput (AD_Client_ID,AD_Column_ID,AD_Org_ID,Created,CreatedBy,IsActive,Updated,UpdatedBy,WS_WebServiceFieldOutput_ID,WS_WebServiceType_ID) VALUES (0,54095,0,TO_DATE('2014-09-19 16:36:01','YYYY-MM-DD HH24:MI:SS'),100,'Y',TO_DATE('2014-09-19 16:36:01','YYYY-MM-DD HH24:MI:SS'),100,50091,50147)
+;
+
+-- Sep 19, 2014 4:36:02 PM VET
+-- SPS
+INSERT INTO WS_WebServiceFieldOutput (AD_Client_ID,AD_Column_ID,AD_Org_ID,Created,CreatedBy,IsActive,Updated,UpdatedBy,WS_WebServiceFieldOutput_ID,WS_WebServiceType_ID) VALUES (0,12058,0,TO_DATE('2014-09-19 16:36:02','YYYY-MM-DD HH24:MI:SS'),100,'Y',TO_DATE('2014-09-19 16:36:02','YYYY-MM-DD HH24:MI:SS'),100,50092,50147)
+;
+
+-- Sep 19, 2014 4:36:03 PM VET
+-- SPS
+INSERT INTO WS_WebServiceFieldOutput (AD_Client_ID,AD_Column_ID,AD_Org_ID,Created,CreatedBy,IsActive,Updated,UpdatedBy,WS_WebServiceFieldOutput_ID,WS_WebServiceType_ID) VALUES (0,13246,0,TO_DATE('2014-09-19 16:36:02','YYYY-MM-DD HH24:MI:SS'),100,'Y',TO_DATE('2014-09-19 16:36:02','YYYY-MM-DD HH24:MI:SS'),100,50093,50147)
+;
+
+-- Sep 19, 2014 4:36:04 PM VET
+-- SPS
+INSERT INTO WS_WebServiceFieldOutput (AD_Client_ID,AD_Column_ID,AD_Org_ID,Created,CreatedBy,IsActive,Updated,UpdatedBy,WS_WebServiceFieldOutput_ID,WS_WebServiceType_ID) VALUES (0,13058,0,TO_DATE('2014-09-19 16:36:03','YYYY-MM-DD HH24:MI:SS'),100,'Y',TO_DATE('2014-09-19 16:36:03','YYYY-MM-DD HH24:MI:SS'),100,50094,50147)
+;
+
+-- Sep 19, 2014 4:36:05 PM VET
+-- SPS
+INSERT INTO WS_WebServiceFieldOutput (AD_Client_ID,AD_Column_ID,AD_Org_ID,Created,CreatedBy,IsActive,Updated,UpdatedBy,WS_WebServiceFieldOutput_ID,WS_WebServiceType_ID) VALUES (0,208,0,TO_DATE('2014-09-19 16:36:04','YYYY-MM-DD HH24:MI:SS'),100,'Y',TO_DATE('2014-09-19 16:36:04','YYYY-MM-DD HH24:MI:SS'),100,50095,50147)
+;
+
+-- Sep 19, 2014 4:36:06 PM VET
+-- SPS
+INSERT INTO WS_WebServiceFieldOutput (AD_Client_ID,AD_Column_ID,AD_Org_ID,Created,CreatedBy,IsActive,Updated,UpdatedBy,WS_WebServiceFieldOutput_ID,WS_WebServiceType_ID) VALUES (0,6557,0,TO_DATE('2014-09-19 16:36:05','YYYY-MM-DD HH24:MI:SS'),100,'Y',TO_DATE('2014-09-19 16:36:05','YYYY-MM-DD HH24:MI:SS'),100,50096,50147)
+;
+
+-- Sep 19, 2014 4:36:06 PM VET
+-- SPS
+INSERT INTO WS_WebServiceFieldOutput (AD_Client_ID,AD_Column_ID,AD_Org_ID,Created,CreatedBy,IsActive,Updated,UpdatedBy,WS_WebServiceFieldOutput_ID,WS_WebServiceType_ID) VALUES (0,6558,0,TO_DATE('2014-09-19 16:36:06','YYYY-MM-DD HH24:MI:SS'),100,'Y',TO_DATE('2014-09-19 16:36:06','YYYY-MM-DD HH24:MI:SS'),100,50097,50147)
+;
+
+-- Sep 19, 2014 4:36:07 PM VET
+-- SPS
+INSERT INTO WS_WebServiceFieldOutput (AD_Client_ID,AD_Column_ID,AD_Org_ID,Created,CreatedBy,IsActive,Updated,UpdatedBy,WS_WebServiceFieldOutput_ID,WS_WebServiceType_ID) VALUES (0,6559,0,TO_DATE('2014-09-19 16:36:06','YYYY-MM-DD HH24:MI:SS'),100,'Y',TO_DATE('2014-09-19 16:36:06','YYYY-MM-DD HH24:MI:SS'),100,50098,50147)
+;
+
+-- Sep 19, 2014 4:36:08 PM VET
+-- SPS
+INSERT INTO WS_WebServiceFieldOutput (AD_Client_ID,AD_Column_ID,AD_Org_ID,Created,CreatedBy,IsActive,Updated,UpdatedBy,WS_WebServiceFieldOutput_ID,WS_WebServiceType_ID) VALUES (0,6560,0,TO_DATE('2014-09-19 16:36:07','YYYY-MM-DD HH24:MI:SS'),100,'Y',TO_DATE('2014-09-19 16:36:07','YYYY-MM-DD HH24:MI:SS'),100,50099,50147)
+;
+
+-- Sep 19, 2014 4:36:09 PM VET
+-- SPS
+INSERT INTO WS_WebServiceFieldOutput (AD_Client_ID,AD_Column_ID,AD_Org_ID,Created,CreatedBy,IsActive,Updated,UpdatedBy,WS_WebServiceFieldOutput_ID,WS_WebServiceType_ID) VALUES (0,4771,0,TO_DATE('2014-09-19 16:36:08','YYYY-MM-DD HH24:MI:SS'),100,'Y',TO_DATE('2014-09-19 16:36:08','YYYY-MM-DD HH24:MI:SS'),100,50100,50147)
+;
+
+-- Sep 19, 2014 4:36:10 PM VET
+-- SPS
+INSERT INTO WS_WebServiceFieldOutput (AD_Client_ID,AD_Column_ID,AD_Org_ID,Created,CreatedBy,IsActive,Updated,UpdatedBy,WS_WebServiceFieldOutput_ID,WS_WebServiceType_ID) VALUES (0,50214,0,TO_DATE('2014-09-19 16:36:09','YYYY-MM-DD HH24:MI:SS'),100,'Y',TO_DATE('2014-09-19 16:36:09','YYYY-MM-DD HH24:MI:SS'),100,50101,50147)
+;
+
+-- Sep 19, 2014 4:36:11 PM VET
+-- SPS
+INSERT INTO WS_WebServiceFieldOutput (AD_Client_ID,AD_Column_ID,AD_Org_ID,Created,CreatedBy,IsActive,Updated,UpdatedBy,WS_WebServiceFieldOutput_ID,WS_WebServiceType_ID) VALUES (0,50184,0,TO_DATE('2014-09-19 16:36:10','YYYY-MM-DD HH24:MI:SS'),100,'Y',TO_DATE('2014-09-19 16:36:10','YYYY-MM-DD HH24:MI:SS'),100,50102,50147)
+;
+
+-- Sep 19, 2014 4:36:12 PM VET
+-- SPS
+INSERT INTO WS_WebServiceFieldOutput (AD_Client_ID,AD_Column_ID,AD_Org_ID,Created,CreatedBy,IsActive,Updated,UpdatedBy,WS_WebServiceFieldOutput_ID,WS_WebServiceType_ID) VALUES (0,50216,0,TO_DATE('2014-09-19 16:36:11','YYYY-MM-DD HH24:MI:SS'),100,'Y',TO_DATE('2014-09-19 16:36:11','YYYY-MM-DD HH24:MI:SS'),100,50103,50147)
+;
+
+-- Sep 19, 2014 4:36:13 PM VET
+-- SPS
+INSERT INTO WS_WebServiceFieldOutput (AD_Client_ID,AD_Column_ID,AD_Org_ID,Created,CreatedBy,IsActive,Updated,UpdatedBy,WS_WebServiceFieldOutput_ID,WS_WebServiceType_ID) VALUES (0,50186,0,TO_DATE('2014-09-19 16:36:12','YYYY-MM-DD HH24:MI:SS'),100,'Y',TO_DATE('2014-09-19 16:36:12','YYYY-MM-DD HH24:MI:SS'),100,50104,50147)
+;
+
+-- Sep 19, 2014 4:36:14 PM VET
+-- SPS
+INSERT INTO WS_WebServiceFieldOutput (AD_Client_ID,AD_Column_ID,AD_Org_ID,Created,CreatedBy,IsActive,Updated,UpdatedBy,WS_WebServiceFieldOutput_ID,WS_WebServiceType_ID) VALUES (0,620,0,TO_DATE('2014-09-19 16:36:13','YYYY-MM-DD HH24:MI:SS'),100,'Y',TO_DATE('2014-09-19 16:36:13','YYYY-MM-DD HH24:MI:SS'),100,50105,50147)
+;
+
+-- Sep 19, 2014 4:36:14 PM VET
+-- SPS
+INSERT INTO WS_WebServiceFieldOutput (AD_Client_ID,AD_Column_ID,AD_Org_ID,Created,CreatedBy,IsActive,Updated,UpdatedBy,WS_WebServiceFieldOutput_ID,WS_WebServiceType_ID) VALUES (0,621,0,TO_DATE('2014-09-19 16:36:14','YYYY-MM-DD HH24:MI:SS'),100,'Y',TO_DATE('2014-09-19 16:36:14','YYYY-MM-DD HH24:MI:SS'),100,50106,50147)
+;
+
+-- Sep 19, 2014 4:36:15 PM VET
+-- SPS
+INSERT INTO WS_WebServiceFieldOutput (AD_Client_ID,AD_Column_ID,AD_Org_ID,Created,CreatedBy,IsActive,Updated,UpdatedBy,WS_WebServiceFieldOutput_ID,WS_WebServiceType_ID) VALUES (0,4773,0,TO_DATE('2014-09-19 16:36:14','YYYY-MM-DD HH24:MI:SS'),100,'Y',TO_DATE('2014-09-19 16:36:14','YYYY-MM-DD HH24:MI:SS'),100,50107,50147)
+;
+
+-- Sep 19, 2014 4:36:16 PM VET
+-- SPS
+INSERT INTO WS_WebServiceFieldOutput (AD_Client_ID,AD_Column_ID,AD_Org_ID,Created,CreatedBy,IsActive,Updated,UpdatedBy,WS_WebServiceFieldOutput_ID,WS_WebServiceType_ID) VALUES (0,50215,0,TO_DATE('2014-09-19 16:36:15','YYYY-MM-DD HH24:MI:SS'),100,'Y',TO_DATE('2014-09-19 16:36:15','YYYY-MM-DD HH24:MI:SS'),100,50108,50147)
+;
+
+-- Sep 19, 2014 4:36:17 PM VET
+-- SPS
+INSERT INTO WS_WebServiceFieldOutput (AD_Client_ID,AD_Column_ID,AD_Org_ID,Created,CreatedBy,IsActive,Updated,UpdatedBy,WS_WebServiceFieldOutput_ID,WS_WebServiceType_ID) VALUES (0,50185,0,TO_DATE('2014-09-19 16:36:16','YYYY-MM-DD HH24:MI:SS'),100,'Y',TO_DATE('2014-09-19 16:36:16','YYYY-MM-DD HH24:MI:SS'),100,50109,50147)
+;
+
+-- Sep 19, 2014 4:36:17 PM VET
+-- SPS
+UPDATE SPS_SyncMenu SET WS_WebService_ID=50006, WS_WebServiceType_ID=50147,Updated=TO_DATE('2014-09-19 16:36:17','YYYY-MM-DD HH24:MI:SS'),UpdatedBy=100 WHERE SPS_SyncMenu_ID=50104
+;
+
+-- Sep 19, 2014 4:37:04 PM VET
+-- SPS
+UPDATE AD_TreeNode SET Parent_ID=50002, SeqNo=0,Updated=TO_DATE('2014-09-19 16:37:04','YYYY-MM-DD HH24:MI:SS'),UpdatedBy=100 WHERE AD_Tree_ID=50005 AND Node_ID=50104
+;
+
+-- Sep 19, 2014 4:41:26 PM VET
+-- SPS
+INSERT INTO SPS_SyncMenu (AD_Client_ID,AD_Org_ID,Created,CreatedBy,EntityType,IsActive,IsSummary,Name,Processing,SPS_SyncMenu_ID,SPS_Table_ID,Updated,UpdatedBy,WS_WebService_ID) VALUES (0,0,TO_DATE('2014-09-19 16:41:25','YYYY-MM-DD HH24:MI:SS'),100,'ECA01','Y','N','Create Web Service Definition Organization','N',50105,50099,TO_DATE('2014-09-19 16:41:25','YYYY-MM-DD HH24:MI:SS'),100,50006)
+;
+
+-- Sep 19, 2014 4:41:26 PM VET
+-- SPS
+INSERT INTO SPS_SyncMenu_Trl (AD_Language,SPS_SyncMenu_ID, Description,Name, IsTranslated,AD_Client_ID,AD_Org_ID,Created,Createdby,Updated,UpdatedBy) SELECT l.AD_Language,t.SPS_SyncMenu_ID, t.Description,t.Name, 'N',t.AD_Client_ID,t.AD_Org_ID,t.Created,t.Createdby,t.Updated,t.UpdatedBy FROM AD_Language l, SPS_SyncMenu t WHERE l.IsActive='Y' AND l.IsSystemLanguage='Y' AND l.IsBaseLanguage='N' AND t.SPS_SyncMenu_ID=50105 AND NOT EXISTS (SELECT * FROM SPS_SyncMenu_Trl tt WHERE tt.AD_Language=l.AD_Language AND tt.SPS_SyncMenu_ID=t.SPS_SyncMenu_ID)
+;
+
+-- Sep 19, 2014 4:41:26 PM VET
+-- SPS
+INSERT INTO AD_TreeNode (AD_Client_ID,AD_Org_ID, IsActive,Created,CreatedBy,Updated,UpdatedBy, AD_Tree_ID, Node_ID, Parent_ID, SeqNo) SELECT t.AD_Client_ID,0, 'Y', SysDate, 0, SysDate, 0,t.AD_Tree_ID, 50105, 0, 999 FROM AD_Tree t WHERE t.AD_Client_ID=0 AND t.IsActive='Y' AND t.IsAllNodes='Y' AND t.AD_Table_ID=53501 AND NOT EXISTS (SELECT * FROM AD_TreeNode e WHERE e.AD_Tree_ID=t.AD_Tree_ID AND Node_ID=50105)
+;
+
+-- Sep 19, 2014 4:41:49 PM VET
+-- SPS
+INSERT INTO WS_WebServiceType (AD_Client_ID,AD_Org_ID,AD_Table_ID,Created,CreatedBy,IsActive,Name,Updated,UpdatedBy,Value,WS_WebService_ID,WS_WebServiceMethod_ID,WS_WebServiceType_ID) VALUES (0,0,155,TO_DATE('2014-09-19 16:41:45','YYYY-MM-DD HH24:MI:SS'),100,'Y','Create Web Service Definition Organization',TO_DATE('2014-09-19 16:41:45','YYYY-MM-DD HH24:MI:SS'),100,'Create Web Service Definition Organizati',50006,50047,50148)
+;
+
+-- Sep 19, 2014 4:41:50 PM VET
+-- SPS
+INSERT INTO WS_WebService_Para (AD_Client_ID,AD_Org_ID,ConstantValue,Created,CreatedBy,IsActive,ParameterName,ParameterType,Updated,UpdatedBy,WS_WebService_Para_ID,WS_WebServiceType_ID) VALUES (0,0,'Create',TO_DATE('2014-09-19 16:41:49','YYYY-MM-DD HH24:MI:SS'),100,'Y','Action','C',TO_DATE('2014-09-19 16:41:49','YYYY-MM-DD HH24:MI:SS'),100,50240,50148)
+;
+
+-- Sep 19, 2014 4:41:51 PM VET
+-- SPS
+INSERT INTO WS_WebServiceFieldOutput (AD_Client_ID,AD_Column_ID,AD_Org_ID,Created,CreatedBy,IsActive,Updated,UpdatedBy,WS_WebServiceFieldOutput_ID,WS_WebServiceType_ID) VALUES (0,527,0,TO_DATE('2014-09-19 16:41:50','YYYY-MM-DD HH24:MI:SS'),100,'Y',TO_DATE('2014-09-19 16:41:50','YYYY-MM-DD HH24:MI:SS'),100,50110,50148)
+;
+
+-- Sep 19, 2014 4:41:52 PM VET
+-- SPS
+INSERT INTO WS_WebServiceFieldOutput (AD_Client_ID,AD_Column_ID,AD_Org_ID,Created,CreatedBy,IsActive,Updated,UpdatedBy,WS_WebServiceFieldOutput_ID,WS_WebServiceType_ID) VALUES (0,528,0,TO_DATE('2014-09-19 16:41:51','YYYY-MM-DD HH24:MI:SS'),100,'Y',TO_DATE('2014-09-19 16:41:51','YYYY-MM-DD HH24:MI:SS'),100,50111,50148)
+;
+
+-- Sep 19, 2014 4:41:52 PM VET
+-- SPS
+INSERT INTO WS_WebServiceFieldOutput (AD_Client_ID,AD_Column_ID,AD_Org_ID,Created,CreatedBy,IsActive,Updated,UpdatedBy,WS_WebServiceFieldOutput_ID,WS_WebServiceType_ID) VALUES (0,57227,0,TO_DATE('2014-09-19 16:41:52','YYYY-MM-DD HH24:MI:SS'),100,'Y',TO_DATE('2014-09-19 16:41:52','YYYY-MM-DD HH24:MI:SS'),100,50112,50148)
+;
+
+-- Sep 19, 2014 4:41:53 PM VET
+-- SPS
+INSERT INTO WS_WebServiceFieldOutput (AD_Client_ID,AD_Column_ID,AD_Org_ID,Created,CreatedBy,IsActive,Updated,UpdatedBy,WS_WebServiceFieldOutput_ID,WS_WebServiceType_ID) VALUES (0,712,0,TO_DATE('2014-09-19 16:41:52','YYYY-MM-DD HH24:MI:SS'),100,'Y',TO_DATE('2014-09-19 16:41:52','YYYY-MM-DD HH24:MI:SS'),100,50113,50148)
+;
+
+-- Sep 19, 2014 4:41:54 PM VET
+-- SPS
+INSERT INTO WS_WebServiceFieldOutput (AD_Client_ID,AD_Column_ID,AD_Org_ID,Created,CreatedBy,IsActive,Updated,UpdatedBy,WS_WebServiceFieldOutput_ID,WS_WebServiceType_ID) VALUES (0,713,0,TO_DATE('2014-09-19 16:41:53','YYYY-MM-DD HH24:MI:SS'),100,'Y',TO_DATE('2014-09-19 16:41:53','YYYY-MM-DD HH24:MI:SS'),100,50114,50148)
+;
+
+-- Sep 19, 2014 4:41:55 PM VET
+-- SPS
+INSERT INTO WS_WebServiceFieldOutput (AD_Client_ID,AD_Column_ID,AD_Org_ID,Created,CreatedBy,IsActive,Updated,UpdatedBy,WS_WebServiceFieldOutput_ID,WS_WebServiceType_ID) VALUES (0,523,0,TO_DATE('2014-09-19 16:41:54','YYYY-MM-DD HH24:MI:SS'),100,'Y',TO_DATE('2014-09-19 16:41:54','YYYY-MM-DD HH24:MI:SS'),100,50115,50148)
+;
+
+-- Sep 19, 2014 4:41:56 PM VET
+-- SPS
+INSERT INTO WS_WebServiceFieldOutput (AD_Client_ID,AD_Column_ID,AD_Org_ID,Created,CreatedBy,IsActive,Updated,UpdatedBy,WS_WebServiceFieldOutput_ID,WS_WebServiceType_ID) VALUES (0,711,0,TO_DATE('2014-09-19 16:41:55','YYYY-MM-DD HH24:MI:SS'),100,'Y',TO_DATE('2014-09-19 16:41:55','YYYY-MM-DD HH24:MI:SS'),100,50116,50148)
+;
+
+-- Sep 19, 2014 4:41:57 PM VET
+-- SPS
+INSERT INTO WS_WebServiceFieldOutput (AD_Client_ID,AD_Column_ID,AD_Org_ID,Created,CreatedBy,IsActive,Updated,UpdatedBy,WS_WebServiceFieldOutput_ID,WS_WebServiceType_ID) VALUES (0,2752,0,TO_DATE('2014-09-19 16:41:56','YYYY-MM-DD HH24:MI:SS'),100,'Y',TO_DATE('2014-09-19 16:41:56','YYYY-MM-DD HH24:MI:SS'),100,50117,50148)
+;
+
+-- Sep 19, 2014 4:41:58 PM VET
+-- SPS
+INSERT INTO WS_WebServiceFieldOutput (AD_Client_ID,AD_Column_ID,AD_Org_ID,Created,CreatedBy,IsActive,Updated,UpdatedBy,WS_WebServiceFieldOutput_ID,WS_WebServiceType_ID) VALUES (0,522,0,TO_DATE('2014-09-19 16:41:57','YYYY-MM-DD HH24:MI:SS'),100,'Y',TO_DATE('2014-09-19 16:41:57','YYYY-MM-DD HH24:MI:SS'),100,50118,50148)
+;
+
+-- Sep 19, 2014 4:41:58 PM VET
+-- SPS
+INSERT INTO WS_WebServiceFieldOutput (AD_Client_ID,AD_Column_ID,AD_Org_ID,Created,CreatedBy,IsActive,Updated,UpdatedBy,WS_WebServiceFieldOutput_ID,WS_WebServiceType_ID) VALUES (0,714,0,TO_DATE('2014-09-19 16:41:58','YYYY-MM-DD HH24:MI:SS'),100,'Y',TO_DATE('2014-09-19 16:41:58','YYYY-MM-DD HH24:MI:SS'),100,50119,50148)
+;
+
+-- Sep 19, 2014 4:41:59 PM VET
+-- SPS
+INSERT INTO WS_WebServiceFieldOutput (AD_Client_ID,AD_Column_ID,AD_Org_ID,Created,CreatedBy,IsActive,Updated,UpdatedBy,WS_WebServiceFieldOutput_ID,WS_WebServiceType_ID) VALUES (0,715,0,TO_DATE('2014-09-19 16:41:58','YYYY-MM-DD HH24:MI:SS'),100,'Y',TO_DATE('2014-09-19 16:41:58','YYYY-MM-DD HH24:MI:SS'),100,50120,50148)
+;
+
+-- Sep 19, 2014 4:42:03 PM VET
+-- SPS
+INSERT INTO WS_WebServiceFieldOutput (AD_Client_ID,AD_Column_ID,AD_Org_ID,Created,CreatedBy,IsActive,Updated,UpdatedBy,WS_WebServiceFieldOutput_ID,WS_WebServiceType_ID) VALUES (0,2045,0,TO_DATE('2014-09-19 16:41:59','YYYY-MM-DD HH24:MI:SS'),100,'Y',TO_DATE('2014-09-19 16:41:59','YYYY-MM-DD HH24:MI:SS'),100,50121,50148)
+;
+
+-- Sep 19, 2014 4:42:03 PM VET
+-- SPS
+UPDATE SPS_SyncMenu SET WS_WebService_ID=50006, WS_WebServiceType_ID=50148,Updated=TO_DATE('2014-09-19 16:42:03','YYYY-MM-DD HH24:MI:SS'),UpdatedBy=100 WHERE SPS_SyncMenu_ID=50105
+;
+
+-- Sep 19, 2014 4:42:15 PM VET
+-- SPS
+UPDATE AD_TreeNode SET Parent_ID=50002, SeqNo=0,Updated=TO_DATE('2014-09-19 16:42:15','YYYY-MM-DD HH24:MI:SS'),UpdatedBy=100 WHERE AD_Tree_ID=50005 AND Node_ID=50105
+;
+
+-- Sep 19, 2014 4:42:16 PM VET
+-- SPS
+UPDATE AD_TreeNode SET Parent_ID=50002, SeqNo=1,Updated=TO_DATE('2014-09-19 16:42:16','YYYY-MM-DD HH24:MI:SS'),UpdatedBy=100 WHERE AD_Tree_ID=50005 AND Node_ID=50104
+;
+
