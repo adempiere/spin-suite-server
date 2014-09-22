@@ -75,6 +75,7 @@ public class CalloutSPSTable extends CalloutEngine {
 			return "";
 		Integer m_Column_ID = (Integer) value;
 		MColumn mColumn = new MColumn(ctx, m_Column_ID, null);
+		mTab.setValue("AD_Element_ID", mColumn.getAD_Element_ID());
 		mTab.setValue("ColumnName", mColumn.getColumnName());
 		mTab.setValue("ColumnSQL", mColumn.getColumnSQL());
 		mTab.setValue("Description", mColumn.getDescription());
