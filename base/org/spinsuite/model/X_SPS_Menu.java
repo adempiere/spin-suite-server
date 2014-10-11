@@ -31,7 +31,7 @@ public class X_SPS_Menu extends PO implements I_SPS_Menu, I_Persistent
 	/**
 	 *
 	 */
-	private static final long serialVersionUID = 20140829L;
+	private static final long serialVersionUID = 20140927L;
 
     /** Standard Constructor */
     public X_SPS_Menu (Properties ctx, int SPS_Menu_ID, String trxName)
@@ -317,52 +317,52 @@ public class X_SPS_Menu extends PO implements I_SPS_Menu, I_Persistent
 		return false;
 	}
 
+	/** IsInsertRecord AD_Reference_ID=319 */
+	public static final int ISINSERTRECORD_AD_Reference_ID=319;
+	/** Yes = Y */
+	public static final String ISINSERTRECORD_Yes = "Y";
+	/** No = N */
+	public static final String ISINSERTRECORD_No = "N";
 	/** Set Insert Record.
 		@param IsInsertRecord 
 		The user can insert a new Record
 	  */
-	public void setIsInsertRecord (boolean IsInsertRecord)
+	public void setIsInsertRecord (String IsInsertRecord)
 	{
-		set_Value (COLUMNNAME_IsInsertRecord, Boolean.valueOf(IsInsertRecord));
+
+		set_Value (COLUMNNAME_IsInsertRecord, IsInsertRecord);
 	}
 
 	/** Get Insert Record.
 		@return The user can insert a new Record
 	  */
-	public boolean isInsertRecord () 
+	public String getIsInsertRecord () 
 	{
-		Object oo = get_Value(COLUMNNAME_IsInsertRecord);
-		if (oo != null) 
-		{
-			 if (oo instanceof Boolean) 
-				 return ((Boolean)oo).booleanValue(); 
-			return "Y".equals(oo);
-		}
-		return false;
+		return (String)get_Value(COLUMNNAME_IsInsertRecord);
 	}
 
+	/** IsReadWrite AD_Reference_ID=319 */
+	public static final int ISREADWRITE_AD_Reference_ID=319;
+	/** Yes = Y */
+	public static final String ISREADWRITE_Yes = "Y";
+	/** No = N */
+	public static final String ISREADWRITE_No = "N";
 	/** Set Read Write.
 		@param IsReadWrite 
 		Field is read / write
 	  */
-	public void setIsReadWrite (boolean IsReadWrite)
+	public void setIsReadWrite (String IsReadWrite)
 	{
-		set_Value (COLUMNNAME_IsReadWrite, Boolean.valueOf(IsReadWrite));
+
+		set_Value (COLUMNNAME_IsReadWrite, IsReadWrite);
 	}
 
 	/** Get Read Write.
 		@return Field is read / write
 	  */
-	public boolean isReadWrite () 
+	public String getIsReadWrite () 
 	{
-		Object oo = get_Value(COLUMNNAME_IsReadWrite);
-		if (oo != null) 
-		{
-			 if (oo instanceof Boolean) 
-				 return ((Boolean)oo).booleanValue(); 
-			return "Y".equals(oo);
-		}
-		return false;
+		return (String)get_Value(COLUMNNAME_IsReadWrite);
 	}
 
 	/** Set Summary Level.

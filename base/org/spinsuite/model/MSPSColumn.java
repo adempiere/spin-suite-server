@@ -284,11 +284,11 @@ public class MSPSColumn extends X_SPS_Column {
 		}
 		//
 		if (displayType == DisplayType.Integer)
-			return "NUMERIC(10)";
+			return "NUMBERIC(10)";
 		if (DisplayType.isDate(displayType))
 			return "TIMESTAMP";
 		if (DisplayType.isNumeric(displayType))
-			return "NUMERIC(" + fieldLength + ")";
+			return "NUMBER";
 		if (displayType == DisplayType.Binary)
 			return "TEXT";
 		if (displayType == DisplayType.TextLong 
@@ -305,14 +305,14 @@ public class MSPSColumn extends X_SPS_Column {
 		if (displayType == DisplayType.Color) // this condition is never reached - filtered above in isID
 		{
 			if (columnName.endsWith("_ID"))
-				return "NUMERIC(10)";
+				return "NUMBER(10)";
 			else
 				return "CHAR(" + fieldLength + ")";
 		}
 		if (displayType == DisplayType.Button)
 		{
 			if (columnName.endsWith("_ID"))
-				return "NUMERIC(10)";
+				return "NUMBERIC(10)";
 			else
 				return "CHAR(" + fieldLength + ")";
 		}

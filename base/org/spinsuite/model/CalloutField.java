@@ -30,6 +30,15 @@ public class CalloutField extends CalloutEngine
 {
 
 	/**
+	 * *** Constructor ***
+	 * @author <a href="mailto:dixon.22martinez@gmail.com">Dixon Martinez</a> 13/02/2014, 16:47:49
+	 */
+	public CalloutField()
+	{
+		// TODO Auto-generated constructor stub
+	}
+
+	/**
 	 * Set Name and Description of Sync Column
 	 * @author <a href="mailto:dixon.22martinez@gmail.com">Dixon Martinez</a> 13/02/2014, 16:51:31
 	 * @param ctx

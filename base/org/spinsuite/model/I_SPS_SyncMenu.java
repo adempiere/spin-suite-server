@@ -190,6 +190,15 @@ public interface I_SPS_SyncMenu
 	  */
 	public String getName();
 
+    /** Column name Processing */
+    public static final String COLUMNNAME_Processing = "Processing";
+
+	/** Set Process Now	  */
+	public void setProcessing (boolean Processing);
+
+	/** Get Process Now	  */
+	public boolean isProcessing();
+
     /** Column name SPS_SyncMenu_ID */
     public static final String COLUMNNAME_SPS_SyncMenu_ID = "SPS_SyncMenu_ID";
 

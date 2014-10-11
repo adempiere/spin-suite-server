@@ -31,7 +31,7 @@ public class X_SPS_Table extends PO implements I_SPS_Table, I_Persistent
 	/**
 	 *
 	 */
-	private static final long serialVersionUID = 20140829L;
+	private static final long serialVersionUID = 20140927L;
 
     /** Standard Constructor */
     public X_SPS_Table (Properties ctx, int SPS_Table_ID, String trxName)

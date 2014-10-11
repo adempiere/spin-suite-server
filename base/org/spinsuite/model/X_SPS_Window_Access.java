@@ -20,12 +20,11 @@ package org.spinsuite.model;
 import java.sql.ResultSet;
 import java.util.Properties;
 import org.compiere.model.*;
-import org.compiere.util.KeyNamePair;
 
-/** Generated Model for SPS_Window
+/** Generated Model for SPS_Window_Access
  *  @author Adempiere (generated) 
  *  @version Release 3.7.0LTS - $Id$ */
-public class X_SPS_Window extends PO implements I_SPS_Window, I_Persistent 
+public class X_SPS_Window_Access extends PO implements I_SPS_Window_Access, I_Persistent 
 {
 
 	/**
@@ -34,26 +33,25 @@ public class X_SPS_Window extends PO implements I_SPS_Window, I_Persistent
 	private static final long serialVersionUID = 20140927L;
 
     /** Standard Constructor */
-    public X_SPS_Window (Properties ctx, int SPS_Window_ID, String trxName)
+    public X_SPS_Window_Access (Properties ctx, int SPS_Window_Access_ID, String trxName)
     {
-      super (ctx, SPS_Window_ID, trxName);
-      /** if (SPS_Window_ID == 0)
+      super (ctx, SPS_Window_Access_ID, trxName);
+      /** if (SPS_Window_Access_ID == 0)
         {
-			setEntityType (null);
-// ECA01
-			setName (null);
+			setAD_Role_ID (0);
+			setIsReadWrite (false);
 			setSPS_Window_ID (0);
         } */
     }
 
     /** Load Constructor */
-    public X_SPS_Window (Properties ctx, ResultSet rs, String trxName)
+    public X_SPS_Window_Access (Properties ctx, ResultSet rs, String trxName)
     {
       super (ctx, rs, trxName);
     }
 
     /** AccessLevel
-      * @return 4 - System 
+      * @return 6 - System - Client 
       */
     protected int get_AccessLevel()
     {
@@ -69,102 +67,54 @@ public class X_SPS_Window extends PO implements I_SPS_Window, I_Persistent
 
     public String toString()
     {
-      StringBuffer sb = new StringBuffer ("X_SPS_Window[")
+      StringBuffer sb = new StringBuffer ("X_SPS_Window_Access[")
         .append(get_ID()).append("]");
       return sb.toString();
     }
 
-	/** Set Description.
-		@param Description 
-		Optional short description of the record
-	  */
-	public void setDescription (String Description)
-	{
-		set_Value (COLUMNNAME_Description, Description);
-	}
-
-	/** Get Description.
-		@return Optional short description of the record
-	  */
-	public String getDescription () 
-	{
-		return (String)get_Value(COLUMNNAME_Description);
-	}
-
-	/** EntityType AD_Reference_ID=389 */
-	public static final int ENTITYTYPE_AD_Reference_ID=389;
-	/** Set Entity Type.
-		@param EntityType 
-		Dictionary Entity Type; Determines ownership and synchronization
-	  */
-	public void setEntityType (String EntityType)
-	{
-
-		set_Value (COLUMNNAME_EntityType, EntityType);
-	}
-
-	/** Get Entity Type.
-		@return Dictionary Entity Type; Determines ownership and synchronization
-	  */
-	public String getEntityType () 
-	{
-		return (String)get_Value(COLUMNNAME_EntityType);
-	}
-
-	/** Set Comment/Help.
-		@param Help 
-		Comment or Hint
-	  */
-	public void setHelp (String Help)
-	{
-		set_Value (COLUMNNAME_Help, Help);
-	}
-
-	/** Get Comment/Help.
-		@return Comment or Hint
-	  */
-	public String getHelp () 
-	{
-		return (String)get_Value(COLUMNNAME_Help);
-	}
-
-	/** Set Name.
-		@param Name 
-		Alphanumeric identifier of the entity
-	  */
-	public void setName (String Name)
-	{
-		set_Value (COLUMNNAME_Name, Name);
-	}
-
-	/** Get Name.
-		@return Alphanumeric identifier of the entity
-	  */
-	public String getName () 
-	{
-		return (String)get_Value(COLUMNNAME_Name);
-	}
-
-    /** Get Record ID/ColumnName
-        @return ID/ColumnName pair
-      */
-    public KeyNamePair getKeyNamePair() 
+	public org.compiere.model.I_AD_Role getAD_Role() throws RuntimeException
     {
-        return new KeyNamePair(get_ID(), getName());
-    }
+		return (org.compiere.model.I_AD_Role)MTable.get(getCtx(), org.compiere.model.I_AD_Role.Table_Name)
+			.getPO(getAD_Role_ID(), get_TrxName());	}
 
-	/** Set Process Now.
-		@param Processing Process Now	  */
-	public void setProcessing (boolean Processing)
+	/** Set Role.
+		@param AD_Role_ID 
+		Responsibility Role
+	  */
+	public void setAD_Role_ID (int AD_Role_ID)
 	{
-		set_Value (COLUMNNAME_Processing, Boolean.valueOf(Processing));
+		if (AD_Role_ID < 0) 
+			set_ValueNoCheck (COLUMNNAME_AD_Role_ID, null);
+		else 
+			set_ValueNoCheck (COLUMNNAME_AD_Role_ID, Integer.valueOf(AD_Role_ID));
 	}
 
-	/** Get Process Now.
-		@return Process Now	  */
-	public boolean isProcessing () 
+	/** Get Role.
+		@return Responsibility Role
+	  */
+	public int getAD_Role_ID () 
 	{
-		Object oo = get_Value(COLUMNNAME_Processing);
+		Integer ii = (Integer)get_Value(COLUMNNAME_AD_Role_ID);
+		if (ii == null)
+			 return 0;
+		return ii.intValue();
+	}
+
+	/** Set Read Write.
+		@param IsReadWrite 
+		Field is read / write
+	  */
+	public void setIsReadWrite (boolean IsReadWrite)
+	{
+		set_Value (COLUMNNAME_IsReadWrite, Boolean.valueOf(IsReadWrite));
+	}
+
+	/** Get Read Write.
+		@return Field is read / write
+	  */
+	public boolean isReadWrite () 
+	{
+		Object oo = get_Value(COLUMNNAME_IsReadWrite);
 		if (oo != null) 
 		{
 			 if (oo instanceof Boolean) 
@@ -173,6 +123,11 @@ public class X_SPS_Window extends PO implements I_SPS_Window, I_Persistent
 		}
 		return false;
 	}
+
+	public org.spinsuite.model.I_SPS_Window getSPS_Window() throws RuntimeException
+    {
+		return (org.spinsuite.model.I_SPS_Window)MTable.get(getCtx(), org.spinsuite.model.I_SPS_Window.Table_Name)
+			.getPO(getSPS_Window_ID(), get_TrxName());	}
 
 	/** Set Window Mobile.
 		@param SPS_Window_ID Window Mobile	  */

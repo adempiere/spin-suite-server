@@ -31,7 +31,7 @@ public class X_SPS_SyncMenu extends PO implements I_SPS_SyncMenu, I_Persistent
 	/**
 	 *
 	 */
-	private static final long serialVersionUID = 20140829L;
+	private static final long serialVersionUID = 20140927L;
 
     /** Standard Constructor */
     public X_SPS_SyncMenu (Properties ctx, int SPS_SyncMenu_ID, String trxName)
@@ -242,6 +242,27 @@ public class X_SPS_SyncMenu extends PO implements I_SPS_SyncMenu, I_Persistent
     {
         return new KeyNamePair(get_ID(), getName());
     }
+
+	/** Set Process Now.
+		@param Processing Process Now	  */
+	public void setProcessing (boolean Processing)
+	{
+		set_Value (COLUMNNAME_Processing, Boolean.valueOf(Processing));
+	}
+
+	/** Get Process Now.
+		@return Process Now	  */
+	public boolean isProcessing () 
+	{
+		Object oo = get_Value(COLUMNNAME_Processing);
+		if (oo != null) 
+		{
+			 if (oo instanceof Boolean) 
+				 return ((Boolean)oo).booleanValue(); 
+			return "Y".equals(oo);
+		}
+		return false;
+	}
 
 	/** Set Sync/Option Menu.
 		@param SPS_SyncMenu_ID Sync/Option Menu	  */

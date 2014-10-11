@@ -30,7 +30,7 @@ public class X_SPS_UserDocSequence extends PO implements I_SPS_UserDocSequence, 
 	/**
 	 *
 	 */
-	private static final long serialVersionUID = 20140829L;
+	private static final long serialVersionUID = 20140927L;
 
     /** Standard Constructor */
     public X_SPS_UserDocSequence (Properties ctx, int SPS_UserDocSequence_ID, String trxName)

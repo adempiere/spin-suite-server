@@ -233,12 +233,12 @@ public interface I_SPS_Menu
 	/** Set Insert Record.
 	  * The user can insert a new Record
 	  */
-	public void setIsInsertRecord (boolean IsInsertRecord);
+	public void setIsInsertRecord (String IsInsertRecord);
 
 	/** Get Insert Record.
 	  * The user can insert a new Record
 	  */
-	public boolean isInsertRecord();
+	public String getIsInsertRecord();
 
     /** Column name IsReadWrite */
     public static final String COLUMNNAME_IsReadWrite = "IsReadWrite";
@@ -246,12 +246,12 @@ public interface I_SPS_Menu
 	/** Set Read Write.
 	  * Field is read / write
 	  */
-	public void setIsReadWrite (boolean IsReadWrite);
+	public void setIsReadWrite (String IsReadWrite);
 
 	/** Get Read Write.
 	  * Field is read / write
 	  */
-	public boolean isReadWrite();
+	public String getIsReadWrite();
 
     /** Column name IsSummary */
     public static final String COLUMNNAME_IsSummary = "IsSummary";

@@ -31,7 +31,7 @@ public class X_SPS_Column extends PO implements I_SPS_Column, I_Persistent
 	/**
 	 *
 	 */
-	private static final long serialVersionUID = 20140829L;
+	private static final long serialVersionUID = 20140927L;
 
     /** Standard Constructor */
     public X_SPS_Column (Properties ctx, int SPS_Column_ID, String trxName)
