@@ -323,8 +323,9 @@ public class ModelClassGenerator
 						isKeyNamePairCreated = true;
 					}
 					else {
-						throw new RuntimeException("More than one primary identifier found "
-								+ " (AD_Table_ID=" + SPS_Table_ID + ", ColumnName=" + columnName + ")");
+						continue;
+						//throw new RuntimeException("More than one primary identifier found "
+							//	+ " (AD_Table_ID=" + SPS_Table_ID + ", ColumnName=" + columnName + ")");
 					}
 				}
 			}
