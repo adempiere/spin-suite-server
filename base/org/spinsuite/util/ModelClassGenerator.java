@@ -162,7 +162,14 @@ public class ModelClassGenerator
 		addImportClass("android.content.Context");
 		addImportClass("android.database.Cursor");
 		addImportClass("org.spinsuite.base.DB");
-		addImportClass("java.util.Date");
+		//	Verify Colunms
+		int m_SPS_Column_ID = DB.getSQLValue(null, "SELECT SPS_Column_ID "
+				+ "FROM SPS_Column "
+				+ "WHERE AD_Reference_ID IN(15, 16) "
+				+ "AND ColumnName NOT IN('Updated', 'Created') "
+				+ "AND SPS_Table_ID = ?", SPS_Table_ID);
+		if(m_SPS_Column_ID > 0)
+			addImportClass("java.util.Date");
 		createImports(start);
 		//	Class
 		start.append("/** Generated Model for ").append(tableName).append(NL)
@@ -171,21 +178,21 @@ public class ModelClassGenerator
 			 .append("public class ").append(className)
 			 	.append(" extends PO")
 			 	.append(" implements I_").append(tableName)
-			 	.append(NL)
+			 	.append(" ")
 			 .append("{").append(NL)
 
 			 // serialVersionUID
-			 .append(NL)
-			 .append("\t/**").append(NL)
-			 .append("\t *").append(NL)
-			 .append("\t */").append(NL)
-			 .append("\tprivate static final long serialVersionUID = ")
-			 .append(String.format("%1$tY%1$tm%1$td", new Timestamp(System.currentTimeMillis())))
-		 	 .append("L;").append(NL)
+			// .append(NL)
+			 //.append("\t/**").append(NL)
+			 //.append("\t *").append(NL)
+			 //.append("\t */").append(NL)
+			 //.append("\tprivate static final long serialVersionUID = ")
+			 //.append(String.format("%1$tY%1$tm%1$td", new Timestamp(System.currentTimeMillis())))
+		 	 //.append("L;").append(NL)
 			 //.append("\tprivate static final long serialVersionUID = 1L;").append(NL)
 
 			//	Standard Constructor
-			 .append(NL)
+			 //.append(NL)
 			 .append("    /** Standard Constructor */").append(NL)
 			 .append("    public ").append(className).append(" (Context ctx, int ").append(keyColumn).append(", DB conn)").append(NL)
 			 .append("    {").append(NL)

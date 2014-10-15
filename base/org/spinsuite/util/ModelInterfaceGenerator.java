@@ -87,7 +87,7 @@ public class ModelInterfaceGenerator
 	/** File Header			*/
 	public static final String COPY = 
 		 "/******************************************************************************\n"
-		+" * Product: Adempiere ERP & CRM Smart Business Solution                       *\n"
+		+" * Product: Spin-Suite (Making your Business Spin)                            *\n"
 		+" * Copyright (C) 1999-2007 ComPiere, Inc. All Rights Reserved.                *\n"
 		+" * This program is free software, you can redistribute it and/or modify it    *\n"
 		+" * under the terms version 2 of the GNU General Public License as published   *\n"
@@ -181,8 +181,23 @@ public class ModelInterfaceGenerator
 		if (!packageName.equals("org.spinsuite.model")) {
 			addImportClass("org.spinsuite.model.*");
 		}
-		addImportClass(java.math.BigDecimal.class);
-		addImportClass("java.util.Date");
+		//	Verify Colunms
+		int m_SPS_Column_ID = DB.getSQLValue(null, "SELECT SPS_Column_ID "
+				+ "FROM SPS_Column "
+				+ "WHERE AD_Reference_ID IN(15, 16) "
+				+ "AND ColumnName NOT IN('Updated', 'Created') "
+				+ "AND SPS_Table_ID = ?", SPS_Table_ID);
+		if(m_SPS_Column_ID > 0)
+			addImportClass("java.util.Date");
+		//	Timestamp
+		m_SPS_Column_ID = DB.getSQLValue(null, "SELECT SPS_Column_ID "
+				+ "FROM SPS_Column "
+				+ "WHERE AD_Reference_ID IN(12, 22, 29, 37) "
+				+ "AND ColumnName NOT IN('Updated', 'Created') "
+				+ "AND SPS_Table_ID = ?", SPS_Table_ID);
+		if(m_SPS_Column_ID > 0)
+			addImportClass(java.math.BigDecimal.class);
+		//	
 		addImportClass("org.spinsuite.util.KeyNamePair");
 		
 		createImports(start);
@@ -526,10 +541,44 @@ public class ModelInterfaceGenerator
 		}
 		else
 		{
-			return DisplayType.getClass(displayType, true);
+			return getClass(displayType, true);
 		}
 	}
 	
+	/**
+	 *  Return Storage Class.
+	 *  (used for MiniTable)
+	 *  @param displayType Display Type
+	 *  @param yesNoAsBoolean - yes or no as boolean
+	 *  @return class Integer - BigDecimal - Timestamp - String - Boolean
+	 */
+	public static Class<?> getClass (int displayType, boolean yesNoAsBoolean) {
+		if (DisplayType.isText(displayType) || displayType == DisplayType.List)
+			return String.class;
+		else if (DisplayType.isID(displayType) || displayType == DisplayType.Integer)    //  note that Integer is stored as BD
+			return Integer.class;
+		else if (DisplayType.isNumeric(displayType))
+			return java.math.BigDecimal.class;
+		else if (DisplayType.isDate(displayType))
+			return java.util.Date.class;
+		else if (displayType == DisplayType.YesNo)
+			return yesNoAsBoolean ? Boolean.class : String.class;
+		else if (displayType == DisplayType.Button)
+			return String.class;
+		else if (DisplayType.isLOB(displayType))	//	CLOB is String
+			return byte[].class;
+		//
+		return Object.class;
+	}   //  getClass
+	
+	/**
+	 * Get Data Type
+	 * @author <a href="mailto:yamelsenih@gmail.com">Yamel Senih</a> 15/10/2014, 1:47:30
+	 * @param cl
+	 * @param displayType
+	 * @return
+	 * @return String
+	 */
 	public static String getDataTypeName(Class<?> cl, int displayType)
 	{
 		String dataType = cl.getName();
