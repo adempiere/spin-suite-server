@@ -1,0 +1,40 @@
+-- Oct 16, 2014 5:03:41 PM CEST
+-- Spin-Suite
+UPDATE SPS_Field SET IsReadOnly='N',Updated=TO_TIMESTAMP('2014-10-16 17:03:41','YYYY-MM-DD HH24:MI:SS'),UpdatedBy=100 WHERE SPS_Field_ID=50106
+;
+
+-- Oct 16, 2014 5:08:59 PM CEST
+-- Spin-Suite
+UPDATE SPS_Field SET IsReadOnly='Y',Updated=TO_TIMESTAMP('2014-10-16 17:08:59','YYYY-MM-DD HH24:MI:SS'),UpdatedBy=100 WHERE SPS_Field_ID=50225
+;
+
+-- Oct 16, 2014 5:09:02 PM CEST
+-- Spin-Suite
+UPDATE SPS_Field SET IsSameLine='Y',Updated=TO_TIMESTAMP('2014-10-16 17:09:02','YYYY-MM-DD HH24:MI:SS'),UpdatedBy=100 WHERE SPS_Field_ID=50228
+;
+
+-- Oct 16, 2014 9:37:11 PM CEST
+-- Spin-Suite
+UPDATE SPS_Field SET IsDisplayed='Y', SeqNo=80,Updated=TO_TIMESTAMP('2014-10-16 21:37:11','YYYY-MM-DD HH24:MI:SS'),UpdatedBy=100 WHERE SPS_Field_ID=50231
+;
+
+-- Oct 16, 2014 9:37:17 PM CEST
+-- Spin-Suite
+DELETE FROM SPS_Field_Trl WHERE SPS_Field_ID=50231
+;
+
+-- Oct 16, 2014 9:37:17 PM CEST
+-- Spin-Suite
+DELETE FROM SPS_Field WHERE SPS_Field_ID=50231
+;
+
+-- Oct 16, 2014 9:37:37 PM CEST
+-- Spin-Suite
+DELETE FROM SPS_Column_Trl WHERE SPS_Column_ID=55443
+;
+
+-- Oct 16, 2014 9:37:37 PM CEST
+-- Spin-Suite
+DELETE FROM SPS_Column WHERE SPS_Column_ID=55443
+;
+
