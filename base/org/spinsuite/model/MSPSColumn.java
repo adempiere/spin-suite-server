@@ -348,11 +348,13 @@ public class MSPSColumn extends X_SPS_Column {
 				setFieldLength(14);
 			else if (DisplayType.isDate (displayType))
 				setFieldLength(7);
-			else
-		{
-			log.saveError("FillMandatory", Msg.getElement(getCtx(), "FieldLength"));
-			return false;
-		}
+			else if(DisplayType.YesNo == displayType)
+				setFieldLength(1);
+			else 
+			{
+				log.saveError("FillMandatory", Msg.getElement(getCtx(), "FieldLength"));
+				return false;
+			}
 		}
 		
 		/** Views are not updateable
@@ -374,22 +376,6 @@ public class MSPSColumn extends X_SPS_Column {
 			setIsUpdateable(false);
 		if (isAlwaysUpdateable() && !isUpdateable())
 			setIsAlwaysUpdateable(false);
-		//	Encrypted
-		/*if (isEncrypted()) 
-		{
-			int dt = getAD_Reference_ID();
-			if (isKey() || isParent() || isStandardColumn()
-				|| isVirtualColumn() || isIdentifier() || isTranslated()
-				|| DisplayType.isLookup(dt) || DisplayType.isLOB(dt)
-				|| "DocumentNo".equalsIgnoreCase(getColumnName())
-				|| "Value".equalsIgnoreCase(getColumnName())
-				|| "Name".equalsIgnoreCase(getColumnName()))
-			{
-				log.warning("Encryption not sensible - " + getColumnName());
-				setIsEncrypted(false);
-			}
-		}	
-		*/
 		//	Sync Terminology
 		if ((newRecord || is_ValueChanged ("AD_Element_ID")) 
 			&& getAD_Element_ID() != 0)
@@ -399,6 +385,19 @@ public class MSPSColumn extends X_SPS_Column {
 			setName (element.getName());
 			setDescription (element.getDescription());
 			//setHelp (element.getHelp());
+		}
+		//	Yamel Senih 2014-10-24 20:06:17
+		//	Set Column reference
+		if(getAD_Column_ID() == 0) {
+			//	Get Column Reference
+			int m_AD_Column_ID = DB.getSQLValue(get_TrxName(), "SELECT c.AD_Column_ID "
+					+ "FROM AD_Column c "
+					+ "INNER JOIN SPS_Table t ON(t.AD_Table_ID = c.AD_Table_ID) "
+					+ "WHERE t.SPS_Table_ID = ? "
+					+ "AND c.ColumnName = ?", getSPS_Table_ID(), getColumnName());
+			//	Set Column Reference
+			if(m_AD_Column_ID > 0)
+				setAD_Column_ID(m_AD_Column_ID);
 		}
 		return true;
 	}	//	beforeSave
