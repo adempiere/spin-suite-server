@@ -1,0 +1,21 @@
+
+
+#Run Scripts:
+
+psql.bin:/opt/Development/workspace/Spin-Suite-Server/migration/postgresql/001Add_EntityType_SFAndroid_Spin_postgresql.sql:9: ERROR:  duplicate key value violates unique constraint "ad_entitytype_pkey"
+DETAIL:  Key (entitytype)=(ECA02) already exists.
+psql.bin:/opt/Development/workspace/Spin-Suite-Server/migration/postgresql/800AddTablesSFAndroidServer.sql_Postgresql.sql:4: NOTICE:  CREATE TABLE / PRIMARY KEY will create implicit index "sps_column_key" for table "sps_column"
+psql.bin:/opt/Development/workspace/Spin-Suite-Server/migration/postgresql/800AddTablesSFAndroidServer.sql_Postgresql.sql:9: NOTICE:  CREATE TABLE / PRIMARY KEY will create implicit index "sps_column_trl_key" for table "sps_column_trl"
+psql.bin:/opt/Development/workspace/Spin-Suite-Server/migration/postgresql/800AddTablesSFAndroidServer.sql_Postgresql.sql:14: NOTICE:  CREATE TABLE / PRIMARY KEY will create implicit index "sps_field_key" for table "sps_field"
+psql.bin:/opt/Development/workspace/Spin-Suite-Server/migration/postgresql/800AddTablesSFAndroidServer.sql_Postgresql.sql:19: NOTICE:  CREATE TABLE / PRIMARY KEY will create implicit index "sps_field_trl_key" for table "sps_field_trl"
+psql.bin:/opt/Development/workspace/Spin-Suite-Server/migration/postgresql/800AddTablesSFAndroidServer.sql_Postgresql.sql:24: NOTICE:  CREATE TABLE / PRIMARY KEY will create implicit index "sps_menu_key" for table "sps_menu"
+psql.bin:/opt/Development/workspace/Spin-Suite-Server/migration/postgresql/800AddTablesSFAndroidServer.sql_Postgresql.sql:29: NOTICE:  CREATE TABLE / PRIMARY KEY will create implicit index "sps_menu_trl_key" for table "sps_menu_trl"
+psql.bin:/opt/Development/workspace/Spin-Suite-Server/migration/postgresql/800AddTablesSFAndroidServer.sql_Postgresql.sql:34: NOTICE:  CREATE TABLE / PRIMARY KEY will create implicit index "sps_syncmenu_key" for table "sps_syncmenu"
+psql.bin:/opt/Development/workspace/Spin-Suite-Server/migration/postgresql/800AddTablesSFAndroidServer.sql_Postgresql.sql:39: NOTICE:  CREATE TABLE / PRIMARY KEY will create implicit index "sps_syncmenu_trl_key" for table "sps_syncmenu_trl"
+psql.bin:/opt/Development/workspace/Spin-Suite-Server/migration/postgresql/800AddTablesSFAndroidServer.sql_Postgresql.sql:44: NOTICE:  CREATE TABLE / PRIMARY KEY will create implicit index "sps_tab_key" for table "sps_tab"
+psql.bin:/opt/Development/workspace/Spin-Suite-Server/migration/postgresql/800AddTablesSFAndroidServer.sql_Postgresql.sql:49: NOTICE:  CREATE TABLE / PRIMARY KEY will create implicit index "sps_table_key" for table "sps_table"
+psql.bin:/opt/Development/workspace/Spin-Suite-Server/migration/postgresql/800AddTablesSFAndroidServer.sql_Postgresql.sql:54: NOTICE:  CREATE TABLE / PRIMARY KEY will create implicit index "sps_table_trl_key" for table "sps_table_trl"
+psql.bin:/opt/Development/workspace/Spin-Suite-Server/migration/postgresql/800AddTablesSFAndroidServer.sql_Postgresql.sql:59: NOTICE:  CREATE TABLE / PRIMARY KEY will create implicit index "sps_tab_trl_key" for table "sps_tab_trl"
+psql.bin:/opt/Development/workspace/Spin-Suite-Server/migration/postgresql/800AddTablesSFAndroidServer.sql_Postgresql.sql:69: NOTICE:  CREATE TABLE / PRIMARY KEY will create implicit index "sps_window_key" for table "sps_window"
+psql.bin:/opt/Development/workspace/Spin-Suite-Server/migration/postgresql/800AddTablesSFAndroidServer.sql_Postgresql.sql:74: NOTICE:  CREATE TABLE / PRIMARY KEY will create implicit index "sps_window_trl_key" for table "sps_window_trl"
+psql.bin:/opt/Development/workspace/Spin-Suite-Server/migration/postgresql/800AddTablesSFAndroidServer.sql_Postgresql.sql:79: NOTICE:  CREATE TABLE / PRIMARY KEY will create implicit index "sps_window_access_key" for table "sps_window_access"
