@@ -17,12 +17,10 @@ package org.spinsuite.process;
 
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
-import java.util.logging.Level;
 
 import org.compiere.model.MColumn;
 import org.compiere.model.MTable;
 import org.compiere.model.M_Element;
-import org.compiere.process.ProcessInfoParameter;
 import org.compiere.process.SvrProcess;
 import org.compiere.util.AdempiereSystemError;
 import org.compiere.util.DB;
@@ -50,25 +48,10 @@ public class CopyColumnsFromTable extends SvrProcess {
 	/** Column Count */
 	private int m_count = 0;
 
-	/** Referencing Column */
-	private boolean referencingColumn;
-
 	/**
 	 * Prepare - e.g., get Parameters.
 	 */
 	protected void prepare() {
-		ProcessInfoParameter[] para = getParameter();
-		for (int i = 0; i < para.length; i++) {
-			String name = para[i].getParameterName();
-			if (para[i].getParameter() == null)
-				;
-			// Initialize the value of ReferencingColumn
-			// Dixon Martinez
-			else if (name.equals("ReferencingColumn"))
-				referencingColumn = para[i].getParameterAsBoolean();
-			else
-				log.log(Level.SEVERE, "Unknown Parameter: " + name);
-		}
 		p_target_AD_Table_ID = getRecord_ID();
 	} // prepare
 
@@ -90,7 +73,7 @@ public class CopyColumnsFromTable extends SvrProcess {
 				p_target_AD_Table_ID, get_TrxName());
 		MSPSColumn[] targetColumns = targetTable.getColumns();
 
-		p_source_AD_Table_ID = targetTable.get_ValueAsInt("AD_Table_ID");
+		p_source_AD_Table_ID = targetTable.getAD_Table_ID();
 
 		if (p_source_AD_Table_ID == 0)
 			throw new AdempiereSystemError("@NotFound@ @AD_Table_ID@ "
@@ -168,10 +151,10 @@ public class CopyColumnsFromTable extends SvrProcess {
 			}
 			// Dixon Martinez
 			// If you want to reference the columns
-			if (referencingColumn) {
-				colTarget.setAD_Column_ID(sourceColumns[i].getAD_Column_ID());
-			} 
-			
+			//	Yamel Senih 2014-10-24 20:03:13
+			//	Always reference column
+			colTarget.setAD_Column_ID(sourceColumns[i].getAD_Column_ID());
+			//	
 			colTarget.setAD_Val_Rule_ID(sourceColumns[i].getAD_Val_Rule_ID());
 			colTarget.setDefaultValue(sourceColumns[i].getDefaultValue());
 			colTarget.setFieldLength(sourceColumns[i].getFieldLength());
