@@ -94,12 +94,6 @@ public class MSPSSyncMenu extends X_SPS_SyncMenu implements I_SPS_SyncMenu {
 			ps.setInt(2, p_ParentNode);
 			ps.setString(3, p_WebServiceDefinitionValue);
 			
-			/*System.out.println(sql);
-			System.out.println(MSPSSyncMenu.Table_Name);
-			System.out.println(p_ParentNode);
-			System.out.println(p_WebServiceDefinitionValue);
-			*/
-			
 			rs = ps.executeQuery();
 			
 			while (rs.next()){
@@ -157,31 +151,5 @@ public class MSPSSyncMenu extends X_SPS_SyncMenu implements I_SPS_SyncMenu {
 		return true;
 	}	//	beforeSave
 	
-	/*
-	public static void main(String[] args) {
-		Adempiere.startup(true);
-		Ini.setProperty(Ini.P_UID, "SuperUser");
-		Ini.setProperty(Ini.P_PWD, "System");
-		Ini.setProperty(Ini.P_ROLE, "GardenWorld Admin");
-		//Ini.setProperty(Ini.P_ROLE, "System Administrator");
-		Ini.setProperty(Ini.P_CLIENT, "GardenWorld");
-		//Ini.setProperty(Ini.P_CLIENT, "System");
-		Ini.setProperty(Ini.P_ORG, "HQ");
-		Ini.setProperty(Ini.P_WAREHOUSE, "HQ Warehouse");
-		Ini.setProperty(Ini.P_LANGUAGE, "English");
-		// Ini.setProperty(Ini.P_PRINTER,"MyPrinter");
-		Login login = new Login(Env.getCtx());
-		login.batchLogin();
-
-		Properties m_ctx = Env.getCtx();
-		
-		List<MSPSSyncMenu> sps = MSPSSyncMenu.getNodes(0,"Spin-Suite", "WebServiceDefinition", null);
-		
-		//System.out.println(sps);
-		for (MSPSSyncMenu mspsSyncMenu : sps) {
-			System.out.println(mspsSyncMenu);
-		}
-		
-	}*/
 	
 }
