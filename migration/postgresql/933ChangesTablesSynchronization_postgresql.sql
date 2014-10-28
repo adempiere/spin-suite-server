@@ -3018,3 +3018,233 @@ INSERT INTO WS_WebServiceFieldOutput (AD_Client_ID,AD_Column_ID,AD_Org_ID,Create
 UPDATE SPS_SyncMenu SET WS_WebService_ID=50006, WS_WebServiceType_ID=50402,Updated=TO_TIMESTAMP('2014-10-27 22:16:36','YYYY-MM-DD HH24:MI:SS'),UpdatedBy=100 WHERE SPS_SyncMenu_ID=50364
 ;
 
+-- 27-oct-2014 22:33:54 VET
+-- Spin-Suite-Server
+UPDATE SPS_SyncMenu SET WS_WebServiceType_ID=NULL,Updated=TO_TIMESTAMP('2014-10-27 22:33:54','YYYY-MM-DD HH24:MI:SS'),UpdatedBy=100 WHERE SPS_SyncMenu_ID=50364
+;
+
+-- 27-oct-2014 22:34:00 VET
+-- Spin-Suite-Server
+DELETE FROM WS_WebServiceFieldOutput WHERE WS_WebServiceFieldOutput_ID=52760
+;
+
+-- 27-oct-2014 22:34:01 VET
+-- Spin-Suite-Server
+DELETE FROM WS_WebServiceFieldOutput WHERE WS_WebServiceFieldOutput_ID=52761
+;
+
+-- 27-oct-2014 22:34:01 VET
+-- Spin-Suite-Server
+DELETE FROM WS_WebServiceFieldOutput WHERE WS_WebServiceFieldOutput_ID=52762
+;
+
+-- 27-oct-2014 22:34:02 VET
+-- Spin-Suite-Server
+DELETE FROM WS_WebServiceFieldOutput WHERE WS_WebServiceFieldOutput_ID=52763
+;
+
+-- 27-oct-2014 22:34:02 VET
+-- Spin-Suite-Server
+DELETE FROM WS_WebServiceFieldOutput WHERE WS_WebServiceFieldOutput_ID=52764
+;
+
+-- 27-oct-2014 22:34:03 VET
+-- Spin-Suite-Server
+DELETE FROM WS_WebServiceFieldOutput WHERE WS_WebServiceFieldOutput_ID=52765
+;
+
+-- 27-oct-2014 22:34:03 VET
+-- Spin-Suite-Server
+DELETE FROM WS_WebServiceFieldOutput WHERE WS_WebServiceFieldOutput_ID=52766
+;
+
+-- 27-oct-2014 22:34:04 VET
+-- Spin-Suite-Server
+DELETE FROM WS_WebServiceFieldOutput WHERE WS_WebServiceFieldOutput_ID=52767
+;
+
+-- 27-oct-2014 22:34:04 VET
+-- Spin-Suite-Server
+DELETE FROM WS_WebServiceFieldOutput WHERE WS_WebServiceFieldOutput_ID=52768
+;
+
+-- 27-oct-2014 22:34:05 VET
+-- Spin-Suite-Server
+DELETE FROM WS_WebServiceFieldOutput WHERE WS_WebServiceFieldOutput_ID=52769
+;
+
+-- 27-oct-2014 22:34:05 VET
+-- Spin-Suite-Server
+DELETE FROM WS_WebServiceFieldOutput WHERE WS_WebServiceFieldOutput_ID=52770
+;
+
+-- 27-oct-2014 22:34:06 VET
+-- Spin-Suite-Server
+DELETE FROM WS_WebServiceFieldOutput WHERE WS_WebServiceFieldOutput_ID=52771
+;
+
+-- 27-oct-2014 22:34:06 VET
+-- Spin-Suite-Server
+DELETE FROM WS_WebServiceFieldOutput WHERE WS_WebServiceFieldOutput_ID=52772
+;
+
+-- 27-oct-2014 22:34:09 VET
+-- Spin-Suite-Server
+DELETE FROM WS_WebService_Para WHERE WS_WebService_Para_ID=50494
+;
+
+-- 27-oct-2014 22:34:11 VET
+-- Spin-Suite-Server
+DELETE FROM WS_WebServiceType WHERE WS_WebServiceType_ID=50402
+;
+
+-- 27-oct-2014 22:34:18 VET
+-- Spin-Suite-Server
+DELETE FROM SPS_SyncMenu_Trl WHERE SPS_SyncMenu_ID=50364
+;
+
+-- 27-oct-2014 22:34:18 VET
+-- Spin-Suite-Server
+DELETE FROM SPS_SyncMenu WHERE SPS_SyncMenu_ID=50364
+;
+
+-- 27-oct-2014 22:34:18 VET
+-- Spin-Suite-Server
+DELETE FROM AD_TreeNode WHERE Node_ID=50364 AND EXISTS (SELECT * FROM AD_Tree t WHERE t.AD_Tree_ID=AD_TreeNode.AD_Tree_ID AND t.AD_Table_ID=53501)
+;
+
+-- 27-oct-2014 22:34:30 VET
+-- Spin-Suite-Server
+DELETE FROM WS_WebServiceFieldOutput WHERE WS_WebServiceFieldOutput_ID=52726
+;
+
+-- 27-oct-2014 22:34:30 VET
+-- Spin-Suite-Server
+DELETE FROM WS_WebServiceFieldOutput WHERE WS_WebServiceFieldOutput_ID=52727
+;
+
+-- 27-oct-2014 22:34:30 VET
+-- Spin-Suite-Server
+DELETE FROM WS_WebServiceFieldOutput WHERE WS_WebServiceFieldOutput_ID=52728
+;
+
+-- 27-oct-2014 22:34:31 VET
+-- Spin-Suite-Server
+DELETE FROM WS_WebServiceFieldOutput WHERE WS_WebServiceFieldOutput_ID=52729
+;
+
+-- 27-oct-2014 22:34:31 VET
+-- Spin-Suite-Server
+DELETE FROM WS_WebServiceFieldOutput WHERE WS_WebServiceFieldOutput_ID=52730
+;
+
+-- 27-oct-2014 22:34:32 VET
+-- Spin-Suite-Server
+DELETE FROM WS_WebServiceFieldOutput WHERE WS_WebServiceFieldOutput_ID=52731
+;
+
+-- 27-oct-2014 22:34:32 VET
+-- Spin-Suite-Server
+DELETE FROM WS_WebServiceFieldOutput WHERE WS_WebServiceFieldOutput_ID=52732
+;
+
+-- 27-oct-2014 22:34:33 VET
+-- Spin-Suite-Server
+DELETE FROM WS_WebServiceFieldOutput WHERE WS_WebServiceFieldOutput_ID=52733
+;
+
+-- 27-oct-2014 22:34:33 VET
+-- Spin-Suite-Server
+DELETE FROM WS_WebServiceFieldOutput WHERE WS_WebServiceFieldOutput_ID=52734
+;
+
+-- 27-oct-2014 22:34:34 VET
+-- Spin-Suite-Server
+DELETE FROM WS_WebServiceFieldOutput WHERE WS_WebServiceFieldOutput_ID=52735
+;
+
+-- 27-oct-2014 22:34:34 VET
+-- Spin-Suite-Server
+DELETE FROM WS_WebServiceFieldOutput WHERE WS_WebServiceFieldOutput_ID=52736
+;
+
+-- 27-oct-2014 22:34:35 VET
+-- Spin-Suite-Server
+DELETE FROM WS_WebServiceFieldOutput WHERE WS_WebServiceFieldOutput_ID=52737
+;
+
+-- 27-oct-2014 22:34:35 VET
+-- Spin-Suite-Server
+DELETE FROM WS_WebServiceFieldOutput WHERE WS_WebServiceFieldOutput_ID=52738
+;
+
+-- 27-oct-2014 22:34:36 VET
+-- Spin-Suite-Server
+DELETE FROM WS_WebServiceFieldOutput WHERE WS_WebServiceFieldOutput_ID=52739
+;
+
+-- 27-oct-2014 22:34:36 VET
+-- Spin-Suite-Server
+DELETE FROM WS_WebServiceFieldOutput WHERE WS_WebServiceFieldOutput_ID=52740
+;
+
+-- 27-oct-2014 22:34:37 VET
+-- Spin-Suite-Server
+DELETE FROM WS_WebServiceFieldOutput WHERE WS_WebServiceFieldOutput_ID=52741
+;
+
+-- 27-oct-2014 22:34:37 VET
+-- Spin-Suite-Server
+DELETE FROM WS_WebServiceFieldOutput WHERE WS_WebServiceFieldOutput_ID=52742
+;
+
+-- 27-oct-2014 22:34:41 VET
+-- Spin-Suite-Server
+DELETE FROM WS_WebService_Para WHERE WS_WebService_Para_ID=50492
+;
+
+-- 27-oct-2014 22:34:45 VET
+-- Spin-Suite-Server
+DELETE FROM WS_WebServiceType WHERE WS_WebServiceType_ID=50400
+;
+
+-- 27-oct-2014 22:34:51 VET
+-- Spin-Suite-Server
+UPDATE SPS_SyncMenu SET WS_WebServiceType_ID=NULL,Updated=TO_TIMESTAMP('2014-10-27 22:34:51','YYYY-MM-DD HH24:MI:SS'),UpdatedBy=100 WHERE SPS_SyncMenu_ID=50363
+;
+
+-- 27-oct-2014 22:34:57 VET
+-- Spin-Suite-Server
+DELETE FROM WS_WebServiceType WHERE WS_WebServiceType_ID=50400
+;
+
+-- 27-oct-2014 22:35:01 VET
+-- Spin-Suite-Server
+DELETE FROM SPS_SyncMenu_Trl WHERE SPS_SyncMenu_ID=50363
+;
+
+-- 27-oct-2014 22:35:01 VET
+-- Spin-Suite-Server
+DELETE FROM SPS_SyncMenu WHERE SPS_SyncMenu_ID=50363
+;
+
+-- 27-oct-2014 22:35:01 VET
+-- Spin-Suite-Server
+DELETE FROM AD_TreeNode WHERE Node_ID=50363 AND EXISTS (SELECT * FROM AD_Tree t WHERE t.AD_Tree_ID=AD_TreeNode.AD_Tree_ID AND t.AD_Table_ID=53501)
+;
+
+-- 27-oct-2014 22:42:58 VET
+-- Spin-Suite-Server
+UPDATE AD_Rule SET Script='CREATE TABLE SPS_Window (AD_Client_ID NUMERIC(10) NOT NULL, AD_Org_ID NUMERIC(10) NOT NULL, Created TIMESTAMP NOT NULL, CreatedBy NUMERIC(10) NOT NULL, Description VARCHAR(255) DEFAULT NULL , EntityType VARCHAR(40) DEFAULT ''ECA01'' NOT NULL, Help VARCHAR(2000) DEFAULT NULL , IsActive CHAR(1) DEFAULT ''Y'' CHECK (IsActive IN (''Y'',''N'')) NOT NULL, IsSOTrx CHAR(1) DEFAULT ''Y'' CHECK (IsSOTrx IN (''Y'',''N'')) NOT NULL, Name VARCHAR(60) NOT NULL, Processing CHAR(1) DEFAULT NULL , SPS_Window_ID NUMERIC(10) NOT NULL, Updated TIMESTAMP NOT NULL, UpdatedBy NUMERIC(10) NOT NULL, CONSTRAINT SPS_Window_Key PRIMARY KEY (SPS_Window_ID))',Updated=TO_TIMESTAMP('2014-10-27 22:42:58','YYYY-MM-DD HH24:MI:SS'),UpdatedBy=100 WHERE AD_Rule_ID=50199
+;
+
+-- 27-oct-2014 23:00:04 VET
+-- Spin-Suite-Server
+DELETE FROM WS_WebServiceFieldOutput WHERE WS_WebServiceFieldOutput_ID=51643
+;
+
+-- 27-oct-2014 23:00:07 VET
+-- Spin-Suite-Server
+DELETE FROM WS_WebServiceFieldOutput WHERE WS_WebServiceFieldOutput_ID=51648
+;
+
