@@ -33,6 +33,7 @@ public class CalloutSPSTable extends CalloutEngine {
 	/**
 	 * 
 	 * @author Dixon Martinez 08/02/2013, 16:27:59
+	 * @author <a href="mailto:yamelsenih@gmail.com">Yamel Senih</a> 11/02/2013, 23:49:08
 	 * @param ctx
 	 * @param WindowNo
 	 * @param mTab
@@ -51,7 +52,7 @@ public class CalloutSPSTable extends CalloutEngine {
 		mTab.setValue("Description", mTable.getDescription());
 		mTab.setValue("IsView", mTable.isView());
 		mTab.setValue("IsDeleteable", mTable.isDeleteable());
-		
+		mTab.setValue("AccessLevel", mTable.getAccessLevel());
 		
 		return "";
 	}
