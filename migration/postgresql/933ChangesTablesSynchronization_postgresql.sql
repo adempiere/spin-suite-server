@@ -3203,11 +3203,6 @@ DELETE FROM WS_WebServiceFieldOutput WHERE WS_WebServiceFieldOutput_ID=52742
 DELETE FROM WS_WebService_Para WHERE WS_WebService_Para_ID=50492
 ;
 
--- 27-oct-2014 22:34:45 VET
--- Spin-Suite-Server
-DELETE FROM WS_WebServiceType WHERE WS_WebServiceType_ID=50400
-;
-
 -- 27-oct-2014 22:34:51 VET
 -- Spin-Suite-Server
 UPDATE SPS_SyncMenu SET WS_WebServiceType_ID=NULL,Updated=TO_TIMESTAMP('2014-10-27 22:34:51','YYYY-MM-DD HH24:MI:SS'),UpdatedBy=100 WHERE SPS_SyncMenu_ID=50363

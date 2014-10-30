@@ -419,7 +419,7 @@ public class MSPSColumn extends X_SPS_Column {
 				|| is_ValueChanged(MSPSColumn.COLUMNNAME_Description)
 				//|| is_ValueChanged(MSPSColumn.COLUMNNAME_Help)
 				) {
-				StringBuffer sql = new StringBuffer("UPDATE AD_Field SET Name=")
+				StringBuffer sql = new StringBuffer("UPDATE SPS_Field SET Name=")
 					.append(DB.TO_STRING(getName()))
 					.append(", Description=").append(DB.TO_STRING(getDescription()))
 					//.append(", Help=").append(DB.TO_STRING(getHelp()))

@@ -413,11 +413,6 @@ DELETE FROM AD_TreeNode n WHERE Node_ID=50343 AND EXISTS (SELECT * FROM AD_Tree 
 UPDATE SPS_SyncMenu SET WS_WebServiceType_ID=NULL,Updated=TO_DATE('2014-10-27 16:00:27','YYYY-MM-DD HH24:MI:SS'),UpdatedBy=100 WHERE SPS_SyncMenu_ID=50342
 ;
 
--- 27-oct-2014 16:00:29 VET
--- Spin-Suite-Server
-DELETE FROM WS_WebServiceType WHERE WS_WebServiceType_ID=50382
-;
-
 -- 27-oct-2014 16:00:36 VET
 -- Spin-Suite-Server
 DELETE FROM WS_WebServiceFieldOutput WHERE WS_WebServiceFieldOutput_ID=52402

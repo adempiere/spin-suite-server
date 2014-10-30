@@ -186,9 +186,11 @@ public class MSPSTable extends X_SPS_Table {
 	protected boolean afterSave (boolean newRecord, boolean success)
 	{
 		//	Sync Table ID
-		if (newRecord)
-		{
-			createMandatoryColumns();
+		if (newRecord) {
+			
+			//	Create columns if not exists table reference 
+			if(getAD_Table_ID() == 0)
+				createMandatoryColumns();
 			
 			MSequence seq = MSequence.get(getCtx(), getTableName(), get_TrxName());
 			if (seq == null || seq.get_ID() == 0)
