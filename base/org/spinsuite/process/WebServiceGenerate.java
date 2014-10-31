@@ -162,7 +162,7 @@ public class WebServiceGenerate extends SvrProcess {
 					create_WS_Parameter(wst.getWS_WebServiceType_ID(), RecordID, X_WS_WebService_Para.PARAMETERTYPE_Free, "");
 					
 					if (table != null)
-						create_WS_Parameter(wst.getWS_WebServiceType_ID(), TableName, X_WS_WebService_Para.PARAMETERTYPE_Constant, table.get_TableName());
+						create_WS_Parameter(wst.getWS_WebServiceType_ID(), TableName, X_WS_WebService_Para.PARAMETERTYPE_Constant, table.get_ValueAsString(TableName));
 				}
 				
 				//End Create Generic Parameters
