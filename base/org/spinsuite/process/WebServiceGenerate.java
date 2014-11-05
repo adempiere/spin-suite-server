@@ -65,7 +65,7 @@ public class WebServiceGenerate extends SvrProcess {
 	private static String TableName 	= "TableName";
 	
 	/** Web Service Parameter RecordID */
-	private static String RecordID 		= "Record_ID";
+	private static String RecordID 		= "RecordID";
 	
 	/** Web Service Parameter AD_Menu_ID */
 	private static String AD_Menu_ID 	= "AD_MenuID";
