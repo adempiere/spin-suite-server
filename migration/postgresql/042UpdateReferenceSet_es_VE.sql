@@ -22,9 +22,3 @@ UPDATE AD_Column SET AD_Reference_ID=18, AD_Reference_Value_ID=53650,Updated=TO_
 -- Sales Force From Android client with ADempiere
 UPDATE AD_Column SET IsKey='N', IsParent='Y', IsUpdateable='N',Updated=TO_TIMESTAMP('2014-01-29 16:03:28','YYYY-MM-DD HH24:MI:SS'),UpdatedBy=100 WHERE AD_Column_ID=65791
 ;
-
--- Jan 29, 2014 4:12:12 PM VET
--- Sales Force From Android client with ADempiere
-UPDATE AD_Language SET IsSystemLanguage='Y',Updated=TO_TIMESTAMP('2014-01-29 16:12:12','YYYY-MM-DD HH24:MI:SS'),UpdatedBy=100 WHERE AD_Language_ID=151
-;
-

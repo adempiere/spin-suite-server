@@ -143,11 +143,6 @@ UPDATE AD_Ref_List_Trl SET Name='Proceso',Updated=TO_TIMESTAMP('2014-09-08 10:52
 UPDATE AD_Column SET AD_Reference_ID=17, AD_Reference_Value_ID=53726,Updated=TO_TIMESTAMP('2014-09-08 10:53:18','YYYY-MM-DD HH24:MI:SS'),UpdatedBy=100 WHERE AD_Column_ID=56743
 ;
 
--- Sep 8, 2014 10:54:24 AM VET
--- SPS
-UPDATE AD_Language SET IsSystemLanguage='N',Updated=TO_TIMESTAMP('2014-09-08 10:54:24','YYYY-MM-DD HH24:MI:SS'),UpdatedBy=100 WHERE AD_Language_ID=151
-;
-
 -- Sep 8, 2014 10:55:41 AM VET
 -- SPS
 UPDATE AD_Process_Para SET DisplayLogic='@ParameterName@ ! "Action"',Updated=TO_TIMESTAMP('2014-09-08 10:55:41','YYYY-MM-DD HH24:MI:SS'),UpdatedBy=100 WHERE AD_Process_Para_ID=54948
