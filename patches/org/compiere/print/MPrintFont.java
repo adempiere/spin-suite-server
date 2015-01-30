@@ -39,7 +39,6 @@ public class MPrintFont extends X_AD_PrintFont
 {
 	public MPrintFont(Properties ctx, ResultSet rs, String trxName) {
 		super(ctx, rs, trxName);
-		// TODO Auto-generated constructor stub
 	}
 
 	/**

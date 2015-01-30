@@ -590,7 +590,7 @@ INSERT INTO AD_Tab_Trl (AD_Language,AD_Tab_ID, CommitWarning,Description,Help,Na
 
 -- Mar 15, 2014 5:56:14 PM VET
 -- SFAndroid Server
-INSERT INTO AD_Field (AD_Client_ID,AD_Column_ID,AD_Field_ID,AD_Org_ID,AD_Tab_ID,Created,CreatedBy,Description,DisplayLength,EntityType,Help,HideInListView,IsActive,IsCentrallyMaintained,IsDisplayed,IsEncrypted,IsFieldOnly,IsHeading,IsReadOnly,IsSameLine,Name,SeqNo,Updated,UpdatedBy) VALUES (0,66029,72844,0,53917,TO_TIMESTAMP('2014-03-15 17:56:07','YYYY-MM-DD HH24:MI:SS'),100,'Client/Tenant for this installation.',22,'ECA01','A Client is a company or a legal entity. You cannot share data between Clients. Tenant is a synonym for Client.','N','Y','Y','Y','N','N','N','N','N','Client',10,TO_TIMESTAMP('2014-03-15 17:56:07','YYYY-MM-DD HH24:MI:SS'),100)
+INSERT INTO AD_Field (AD_Client_ID,AD_Column_ID,AD_Field_ID,AD_Org_ID,AD_Tab_ID,Created,CreatedBy,Description,DisplayLength,EntityType,Help,IsEmbedded,IsActive,IsCentrallyMaintained,IsDisplayed,IsEncrypted,IsFieldOnly,IsHeading,IsReadOnly,IsSameLine,Name,SeqNo,Updated,UpdatedBy) VALUES (0,66029,72844,0,53917,TO_TIMESTAMP('2014-03-15 17:56:07','YYYY-MM-DD HH24:MI:SS'),100,'Client/Tenant for this installation.',22,'ECA01','A Client is a company or a legal entity. You cannot share data between Clients. Tenant is a synonym for Client.','N','Y','Y','Y','N','N','N','N','N','Client',10,TO_TIMESTAMP('2014-03-15 17:56:07','YYYY-MM-DD HH24:MI:SS'),100)
 ;
 
 -- Mar 15, 2014 5:56:14 PM VET
@@ -600,7 +600,7 @@ INSERT INTO AD_Field_Trl (AD_Language,AD_Field_ID, Description,Help,Name, IsTran
 
 -- Mar 15, 2014 5:56:23 PM VET
 -- SFAndroid Server
-INSERT INTO AD_Field (AD_Client_ID,AD_Column_ID,AD_Field_ID,AD_Org_ID,AD_Tab_ID,Created,CreatedBy,Description,DisplayLength,EntityType,Help,HideInListView,IsActive,IsCentrallyMaintained,IsDisplayed,IsEncrypted,IsFieldOnly,IsHeading,IsReadOnly,IsSameLine,Name,SeqNo,Updated,UpdatedBy) VALUES (0,66030,72845,0,53917,TO_TIMESTAMP('2014-03-15 17:56:14','YYYY-MM-DD HH24:MI:SS'),100,'Organizational entity within client',22,'ECA01','An organization is a unit of your client or legal entity - examples are store, department. You can share data between organizations.','N','Y','Y','Y','N','N','N','N','Y','Organization',20,TO_TIMESTAMP('2014-03-15 17:56:14','YYYY-MM-DD HH24:MI:SS'),100)
+INSERT INTO AD_Field (AD_Client_ID,AD_Column_ID,AD_Field_ID,AD_Org_ID,AD_Tab_ID,Created,CreatedBy,Description,DisplayLength,EntityType,Help,IsEmbedded,IsActive,IsCentrallyMaintained,IsDisplayed,IsEncrypted,IsFieldOnly,IsHeading,IsReadOnly,IsSameLine,Name,SeqNo,Updated,UpdatedBy) VALUES (0,66030,72845,0,53917,TO_TIMESTAMP('2014-03-15 17:56:14','YYYY-MM-DD HH24:MI:SS'),100,'Organizational entity within client',22,'ECA01','An organization is a unit of your client or legal entity - examples are store, department. You can share data between organizations.','N','Y','Y','Y','N','N','N','N','Y','Organization',20,TO_TIMESTAMP('2014-03-15 17:56:14','YYYY-MM-DD HH24:MI:SS'),100)
 ;
 
 -- Mar 15, 2014 5:56:23 PM VET
@@ -610,7 +610,7 @@ INSERT INTO AD_Field_Trl (AD_Language,AD_Field_ID, Description,Help,Name, IsTran
 
 -- Mar 15, 2014 5:56:27 PM VET
 -- SFAndroid Server
-INSERT INTO AD_Field (AD_Client_ID,AD_Column_ID,AD_Field_ID,AD_Org_ID,AD_Tab_ID,Created,CreatedBy,Description,DisplayLength,EntityType,Help,HideInListView,IsActive,IsCentrallyMaintained,IsDisplayed,IsEncrypted,IsFieldOnly,IsHeading,IsReadOnly,IsSameLine,Name,SeqNo,Updated,UpdatedBy) VALUES (0,66035,72846,0,53917,TO_TIMESTAMP('2014-03-15 17:56:24','YYYY-MM-DD HH24:MI:SS'),100,'Alphanumeric identifier of the entity',60,'ECA01','The name of an entity (record) is used as an default search option in addition to the search key. The name is up to 60 characters in length.','N','Y','Y','Y','N','N','N','N','N','Name',30,TO_TIMESTAMP('2014-03-15 17:56:24','YYYY-MM-DD HH24:MI:SS'),100)
+INSERT INTO AD_Field (AD_Client_ID,AD_Column_ID,AD_Field_ID,AD_Org_ID,AD_Tab_ID,Created,CreatedBy,Description,DisplayLength,EntityType,Help,IsEmbedded,IsActive,IsCentrallyMaintained,IsDisplayed,IsEncrypted,IsFieldOnly,IsHeading,IsReadOnly,IsSameLine,Name,SeqNo,Updated,UpdatedBy) VALUES (0,66035,72846,0,53917,TO_TIMESTAMP('2014-03-15 17:56:24','YYYY-MM-DD HH24:MI:SS'),100,'Alphanumeric identifier of the entity',60,'ECA01','The name of an entity (record) is used as an default search option in addition to the search key. The name is up to 60 characters in length.','N','Y','Y','Y','N','N','N','N','N','Name',30,TO_TIMESTAMP('2014-03-15 17:56:24','YYYY-MM-DD HH24:MI:SS'),100)
 ;
 
 -- Mar 15, 2014 5:56:27 PM VET
@@ -620,7 +620,7 @@ INSERT INTO AD_Field_Trl (AD_Language,AD_Field_ID, Description,Help,Name, IsTran
 
 -- Mar 15, 2014 5:56:36 PM VET
 -- SFAndroid Server
-INSERT INTO AD_Field (AD_Client_ID,AD_Column_ID,AD_Field_ID,AD_Org_ID,AD_Tab_ID,Created,CreatedBy,DisplayLength,EntityType,HideInListView,IsActive,IsCentrallyMaintained,IsDisplayed,IsEncrypted,IsFieldOnly,IsHeading,IsReadOnly,IsSameLine,Name,SeqNo,Updated,UpdatedBy) VALUES (0,72395,72847,0,53917,TO_TIMESTAMP('2014-03-15 17:56:27','YYYY-MM-DD HH24:MI:SS'),100,1,'ECA01','N','Y','Y','Y','N','N','N','N','N','Menu Type',40,TO_TIMESTAMP('2014-03-15 17:56:27','YYYY-MM-DD HH24:MI:SS'),100)
+INSERT INTO AD_Field (AD_Client_ID,AD_Column_ID,AD_Field_ID,AD_Org_ID,AD_Tab_ID,Created,CreatedBy,DisplayLength,EntityType,IsEmbedded,IsActive,IsCentrallyMaintained,IsDisplayed,IsEncrypted,IsFieldOnly,IsHeading,IsReadOnly,IsSameLine,Name,SeqNo,Updated,UpdatedBy) VALUES (0,72395,72847,0,53917,TO_TIMESTAMP('2014-03-15 17:56:27','YYYY-MM-DD HH24:MI:SS'),100,1,'ECA01','N','Y','Y','Y','N','N','N','N','N','Menu Type',40,TO_TIMESTAMP('2014-03-15 17:56:27','YYYY-MM-DD HH24:MI:SS'),100)
 ;
 
 -- Mar 15, 2014 5:56:36 PM VET
@@ -630,7 +630,7 @@ INSERT INTO AD_Field_Trl (AD_Language,AD_Field_ID, Description,Help,Name, IsTran
 
 -- Mar 15, 2014 5:56:43 PM VET
 -- SFAndroid Server
-INSERT INTO AD_Field (AD_Client_ID,AD_Column_ID,AD_Field_ID,AD_Org_ID,AD_Tab_ID,Created,CreatedBy,Description,DisplayLength,EntityType,Help,HideInListView,IsActive,IsCentrallyMaintained,IsDisplayed,IsEncrypted,IsFieldOnly,IsHeading,IsReadOnly,IsSameLine,Name,SeqNo,Updated,UpdatedBy) VALUES (0,71492,72848,0,53917,TO_TIMESTAMP('2014-03-15 17:56:36','YYYY-MM-DD HH24:MI:SS'),100,'Dictionary Entity Type; Determines ownership and synchronization',10,'ECA01','The Entity Types "Dictionary", "Adempiere" and "Application" might be automatically synchronized and customizations deleted or overwritten.  
+INSERT INTO AD_Field (AD_Client_ID,AD_Column_ID,AD_Field_ID,AD_Org_ID,AD_Tab_ID,Created,CreatedBy,Description,DisplayLength,EntityType,Help,IsEmbedded,IsActive,IsCentrallyMaintained,IsDisplayed,IsEncrypted,IsFieldOnly,IsHeading,IsReadOnly,IsSameLine,Name,SeqNo,Updated,UpdatedBy) VALUES (0,71492,72848,0,53917,TO_TIMESTAMP('2014-03-15 17:56:36','YYYY-MM-DD HH24:MI:SS'),100,'Dictionary Entity Type; Determines ownership and synchronization',10,'ECA01','The Entity Types "Dictionary", "Adempiere" and "Application" might be automatically synchronized and customizations deleted or overwritten.  
 
 For customizations, copy the entity and select "User"!','N','Y','Y','Y','N','N','N','N','Y','Entity Type',50,TO_TIMESTAMP('2014-03-15 17:56:36','YYYY-MM-DD HH24:MI:SS'),100)
 ;
@@ -642,7 +642,7 @@ INSERT INTO AD_Field_Trl (AD_Language,AD_Field_ID, Description,Help,Name, IsTran
 
 -- Mar 15, 2014 5:56:52 PM VET
 -- SFAndroid Server
-INSERT INTO AD_Field (AD_Client_ID,AD_Column_ID,AD_Field_ID,AD_Org_ID,AD_Tab_ID,Created,CreatedBy,Description,DisplayLength,EntityType,Help,HideInListView,IsActive,IsCentrallyMaintained,IsDisplayed,IsEncrypted,IsFieldOnly,IsHeading,IsReadOnly,IsSameLine,Name,SeqNo,Updated,UpdatedBy) VALUES (0,66033,72849,0,53917,TO_TIMESTAMP('2014-03-15 17:56:44','YYYY-MM-DD HH24:MI:SS'),100,'Optional short description of the record',255,'ECA01','A description is limited to 255 characters.','N','Y','Y','Y','N','N','N','N','N','Description',60,TO_TIMESTAMP('2014-03-15 17:56:44','YYYY-MM-DD HH24:MI:SS'),100)
+INSERT INTO AD_Field (AD_Client_ID,AD_Column_ID,AD_Field_ID,AD_Org_ID,AD_Tab_ID,Created,CreatedBy,Description,DisplayLength,EntityType,Help,IsEmbedded,IsActive,IsCentrallyMaintained,IsDisplayed,IsEncrypted,IsFieldOnly,IsHeading,IsReadOnly,IsSameLine,Name,SeqNo,Updated,UpdatedBy) VALUES (0,66033,72849,0,53917,TO_TIMESTAMP('2014-03-15 17:56:44','YYYY-MM-DD HH24:MI:SS'),100,'Optional short description of the record',255,'ECA01','A description is limited to 255 characters.','N','Y','Y','Y','N','N','N','N','N','Description',60,TO_TIMESTAMP('2014-03-15 17:56:44','YYYY-MM-DD HH24:MI:SS'),100)
 ;
 
 -- Mar 15, 2014 5:56:52 PM VET
@@ -652,7 +652,7 @@ INSERT INTO AD_Field_Trl (AD_Language,AD_Field_ID, Description,Help,Name, IsTran
 
 -- Mar 15, 2014 5:56:59 PM VET
 -- SFAndroid Server
-INSERT INTO AD_Field (AD_Client_ID,AD_Column_ID,AD_Field_ID,AD_Org_ID,AD_Tab_ID,Created,CreatedBy,Description,DisplayLength,EntityType,Help,HideInListView,IsActive,IsCentrallyMaintained,IsDisplayed,IsEncrypted,IsFieldOnly,IsHeading,IsReadOnly,IsSameLine,Name,SeqNo,Updated,UpdatedBy) VALUES (0,66034,72850,0,53917,TO_TIMESTAMP('2014-03-15 17:56:52','YYYY-MM-DD HH24:MI:SS'),100,'The record is active in the system',1,'ECA01','There are two methods of making records unavailable in the system: One is to delete the record, the other is to de-activate the record. A de-activated record is not available for selection, but available for reports.
+INSERT INTO AD_Field (AD_Client_ID,AD_Column_ID,AD_Field_ID,AD_Org_ID,AD_Tab_ID,Created,CreatedBy,Description,DisplayLength,EntityType,Help,IsEmbedded,IsActive,IsCentrallyMaintained,IsDisplayed,IsEncrypted,IsFieldOnly,IsHeading,IsReadOnly,IsSameLine,Name,SeqNo,Updated,UpdatedBy) VALUES (0,66034,72850,0,53917,TO_TIMESTAMP('2014-03-15 17:56:52','YYYY-MM-DD HH24:MI:SS'),100,'The record is active in the system',1,'ECA01','There are two methods of making records unavailable in the system: One is to delete the record, the other is to de-activate the record. A de-activated record is not available for selection, but available for reports.
 There are two reasons for de-activating and not deleting records:
 (1) The system requires the record for audit purposes.
 (2) The record is referenced by other records. E.g., you cannot delete a Business Partner, if there are invoices for this partner record existing. You de-activate the Business Partner and prevent that this record is used for future entries.','N','Y','Y','Y','N','N','N','N','N','Active',70,TO_TIMESTAMP('2014-03-15 17:56:52','YYYY-MM-DD HH24:MI:SS'),100)
@@ -665,7 +665,7 @@ INSERT INTO AD_Field_Trl (AD_Language,AD_Field_ID, Description,Help,Name, IsTran
 
 -- Mar 15, 2014 5:57:08 PM VET
 -- SFAndroid Server
-INSERT INTO AD_Field (AD_Client_ID,AD_Column_ID,AD_Field_ID,AD_Org_ID,AD_Tab_ID,Created,CreatedBy,Description,DisplayLength,EntityType,Help,HideInListView,IsActive,IsCentrallyMaintained,IsDisplayed,IsEncrypted,IsFieldOnly,IsHeading,IsReadOnly,IsSameLine,Name,SeqNo,Updated,UpdatedBy) VALUES (0,66043,72851,0,53917,TO_TIMESTAMP('2014-03-15 17:56:59','YYYY-MM-DD HH24:MI:SS'),100,'This is a summary entity',1,'ECA01','A summary entity represents a branch in a tree rather than an end-node. Summary entities are used for reporting and do not have own values.','N','Y','Y','Y','N','N','N','N','Y','Summary Level',80,TO_TIMESTAMP('2014-03-15 17:56:59','YYYY-MM-DD HH24:MI:SS'),100)
+INSERT INTO AD_Field (AD_Client_ID,AD_Column_ID,AD_Field_ID,AD_Org_ID,AD_Tab_ID,Created,CreatedBy,Description,DisplayLength,EntityType,Help,IsEmbedded,IsActive,IsCentrallyMaintained,IsDisplayed,IsEncrypted,IsFieldOnly,IsHeading,IsReadOnly,IsSameLine,Name,SeqNo,Updated,UpdatedBy) VALUES (0,66043,72851,0,53917,TO_TIMESTAMP('2014-03-15 17:56:59','YYYY-MM-DD HH24:MI:SS'),100,'This is a summary entity',1,'ECA01','A summary entity represents a branch in a tree rather than an end-node. Summary entities are used for reporting and do not have own values.','N','Y','Y','Y','N','N','N','N','Y','Summary Level',80,TO_TIMESTAMP('2014-03-15 17:56:59','YYYY-MM-DD HH24:MI:SS'),100)
 ;
 
 -- Mar 15, 2014 5:57:08 PM VET
@@ -675,7 +675,7 @@ INSERT INTO AD_Field_Trl (AD_Language,AD_Field_ID, Description,Help,Name, IsTran
 
 -- Mar 15, 2014 5:57:13 PM VET
 -- SFAndroid Server
-INSERT INTO AD_Field (AD_Client_ID,AD_Column_ID,AD_Field_ID,AD_Org_ID,AD_Reference_ID,AD_Reference_Value_ID,AD_Tab_ID,Created,CreatedBy,Description,DisplayLength,DisplayLogic,EntityType,Help,HideInListView,IsActive,IsCentrallyMaintained,IsDisplayed,IsEncrypted,IsFieldOnly,IsHeading,IsMandatory,IsReadOnly,IsSameLine,Name,SeqNo,Updated,UpdatedBy) VALUES (0,66044,72852,0,17,53504,53917,TO_TIMESTAMP('2014-03-15 17:57:08','YYYY-MM-DD HH24:MI:SS'),100,'Indicates the Action to be performed',1,'@IsSummary@ ! ''Y''','ECA01','The Action field is a drop down list box which indicates the Action to be performed for this Item.','N','Y','Y','Y','N','N','N','Y','N','N','Action',90,TO_TIMESTAMP('2014-03-15 17:57:08','YYYY-MM-DD HH24:MI:SS'),100)
+INSERT INTO AD_Field (AD_Client_ID,AD_Column_ID,AD_Field_ID,AD_Org_ID,AD_Reference_ID,AD_Reference_Value_ID,AD_Tab_ID,Created,CreatedBy,Description,DisplayLength,DisplayLogic,EntityType,Help,IsEmbedded,IsActive,IsCentrallyMaintained,IsDisplayed,IsEncrypted,IsFieldOnly,IsHeading,IsMandatory,IsReadOnly,IsSameLine,Name,SeqNo,Updated,UpdatedBy) VALUES (0,66044,72852,0,17,53504,53917,TO_TIMESTAMP('2014-03-15 17:57:08','YYYY-MM-DD HH24:MI:SS'),100,'Indicates the Action to be performed',1,'@IsSummary@ ! ''Y''','ECA01','The Action field is a drop down list box which indicates the Action to be performed for this Item.','N','Y','Y','Y','N','N','N','Y','N','N','Action',90,TO_TIMESTAMP('2014-03-15 17:57:08','YYYY-MM-DD HH24:MI:SS'),100)
 ;
 
 -- Mar 15, 2014 5:57:13 PM VET
@@ -685,7 +685,7 @@ INSERT INTO AD_Field_Trl (AD_Language,AD_Field_ID, Description,Help,Name, IsTran
 
 -- Mar 15, 2014 5:57:18 PM VET
 -- SFAndroid Server
-INSERT INTO AD_Field (AD_Client_ID,AD_Column_ID,AD_Field_ID,AD_Org_ID,AD_Tab_ID,Created,CreatedBy,Description,DisplayLength,EntityType,Help,HideInListView,IsActive,IsCentrallyMaintained,IsDisplayed,IsEncrypted,IsFieldOnly,IsHeading,IsReadOnly,IsSameLine,Name,SeqNo,Updated,UpdatedBy) VALUES (0,66324,72853,0,53917,TO_TIMESTAMP('2014-03-15 17:57:13','YYYY-MM-DD HH24:MI:SS'),100,'Information maintained in System Element table',1,'ECA01','The Centrally Maintained checkbox indicates if the Name, Description and Help maintained in ''System Element'' table  or ''Window'' table.','N','Y','Y','Y','N','N','N','N','Y','Centrally maintained',100,TO_TIMESTAMP('2014-03-15 17:57:13','YYYY-MM-DD HH24:MI:SS'),100)
+INSERT INTO AD_Field (AD_Client_ID,AD_Column_ID,AD_Field_ID,AD_Org_ID,AD_Tab_ID,Created,CreatedBy,Description,DisplayLength,EntityType,Help,IsEmbedded,IsActive,IsCentrallyMaintained,IsDisplayed,IsEncrypted,IsFieldOnly,IsHeading,IsReadOnly,IsSameLine,Name,SeqNo,Updated,UpdatedBy) VALUES (0,66324,72853,0,53917,TO_TIMESTAMP('2014-03-15 17:57:13','YYYY-MM-DD HH24:MI:SS'),100,'Information maintained in System Element table',1,'ECA01','The Centrally Maintained checkbox indicates if the Name, Description and Help maintained in ''System Element'' table  or ''Window'' table.','N','Y','Y','Y','N','N','N','N','Y','Centrally maintained',100,TO_TIMESTAMP('2014-03-15 17:57:13','YYYY-MM-DD HH24:MI:SS'),100)
 ;
 
 -- Mar 15, 2014 5:57:18 PM VET
@@ -695,7 +695,7 @@ INSERT INTO AD_Field_Trl (AD_Language,AD_Field_ID, Description,Help,Name, IsTran
 
 -- Mar 15, 2014 5:57:23 PM VET
 -- SFAndroid Server
-INSERT INTO AD_Field (AD_Client_ID,AD_Column_ID,AD_Field_ID,AD_Org_ID,AD_Tab_ID,Created,CreatedBy,Description,DisplayLength,EntityType,Help,HideInListView,IsActive,IsCentrallyMaintained,IsDisplayed,IsEncrypted,IsFieldOnly,IsHeading,IsReadOnly,IsSameLine,Name,SeqNo,Updated,UpdatedBy) VALUES (0,66042,72854,0,53917,TO_TIMESTAMP('2014-03-15 17:57:18','YYYY-MM-DD HH24:MI:SS'),100,'URL of  image',10,'ECA01','URL of image; The image is not stored in the database, but retrieved at runtime. The image can be a gif, jpeg or png.','N','Y','Y','Y','N','N','N','N','N','Image URL',110,TO_TIMESTAMP('2014-03-15 17:57:18','YYYY-MM-DD HH24:MI:SS'),100)
+INSERT INTO AD_Field (AD_Client_ID,AD_Column_ID,AD_Field_ID,AD_Org_ID,AD_Tab_ID,Created,CreatedBy,Description,DisplayLength,EntityType,Help,IsEmbedded,IsActive,IsCentrallyMaintained,IsDisplayed,IsEncrypted,IsFieldOnly,IsHeading,IsReadOnly,IsSameLine,Name,SeqNo,Updated,UpdatedBy) VALUES (0,66042,72854,0,53917,TO_TIMESTAMP('2014-03-15 17:57:18','YYYY-MM-DD HH24:MI:SS'),100,'URL of  image',10,'ECA01','URL of image; The image is not stored in the database, but retrieved at runtime. The image can be a gif, jpeg or png.','N','Y','Y','Y','N','N','N','N','N','Image URL',110,TO_TIMESTAMP('2014-03-15 17:57:18','YYYY-MM-DD HH24:MI:SS'),100)
 ;
 
 -- Mar 15, 2014 5:57:23 PM VET
@@ -705,7 +705,7 @@ INSERT INTO AD_Field_Trl (AD_Language,AD_Field_ID, Description,Help,Name, IsTran
 
 -- Mar 15, 2014 5:57:31 PM VET
 -- SFAndroid Server
-INSERT INTO AD_Field (AD_Client_ID,AD_Column_ID,AD_Field_ID,AD_Org_ID,AD_Tab_ID,Created,CreatedBy,DisplayLength,EntityType,HideInListView,IsActive,IsCentrallyMaintained,IsDisplayed,IsEncrypted,IsFieldOnly,IsHeading,IsReadOnly,IsSameLine,Name,SeqNo,Updated,UpdatedBy) VALUES (0,66041,72855,0,53917,TO_TIMESTAMP('2014-03-15 17:57:23','YYYY-MM-DD HH24:MI:SS'),100,10,'ECA01','N','Y','Y','Y','N','N','N','N','Y','Error Image URL',120,TO_TIMESTAMP('2014-03-15 17:57:23','YYYY-MM-DD HH24:MI:SS'),100)
+INSERT INTO AD_Field (AD_Client_ID,AD_Column_ID,AD_Field_ID,AD_Org_ID,AD_Tab_ID,Created,CreatedBy,DisplayLength,EntityType,IsEmbedded,IsActive,IsCentrallyMaintained,IsDisplayed,IsEncrypted,IsFieldOnly,IsHeading,IsReadOnly,IsSameLine,Name,SeqNo,Updated,UpdatedBy) VALUES (0,66041,72855,0,53917,TO_TIMESTAMP('2014-03-15 17:57:23','YYYY-MM-DD HH24:MI:SS'),100,10,'ECA01','N','Y','Y','Y','N','N','N','N','Y','Error Image URL',120,TO_TIMESTAMP('2014-03-15 17:57:23','YYYY-MM-DD HH24:MI:SS'),100)
 ;
 
 -- Mar 15, 2014 5:57:31 PM VET
@@ -715,7 +715,7 @@ INSERT INTO AD_Field_Trl (AD_Language,AD_Field_ID, Description,Help,Name, IsTran
 
 -- Mar 15, 2014 5:57:35 PM VET
 -- SFAndroid Server
-INSERT INTO AD_Field (AD_Client_ID,AD_Column_ID,AD_Field_ID,AD_Org_ID,AD_Tab_ID,Created,CreatedBy,Description,DisplayLength,DisplayLogic,EntityType,Help,HideInListView,IsActive,IsCentrallyMaintained,IsDisplayed,IsEncrypted,IsFieldOnly,IsHeading,IsReadOnly,IsSameLine,Name,SeqNo,Updated,UpdatedBy) VALUES (0,66053,72856,0,53917,TO_TIMESTAMP('2014-03-15 17:57:31','YYYY-MM-DD HH24:MI:SS'),100,'Fully qualified SQL WHERE clause',2000,'@IsSummary@ ! ''Y''','ECA01','The Where Clause indicates the SQL WHERE clause to use for record selection. The WHERE clause is added to the query. Fully qualified means "tablename.columnname".','N','Y','Y','Y','N','N','N','N','N','Sql WHERE',130,TO_TIMESTAMP('2014-03-15 17:57:31','YYYY-MM-DD HH24:MI:SS'),100)
+INSERT INTO AD_Field (AD_Client_ID,AD_Column_ID,AD_Field_ID,AD_Org_ID,AD_Tab_ID,Created,CreatedBy,Description,DisplayLength,DisplayLogic,EntityType,Help,IsEmbedded,IsActive,IsCentrallyMaintained,IsDisplayed,IsEncrypted,IsFieldOnly,IsHeading,IsReadOnly,IsSameLine,Name,SeqNo,Updated,UpdatedBy) VALUES (0,66053,72856,0,53917,TO_TIMESTAMP('2014-03-15 17:57:31','YYYY-MM-DD HH24:MI:SS'),100,'Fully qualified SQL WHERE clause',2000,'@IsSummary@ ! ''Y''','ECA01','The Where Clause indicates the SQL WHERE clause to use for record selection. The WHERE clause is added to the query. Fully qualified means "tablename.columnname".','N','Y','Y','Y','N','N','N','N','N','Sql WHERE',130,TO_TIMESTAMP('2014-03-15 17:57:31','YYYY-MM-DD HH24:MI:SS'),100)
 ;
 
 -- Mar 15, 2014 5:57:35 PM VET
@@ -725,7 +725,7 @@ INSERT INTO AD_Field_Trl (AD_Language,AD_Field_ID, Description,Help,Name, IsTran
 
 -- Mar 15, 2014 5:57:43 PM VET
 -- SFAndroid Server
-INSERT INTO AD_Field (AD_Client_ID,AD_Column_ID,AD_Field_ID,AD_Org_ID,AD_Tab_ID,Created,CreatedBy,DisplayLength,DisplayLogic,EntityType,HideInListView,IsActive,IsCentrallyMaintained,IsDisplayed,IsEncrypted,IsFieldOnly,IsHeading,IsReadOnly,IsSameLine,Name,SeqNo,Updated,UpdatedBy) VALUES (0,66048,72857,0,53917,TO_TIMESTAMP('2014-03-15 17:57:35','YYYY-MM-DD HH24:MI:SS'),100,255,'@IsSummary@ ! ''Y''','ECA01','N','Y','Y','Y','N','N','N','N','N','GROUP BY Clause',140,TO_TIMESTAMP('2014-03-15 17:57:35','YYYY-MM-DD HH24:MI:SS'),100)
+INSERT INTO AD_Field (AD_Client_ID,AD_Column_ID,AD_Field_ID,AD_Org_ID,AD_Tab_ID,Created,CreatedBy,DisplayLength,DisplayLogic,EntityType,IsEmbedded,IsActive,IsCentrallyMaintained,IsDisplayed,IsEncrypted,IsFieldOnly,IsHeading,IsReadOnly,IsSameLine,Name,SeqNo,Updated,UpdatedBy) VALUES (0,66048,72857,0,53917,TO_TIMESTAMP('2014-03-15 17:57:35','YYYY-MM-DD HH24:MI:SS'),100,255,'@IsSummary@ ! ''Y''','ECA01','N','Y','Y','Y','N','N','N','N','N','GROUP BY Clause',140,TO_TIMESTAMP('2014-03-15 17:57:35','YYYY-MM-DD HH24:MI:SS'),100)
 ;
 
 -- Mar 15, 2014 5:57:43 PM VET
@@ -735,7 +735,7 @@ INSERT INTO AD_Field_Trl (AD_Language,AD_Field_ID, Description,Help,Name, IsTran
 
 -- Mar 15, 2014 5:57:49 PM VET
 -- SFAndroid Server
-INSERT INTO AD_Field (AD_Client_ID,AD_Column_ID,AD_Field_ID,AD_Org_ID,AD_Tab_ID,Created,CreatedBy,Description,DisplayLength,DisplayLogic,EntityType,Help,HideInListView,IsActive,IsCentrallyMaintained,IsDisplayed,IsEncrypted,IsFieldOnly,IsHeading,IsReadOnly,IsSameLine,Name,SeqNo,Updated,UpdatedBy) VALUES (0,66051,72858,0,53917,TO_TIMESTAMP('2014-03-15 17:57:43','YYYY-MM-DD HH24:MI:SS'),100,'Fully qualified ORDER BY clause',2000,'@IsSummary@ ! ''Y''','ECA01','The ORDER BY Clause indicates the SQL ORDER BY clause to use for record selection','N','Y','Y','Y','N','N','N','N','N','Sql ORDER BY',150,TO_TIMESTAMP('2014-03-15 17:57:43','YYYY-MM-DD HH24:MI:SS'),100)
+INSERT INTO AD_Field (AD_Client_ID,AD_Column_ID,AD_Field_ID,AD_Org_ID,AD_Tab_ID,Created,CreatedBy,Description,DisplayLength,DisplayLogic,EntityType,Help,IsEmbedded,IsActive,IsCentrallyMaintained,IsDisplayed,IsEncrypted,IsFieldOnly,IsHeading,IsReadOnly,IsSameLine,Name,SeqNo,Updated,UpdatedBy) VALUES (0,66051,72858,0,53917,TO_TIMESTAMP('2014-03-15 17:57:43','YYYY-MM-DD HH24:MI:SS'),100,'Fully qualified ORDER BY clause',2000,'@IsSummary@ ! ''Y''','ECA01','The ORDER BY Clause indicates the SQL ORDER BY clause to use for record selection','N','Y','Y','Y','N','N','N','N','N','Sql ORDER BY',150,TO_TIMESTAMP('2014-03-15 17:57:43','YYYY-MM-DD HH24:MI:SS'),100)
 ;
 
 -- Mar 15, 2014 5:57:49 PM VET
@@ -745,7 +745,7 @@ INSERT INTO AD_Field_Trl (AD_Language,AD_Field_ID, Description,Help,Name, IsTran
 
 -- Mar 15, 2014 5:57:55 PM VET
 -- SFAndroid Server
-INSERT INTO AD_Field (AD_Client_ID,AD_Column_ID,AD_Field_ID,AD_Org_ID,AD_Tab_ID,Created,CreatedBy,DisplayLength,DisplayLogic,EntityType,HideInListView,IsActive,IsCentrallyMaintained,IsDisplayed,IsEncrypted,IsFieldOnly,IsHeading,IsReadOnly,IsSameLine,Name,SeqNo,Updated,UpdatedBy) VALUES (0,66047,72859,0,53917,TO_TIMESTAMP('2014-03-15 17:57:49','YYYY-MM-DD HH24:MI:SS'),100,1,'@IsSummary@ ! ''Y''','ECA01','N','Y','Y','Y','N','N','N','N','N','Deployment Type',160,TO_TIMESTAMP('2014-03-15 17:57:49','YYYY-MM-DD HH24:MI:SS'),100)
+INSERT INTO AD_Field (AD_Client_ID,AD_Column_ID,AD_Field_ID,AD_Org_ID,AD_Tab_ID,Created,CreatedBy,DisplayLength,DisplayLogic,EntityType,IsEmbedded,IsActive,IsCentrallyMaintained,IsDisplayed,IsEncrypted,IsFieldOnly,IsHeading,IsReadOnly,IsSameLine,Name,SeqNo,Updated,UpdatedBy) VALUES (0,66047,72859,0,53917,TO_TIMESTAMP('2014-03-15 17:57:49','YYYY-MM-DD HH24:MI:SS'),100,1,'@IsSummary@ ! ''Y''','ECA01','N','Y','Y','Y','N','N','N','N','N','Deployment Type',160,TO_TIMESTAMP('2014-03-15 17:57:49','YYYY-MM-DD HH24:MI:SS'),100)
 ;
 
 -- Mar 15, 2014 5:57:55 PM VET
@@ -755,7 +755,7 @@ INSERT INTO AD_Field_Trl (AD_Language,AD_Field_ID, Description,Help,Name, IsTran
 
 -- Mar 15, 2014 5:58:01 PM VET
 -- SFAndroid Server
-INSERT INTO AD_Field (AD_Client_ID,AD_Column_ID,AD_Field_ID,AD_Org_ID,AD_Tab_ID,Created,CreatedBy,Description,DisplayLength,DisplayLogic,EntityType,Help,HideInListView,IsActive,IsCentrallyMaintained,IsDisplayed,IsEncrypted,IsFieldOnly,IsHeading,IsReadOnly,IsSameLine,Name,SeqNo,Updated,UpdatedBy) VALUES (0,66049,72860,0,53917,TO_TIMESTAMP('2014-03-15 17:57:55','YYYY-MM-DD HH24:MI:SS'),100,'The user can insert a new Record',1,'@IsSummary@ ! ''Y''','ECA01','If not selected, the user cannot create a new Record.  This is automatically disabled, if the Tab is Read Only.','N','Y','Y','Y','N','N','N','N','Y','Insert Record',170,TO_TIMESTAMP('2014-03-15 17:57:55','YYYY-MM-DD HH24:MI:SS'),100)
+INSERT INTO AD_Field (AD_Client_ID,AD_Column_ID,AD_Field_ID,AD_Org_ID,AD_Tab_ID,Created,CreatedBy,Description,DisplayLength,DisplayLogic,EntityType,Help,IsEmbedded,IsActive,IsCentrallyMaintained,IsDisplayed,IsEncrypted,IsFieldOnly,IsHeading,IsReadOnly,IsSameLine,Name,SeqNo,Updated,UpdatedBy) VALUES (0,66049,72860,0,53917,TO_TIMESTAMP('2014-03-15 17:57:55','YYYY-MM-DD HH24:MI:SS'),100,'The user can insert a new Record',1,'@IsSummary@ ! ''Y''','ECA01','If not selected, the user cannot create a new Record.  This is automatically disabled, if the Tab is Read Only.','N','Y','Y','Y','N','N','N','N','Y','Insert Record',170,TO_TIMESTAMP('2014-03-15 17:57:55','YYYY-MM-DD HH24:MI:SS'),100)
 ;
 
 -- Mar 15, 2014 5:58:01 PM VET
@@ -765,7 +765,7 @@ INSERT INTO AD_Field_Trl (AD_Language,AD_Field_ID, Description,Help,Name, IsTran
 
 -- Mar 15, 2014 5:58:06 PM VET
 -- SFAndroid Server
-INSERT INTO AD_Field (AD_Client_ID,AD_Column_ID,AD_Field_ID,AD_Org_ID,AD_Tab_ID,Created,CreatedBy,Description,DisplayLength,DisplayLogic,EntityType,Help,HideInListView,IsActive,IsCentrallyMaintained,IsDisplayed,IsEncrypted,IsFieldOnly,IsHeading,IsReadOnly,IsSameLine,Name,SeqNo,Updated,UpdatedBy) VALUES (0,66050,72861,0,53917,TO_TIMESTAMP('2014-03-15 17:58:01','YYYY-MM-DD HH24:MI:SS'),100,'Field is read / write',1,'@IsSummary@ ! ''Y''','ECA01','The Read Write indicates that this field may be read and updated.','N','Y','Y','Y','N','N','N','N','N','Read Write',180,TO_TIMESTAMP('2014-03-15 17:58:01','YYYY-MM-DD HH24:MI:SS'),100)
+INSERT INTO AD_Field (AD_Client_ID,AD_Column_ID,AD_Field_ID,AD_Org_ID,AD_Tab_ID,Created,CreatedBy,Description,DisplayLength,DisplayLogic,EntityType,Help,IsEmbedded,IsActive,IsCentrallyMaintained,IsDisplayed,IsEncrypted,IsFieldOnly,IsHeading,IsReadOnly,IsSameLine,Name,SeqNo,Updated,UpdatedBy) VALUES (0,66050,72861,0,53917,TO_TIMESTAMP('2014-03-15 17:58:01','YYYY-MM-DD HH24:MI:SS'),100,'Field is read / write',1,'@IsSummary@ ! ''Y''','ECA01','The Read Write indicates that this field may be read and updated.','N','Y','Y','Y','N','N','N','N','N','Read Write',180,TO_TIMESTAMP('2014-03-15 17:58:01','YYYY-MM-DD HH24:MI:SS'),100)
 ;
 
 -- Mar 15, 2014 5:58:07 PM VET
@@ -775,7 +775,7 @@ INSERT INTO AD_Field_Trl (AD_Language,AD_Field_ID, Description,Help,Name, IsTran
 
 -- Mar 15, 2014 5:58:13 PM VET
 -- SFAndroid Server
-INSERT INTO AD_Field (AD_Client_ID,AD_Column_ID,AD_Field_ID,AD_Org_ID,AD_Tab_ID,Created,CreatedBy,Description,DisplayLength,DisplayLogic,EntityType,Help,HideInListView,IsActive,IsCentrallyMaintained,IsDisplayed,IsEncrypted,IsFieldOnly,IsHeading,IsMandatory,IsReadOnly,IsSameLine,Name,SeqNo,Updated,UpdatedBy) VALUES (0,66045,72862,0,53917,TO_TIMESTAMP('2014-03-15 17:58:07','YYYY-MM-DD HH24:MI:SS'),100,'Special Form',10,'@Action@=''X'' & @IsSummary@ ! ''Y''','ECA01','The Special Form field identifies a unique Special Form in the system.','N','Y','Y','Y','N','N','N','Y','N','Y','Special Form',190,TO_TIMESTAMP('2014-03-15 17:58:07','YYYY-MM-DD HH24:MI:SS'),100)
+INSERT INTO AD_Field (AD_Client_ID,AD_Column_ID,AD_Field_ID,AD_Org_ID,AD_Tab_ID,Created,CreatedBy,Description,DisplayLength,DisplayLogic,EntityType,Help,IsEmbedded,IsActive,IsCentrallyMaintained,IsDisplayed,IsEncrypted,IsFieldOnly,IsHeading,IsMandatory,IsReadOnly,IsSameLine,Name,SeqNo,Updated,UpdatedBy) VALUES (0,66045,72862,0,53917,TO_TIMESTAMP('2014-03-15 17:58:07','YYYY-MM-DD HH24:MI:SS'),100,'Special Form',10,'@Action@=''X'' & @IsSummary@ ! ''Y''','ECA01','The Special Form field identifies a unique Special Form in the system.','N','Y','Y','Y','N','N','N','Y','N','Y','Special Form',190,TO_TIMESTAMP('2014-03-15 17:58:07','YYYY-MM-DD HH24:MI:SS'),100)
 ;
 
 -- Mar 15, 2014 5:58:13 PM VET
@@ -785,7 +785,7 @@ INSERT INTO AD_Field_Trl (AD_Language,AD_Field_ID, Description,Help,Name, IsTran
 
 -- Mar 15, 2014 5:58:16 PM VET
 -- SFAndroid Server
-INSERT INTO AD_Field (AD_Client_ID,AD_Column_ID,AD_Field_ID,AD_Org_ID,AD_Tab_ID,Created,CreatedBy,Description,DisplayLength,DisplayLogic,EntityType,Help,HideInListView,IsActive,IsCentrallyMaintained,IsDisplayed,IsEncrypted,IsFieldOnly,IsHeading,IsMandatory,IsReadOnly,IsSameLine,Name,SeqNo,Updated,UpdatedBy) VALUES (0,66046,72863,0,53917,TO_TIMESTAMP('2014-03-15 17:58:13','YYYY-MM-DD HH24:MI:SS'),100,'Process or Report',10,'@Action@ = ''R'' | @Action@ = ''P'' & @IsSummary@ ! ''Y''','ECA01','The Process field identifies a unique Process or Report in the system.','N','Y','Y','Y','N','N','N','Y','N','Y','Process',200,TO_TIMESTAMP('2014-03-15 17:58:13','YYYY-MM-DD HH24:MI:SS'),100)
+INSERT INTO AD_Field (AD_Client_ID,AD_Column_ID,AD_Field_ID,AD_Org_ID,AD_Tab_ID,Created,CreatedBy,Description,DisplayLength,DisplayLogic,EntityType,Help,IsEmbedded,IsActive,IsCentrallyMaintained,IsDisplayed,IsEncrypted,IsFieldOnly,IsHeading,IsMandatory,IsReadOnly,IsSameLine,Name,SeqNo,Updated,UpdatedBy) VALUES (0,66046,72863,0,53917,TO_TIMESTAMP('2014-03-15 17:58:13','YYYY-MM-DD HH24:MI:SS'),100,'Process or Report',10,'@Action@ = ''R'' | @Action@ = ''P'' & @IsSummary@ ! ''Y''','ECA01','The Process field identifies a unique Process or Report in the system.','N','Y','Y','Y','N','N','N','Y','N','Y','Process',200,TO_TIMESTAMP('2014-03-15 17:58:13','YYYY-MM-DD HH24:MI:SS'),100)
 ;
 
 -- Mar 15, 2014 5:58:16 PM VET
@@ -795,7 +795,7 @@ INSERT INTO AD_Field_Trl (AD_Language,AD_Field_ID, Description,Help,Name, IsTran
 
 -- Mar 15, 2014 5:58:32 PM VET
 -- SFAndroid Server
-INSERT INTO AD_Field (AD_Client_ID,AD_Column_ID,AD_Field_ID,AD_Org_ID,AD_Tab_ID,Created,CreatedBy,DisplayLength,DisplayLogic,EntityType,HideInListView,IsActive,IsCentrallyMaintained,IsDisplayed,IsEncrypted,IsFieldOnly,IsHeading,IsMandatory,IsReadOnly,IsSameLine,Name,SeqNo,Updated,UpdatedBy) VALUES (0,66052,72864,0,53917,TO_TIMESTAMP('2014-03-15 17:58:16','YYYY-MM-DD HH24:MI:SS'),100,10,'@DeploymentType@ = ''L''  & @IsSummary@ ! ''Y''','ECA01','N','Y','Y','Y','N','N','N','Y','N','N','Mobile Table',210,TO_TIMESTAMP('2014-03-15 17:58:16','YYYY-MM-DD HH24:MI:SS'),100)
+INSERT INTO AD_Field (AD_Client_ID,AD_Column_ID,AD_Field_ID,AD_Org_ID,AD_Tab_ID,Created,CreatedBy,DisplayLength,DisplayLogic,EntityType,IsEmbedded,IsActive,IsCentrallyMaintained,IsDisplayed,IsEncrypted,IsFieldOnly,IsHeading,IsMandatory,IsReadOnly,IsSameLine,Name,SeqNo,Updated,UpdatedBy) VALUES (0,66052,72864,0,53917,TO_TIMESTAMP('2014-03-15 17:58:16','YYYY-MM-DD HH24:MI:SS'),100,10,'@DeploymentType@ = ''L''  & @IsSummary@ ! ''Y''','ECA01','N','Y','Y','Y','N','N','N','Y','N','N','Mobile Table',210,TO_TIMESTAMP('2014-03-15 17:58:16','YYYY-MM-DD HH24:MI:SS'),100)
 ;
 
 -- Mar 15, 2014 5:58:32 PM VET
@@ -805,7 +805,7 @@ INSERT INTO AD_Field_Trl (AD_Language,AD_Field_ID, Description,Help,Name, IsTran
 
 -- Mar 15, 2014 5:58:36 PM VET
 -- SFAndroid Server
-INSERT INTO AD_Field (AD_Client_ID,AD_Column_ID,AD_Field_ID,AD_Org_ID,AD_Tab_ID,Created,CreatedBy,DisplayLength,DisplayLogic,EntityType,HideInListView,IsActive,IsCentrallyMaintained,IsDisplayed,IsEncrypted,IsFieldOnly,IsHeading,IsMandatory,IsReadOnly,IsSameLine,Name,SeqNo,Updated,UpdatedBy) VALUES (0,71687,72865,0,53917,TO_TIMESTAMP('2014-03-15 17:58:32','YYYY-MM-DD HH24:MI:SS'),100,10,'@Action@ = ''W'' & @IsSummary@ ! ''Y''','ECA01','N','Y','Y','Y','N','N','N','Y','N','Y','Window Mobile',220,TO_TIMESTAMP('2014-03-15 17:58:32','YYYY-MM-DD HH24:MI:SS'),100)
+INSERT INTO AD_Field (AD_Client_ID,AD_Column_ID,AD_Field_ID,AD_Org_ID,AD_Tab_ID,Created,CreatedBy,DisplayLength,DisplayLogic,EntityType,IsEmbedded,IsActive,IsCentrallyMaintained,IsDisplayed,IsEncrypted,IsFieldOnly,IsHeading,IsMandatory,IsReadOnly,IsSameLine,Name,SeqNo,Updated,UpdatedBy) VALUES (0,71687,72865,0,53917,TO_TIMESTAMP('2014-03-15 17:58:32','YYYY-MM-DD HH24:MI:SS'),100,10,'@Action@ = ''W'' & @IsSummary@ ! ''Y''','ECA01','N','Y','Y','Y','N','N','N','Y','N','Y','Window Mobile',220,TO_TIMESTAMP('2014-03-15 17:58:32','YYYY-MM-DD HH24:MI:SS'),100)
 ;
 
 -- Mar 15, 2014 5:58:36 PM VET
@@ -815,7 +815,7 @@ INSERT INTO AD_Field_Trl (AD_Language,AD_Field_ID, Description,Help,Name, IsTran
 
 -- Mar 15, 2014 5:58:41 PM VET
 -- SFAndroid Server
-INSERT INTO AD_Field (AD_Client_ID,AD_Column_ID,AD_Field_ID,AD_Org_ID,AD_Tab_ID,Created,CreatedBy,DisplayLength,DisplayLogic,EntityType,HideInListView,IsActive,IsCentrallyMaintained,IsDisplayed,IsEncrypted,IsFieldOnly,IsHeading,IsReadOnly,IsSameLine,Name,SeqNo,SortNo,Updated,UpdatedBy) VALUES (0,66702,72866,0,53917,TO_TIMESTAMP('2014-03-15 17:58:36','YYYY-MM-DD HH24:MI:SS'),100,0,'@DeploymentType@ = ''W'' | @DeploymentType@ = ''M'' & @IsSummary@ = ''N''','ECA01','N','Y','Y','Y','N','N','N','N','N','Quick Action Menu',230,0,TO_TIMESTAMP('2014-03-15 17:58:36','YYYY-MM-DD HH24:MI:SS'),100)
+INSERT INTO AD_Field (AD_Client_ID,AD_Column_ID,AD_Field_ID,AD_Org_ID,AD_Tab_ID,Created,CreatedBy,DisplayLength,DisplayLogic,EntityType,IsEmbedded,IsActive,IsCentrallyMaintained,IsDisplayed,IsEncrypted,IsFieldOnly,IsHeading,IsReadOnly,IsSameLine,Name,SeqNo,SortNo,Updated,UpdatedBy) VALUES (0,66702,72866,0,53917,TO_TIMESTAMP('2014-03-15 17:58:36','YYYY-MM-DD HH24:MI:SS'),100,0,'@DeploymentType@ = ''W'' | @DeploymentType@ = ''M'' & @IsSummary@ = ''N''','ECA01','N','Y','Y','Y','N','N','N','N','N','Quick Action Menu',230,0,TO_TIMESTAMP('2014-03-15 17:58:36','YYYY-MM-DD HH24:MI:SS'),100)
 ;
 
 -- Mar 15, 2014 5:58:41 PM VET
@@ -825,7 +825,7 @@ INSERT INTO AD_Field_Trl (AD_Language,AD_Field_ID, Description,Help,Name, IsTran
 
 -- Mar 15, 2014 5:58:45 PM VET
 -- SFAndroid Server
-INSERT INTO AD_Field (AD_Client_ID,AD_Column_ID,AD_Field_ID,AD_Org_ID,AD_Tab_ID,Created,CreatedBy,DisplayLength,DisplayLogic,EntityType,HideInListView,IsActive,IsCentrallyMaintained,IsDisplayed,IsEncrypted,IsFieldOnly,IsHeading,IsReadOnly,IsSameLine,Name,SeqNo,Updated,UpdatedBy) VALUES (0,66703,72867,0,53917,TO_TIMESTAMP('2014-03-15 17:58:41','YYYY-MM-DD HH24:MI:SS'),100,10,'@DeploymentType@ = ''D'' | @DeploymentType@ = ''L'' & @IsSummary@ = ''N''','ECA01','N','Y','Y','Y','N','N','N','N','N','Sync/Option Menu',240,TO_TIMESTAMP('2014-03-15 17:58:41','YYYY-MM-DD HH24:MI:SS'),100)
+INSERT INTO AD_Field (AD_Client_ID,AD_Column_ID,AD_Field_ID,AD_Org_ID,AD_Tab_ID,Created,CreatedBy,DisplayLength,DisplayLogic,EntityType,IsEmbedded,IsActive,IsCentrallyMaintained,IsDisplayed,IsEncrypted,IsFieldOnly,IsHeading,IsReadOnly,IsSameLine,Name,SeqNo,Updated,UpdatedBy) VALUES (0,66703,72867,0,53917,TO_TIMESTAMP('2014-03-15 17:58:41','YYYY-MM-DD HH24:MI:SS'),100,10,'@DeploymentType@ = ''D'' | @DeploymentType@ = ''L'' & @IsSummary@ = ''N''','ECA01','N','Y','Y','Y','N','N','N','N','N','Sync/Option Menu',240,TO_TIMESTAMP('2014-03-15 17:58:41','YYYY-MM-DD HH24:MI:SS'),100)
 ;
 
 -- Mar 15, 2014 5:58:45 PM VET
@@ -835,7 +835,7 @@ INSERT INTO AD_Field_Trl (AD_Language,AD_Field_ID, Description,Help,Name, IsTran
 
 -- Mar 15, 2014 5:58:51 PM VET
 -- SFAndroid Server
-INSERT INTO AD_Field (AD_Client_ID,AD_Column_ID,AD_Field_ID,AD_Org_ID,AD_Tab_ID,Created,CreatedBy,DisplayLength,DisplayLogic,EntityType,HideInListView,IsActive,IsCentrallyMaintained,IsDisplayed,IsEncrypted,IsFieldOnly,IsHeading,IsReadOnly,IsSameLine,Name,SeqNo,Updated,UpdatedBy) VALUES (0,72396,72868,0,53917,TO_TIMESTAMP('2014-03-15 17:58:46','YYYY-MM-DD HH24:MI:SS'),100,10,'@Action@ = ''W'' & @IsSummary@ = ''N''','ECA01','N','Y','Y','Y','N','N','N','N','Y','Activity Menu',250,TO_TIMESTAMP('2014-03-15 17:58:46','YYYY-MM-DD HH24:MI:SS'),100)
+INSERT INTO AD_Field (AD_Client_ID,AD_Column_ID,AD_Field_ID,AD_Org_ID,AD_Tab_ID,Created,CreatedBy,DisplayLength,DisplayLogic,EntityType,IsEmbedded,IsActive,IsCentrallyMaintained,IsDisplayed,IsEncrypted,IsFieldOnly,IsHeading,IsReadOnly,IsSameLine,Name,SeqNo,Updated,UpdatedBy) VALUES (0,72396,72868,0,53917,TO_TIMESTAMP('2014-03-15 17:58:46','YYYY-MM-DD HH24:MI:SS'),100,10,'@Action@ = ''W'' & @IsSummary@ = ''N''','ECA01','N','Y','Y','Y','N','N','N','N','Y','Activity Menu',250,TO_TIMESTAMP('2014-03-15 17:58:46','YYYY-MM-DD HH24:MI:SS'),100)
 ;
 
 -- Mar 15, 2014 5:58:51 PM VET
@@ -845,7 +845,7 @@ INSERT INTO AD_Field_Trl (AD_Language,AD_Field_ID, Description,Help,Name, IsTran
 
 -- Mar 15, 2014 5:58:55 PM VET
 -- SFAndroid Server
-INSERT INTO AD_Field (AD_Client_ID,AD_Column_ID,AD_Field_ID,AD_Org_ID,AD_Tab_ID,Created,CreatedBy,DisplayLength,EntityType,HideInListView,IsActive,IsCentrallyMaintained,IsDisplayed,IsEncrypted,IsFieldOnly,IsHeading,IsReadOnly,IsSameLine,Name,Updated,UpdatedBy) VALUES (0,66036,72869,0,53917,TO_TIMESTAMP('2014-03-15 17:58:51','YYYY-MM-DD HH24:MI:SS'),100,22,'ECA01','N','Y','Y','N','N','N','N','N','N','Menu Option',TO_TIMESTAMP('2014-03-15 17:58:51','YYYY-MM-DD HH24:MI:SS'),100)
+INSERT INTO AD_Field (AD_Client_ID,AD_Column_ID,AD_Field_ID,AD_Org_ID,AD_Tab_ID,Created,CreatedBy,DisplayLength,EntityType,IsEmbedded,IsActive,IsCentrallyMaintained,IsDisplayed,IsEncrypted,IsFieldOnly,IsHeading,IsReadOnly,IsSameLine,Name,Updated,UpdatedBy) VALUES (0,66036,72869,0,53917,TO_TIMESTAMP('2014-03-15 17:58:51','YYYY-MM-DD HH24:MI:SS'),100,22,'ECA01','N','Y','Y','N','N','N','N','N','N','Menu Option',TO_TIMESTAMP('2014-03-15 17:58:51','YYYY-MM-DD HH24:MI:SS'),100)
 ;
 
 -- Mar 15, 2014 5:58:55 PM VET
@@ -865,7 +865,7 @@ INSERT INTO AD_Tab_Trl (AD_Language,AD_Tab_ID, CommitWarning,Description,Help,Na
 
 -- Mar 15, 2014 5:59:05 PM VET
 -- SFAndroid Server
-INSERT INTO AD_Field (AD_Client_ID,AD_Column_ID,AD_Field_ID,AD_Org_ID,AD_Tab_ID,Created,CreatedBy,Description,DisplayLength,EntityType,Help,HideInListView,IsActive,IsCentrallyMaintained,IsDisplayed,IsEncrypted,IsFieldOnly,IsHeading,IsReadOnly,IsSameLine,Name,SeqNo,Updated,UpdatedBy) VALUES (0,66054,72870,0,53918,TO_TIMESTAMP('2014-03-15 17:59:01','YYYY-MM-DD HH24:MI:SS'),100,'Client/Tenant for this installation.',22,'ECA01','A Client is a company or a legal entity. You cannot share data between Clients. Tenant is a synonym for Client.','N','Y','Y','Y','N','N','N','N','N','Client',10,TO_TIMESTAMP('2014-03-15 17:59:01','YYYY-MM-DD HH24:MI:SS'),100)
+INSERT INTO AD_Field (AD_Client_ID,AD_Column_ID,AD_Field_ID,AD_Org_ID,AD_Tab_ID,Created,CreatedBy,Description,DisplayLength,EntityType,Help,IsEmbedded,IsActive,IsCentrallyMaintained,IsDisplayed,IsEncrypted,IsFieldOnly,IsHeading,IsReadOnly,IsSameLine,Name,SeqNo,Updated,UpdatedBy) VALUES (0,66054,72870,0,53918,TO_TIMESTAMP('2014-03-15 17:59:01','YYYY-MM-DD HH24:MI:SS'),100,'Client/Tenant for this installation.',22,'ECA01','A Client is a company or a legal entity. You cannot share data between Clients. Tenant is a synonym for Client.','N','Y','Y','Y','N','N','N','N','N','Client',10,TO_TIMESTAMP('2014-03-15 17:59:01','YYYY-MM-DD HH24:MI:SS'),100)
 ;
 
 -- Mar 15, 2014 5:59:05 PM VET
@@ -875,7 +875,7 @@ INSERT INTO AD_Field_Trl (AD_Language,AD_Field_ID, Description,Help,Name, IsTran
 
 -- Mar 15, 2014 5:59:11 PM VET
 -- SFAndroid Server
-INSERT INTO AD_Field (AD_Client_ID,AD_Column_ID,AD_Field_ID,AD_Org_ID,AD_Tab_ID,Created,CreatedBy,Description,DisplayLength,EntityType,Help,HideInListView,IsActive,IsCentrallyMaintained,IsDisplayed,IsEncrypted,IsFieldOnly,IsHeading,IsReadOnly,IsSameLine,Name,SeqNo,Updated,UpdatedBy) VALUES (0,66055,72871,0,53918,TO_TIMESTAMP('2014-03-15 17:59:05','YYYY-MM-DD HH24:MI:SS'),100,'Organizational entity within client',22,'ECA01','An organization is a unit of your client or legal entity - examples are store, department. You can share data between organizations.','N','Y','Y','Y','N','N','N','N','Y','Organization',20,TO_TIMESTAMP('2014-03-15 17:59:05','YYYY-MM-DD HH24:MI:SS'),100)
+INSERT INTO AD_Field (AD_Client_ID,AD_Column_ID,AD_Field_ID,AD_Org_ID,AD_Tab_ID,Created,CreatedBy,Description,DisplayLength,EntityType,Help,IsEmbedded,IsActive,IsCentrallyMaintained,IsDisplayed,IsEncrypted,IsFieldOnly,IsHeading,IsReadOnly,IsSameLine,Name,SeqNo,Updated,UpdatedBy) VALUES (0,66055,72871,0,53918,TO_TIMESTAMP('2014-03-15 17:59:05','YYYY-MM-DD HH24:MI:SS'),100,'Organizational entity within client',22,'ECA01','An organization is a unit of your client or legal entity - examples are store, department. You can share data between organizations.','N','Y','Y','Y','N','N','N','N','Y','Organization',20,TO_TIMESTAMP('2014-03-15 17:59:05','YYYY-MM-DD HH24:MI:SS'),100)
 ;
 
 -- Mar 15, 2014 5:59:11 PM VET
@@ -885,7 +885,7 @@ INSERT INTO AD_Field_Trl (AD_Language,AD_Field_ID, Description,Help,Name, IsTran
 
 -- Mar 15, 2014 5:59:26 PM VET
 -- SFAndroid Server
-INSERT INTO AD_Field (AD_Client_ID,AD_Column_ID,AD_Field_ID,AD_Org_ID,AD_Tab_ID,Created,CreatedBy,DisplayLength,EntityType,HideInListView,IsActive,IsCentrallyMaintained,IsDisplayed,IsEncrypted,IsFieldOnly,IsHeading,IsReadOnly,IsSameLine,Name,SeqNo,Updated,UpdatedBy) VALUES (0,66064,72872,0,53918,TO_TIMESTAMP('2014-03-15 17:59:11','YYYY-MM-DD HH24:MI:SS'),100,10,'ECA01','N','Y','Y','Y','N','N','N','Y','N','Menu Option',30,TO_TIMESTAMP('2014-03-15 17:59:11','YYYY-MM-DD HH24:MI:SS'),100)
+INSERT INTO AD_Field (AD_Client_ID,AD_Column_ID,AD_Field_ID,AD_Org_ID,AD_Tab_ID,Created,CreatedBy,DisplayLength,EntityType,IsEmbedded,IsActive,IsCentrallyMaintained,IsDisplayed,IsEncrypted,IsFieldOnly,IsHeading,IsReadOnly,IsSameLine,Name,SeqNo,Updated,UpdatedBy) VALUES (0,66064,72872,0,53918,TO_TIMESTAMP('2014-03-15 17:59:11','YYYY-MM-DD HH24:MI:SS'),100,10,'ECA01','N','Y','Y','Y','N','N','N','Y','N','Menu Option',30,TO_TIMESTAMP('2014-03-15 17:59:11','YYYY-MM-DD HH24:MI:SS'),100)
 ;
 
 -- Mar 15, 2014 5:59:26 PM VET
@@ -895,7 +895,7 @@ INSERT INTO AD_Field_Trl (AD_Language,AD_Field_ID, Description,Help,Name, IsTran
 
 -- Mar 15, 2014 5:59:32 PM VET
 -- SFAndroid Server
-INSERT INTO AD_Field (AD_Client_ID,AD_Column_ID,AD_Field_ID,AD_Org_ID,AD_Tab_ID,Created,CreatedBy,Description,DisplayLength,EntityType,Help,HideInListView,IsActive,IsCentrallyMaintained,IsDisplayed,IsEncrypted,IsFieldOnly,IsHeading,IsReadOnly,IsSameLine,Name,SeqNo,Updated,UpdatedBy) VALUES (0,66065,72873,0,53918,TO_TIMESTAMP('2014-03-15 17:59:26','YYYY-MM-DD HH24:MI:SS'),100,'Language for this entity',6,'ECA01','The Language identifies the language to use for display and formatting','N','Y','Y','Y','N','N','N','Y','Y','Language',40,TO_TIMESTAMP('2014-03-15 17:59:26','YYYY-MM-DD HH24:MI:SS'),100)
+INSERT INTO AD_Field (AD_Client_ID,AD_Column_ID,AD_Field_ID,AD_Org_ID,AD_Tab_ID,Created,CreatedBy,Description,DisplayLength,EntityType,Help,IsEmbedded,IsActive,IsCentrallyMaintained,IsDisplayed,IsEncrypted,IsFieldOnly,IsHeading,IsReadOnly,IsSameLine,Name,SeqNo,Updated,UpdatedBy) VALUES (0,66065,72873,0,53918,TO_TIMESTAMP('2014-03-15 17:59:26','YYYY-MM-DD HH24:MI:SS'),100,'Language for this entity',6,'ECA01','The Language identifies the language to use for display and formatting','N','Y','Y','Y','N','N','N','Y','Y','Language',40,TO_TIMESTAMP('2014-03-15 17:59:26','YYYY-MM-DD HH24:MI:SS'),100)
 ;
 
 -- Mar 15, 2014 5:59:32 PM VET
@@ -905,7 +905,7 @@ INSERT INTO AD_Field_Trl (AD_Language,AD_Field_ID, Description,Help,Name, IsTran
 
 -- Mar 15, 2014 5:59:40 PM VET
 -- SFAndroid Server
-INSERT INTO AD_Field (AD_Client_ID,AD_Column_ID,AD_Field_ID,AD_Org_ID,AD_Tab_ID,Created,CreatedBy,Description,DisplayLength,EntityType,Help,HideInListView,IsActive,IsCentrallyMaintained,IsDisplayed,IsEncrypted,IsFieldOnly,IsHeading,IsReadOnly,IsSameLine,Name,SeqNo,Updated,UpdatedBy) VALUES (0,66059,72874,0,53918,TO_TIMESTAMP('2014-03-15 17:59:32','YYYY-MM-DD HH24:MI:SS'),100,'The record is active in the system',1,'ECA01','There are two methods of making records unavailable in the system: One is to delete the record, the other is to de-activate the record. A de-activated record is not available for selection, but available for reports.
+INSERT INTO AD_Field (AD_Client_ID,AD_Column_ID,AD_Field_ID,AD_Org_ID,AD_Tab_ID,Created,CreatedBy,Description,DisplayLength,EntityType,Help,IsEmbedded,IsActive,IsCentrallyMaintained,IsDisplayed,IsEncrypted,IsFieldOnly,IsHeading,IsReadOnly,IsSameLine,Name,SeqNo,Updated,UpdatedBy) VALUES (0,66059,72874,0,53918,TO_TIMESTAMP('2014-03-15 17:59:32','YYYY-MM-DD HH24:MI:SS'),100,'The record is active in the system',1,'ECA01','There are two methods of making records unavailable in the system: One is to delete the record, the other is to de-activate the record. A de-activated record is not available for selection, but available for reports.
 There are two reasons for de-activating and not deleting records:
 (1) The system requires the record for audit purposes.
 (2) The record is referenced by other records. E.g., you cannot delete a Business Partner, if there are invoices for this partner record existing. You de-activate the Business Partner and prevent that this record is used for future entries.','N','Y','Y','Y','N','N','N','N','N','Active',50,TO_TIMESTAMP('2014-03-15 17:59:32','YYYY-MM-DD HH24:MI:SS'),100)
@@ -918,7 +918,7 @@ INSERT INTO AD_Field_Trl (AD_Language,AD_Field_ID, Description,Help,Name, IsTran
 
 -- Mar 15, 2014 5:59:43 PM VET
 -- SFAndroid Server
-INSERT INTO AD_Field (AD_Client_ID,AD_Column_ID,AD_Field_ID,AD_Org_ID,AD_Tab_ID,Created,CreatedBy,Description,DisplayLength,EntityType,Help,HideInListView,IsActive,IsCentrallyMaintained,IsDisplayed,IsEncrypted,IsFieldOnly,IsHeading,IsReadOnly,IsSameLine,Name,SeqNo,Updated,UpdatedBy) VALUES (0,66066,72875,0,53918,TO_TIMESTAMP('2014-03-15 17:59:40','YYYY-MM-DD HH24:MI:SS'),100,'This column is translated',1,'ECA01','The Translated checkbox indicates if this column is translated.','N','Y','Y','Y','N','N','N','N','Y','Translated',60,TO_TIMESTAMP('2014-03-15 17:59:40','YYYY-MM-DD HH24:MI:SS'),100)
+INSERT INTO AD_Field (AD_Client_ID,AD_Column_ID,AD_Field_ID,AD_Org_ID,AD_Tab_ID,Created,CreatedBy,Description,DisplayLength,EntityType,Help,IsEmbedded,IsActive,IsCentrallyMaintained,IsDisplayed,IsEncrypted,IsFieldOnly,IsHeading,IsReadOnly,IsSameLine,Name,SeqNo,Updated,UpdatedBy) VALUES (0,66066,72875,0,53918,TO_TIMESTAMP('2014-03-15 17:59:40','YYYY-MM-DD HH24:MI:SS'),100,'This column is translated',1,'ECA01','The Translated checkbox indicates if this column is translated.','N','Y','Y','Y','N','N','N','N','Y','Translated',60,TO_TIMESTAMP('2014-03-15 17:59:40','YYYY-MM-DD HH24:MI:SS'),100)
 ;
 
 -- Mar 15, 2014 5:59:43 PM VET
@@ -928,7 +928,7 @@ INSERT INTO AD_Field_Trl (AD_Language,AD_Field_ID, Description,Help,Name, IsTran
 
 -- Mar 15, 2014 5:59:44 PM VET
 -- SFAndroid Server
-INSERT INTO AD_Field (AD_Client_ID,AD_Column_ID,AD_Field_ID,AD_Org_ID,AD_Tab_ID,Created,CreatedBy,Description,DisplayLength,EntityType,Help,HideInListView,IsActive,IsCentrallyMaintained,IsDisplayed,IsEncrypted,IsFieldOnly,IsHeading,IsReadOnly,IsSameLine,Name,SeqNo,Updated,UpdatedBy) VALUES (0,66060,72876,0,53918,TO_TIMESTAMP('2014-03-15 17:59:43','YYYY-MM-DD HH24:MI:SS'),100,'Alphanumeric identifier of the entity',60,'ECA01','The name of an entity (record) is used as an default search option in addition to the search key. The name is up to 60 characters in length.','N','Y','Y','Y','N','N','N','N','N','Name',70,TO_TIMESTAMP('2014-03-15 17:59:43','YYYY-MM-DD HH24:MI:SS'),100)
+INSERT INTO AD_Field (AD_Client_ID,AD_Column_ID,AD_Field_ID,AD_Org_ID,AD_Tab_ID,Created,CreatedBy,Description,DisplayLength,EntityType,Help,IsEmbedded,IsActive,IsCentrallyMaintained,IsDisplayed,IsEncrypted,IsFieldOnly,IsHeading,IsReadOnly,IsSameLine,Name,SeqNo,Updated,UpdatedBy) VALUES (0,66060,72876,0,53918,TO_TIMESTAMP('2014-03-15 17:59:43','YYYY-MM-DD HH24:MI:SS'),100,'Alphanumeric identifier of the entity',60,'ECA01','The name of an entity (record) is used as an default search option in addition to the search key. The name is up to 60 characters in length.','N','Y','Y','Y','N','N','N','N','N','Name',70,TO_TIMESTAMP('2014-03-15 17:59:43','YYYY-MM-DD HH24:MI:SS'),100)
 ;
 
 -- Mar 15, 2014 5:59:44 PM VET
@@ -938,7 +938,7 @@ INSERT INTO AD_Field_Trl (AD_Language,AD_Field_ID, Description,Help,Name, IsTran
 
 -- Mar 15, 2014 6:00:49 PM VET
 -- SFAndroid Server
-INSERT INTO AD_Field (AD_Client_ID,AD_Column_ID,AD_Field_ID,AD_Org_ID,AD_Tab_ID,Created,CreatedBy,Description,DisplayLength,EntityType,Help,HideInListView,IsActive,IsCentrallyMaintained,IsDisplayed,IsEncrypted,IsFieldOnly,IsHeading,IsReadOnly,IsSameLine,Name,SeqNo,Updated,UpdatedBy) VALUES (0,66058,72877,0,53918,TO_TIMESTAMP('2014-03-15 17:59:44','YYYY-MM-DD HH24:MI:SS'),100,'Optional short description of the record',255,'ECA01','A description is limited to 255 characters.','N','Y','Y','Y','N','N','N','N','N','Description',80,TO_TIMESTAMP('2014-03-15 17:59:44','YYYY-MM-DD HH24:MI:SS'),100)
+INSERT INTO AD_Field (AD_Client_ID,AD_Column_ID,AD_Field_ID,AD_Org_ID,AD_Tab_ID,Created,CreatedBy,Description,DisplayLength,EntityType,Help,IsEmbedded,IsActive,IsCentrallyMaintained,IsDisplayed,IsEncrypted,IsFieldOnly,IsHeading,IsReadOnly,IsSameLine,Name,SeqNo,Updated,UpdatedBy) VALUES (0,66058,72877,0,53918,TO_TIMESTAMP('2014-03-15 17:59:44','YYYY-MM-DD HH24:MI:SS'),100,'Optional short description of the record',255,'ECA01','A description is limited to 255 characters.','N','Y','Y','Y','N','N','N','N','N','Description',80,TO_TIMESTAMP('2014-03-15 17:59:44','YYYY-MM-DD HH24:MI:SS'),100)
 ;
 
 -- Mar 15, 2014 6:00:49 PM VET

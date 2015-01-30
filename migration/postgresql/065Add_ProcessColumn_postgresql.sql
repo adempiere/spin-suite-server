@@ -10,7 +10,7 @@ INSERT INTO AD_Column_Trl (AD_Language,AD_Column_ID, Name, IsTranslated,AD_Clien
 
 -- Apr 7, 2014 9:53:27 PM CEST
 -- SFAndroid Server
-INSERT INTO AD_Field (AD_Client_ID,AD_Column_ID,AD_Field_ID,AD_Org_ID,AD_Tab_ID,Created,CreatedBy,Description,DisplayLength,EntityType,Help,HideInListView,IsActive,IsCentrallyMaintained,IsDisplayed,IsEncrypted,IsFieldOnly,IsHeading,IsReadOnly,IsSameLine,Name,PreferredWidth,SeqNo,SortNo,Updated,UpdatedBy) VALUES (0,72598,73270,0,53661,TO_TIMESTAMP('2014-04-07 21:53:26','YYYY-MM-DD HH24:MI:SS'),100,'Process or Report',0,'ECA01','The Process field identifies a unique Process or Report in the system.','N','Y','Y','Y','N','N','N','N','Y','Process',0,350,0,TO_TIMESTAMP('2014-04-07 21:53:26','YYYY-MM-DD HH24:MI:SS'),100)
+INSERT INTO AD_Field (AD_Client_ID,AD_Column_ID,AD_Field_ID,AD_Org_ID,AD_Tab_ID,Created,CreatedBy,Description,DisplayLength,EntityType,Help,IsEmbedded,IsActive,IsCentrallyMaintained,IsDisplayed,IsEncrypted,IsFieldOnly,IsHeading,IsReadOnly,IsSameLine,Name,PreferredWidth,SeqNo,SortNo,Updated,UpdatedBy) VALUES (0,72598,73270,0,53661,TO_TIMESTAMP('2014-04-07 21:53:26','YYYY-MM-DD HH24:MI:SS'),100,'Process or Report',0,'ECA01','The Process field identifies a unique Process or Report in the system.','N','Y','Y','Y','N','N','N','N','Y','Process',0,350,0,TO_TIMESTAMP('2014-04-07 21:53:26','YYYY-MM-DD HH24:MI:SS'),100)
 ;
 
 -- Apr 7, 2014 9:53:27 PM CEST

@@ -30,7 +30,7 @@ INSERT INTO AD_Column_Trl (AD_Language,AD_Column_ID, Name, IsTranslated,AD_Clien
 
 -- Oct 23, 2014 4:22:51 PM CEST
 -- Spin-Suite
-INSERT INTO AD_Field (AD_Client_ID,AD_Column_ID,AD_Field_ID,AD_Org_ID,AD_Tab_ID,Created,CreatedBy,Description,DisplayLength,EntityType,Help,HideInListView,IsActive,IsCentrallyMaintained,IsDisplayed,IsEncrypted,IsFieldOnly,IsHeading,IsReadOnly,IsSameLine,Name,PreferredWidth,SeqNo,SortNo,Updated,UpdatedBy) VALUES (0,74604,74738,0,53677,TO_TIMESTAMP('2014-10-23 16:22:46','YYYY-MM-DD HH24:MI:SS'),100,'This is a Sales Transaction',0,'U','The Sales Transaction checkbox indicates if this item is a Sales Transaction.','N','Y','Y','Y','N','N','N','N','N','Sales Transaction',0,260,0,TO_TIMESTAMP('2014-10-23 16:22:46','YYYY-MM-DD HH24:MI:SS'),100)
+INSERT INTO AD_Field (AD_Client_ID,AD_Column_ID,AD_Field_ID,AD_Org_ID,AD_Tab_ID,Created,CreatedBy,Description,DisplayLength,EntityType,Help,IsEmbedded,IsActive,IsCentrallyMaintained,IsDisplayed,IsEncrypted,IsFieldOnly,IsHeading,IsReadOnly,IsSameLine,Name,PreferredWidth,SeqNo,SortNo,Updated,UpdatedBy) VALUES (0,74604,74738,0,53677,TO_TIMESTAMP('2014-10-23 16:22:46','YYYY-MM-DD HH24:MI:SS'),100,'This is a Sales Transaction',0,'U','The Sales Transaction checkbox indicates if this item is a Sales Transaction.','N','Y','Y','Y','N','N','N','N','N','Sales Transaction',0,260,0,TO_TIMESTAMP('2014-10-23 16:22:46','YYYY-MM-DD HH24:MI:SS'),100)
 ;
 
 -- Oct 23, 2014 4:22:51 PM CEST
@@ -140,7 +140,7 @@ UPDATE AD_Field SET IsDisplayed='Y', SeqNo=260,Updated=TO_TIMESTAMP('2014-10-23 
 
 -- Oct 23, 2014 4:29:06 PM CEST
 -- Spin-Suite
-INSERT INTO AD_Field (AD_Client_ID,AD_Column_ID,AD_Field_ID,AD_Org_ID,AD_Tab_ID,Created,CreatedBy,Description,DisplayLength,EntityType,Help,HideInListView,IsActive,IsCentrallyMaintained,IsDisplayed,IsEncrypted,IsFieldOnly,IsHeading,IsReadOnly,IsSameLine,Name,PreferredWidth,SeqNo,SortNo,Updated,UpdatedBy) VALUES (0,74602,74739,0,53659,TO_TIMESTAMP('2014-10-23 16:28:54','YYYY-MM-DD HH24:MI:SS'),100,'Access Level required',0,'ECA01','Indicates the access level required for this record or process.','N','Y','Y','Y','N','N','N','N','N','Data Access Level',0,130,0,TO_TIMESTAMP('2014-10-23 16:28:54','YYYY-MM-DD HH24:MI:SS'),100)
+INSERT INTO AD_Field (AD_Client_ID,AD_Column_ID,AD_Field_ID,AD_Org_ID,AD_Tab_ID,Created,CreatedBy,Description,DisplayLength,EntityType,Help,IsEmbedded,IsActive,IsCentrallyMaintained,IsDisplayed,IsEncrypted,IsFieldOnly,IsHeading,IsReadOnly,IsSameLine,Name,PreferredWidth,SeqNo,SortNo,Updated,UpdatedBy) VALUES (0,74602,74739,0,53659,TO_TIMESTAMP('2014-10-23 16:28:54','YYYY-MM-DD HH24:MI:SS'),100,'Access Level required',0,'ECA01','Indicates the access level required for this record or process.','N','Y','Y','Y','N','N','N','N','N','Data Access Level',0,130,0,TO_TIMESTAMP('2014-10-23 16:28:54','YYYY-MM-DD HH24:MI:SS'),100)
 ;
 
 -- Oct 23, 2014 4:29:06 PM CEST
@@ -210,7 +210,7 @@ UPDATE AD_Field SET IsDisplayed='Y', SeqNo=150,Updated=TO_TIMESTAMP('2014-10-23 
 
 -- Oct 23, 2014 4:33:40 PM CEST
 -- Spin-Suite
-INSERT INTO AD_Field (AD_Client_ID,AD_Column_ID,AD_Field_ID,AD_Org_ID,AD_Tab_ID,Created,CreatedBy,Description,DisplayLength,EntityType,Help,HideInListView,IsActive,IsCentrallyMaintained,IsDisplayed,IsEncrypted,IsFieldOnly,IsHeading,IsReadOnly,IsSameLine,Name,PreferredWidth,SeqNo,SortNo,Updated,UpdatedBy) VALUES (0,74603,74740,0,53895,TO_TIMESTAMP('2014-10-23 16:33:34','YYYY-MM-DD HH24:MI:SS'),100,'This is a Sales Transaction',0,'ECA01','The Sales Transaction checkbox indicates if this item is a Sales Transaction.','N','Y','Y','Y','N','N','N','N','N','Sales Transaction',0,80,0,TO_TIMESTAMP('2014-10-23 16:33:34','YYYY-MM-DD HH24:MI:SS'),100)
+INSERT INTO AD_Field (AD_Client_ID,AD_Column_ID,AD_Field_ID,AD_Org_ID,AD_Tab_ID,Created,CreatedBy,Description,DisplayLength,EntityType,Help,IsEmbedded,IsActive,IsCentrallyMaintained,IsDisplayed,IsEncrypted,IsFieldOnly,IsHeading,IsReadOnly,IsSameLine,Name,PreferredWidth,SeqNo,SortNo,Updated,UpdatedBy) VALUES (0,74603,74740,0,53895,TO_TIMESTAMP('2014-10-23 16:33:34','YYYY-MM-DD HH24:MI:SS'),100,'This is a Sales Transaction',0,'ECA01','The Sales Transaction checkbox indicates if this item is a Sales Transaction.','N','Y','Y','Y','N','N','N','N','N','Sales Transaction',0,80,0,TO_TIMESTAMP('2014-10-23 16:33:34','YYYY-MM-DD HH24:MI:SS'),100)
 ;
 
 -- Oct 23, 2014 4:33:40 PM CEST
