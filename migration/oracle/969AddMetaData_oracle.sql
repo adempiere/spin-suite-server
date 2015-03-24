@@ -3,6 +3,7 @@
 INSERT INTO SPS_Table (AccessLevel,AD_Client_ID,AD_Org_ID,AD_Rule_ID,AD_Table_ID,CopyColumnsFromTable,Created,CreatedBy,EntityType,GenerateScriptFromTable,IsActive,IsCentrallyMaintained,IsDeleteable,IsView,Name,SPS_Table_ID,TableName,Updated,UpdatedBy) VALUES ('6',0,0,50283,283,'N',TO_DATE('2015-03-03 01:59:46','YYYY-MM-DD HH24:MI:SS'),100,'ECA01','N','Y','Y','Y','N','AD_PInstance_Para',50331,'AD_PInstance_Para',TO_DATE('2015-03-03 01:59:46','YYYY-MM-DD HH24:MI:SS'),100)
 ;
 
+
 -- Mar 3, 2015 1:59:56 AM VET
 -- Spin-Suite-Contribution
 INSERT INTO SPS_Table_Trl (AD_Language,SPS_Table_ID, Name, IsTranslated,AD_Client_ID,AD_Org_ID,Created,Createdby,Updated,UpdatedBy) SELECT l.AD_Language,t.SPS_Table_ID, t.Name, 'N',t.AD_Client_ID,t.AD_Org_ID,t.Created,t.Createdby,t.Updated,t.UpdatedBy FROM AD_Language l, SPS_Table t WHERE l.IsActive='Y' AND l.IsSystemLanguage='Y' AND l.IsBaseLanguage='N' AND t.SPS_Table_ID=50331 AND NOT EXISTS (SELECT * FROM SPS_Table_Trl tt WHERE tt.AD_Language=l.AD_Language AND tt.SPS_Table_ID=t.SPS_Table_ID)

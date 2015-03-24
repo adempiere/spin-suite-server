@@ -940,23 +940,23 @@ INSERT INTO SPS_Column_Trl (AD_Language,SPS_Column_ID, Name, IsTranslated,AD_Cli
 
 -- Feb 20, 2015 5:17:34 PM VET
 -- Spin-Suite-Server
-INSERT INTO SPS_Column (AD_Client_ID,AD_Column_ID,AD_Element_ID,AD_Org_ID,AD_Reference_ID,ColumnName,Created,CreatedBy,Description,EntityType,FieldLength,IsActive,IsAlwaysUpdateable,IsCentrallyMaintained,IsEncrypted,IsIdentifier,IsKey,IsMandatory,IsParent,IsSelectionColumn,IsUpdateable,Name,SeqNo,SPS_Column_ID,SPS_Table_ID,Updated,UpdatedBy) VALUES (0,72746,469,0,10,'Name',TO_TIMESTAMP('2015-02-20 17:17:30','YYYY-MM-DD HH24:MI:SS'),100,'Alphanumeric identifier of the entity','ECA01',60,'Y','N','Y','N','Y','N','N','N','Y','Y','Name',3,56206,50328,TO_TIMESTAMP('2015-02-20 17:17:30','YYYY-MM-DD HH24:MI:SS'),100)
-;
+--INSERT INTO SPS_Column (AD_Client_ID,AD_Column_ID,AD_Element_ID,AD_Org_ID,AD_Reference_ID,ColumnName,Created,CreatedBy,Description,EntityType,FieldLength,IsActive,IsAlwaysUpdateable,IsCentrallyMaintained,IsEncrypted,IsIdentifier,IsKey,IsMandatory,IsParent,IsSelectionColumn,IsUpdateable,Name,SeqNo,SPS_Column_ID,SPS_Table_ID,Updated,UpdatedBy) VALUES (0,72746,469,0,10,'Name',TO_TIMESTAMP('2015-02-20 17:17:30','YYYY-MM-DD HH24:MI:SS'),100,'Alphanumeric identifier of the entity','ECA01',60,'Y','N','Y','N','Y','N','N','N','Y','Y','Name',3,56206,50328,TO_TIMESTAMP('2015-02-20 17:17:30','YYYY-MM-DD HH24:MI:SS'),100)
+--;
 
 -- Feb 20, 2015 5:17:34 PM VET
 -- Spin-Suite-Server
-INSERT INTO SPS_Column_Trl (AD_Language,SPS_Column_ID, Name, IsTranslated,AD_Client_ID,AD_Org_ID,Created,Createdby,Updated,UpdatedBy) SELECT l.AD_Language,t.SPS_Column_ID, t.Name, 'N',t.AD_Client_ID,t.AD_Org_ID,t.Created,t.Createdby,t.Updated,t.UpdatedBy FROM AD_Language l, SPS_Column t WHERE l.IsActive='Y' AND l.IsSystemLanguage='Y' AND l.IsBaseLanguage='N' AND t.SPS_Column_ID=56206 AND NOT EXISTS (SELECT * FROM SPS_Column_Trl tt WHERE tt.AD_Language=l.AD_Language AND tt.SPS_Column_ID=t.SPS_Column_ID)
-;
+--INSERT INTO SPS_Column_Trl (AD_Language,SPS_Column_ID, Name, IsTranslated,AD_Client_ID,AD_Org_ID,Created,Createdby,Updated,UpdatedBy) SELECT l.AD_Language,t.SPS_Column_ID, t.Name, 'N',t.AD_Client_ID,t.AD_Org_ID,t.Created,t.Createdby,t.Updated,t.UpdatedBy FROM AD_Language l, SPS_Column t WHERE l.IsActive='Y' AND l.IsSystemLanguage='Y' AND l.IsBaseLanguage='N' AND t.SPS_Column_ID=56206 AND NOT EXISTS (SELECT * FROM SPS_Column_Trl tt WHERE tt.AD_Language=l.AD_Language AND tt.SPS_Column_ID=t.SPS_Column_ID)
+--;
 
 -- Feb 20, 2015 5:17:34 PM VET
 -- Spin-Suite-Server
-DELETE FROM SPS_Column_Trl WHERE SPS_Column_ID = 56206
-;
+--DELETE FROM SPS_Column_Trl WHERE SPS_Column_ID = 56206
+--;
 
 -- Feb 20, 2015 5:17:34 PM VET
 -- Spin-Suite-Server
-INSERT INTO SPS_Column_Trl (AD_Language,SPS_Column_ID, Name, IsTranslated,AD_Client_ID,AD_Org_ID,Created,Createdby,Updated,UpdatedBy)VALUES ('es_MX',56206,'Nombre','N',0,0,'2014-04-25',100,'2014-04-25',100)
-;
+--INSERT INTO SPS_Column_Trl (AD_Language,SPS_Column_ID, Name, IsTranslated,AD_Client_ID,AD_Org_ID,Created,Createdby,Updated,UpdatedBy)VALUES ('es_MX',56206,'Nombre','N',0,0,'2014-04-25',100,'2014-04-25',100)
+--;
 
 -- Feb 20, 2015 5:17:38 PM VET
 -- Spin-Suite-Server

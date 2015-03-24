@@ -490,7 +490,7 @@ INSERT INTO AD_Column_Trl (AD_Language,AD_Column_ID, Name, IsTranslated,AD_Clien
 
 -- Mar 3, 2015 2:05:28 AM VET
 -- Spin-Suite-Contribution
-INSERT INTO AD_Field (AD_Client_ID,AD_Column_ID,AD_Field_ID,AD_Org_ID,AD_Tab_ID,Created,CreatedBy,Description,DisplayLength,EntityType,Help,IsActive,IsAllowCopy,IsCentrallyMaintained,IsDisplayed,IsDisplayedGrid,IsEmbedded,IsEncrypted,IsFieldOnly,IsHeading,IsReadOnly,IsSameLine,Name,SeqNo,SeqNoGrid,Updated,UpdatedBy) VALUES (0,75969,76239,0,53659,TO_TIMESTAMP('2015-03-03 02:05:27','YYYY-MM-DD HH24:MI:SS'),100,'Maintain a log of changes',1,'ECA01','If selected, a log of all changes is maintained.','Y','Y','Y','Y','Y','N','N','N','N','N','N','Maintain Change Log',0,0,TO_TIMESTAMP('2015-03-03 02:05:27','YYYY-MM-DD HH24:MI:SS'),100)
+INSERT INTO AD_Field (AD_Client_ID,AD_Column_ID,AD_Field_ID,AD_Org_ID,AD_Tab_ID,Created,CreatedBy,Description,DisplayLength,EntityType,Help,IsActive,IsAllowCopy,IsCentrallyMaintained,IsDisplayed,HideInListView,IsEmbedded,IsEncrypted,IsFieldOnly,IsHeading,IsReadOnly,IsSameLine,Name,SeqNo,SeqNoGrid,Updated,UpdatedBy) VALUES (0,75969,76239,0,53659,TO_TIMESTAMP('2015-03-03 02:05:27','YYYY-MM-DD HH24:MI:SS'),100,'Maintain a log of changes',1,'ECA01','If selected, a log of all changes is maintained.','Y','Y','Y','Y','Y','N','N','N','N','N','N','Maintain Change Log',0,0,TO_TIMESTAMP('2015-03-03 02:05:27','YYYY-MM-DD HH24:MI:SS'),100)
 ;
 
 -- Mar 3, 2015 2:05:28 AM VET
@@ -555,7 +555,7 @@ INSERT INTO AD_Column_Trl (AD_Language,AD_Column_ID, Name, IsTranslated,AD_Clien
 
 -- Mar 3, 2015 2:09:14 AM VET
 -- Spin-Suite-Contribution
-INSERT INTO AD_Field (AD_Client_ID,AD_Column_ID,AD_Field_ID,AD_Org_ID,AD_Tab_ID,Created,CreatedBy,Description,DisplayLength,EntityType,IsActive,IsAllowCopy,IsCentrallyMaintained,IsDisplayed,IsDisplayedGrid,IsEmbedded,IsEncrypted,IsFieldOnly,IsHeading,IsReadOnly,IsSameLine,Name,SeqNo,SeqNoGrid,Updated,UpdatedBy) VALUES (0,75970,76240,0,53661,TO_TIMESTAMP('2015-03-03 02:09:13','YYYY-MM-DD HH24:MI:SS'),100,'Determine if a column must be recorded into the change log',1,'ECA01','Y','Y','Y','Y','Y','N','N','N','N','N','N','Allow Logging',0,0,TO_TIMESTAMP('2015-03-03 02:09:13','YYYY-MM-DD HH24:MI:SS'),100)
+INSERT INTO AD_Field (AD_Client_ID,AD_Column_ID,AD_Field_ID,AD_Org_ID,AD_Tab_ID,Created,CreatedBy,Description,DisplayLength,EntityType,IsActive,IsAllowCopy,IsCentrallyMaintained,IsDisplayed,HideInListView,IsEmbedded,IsEncrypted,IsFieldOnly,IsHeading,IsReadOnly,IsSameLine,Name,SeqNo,SeqNoGrid,Updated,UpdatedBy) VALUES (0,75970,76240,0,53661,TO_TIMESTAMP('2015-03-03 02:09:13','YYYY-MM-DD HH24:MI:SS'),100,'Determine if a column must be recorded into the change log',1,'ECA01','Y','Y','Y','Y','Y','N','N','N','N','N','N','Allow Logging',0,0,TO_TIMESTAMP('2015-03-03 02:09:13','YYYY-MM-DD HH24:MI:SS'),100)
 ;
 
 -- Mar 3, 2015 2:09:14 AM VET
