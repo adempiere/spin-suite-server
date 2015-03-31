@@ -198,11 +198,6 @@ UPDATE AD_Rule SET Script='CREATE TABLE SPS_SyncTable (AD_Client_ID NUMERIC(10) 
 DELETE FROM WS_WebService_Para WHERE WS_WebService_Para_ID=51054
 ;
 
--- Mar 20, 2015 8:47:09 PM VET
--- Spin-Suite-Contribution
-DELETE FROM WS_WebServiceType WHERE WS_WebServiceType_ID=50583
-;
-
 -- Mar 20, 2015 8:47:14 PM VET
 -- Spin-Suite-Contribution
 DELETE FROM SPS_SyncMenu_Trl WHERE SPS_SyncMenu_ID=50558
@@ -496,11 +491,6 @@ DELETE FROM SPS_SyncMenu WHERE SPS_SyncMenu_ID=50571
 -- Mar 20, 2015 9:04:30 PM VET
 -- Spin-Suite-Contribution
 DELETE FROM AD_TreeNode WHERE Node_ID=50571 AND EXISTS (SELECT * FROM AD_Tree t WHERE t.AD_Tree_ID=AD_TreeNode.AD_Tree_ID AND t.AD_Table_ID=53501)
-;
-
--- Mar 20, 2015 9:04:32 PM VET
--- Spin-Suite-Contribution
-DELETE FROM WS_WebServiceType WHERE WS_WebServiceType_ID=50596
 ;
 
 -- Mar 20, 2015 9:04:37 PM VET
