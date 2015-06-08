@@ -110,13 +110,13 @@ UPDATE AD_Column SET DefaultValue=NULL,Updated=TO_DATE('2015-03-16 09:50:56','YY
 
 -- Mar 16, 2015 9:51:29 AM VET
 -- Spin-Suite-Contribution
-ALTER TABLE SPS_ChangeLog MODIFY IsCustomization CHAR(1) DEFAULT 'N'
-;
+-- ALTER TABLE SPS_ChangeLog MODIFY IsCustomization CHAR(1) DEFAULT 'N'
+-- ;
 
 -- Mar 16, 2015 9:51:29 AM VET
 -- Spin-Suite-Contribution
-UPDATE SPS_ChangeLog SET IsCustomization='N' WHERE IsCustomization IS NULL
-;
+-- UPDATE SPS_ChangeLog SET IsCustomization='N' WHERE IsCustomization IS NULL
+-- ;
 
 -- Mar 16, 2015 9:52:01 AM VET
 -- Spin-Suite-Contribution

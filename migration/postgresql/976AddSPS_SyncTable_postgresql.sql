@@ -113,11 +113,6 @@ INSERT INTO SPS_Column (AD_Client_ID,AD_Element_ID,AD_Org_ID,AD_Reference_ID,Col
 INSERT INTO SPS_Column_Trl (AD_Language,SPS_Column_ID, Name, IsTranslated,AD_Client_ID,AD_Org_ID,Created,Createdby,Updated,UpdatedBy) SELECT l.AD_Language,t.SPS_Column_ID, t.Name, 'N',t.AD_Client_ID,t.AD_Org_ID,t.Created,t.Createdby,t.Updated,t.UpdatedBy FROM AD_Language l, SPS_Column t WHERE l.IsActive='Y' AND l.IsSystemLanguage='Y' AND l.IsBaseLanguage='N' AND t.SPS_Column_ID=56271 AND NOT EXISTS (SELECT * FROM SPS_Column_Trl tt WHERE tt.AD_Language=l.AD_Language AND tt.SPS_Column_ID=t.SPS_Column_ID)
 ;
 
--- Mar 13, 2015 4:42:57 PM VET
--- Spin-Suite-Contribution
-INSERT INTO AD_Sequence (AD_Client_ID,AD_Org_ID,AD_Sequence_ID,Created,CreatedBy,CurrentNext,CurrentNextSys,Description,IncrementNo,IsActive,IsAudited,IsAutoSequence,IsTableID,Name,StartNewYear,StartNo,Updated,UpdatedBy) VALUES (0,0,54121,TO_TIMESTAMP('2015-03-13 16:42:56','YYYY-MM-DD HH24:MI:SS'),100,1000000,50000,'Table SPS_SyncTable',1,'Y','N','Y','Y','SPS_SyncTable','N',1000000,TO_TIMESTAMP('2015-03-13 16:42:56','YYYY-MM-DD HH24:MI:SS'),100)
-;
-
 -- Mar 13, 2015 4:43:19 PM VET
 -- Spin-Suite-Contribution
 UPDATE SPS_Table SET AccessLevel='4',Updated=TO_TIMESTAMP('2015-03-13 16:43:19','YYYY-MM-DD HH24:MI:SS'),UpdatedBy=100 WHERE SPS_Table_ID=50333
@@ -140,13 +135,13 @@ INSERT INTO SPS_Column_Trl (AD_Language,SPS_Column_ID, Name, IsTranslated,AD_Cli
 
 -- Mar 13, 2015 4:48:55 PM VET
 -- Spin-Suite-Contribution
-INSERT INTO SPS_Column (AD_Client_ID,AD_Column_ID,AD_Element_ID,AD_Org_ID,AD_Reference_ID,ColumnName,Created,CreatedBy,Description,EntityType,FieldLength,IsActive,IsAllowLogging,IsAlwaysUpdateable,IsCentrallyMaintained,IsEncrypted,IsIdentifier,IsKey,IsMandatory,IsParent,IsSelectionColumn,IsUpdateable,Name,SelectionSeqNo,SeqNo,SPS_Column_ID,SPS_Table_ID,Updated,UpdatedBy) VALUES (0,62107,538,0,28,'Record_ID',TO_TIMESTAMP('2015-03-13 16:48:49','YYYY-MM-DD HH24:MI:SS'),100,'Direct internal record ID','ECA01',22,'Y','Y','N','Y','f','N','N','N','N','N','N','Record ID',0,0,56273,50333,TO_TIMESTAMP('2015-03-13 16:48:49','YYYY-MM-DD HH24:MI:SS'),100)
-;
+--INSERT INTO SPS_Column (AD_Client_ID,AD_Column_ID,AD_Element_ID,AD_Org_ID,AD_Reference_ID,ColumnName,Created,CreatedBy,Description,EntityType,FieldLength,IsActive,IsAllowLogging,IsAlwaysUpdateable,IsCentrallyMaintained,IsEncrypted,IsIdentifier,IsKey,IsMandatory,IsParent,IsSelectionColumn,IsUpdateable,Name,SelectionSeqNo,SeqNo,SPS_Column_ID,SPS_Table_ID,Updated,UpdatedBy) VALUES (0,62107,538,0,28,'Record_ID',TO_TIMESTAMP('2015-03-13 16:48:49','YYYY-MM-DD HH24:MI:SS'),100,'Direct internal record ID','ECA01',22,'Y','Y','N','Y','f','N','N','N','N','N','N','Record ID',0,0,56273,50333,TO_TIMESTAMP('2015-03-13 16:48:49','YYYY-MM-DD HH24:MI:SS'),100)
+--;
 
 -- Mar 13, 2015 4:48:55 PM VET
 -- Spin-Suite-Contribution
-INSERT INTO SPS_Column_Trl (AD_Language,SPS_Column_ID, Name, IsTranslated,AD_Client_ID,AD_Org_ID,Created,Createdby,Updated,UpdatedBy) SELECT l.AD_Language,t.SPS_Column_ID, t.Name, 'N',t.AD_Client_ID,t.AD_Org_ID,t.Created,t.Createdby,t.Updated,t.UpdatedBy FROM AD_Language l, SPS_Column t WHERE l.IsActive='Y' AND l.IsSystemLanguage='Y' AND l.IsBaseLanguage='N' AND t.SPS_Column_ID=56273 AND NOT EXISTS (SELECT * FROM SPS_Column_Trl tt WHERE tt.AD_Language=l.AD_Language AND tt.SPS_Column_ID=t.SPS_Column_ID)
-;
+--INSERT INTO SPS_Column_Trl (AD_Language,SPS_Column_ID, Name, IsTranslated,AD_Client_ID,AD_Org_ID,Created,Createdby,Updated,UpdatedBy) SELECT l.AD_Language,t.SPS_Column_ID, t.Name, 'N',t.AD_Client_ID,t.AD_Org_ID,t.Created,t.Createdby,t.Updated,t.UpdatedBy FROM AD_Language l, SPS_Column t WHERE l.IsActive='Y' AND l.IsSystemLanguage='Y' AND l.IsBaseLanguage='N' AND t.SPS_Column_ID=56273 AND NOT EXISTS (SELECT * FROM SPS_Column_Trl tt WHERE tt.AD_Language=l.AD_Language AND tt.SPS_Column_ID=t.SPS_Column_ID)
+--;
 
 -- Mar 13, 2015 4:50:04 PM VET
 -- Spin-Suite-Contribution

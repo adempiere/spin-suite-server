@@ -1,6 +1,6 @@
 -- Aug 5, 2014 10:57:08 PM VET
 -- Spin-Suite Server
-INSERT INTO WS_WebService (AD_Client_ID,AD_Org_ID,Created,CreatedBy,Description,IsActive,Name,NameSpace,Updated,UpdatedBy,URL,Value,WS_WebService_ID) VALUES (0,0,TO_TIMESTAMP('2014-08-05 22:57:06','YYYY-MM-DD HH24:MI:SS'),100,'Spin-Suite Service','Y','Spin-Suite Service','http://www.erpcya.com/',TO_TIMESTAMP('2014-08-05 22:57:06','YYYY-MM-DD HH24:MI:SS'),100,'http://localhost/ADInterface/services/SpinSuiteService','Spin-Suite',50006)
+INSERT INTO WS_WebService (AD_Client_ID,AD_Org_ID,Created,CreatedBy,Description,IsActive,Name,NameSpace,Updated,UpdatedBy,Value,WS_WebService_ID) VALUES (0,0,TO_TIMESTAMP('2014-08-05 22:57:06','YYYY-MM-DD HH24:MI:SS'),100,'Spin-Suite Service','Y','Spin-Suite Service','http://www.erpcya.com/',TO_TIMESTAMP('2014-08-05 22:57:06','YYYY-MM-DD HH24:MI:SS'),100,'Spin-Suite',50006)
 ;
 
 -- Aug 5, 2014 11:06:59 PM VET
