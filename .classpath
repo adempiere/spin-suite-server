@@ -4,7 +4,7 @@
 	<classpathentry kind="src" path="patches"/>
 	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.6"/>
 	<classpathentry combineaccessrules="false" kind="src" path="/Dynamic-Tree"/>
-	<classpathentry combineaccessrules="false" kind="src" path="/adempiere_370"/>
 	<classpathentry combineaccessrules="false" kind="src" path="/contribution_web_services"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/adempiere_370"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
